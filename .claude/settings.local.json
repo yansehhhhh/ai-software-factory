@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C \"/Users/yansehhhhh/code/ai-software-factory/.claude/worktrees/agent-a121ac230ad47017e\" status --short)",
+      "Bash(git -C \"/Users/yansehhhhh/code/ai-software-factory/.claude/worktrees/agent-a121ac230ad47017e\" ls-tree -r --name-only HEAD)",
+      "Bash(xargs -I {} sh -c 'printf \"--- %s\\\\n\" \"$1\"; sed -n \"1,40p\" \"$1\"' sh {})",
+      "Bash(xargs basename *)"
+    ]
+  }
+}

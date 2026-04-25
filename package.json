@@ -1,0 +1,26 @@
+{
+  "name": "ai-software-factory",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "yarn@1.22.17",
+  "workspaces": [
+    "apps/web",
+    "apps/inspector-demo/frontend",
+    "packages/core",
+    "packages/agents",
+    "packages/skills",
+    "packages/workflows"
+  ],
+  "scripts": {
+    "dev:web": "yarn workspace @ai-factory/web dev",
+    "build:web": "yarn workspace @ai-factory/web build",
+    "preview:web": "yarn workspace @ai-factory/web preview",
+    "server:dev": "cd apps/server && JAVA_HOME=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home mvn spring-boot:run",
+    "server:test": "cd apps/server && JAVA_HOME=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home mvn test",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.46.1"
+  }
+}
