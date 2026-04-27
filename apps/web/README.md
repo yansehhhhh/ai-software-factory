@@ -10,9 +10,15 @@ apps/web/
 │   ├── main.js              # 应用入口
 │   ├── App.vue              # 根组件
 │   ├── components/          # 可复用组件
-│   │   └── WorkflowBoard.vue    # 工作流画板组件
+│   │   ├── RequirementInput.vue   # 需求输入区
+│   │   ├── DiscussionPanel.vue    # 需求讨论面板（AI + 用户对话）
+│   │   ├── LogModal.vue           # 日志弹窗
+│   │   ├── WorkflowProgress.vue   # 执行流程展示
+│   │   ├── DesignResult.vue       # 结果展示区
+│   │   ├── AgentTable.vue         # Agent列表表格
+│   │   └── WorkflowBoard.vue      # 工作流画板组件
 │   ├── views/               # 页面视图
-│   │   └── HomeView.vue         # 首页
+│   │   └── HomeView.vue         # 首页（整合所有组件）
 │   ├── stores/              # Pinia 状态管理
 │   │   └── workflow.js          # 工作流状态
 │   ├── router/              # Vue Router 路由配置
@@ -20,12 +26,14 @@ apps/web/
 │   ├── api/                 # API 客户端
 │   │   ├── client.js           # Axios 实例封装
 │   │   ├── health.js           # 健康检查 API
-│   │   └── workflow.js          # 工作流 API
+│   │   ├── workflow.js         # 工作流 API
+│   │   └── discussion.js       # 需求讨论 API
 │   └── workflow/            # 工作流定义
 │       └── defaultPipeline.js  # 默认流水线配置
 ├── index.html               # HTML 入口
 ├── vite.config.js           # Vite 配置
-└── package.json
+├── package.json
+└── style.css                # 全局样式
 ```
 
 ## 技术栈

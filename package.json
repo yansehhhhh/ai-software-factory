@@ -5,6 +5,7 @@
   "packageManager": "yarn@1.22.17",
   "workspaces": [
     "apps/web",
+    "apps/claude-runner",
     "apps/inspector-demo/frontend",
     "packages/core",
     "packages/agents",
@@ -15,6 +16,8 @@
     "dev:web": "yarn workspace @ai-factory/web dev",
     "build:web": "yarn workspace @ai-factory/web build",
     "preview:web": "yarn workspace @ai-factory/web preview",
+    "runner:dev": "yarn workspace @ai-factory/claude-runner dev",
+    "runner:start": "yarn workspace @ai-factory/claude-runner start",
     "server:dev": "cd apps/server && JAVA_HOME=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home mvn spring-boot:run",
     "server:test": "cd apps/server && JAVA_HOME=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home mvn test",
     "test:e2e": "playwright test",

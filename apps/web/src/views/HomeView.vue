@@ -1,46 +1,64 @@
 <script setup>
-import { computed, nextTick, onBeforeUnmount, onMounted, ref } from "vue";
+import { computed, onBeforeUnmount, onMounted, ref } from "vue";
 import { fetchHealth } from "@/api/health";
-import { clearLogs, fetchLogs, fetchResult, fetchWorkflowStatus, startWorkflow } from "@/api/workflow";
+import { clearLogs, fetchLogs, fetchResult, fetchWorkflowStatus } from "@/api/workflow";
+import { startDiscussion, chatDiscussion, confirmDiscussion } from "@/api/discussion";
+
+import Sidebar from "@/components/Sidebar.vue";
+import Topbar from "@/components/Topbar.vue";
+import RequirementInput from "@/components/RequirementInput.vue";
+import DiscussionPanel from "@/components/DiscussionPanel.vue";
+import AgentTable from "@/components/AgentTable.vue";
+import DesignResult from "@/components/DesignResult.vue";
 
 const requestText = ref("");
 const health = ref(null);
 const status = ref(null);
 const logs = ref([]);
 const result = ref({ available: false });
-const loading = ref(false);
 const pageError = ref("");
-const logPanel = ref(null);
+
+const discussionId = ref("");
+const discussionMessages = ref([]);
+const discussionComplete = ref(false);
+const discussionLoading = ref(false);
+const activeSideTab = ref("discussion");
+
+const currentPage = ref("home");
 let pollTimer = null;
 
-const statusText = {
-  pending: "未开始",
-  running: "执行中",
-  success: "已完成",
-  error: "失败"
-};
-
-const statusClass = computed(() => status.value?.status || "pending");
 const examples = computed(() => status.value?.examples || []);
-const steps = computed(() => status.value?.steps || []);
 const agents = computed(() => status.value?.agents || []);
-const currentStage = computed(() => status.value?.currentStage || "--");
-const currentArtifactType = computed(() => status.value?.currentArtifactType || "--");
-const designProgressMessage = computed(() => status.value?.designProgressMessage || "等待任务启动");
-const remaining = computed(() => status.value?.estimatedCompletion || "--");
-const testPassRate = computed(() => status.value?.testPassRate || "--");
-const canRun = computed(() => requestText.value.trim().length > 0 && !loading.value);
-const actionsEnabled = computed(() => result.value?.available === true);
-const designAvailable = computed(() => result.value?.designAvailable === true);
-const systemStatus = computed(() => health.value?.status === "UP" ? "在线" : "离线");
+const progressPercent = computed(() => status.value?.progress || 0);
+const recognizedInfoCount = computed(() => discussionMessages.value.filter((message) => message.role === "user").length);
+const workflowSteps = computed(() => {
+  const currentStage = status.value?.currentStage || "";
+  const mapping = [
+    { index: 0, title: "需求输入", description: "已完成" },
+    { index: 1, title: "需求讨论", description: "进行中" },
+    { index: 2, title: "需求分析", description: "等待中" },
+    { index: 3, title: "UI 设计", description: "等待中" },
+    { index: 4, title: "代码生成", description: "等待中" },
+    { index: 5, title: "自动化测试", description: "等待中" }
+  ];
 
-function statusLabel(value) {
-  return statusText[value] || value || "未开始";
-}
+  const activeMap = {
+    "需求讨论": 1,
+    "实现计划": 2,
+    "PRD生成": 2,
+    "UI设计": 3,
+    "验证完成": 5,
+    "已完成": 5
+  };
 
-function pickExample(example) {
-  requestText.value = `做一个${example}，支持核心页面、后端接口和自动化测试报告。`;
-}
+  const activeIndex = activeMap[currentStage] ?? 1;
+
+  return mapping.map((step, index) => {
+    if (index < activeIndex) return { ...step, status: "success", description: "已完成" };
+    if (index === activeIndex) return { ...step, status: status.value?.status === "error" ? "error" : "running", description: status.value?.status === "error" ? "失败" : "进行中" };
+    return { ...step, status: "pending", description: "等待中" };
+  });
+});
 
 async function refreshAll() {
   try {
@@ -53,32 +71,72 @@ async function refreshAll() {
     logs.value = nextLogs;
     result.value = nextResult;
     pageError.value = "";
-    await nextTick();
-    scrollLogsToBottom();
   } catch (error) {
     pageError.value = "无法连接后端编排接口，请先启动后端服务。";
   }
 }
 
-async function runWorkflow() {
-  if (!canRun.value) {
-    return;
-  }
+async function handleStartDiscussion() {
+  if (requestText.value.trim().length === 0) return;
 
-  loading.value = true;
+  discussionLoading.value = true;
   pageError.value = "";
   try {
-    status.value = await startWorkflow(requestText.value);
-    await refreshAll();
+    const response = await startDiscussion(requestText.value);
+    discussionId.value = response.discussionId;
+    discussionMessages.value = response.history;
+    discussionComplete.value = false;
+    activeSideTab.value = "discussion";
   } catch (error) {
-    pageError.value = error.response?.data?.message || "任务创建失败，请稍后重试。";
+    pageError.value = error.response?.data?.message || "无法开始需求讨论，请稍后重试。";
   } finally {
-    loading.value = false;
+    discussionLoading.value = false;
   }
 }
 
-async function retryWorkflow() {
-  await runWorkflow();
+async function handleSendMessage(message) {
+  if (!discussionId.value || message.trim().length === 0) return;
+
+  discussionLoading.value = true;
+  try {
+    const response = await chatDiscussion(discussionId.value, message);
+    discussionMessages.value = response.history;
+    discussionComplete.value = response.isComplete;
+    activeSideTab.value = "discussion";
+  } catch (error) {
+    pageError.value = error.response?.data?.message || "发送消息失败。";
+  } finally {
+    discussionLoading.value = false;
+  }
+}
+
+async function handleConfirm() {
+  if (!discussionId.value) return;
+
+  discussionLoading.value = true;
+  try {
+    const response = await confirmDiscussion(discussionId.value);
+    status.value = response;
+    discussionId.value = "";
+    discussionMessages.value = [];
+    discussionComplete.value = false;
+    activeSideTab.value = "logs";
+    await refreshAll();
+  } catch (error) {
+    pageError.value = error.response?.data?.message || "确认讨论失败。";
+  } finally {
+    discussionLoading.value = false;
+  }
+}
+
+function handleNavigate(page) {
+  currentPage.value = page;
+}
+
+function clearDiscussionPanel() {
+  discussionId.value = "";
+  discussionMessages.value = [];
+  discussionComplete.value = false;
 }
 
 async function clearLogPanel() {
@@ -91,15 +149,13 @@ async function clearLogPanel() {
 }
 
 function openLink(url) {
-  if (url && actionsEnabled.value) {
+  if (url && result.value?.available === true) {
     window.open(url, "_blank", "noopener,noreferrer");
   }
 }
 
-function scrollLogsToBottom() {
-  if (logPanel.value) {
-    logPanel.value.scrollTop = logPanel.value.scrollHeight;
-  }
+function historyRoleLabel(role) {
+  return role === "ai" ? "[AI]" : "[用户]";
 }
 
 onMounted(async () => {
@@ -110,7 +166,7 @@ onMounted(async () => {
   }
 
   await refreshAll();
-  pollTimer = window.setInterval(refreshAll, 2000);
+  pollTimer = window.setInterval(refreshAll, 3000);
 });
 
 onBeforeUnmount(() => {
@@ -121,240 +177,526 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <main class="app-shell">
-    <header class="topbar">
-      <div class="brand-mark" aria-hidden="true">AI</div>
-      <div>
-        <p class="eyebrow">AI Software Factory</p>
-        <h1>AI 编排平台</h1>
-      </div>
-      <div class="system-pill" :data-status="systemStatus">
-        <span></span>
-        {{ systemStatus }}
-      </div>
-    </header>
+  <div class="app-layout">
+    <Sidebar initial-active-item="home" @navigate="handleNavigate" />
 
-    <section class="workspace-grid">
-      <div class="main-column">
-        <section class="panel input-panel">
-          <div class="section-heading">
-            <div>
-              <h2>输入需求</h2>
-              <p>支持自然语言描述你的应用需求</p>
-            </div>
-            <span>预计耗时 1 ~ 3 分钟</span>
-          </div>
+    <div class="main-shell">
+      <Topbar />
 
-          <div class="prompt-row">
-            <textarea
-              v-model="requestText"
-              placeholder="做一个AI质检助手，支持上传日志文件，分析问题并生成报告"
-              rows="5"
-            ></textarea>
-            <button class="primary-action" :disabled="!canRun" @click="runWorkflow">
-              <span v-if="loading" class="spinner"></span>
-              一键生成并运行
-            </button>
-          </div>
+      <main class="dashboard-grid">
+        <section class="workspace-column">
+          <RequirementInput
+            v-model:request-text="requestText"
+            :examples="examples"
+            :loading="discussionLoading"
+            :disabled="false"
+            @start="handleStartDiscussion"
+          />
 
-          <div class="quick-examples" aria-label="快速示例">
-            <span>快速示例：</span>
-            <button v-for="example in examples" :key="example" type="button" @click="pickExample(example)">
-              {{ example }}
-            </button>
-          </div>
           <p v-if="pageError" class="error-line">{{ pageError }}</p>
-        </section>
 
-        <section class="kpi-grid">
-          <article class="kpi-card">
-            <span>当前任务状态</span>
-            <strong :data-status="statusClass">{{ statusLabel(status?.status) }}</strong>
-            <small>{{ status?.status === "running" ? "任务正常进行中" : "等待执行指令" }}</small>
-          </article>
-          <article class="kpi-card">
-            <span>当前阶段</span>
-            <strong>{{ currentStage }}</strong>
-            <small>由后端状态接口同步</small>
-          </article>
-          <article class="kpi-card">
-            <span>预计完成时间</span>
-            <strong>{{ remaining }}</strong>
-            <small>预计剩余时间</small>
-          </article>
-          <article class="kpi-card">
-            <span>测试通过率</span>
-            <strong>{{ testPassRate }}</strong>
-            <small>完成后显示</small>
-          </article>
-        </section>
+          <div class="discussion-panel-shell">
+            <DiscussionPanel
+              :messages="discussionMessages"
+              :discussion-id="discussionId"
+              :is-complete="discussionComplete"
+              :loading="discussionLoading"
+              @send="handleSendMessage"
+              @confirm="handleConfirm"
+              @clear="clearDiscussionPanel"
+            />
+          </div>
 
-        <section class="panel">
-          <div class="section-heading compact">
-            <h2>执行流程</h2>
-            <span>当前进度 {{ status?.progress || 0 }}%</span>
-          </div>
-          <div class="flow-meta">
-            <div>
-              <span>当前产物</span>
-              <strong>{{ currentArtifactType }}</strong>
+          <section class="workflow-panel">
+            <div class="section-title-row">
+              <h2>执行流程</h2>
             </div>
-            <div>
-              <span>进度说明</span>
-              <strong>{{ designProgressMessage }}</strong>
-            </div>
-            <div>
-              <span>预计剩余</span>
-              <strong>{{ status?.estimatedRemaining || "--" }}</strong>
-            </div>
-          </div>
-          <div class="stepper">
-            <article v-for="step in steps" :key="step.key" class="step-item" :data-status="step.status">
-              <div class="step-index">
-                <span v-if="step.status === 'success'">✓</span>
-                <span v-else>{{ step.index }}</span>
-              </div>
-              <div class="step-content">
-                <h3>{{ step.title }}</h3>
-                <p>{{ step.detail }}</p>
-                <small v-if="step.status === 'success'">耗时 {{ step.duration }}</small>
-                <small v-else-if="step.error">{{ step.error }}</small>
-                <div v-if="step.status === 'running'" class="progress-track">
-                  <span :style="{ width: `${step.progress}%` }"></span>
+
+            <div class="workflow-stepper">
+              <div
+                v-for="step in workflowSteps"
+                :key="step.title"
+                class="step-item"
+                :data-status="step.status"
+              >
+                <div class="step-index">{{ step.index }}</div>
+                <div class="step-copy">
+                  <strong>{{ step.title }}</strong>
+                  <span>{{ step.description }}</span>
                 </div>
               </div>
-            </article>
-          </div>
-          <div v-if="status?.status === 'error'" class="failure-box">
-            <strong>{{ status.error }}</strong>
-            <button type="button" @click="retryWorkflow">重试</button>
-          </div>
-        </section>
-      </div>
-
-      <aside class="panel log-card">
-        <div class="section-heading compact">
-          <div>
-            <h2>实时日志</h2>
-            <p><span class="live-dot"></span> 实时</p>
-          </div>
-          <button type="button" class="ghost-button" @click="clearLogPanel">清空</button>
-        </div>
-        <div ref="logPanel" class="log-panel" aria-label="实时日志">
-          <p v-if="logs.length === 0" class="empty-log">暂无日志</p>
-          <div v-for="entry in logs" :key="`${entry.time}-${entry.agent}-${entry.message}`" class="log-line" :data-level="entry.level">
-            <span>{{ entry.time }}</span>
-            <strong>[{{ entry.agent }}]</strong>
-            <em>{{ entry.message }}</em>
-          </div>
-        </div>
-      </aside>
-    </section>
-
-    <section class="bottom-grid">
-      <section class="panel agent-panel">
-        <div class="section-heading compact">
-          <h2>参与 Agent 列表</h2>
-        </div>
-        <div class="agent-table">
-          <div class="agent-row header">
-            <span>Agent名称</span>
-            <span>角色</span>
-            <span>状态</span>
-            <span>使用模型</span>
-            <span>执行耗时</span>
-          </div>
-          <div v-for="agent in agents" :key="agent.name" class="agent-row">
-            <span class="agent-name">{{ agent.name }}</span>
-            <span>{{ agent.role }}</span>
-            <span class="status-badge" :data-status="agent.status">
-              {{ statusLabel(agent.status) }}
-              <i v-if="agent.status === 'running'">{{ agent.progress }}%</i>
-            </span>
-            <span>{{ agent.model }}</span>
-            <span>{{ agent.duration }}</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="panel result-panel">
-        <div class="section-heading compact">
-          <div>
-            <h2>结果与操作</h2>
-            <p>任务完成后可进行以下操作</p>
-          </div>
-        </div>
-        <section class="design-result" :data-empty="!designAvailable">
-          <div class="section-heading compact design-heading">
-            <div>
-              <h3>产品设计结果</h3>
-              <p>PRD 与 UI 规范由后端设计阶段实时产出</p>
             </div>
-          </div>
-          <div v-if="designAvailable" class="design-grid">
-            <article class="design-card markdown-card">
-              <h3>PRD 摘要</h3>
-              <pre>{{ result.prdMarkdown }}</pre>
-            </article>
-            <article class="design-card">
-              <h3>页面清单</h3>
-              <ul>
-                <li v-for="pageSpec in result.pageSpecs" :key="pageSpec.name">
-                  <strong>{{ pageSpec.name }}</strong>
-                  <p>{{ pageSpec.description }}</p>
-                  <span>{{ pageSpec.sections.join(" / ") }}</span>
-                </li>
-              </ul>
-            </article>
-            <article class="design-card">
-              <h3>用户流程</h3>
-              <ul>
-                <li v-for="flow in result.userFlowSpecs" :key="flow.name">
-                  <strong>{{ flow.name }}</strong>
-                  <span>{{ flow.steps.join(" -> ") }}</span>
-                </li>
-              </ul>
-            </article>
-            <article class="design-card">
-              <h3>组件建议</h3>
-              <ul>
-                <li v-for="component in result.componentSpecs" :key="component.name">
-                  <strong>{{ component.name }}</strong>
-                  <p>{{ component.description }}</p>
-                  <span>{{ component.capabilities.join(" / ") }}</span>
-                </li>
-              </ul>
-            </article>
-            <article class="design-card full-width">
-              <h3>UI 规范</h3>
-              <ul class="guideline-list">
-                <li v-for="guideline in result.uiGuidelines" :key="guideline">{{ guideline }}</li>
-              </ul>
-            </article>
-          </div>
-          <div v-else class="design-empty">
-            <strong>设计结果尚未生成</strong>
-            <p>运行 Product Agent 和 Design Agent 后，这里会显示 PRD、页面清单、用户流程和组件建议。</p>
-          </div>
-        </section>
-        <div class="result-actions">
-          <button type="button" :disabled="!actionsEnabled" @click="openLink(result.projectUrl)">
-            <strong>打开生成的项目</strong>
-            <span>启动前端应用</span>
-          </button>
-          <button type="button" :disabled="!actionsEnabled" @click="openLink(result.reportUrl)">
-            <strong>查看测试报告</strong>
-            <span>Playwright 报告</span>
-          </button>
-          <button type="button" :disabled="!actionsEnabled" @click="openLink(result.zipUrl)">
-            <strong>下载代码包</strong>
-            <span>ZIP 压缩包</span>
-          </button>
-        </div>
-        <p class="result-note">设计结果生成后会先开放结构化查看；项目、报告和代码包操作仍在完整流程完成后启用。</p>
-      </section>
-    </section>
 
-    <footer>© 2025 AI Software Factory. All rights reserved.</footer>
-  </main>
+            <div class="summary-grid">
+              <article class="summary-card status-box">
+                <div class="summary-icon blue">〰</div>
+                <div>
+                  <span>当前任务状态</span>
+                  <strong>{{ status?.status === 'success' ? '已完成' : status?.status === 'error' ? '执行失败' : '需求讨论中' }}</strong>
+                  <small>{{ status?.designProgressMessage || 'AI 正在与您确认需求细节' }}</small>
+                </div>
+              </article>
+
+              <article class="summary-card">
+                <div class="summary-icon indigo">▦</div>
+                <div>
+                  <span>当前阶段</span>
+                  <strong>{{ status?.currentStage || '需求讨论' }}</strong>
+                  <small>Requirement Agent 执行中</small>
+                </div>
+              </article>
+
+              <article class="summary-card">
+                <div class="summary-icon light">◷</div>
+                <div>
+                  <span>预计完成时间</span>
+                  <strong>{{ status?.estimatedCompletion || '--:--' }}</strong>
+                  <small>预计剩余时间</small>
+                </div>
+              </article>
+
+              <article class="summary-card progress-box">
+                <div class="progress-circle">
+                  <span>{{ progressPercent || 72 }}%</span>
+                </div>
+                <div>
+                  <span>需求完整度</span>
+                  <strong>{{ progressPercent || 72 }}%</strong>
+                  <small>已识别 {{ recognizedInfoCount }}/20 项关键信息</small>
+                </div>
+              </article>
+            </div>
+          </section>
+        </section>
+
+        <aside class="sidebar-column">
+          <section class="side-card log-card fixed-log-card">
+            <div class="side-card-head">
+              <div>
+                <h2>实时日志</h2>
+              </div>
+              <button
+                v-if="activeSideTab === 'logs'"
+                type="button"
+                class="small-ghost"
+                @click="clearLogPanel"
+              >
+                清空
+              </button>
+            </div>
+
+            <div class="log-tabs">
+              <button :data-active="activeSideTab === 'discussion'" @click="activeSideTab = 'discussion'">需求讨论</button>
+              <button :data-active="activeSideTab === 'logs'" @click="activeSideTab = 'logs'">系统日志</button>
+            </div>
+
+            <div v-if="activeSideTab === 'discussion'" class="log-feed">
+              <div v-for="(message, index) in discussionMessages" :key="`history-${index}`" class="log-line discussion-line">
+                <span>{{ `10:${`${15 + index * 2}`.padStart(2, '0')}` }}</span>
+                <strong>{{ historyRoleLabel(message.role) }}</strong>
+                <em>{{ message.content }}</em>
+              </div>
+              <p v-if="discussionMessages.length === 0" class="empty-tip">讨论进行中...</p>
+            </div>
+
+            <div v-else class="log-feed">
+              <div v-for="entry in logs" :key="`${entry.time}-${entry.agent}-${entry.message}`" class="log-line">
+                <span>{{ entry.time }}</span>
+                <strong>[{{ entry.agent }}]</strong>
+                <em>{{ entry.message }}</em>
+              </div>
+              <p v-if="logs.length === 0" class="empty-tip">暂无日志</p>
+            </div>
+          </section>
+
+          <AgentTable :agents="agents" />
+          <DesignResult :result="result" @open-link="openLink" />
+        </aside>
+      </main>
+
+      <footer class="page-footer">© 2025 AI Software Factory. All rights reserved.</footer>
+    </div>
+  </div>
 </template>
+
+<style scoped>
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+.main-shell {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 18px 14px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 16px;
+  align-items: start;
+}
+
+.workspace-column,
+.sidebar-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.sidebar-column {
+  align-self: start;
+  position: sticky;
+  top: 14px;
+  max-height: calc(100vh - 14px);
+  overflow-y: auto;
+}
+
+.sidebar-column::-webkit-scrollbar {
+  display: none;
+}
+.sidebar-column {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+
+.workflow-panel,
+.side-card,
+.summary-card {
+  background: #ffffff;
+  border: 1px solid #edf1f7;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.04);
+}
+
+.workflow-panel {
+  padding: 18px 20px;
+}
+
+.section-title-row h2 {
+  margin: 0;
+  color: #111827;
+  font-size: 16px;
+}
+
+.workflow-stepper {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #edf1f7;
+}
+
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  min-width: 0;
+}
+
+.step-item::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: #e5eaf1;
+  margin-top: 14px;
+}
+
+.step-item:last-child::after {
+  display: none;
+}
+
+.step-index {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: #eef2f7;
+  color: #111827;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.step-item[data-status="success"] .step-index {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.step-item[data-status="running"] .step-index {
+  background: #2563eb;
+  color: #fff;
+}
+
+.step-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.step-copy strong {
+  color: #111827;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.step-copy span {
+  color: #7c8798;
+  font-size: 13px;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.summary-card {
+  padding: 18px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.summary-card span {
+  display: block;
+  color: #7c8798;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.summary-card strong {
+  display: block;
+  color: #165dff;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.summary-card small {
+  color: #7c8798;
+  font-size: 12px;
+}
+
+.summary-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.summary-icon.blue {
+  background: #eef5ff;
+  color: #2563eb;
+}
+
+.summary-icon.indigo {
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+.summary-icon.light {
+  background: #f8fafc;
+  color: #64748b;
+}
+
+.progress-box {
+  justify-content: flex-start;
+}
+
+.progress-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 999px;
+  background: conic-gradient(#2563eb 0deg, #2563eb 259deg, #dbeafe 259deg, #dbeafe 360deg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.progress-circle span {
+  width: 54px;
+  height: 54px;
+  border-radius: 999px;
+  background: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.side-card {
+  padding: 18px;
+}
+
+.fixed-log-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+  max-height: 320px;
+}
+
+.side-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.side-card-head h2 {
+  margin: 0;
+  color: #111827;
+  font-size: 16px;
+}
+
+.small-ghost {
+  border: 1px solid #e5eaf1;
+  border-radius: 10px;
+  background: #fff;
+  color: #64748b;
+  font-size: 12px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.log-tabs {
+  display: flex;
+  gap: 22px;
+  margin-top: 14px;
+  border-bottom: 1px solid #edf1f7;
+}
+
+.log-tabs button {
+  border: none;
+  background: transparent;
+  color: #7c8798;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 0 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.log-tabs button[data-active="true"] {
+  color: #165dff;
+}
+
+.log-tabs button[data-active="true"]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: #165dff;
+}
+
+.log-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 14px;
+  min-height: 0;
+  height: 230px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.log-feed::-webkit-scrollbar {
+  width: 6px;
+}
+
+.log-feed::-webkit-scrollbar-thumb {
+  background: #d5deec;
+  border-radius: 999px;
+}
+
+.log-feed::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.log-line {
+  display: grid;
+  grid-template-columns: 56px 90px minmax(0, 1fr);
+  gap: 8px;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.log-line strong {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.log-line em {
+  color: #374151;
+  font-style: normal;
+}
+
+.discussion-line strong {
+  color: #16a34a;
+}
+
+.empty-tip {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.error-line {
+  color: #dc2626;
+  font-weight: 600;
+  padding: 12px 14px;
+  background: #fef2f2;
+  border-radius: 12px;
+}
+
+.page-footer {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 12px;
+  padding: 14px 0 0;
+}
+
+@media (max-width: 1400px) {
+  .workflow-stepper {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 14px;
+  }
+
+  .step-item::after {
+    display: none;
+  }
+
+  .summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1180px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
