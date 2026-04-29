@@ -9,6 +9,8 @@ public record ClaudeRunResult(
         String content,
         List<String> artifacts,
         String workspaceDir,
-        String projectDir
+        String projectDir,
+        String docsProjectDir,
+        String projectName
 ) {
 }

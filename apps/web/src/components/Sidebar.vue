@@ -40,7 +40,7 @@ function toggleSidebar() {
       <div class="brand-icon">AI</div>
       <div v-if="!collapsed" class="brand-copy">
         <strong>AI SOFTWARE FACTORY</strong>
-        <span>AI 编排平台</span>
+        <h1 class="brand-title">AI 编排平台</h1>
       </div>
     </div>
 
@@ -128,6 +128,14 @@ function toggleSidebar() {
   color: #111827;
   font-size: 15px;
   font-weight: 700;
+}
+
+.brand-title {
+  color: #111827;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1;
 }
 
 .sidebar-nav {

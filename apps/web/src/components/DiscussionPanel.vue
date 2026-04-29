@@ -28,6 +28,14 @@ const messagePanel = ref(null);
 const canSend = computed(() => userInput.value.trim().length > 0 && !props.loading);
 const canConfirm = computed(() => props.messages.length > 2 && !props.loading);
 const userMessages = computed(() => props.messages.filter((message) => message.role === "user"));
+const latestAiIndex = computed(() => {
+  for (let index = props.messages.length - 1; index >= 0; index -= 1) {
+    if (props.messages[index]?.role === "ai") {
+      return index;
+    }
+  }
+  return -1;
+});
 const completionPercent = computed(() => {
   const count = Math.min(userMessages.value.length * 14, 100);
   return count === 0 ? 8 : count;
@@ -53,6 +61,12 @@ function sendMessage() {
   if (canSend.value) {
     emit("send", userInput.value);
     userInput.value = "";
+  }
+}
+
+function sendOption(option) {
+  if (!props.loading && !props.isComplete) {
+    emit("send", option);
   }
 }
 
@@ -107,6 +121,17 @@ watch(() => props.messages.length, async () => {
             <div class="message-avatar">{{ roleLabel(msg.role) }}</div>
             <div class="message-bubble">
               <div class="message-content">{{ msg.content }}</div>
+              <div v-if="msg.role === 'ai' && index === latestAiIndex && msg.options?.length" class="option-list">
+                <button
+                  v-for="option in msg.options"
+                  :key="option"
+                  type="button"
+                  :disabled="loading || isComplete"
+                  @click="sendOption(option)"
+                >
+                  {{ option }}
+                </button>
+              </div>
               <span class="message-time">{{ 10 + Math.floor(index / 2) }}:{{ `${15 + (index % 5) * 7}`.padStart(2, '0') }}</span>
             </div>
           </div>
@@ -282,6 +307,27 @@ watch(() => props.messages.length, async () => {
   font-size: 14px;
   line-height: 1.7;
   white-space: pre-wrap;
+}
+
+.option-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.option-list button {
+  border: 1px solid #bfdbfe;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #1d4ed8;
+  font-size: 13px;
+  padding: 7px 12px;
+  cursor: pointer;
+}
+
+.option-list button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
 }
 
 .message-time {

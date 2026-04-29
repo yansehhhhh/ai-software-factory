@@ -12,6 +12,7 @@ public record ResultView(
         List<PageSpec> pageSpecs,
         List<ComponentSpec> componentSpecs,
         List<UserFlowSpec> userFlowSpecs,
-        List<String> uiGuidelines
+        List<String> uiGuidelines,
+        List<ArtifactView> artifacts
 ) {
 }

@@ -136,17 +136,19 @@ test("renders the factory workflow dashboard", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "输入需求" })).toBeVisible();
   await expect(page.getByPlaceholder("做一个AI质检助手")).toBeVisible();
   await expect(page.getByRole("heading", { name: "执行流程" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "需求分析" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "需求讨论" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "实时日志" })).toBeVisible();
+
+  // 点击"系统日志"标签以显示系统日志
+  await page.getByRole("button", { name: "系统日志" }).click();
   await expect(page.getByText("[Orchestrator]")).toBeVisible();
+
   await expect(page.getByRole("heading", { name: "参与 Agent 列表" })).toBeVisible();
   await expect(page.getByText("Product Agent")).toBeVisible();
   await expect(page.getByRole("heading", { name: "结果与操作" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "产品设计结果" })).toBeVisible();
-  await expect(page.getByText("Dashboard")).toBeVisible();
-  await expect(page.getByText("RequirementInput")).toBeVisible();
+  await expect(page.getByRole("heading", { name: "PRD / UI 摘要" })).toBeVisible();
 
   await page.getByRole("button", { name: "AI质检助手" }).click();
   await expect(page.getByPlaceholder("做一个AI质检助手")).toHaveValue(/AI质检助手/);
-  await page.getByRole("button", { name: "一键生成并运行" }).click();
+  await page.getByRole("button", { name: "开始需求讨论" }).click();
 });

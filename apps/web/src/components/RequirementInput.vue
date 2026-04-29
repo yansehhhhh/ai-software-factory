@@ -50,7 +50,7 @@ function startDiscussion() {
         <textarea
           :value="requestText"
           @input="$emit('update:requestText', $event.target.value)"
-          placeholder="做一个 AI 质检助手，支持上传日志文件，自动分析问题并生成质检报告，报告包括问题概览、错误统计、趋势分析和优化建议，支持导出 PDF 和 Excel。"
+          placeholder="做一个AI质检助手"
           rows="5"
         ></textarea>
         <span class="text-count">{{ textLength }}/1000</span>

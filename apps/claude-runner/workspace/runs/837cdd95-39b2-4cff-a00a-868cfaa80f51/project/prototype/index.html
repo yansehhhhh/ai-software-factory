@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>需求阶段 HTML 原型</title>
+  <style>
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f5f7fb; color: #172033; }
+    main { max-width: 1120px; margin: 0 auto; padding: 48px 24px; }
+    .hero { margin-bottom: 24px; padding: 32px; border-radius: 24px; color: white; background: linear-gradient(135deg, #2563eb, #7c3aed); box-shadow: 0 24px 80px rgba(37, 99, 235, 0.24); }
+    .grid { display: grid; grid-template-columns: 260px 1fr; gap: 20px; }
+    .panel { background: white; border: 1px solid #e5e7ef; border-radius: 20px; padding: 24px; box-shadow: 0 20px 60px rgba(20, 31, 55, 0.08); }
+    .nav { display: grid; gap: 12px; }
+    .nav span { padding: 12px 14px; border-radius: 14px; background: #eef2ff; color: #3730a3; font-weight: 700; }
+    pre { white-space: pre-wrap; line-height: 1.7; background: #111827; color: #e5e7eb; border-radius: 16px; padding: 20px; overflow: auto; }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <h1>需求阶段 HTML 原型</h1>
+      <p>该原型用于表达需求阶段确认的页面结构、关键路径和交互状态。</p>
+    </section>
+    <section class="grid">
+      <aside class="panel nav">
+        <span>入口页面</span>
+        <span>核心流程</span>
+        <span>结果展示</span>
+        <span>异常状态</span>
+      </aside>
+      <article class="panel">
+        <h2>原型说明</h2>
+        <pre># 原型说明
+
+以下内容根据需求阶段产品产物包自动整理，可作为 HTML 原型和后续 UI 设计输入。
+
+PM 产品产物包已成功生成并保存至目标目录。
+
+**产物包内容概览：**
+
+✅ **产品需求文档 PRD**
+- 产品背景、目标用户、用户问题、产品目标
+- 功能范围（8个模块）和非目标边界
+- 核心用户流程（创作者、读者、管理员）
+- 技术栈确认：Nuxt.js + FastAPI + PostgreSQL
+
+✅ **用户故事 User Stories**
+- 3个用户角色定义
+- 8个 Epic 分类
+- 26个用户故事，包含验收条件（Given-When-Then）
+- 优先级建议（P0 MVP，P1 迭代）
+
+✅ **WWAS 条目**
+- 7个 WWAS 条目（用户管理、文章管理、评论系统、关注系统、标签系统、搜索功能、内容审核）
+- 每个条目包含 Why、What、Acceptance、Scope、Out of Scope
+
+✅ **测试场景 Test Scenarios**
+- 22个测试场景
+- 覆盖 Happy Path、边界场景、异常错误、权限访问、数据校验
+- 测试矩阵总结
+
+✅ **样例数据 Dummy Dataset**
+- 6个数据实体定义（User、Article、Comment、Tag、Follow、ArticleTag）
+- 正常样例（4个用户、3篇文章、3条评论、5个标签）
+- 边界样例（昵称、标题、正文边界）
+- 无效样例（格式错误、超长字段、XSS注入）
+- Demo 和测试使用说明
+
+✅ **待确认问题**
+- 8个待确认问题（审核机制、搜索实现、编辑器选型、通知机制、运营功能、数据统计、UI细节、性能扩展）
+
+**文件位置：**
+```
+workspace/runs/837cdd95-39b2-4cff-a00a-868cfaa80f51/project/pm-product-pack.md
+```
+
+产物包已按照自动化执行规则生成，不等待确认，不反问，不编造业务事实，未知信息已放入待确认问题。可直接用于后续 UI 设计、前后端代码生成和测试阶段。</pre>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

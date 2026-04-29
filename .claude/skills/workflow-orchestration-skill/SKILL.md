@@ -10,4 +10,4 @@
 说明：
 - 这是作者工具层 skill，不等同于平台运行时 `packages/skills/`。
 
-参考资料见 `skills/workflow-orchestration-skill/`、`docs/workflow.md` 与 `apps/server/src/main/java/com/aifactory/workflow/`。
+参考资料见 `skills/workflow-orchestration-skill/`、`project-docs/workflow.md` 与 `apps/server/src/main/java/com/aifactory/workflow/`。

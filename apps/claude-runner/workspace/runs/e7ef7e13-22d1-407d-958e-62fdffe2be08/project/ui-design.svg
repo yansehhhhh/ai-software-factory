@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="860" viewBox="0 0 1280 860">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#eef2ff"/><stop offset="1" stop-color="#f8fafc"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#1e293b" flood-opacity="0.16"/></filter>
+  </defs>
+  <rect width="1280" height="860" fill="url(#bg)"/>
+  <rect x="72" y="64" width="1136" height="732" rx="32" fill="#ffffff" filter="url(#shadow)"/>
+  <rect x="72" y="64" width="1136" height="92" rx="32" fill="#2563eb"/>
+  <text x="120" y="122" font-family="Arial, PingFang SC, sans-serif" font-size="30" font-weight="700" fill="#ffffff">UI 设计图</text>
+  <rect x="120" y="204" width="220" height="520" rx="24" fill="#f1f5f9"/>
+  <rect x="376" y="204" width="760" height="156" rx="24" fill="#dbeafe"/>
+  <rect x="376" y="396" width="360" height="328" rx="24" fill="#f8fafc" stroke="#dbe3ef"/>
+  <rect x="776" y="396" width="360" height="328" rx="24" fill="#f8fafc" stroke="#dbe3ef"/>
+  <circle cx="172" cy="268" r="24" fill="#2563eb"/><rect x="214" y="250" width="88" height="18" rx="9" fill="#94a3b8"/>
+  <circle cx="172" cy="340" r="24" fill="#7c3aed"/><rect x="214" y="322" width="96" height="18" rx="9" fill="#94a3b8"/>
+  <circle cx="172" cy="412" r="24" fill="#0f766e"/><rect x="214" y="394" width="78" height="18" rx="9" fill="#94a3b8"/>
+  <text x="416" y="268" font-family="Arial, PingFang SC, sans-serif" font-size="26" font-weight="700" fill="#172033">主页面视觉层级</text>
+  <text x="416" y="318" font-family="Arial, PingFang SC, sans-serif" font-size="18" fill="#475569">投票系统 UI 设计产物包生成完成 ✅ 📦 UI 产物包内容概览 已成功生成以下 2 个核心文档 + 1 个总结文档，总计约 68 KB ： | 文档名称 | 文件大小 | 内容概要 | 核心内容 | | | | | | | ui guidelines.md | 30 KB | 中文 UI 设计规范 | 色彩、字体、间距、组件、布局、交互、响应式、可访问性、性能优化 | | ui design.svg | 35 KB | UI 设计图 | 4个主要页面布局 + 组件状态展示 + 色彩系统 | | UI产物包总结.</text>
+  <text x="416" y="456" font-family="Arial, PingFang SC, sans-serif" font-size="22" font-weight="700" fill="#172033">核心内容区</text>
+  <text x="816" y="456" font-family="Arial, PingFang SC, sans-serif" font-size="22" font-weight="700" fill="#172033">状态与操作区</text>
+  <rect x="416" y="500" width="280" height="18" rx="9" fill="#cbd5e1"/><rect x="416" y="544" width="220" height="18" rx="9" fill="#e2e8f0"/><rect x="416" y="588" width="250" height="18" rx="9" fill="#e2e8f0"/>
+  <rect x="816" y="500" width="160" height="48" rx="16" fill="#2563eb"/><rect x="996" y="500" width="88" height="48" rx="16" fill="#e2e8f0"/><rect x="816" y="584" width="268" height="18" rx="9" fill="#cbd5e1"/>
+</svg>

@@ -1,0 +1,804 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>简单待办事项应用原型</title>
+  <style>
+    :root {
+      --color-bg: #F6F8FC;
+      --color-bg-gradient-start: #EFF6FF;
+      --color-bg-gradient-end: #F8FAFC;
+      --color-surface: #FFFFFF;
+      --color-surface-muted: #EEF4FF;
+      --color-surface-subtle: #F8FAFC;
+      --color-primary: #2563EB;
+      --color-primary-hover: #1D4ED8;
+      --color-primary-active: #1E40AF;
+      --color-primary-soft: #DBEAFE;
+      --color-success: #16A34A;
+      --color-success-soft: #DCFCE7;
+      --color-danger: #DC2626;
+      --color-danger-hover: #B91C1C;
+      --color-danger-soft: #FEE2E2;
+      --color-text: #0F172A;
+      --color-text-muted: #64748B;
+      --color-text-subtle: #94A3B8;
+      --color-text-inverse: #FFFFFF;
+      --color-border: #E2E8F0;
+      --color-border-strong: #CBD5E1;
+      --color-focus: #93C5FD;
+      --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --radius-full: 999px;
+      --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.06);
+      --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 20px 60px rgba(15, 23, 42, 0.10);
+      --motion-fast: 120ms;
+      --motion-base: 180ms;
+      --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100dvh;
+      font-family: var(--font-sans);
+      color: var(--color-text);
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.12), transparent 34rem),
+        linear-gradient(135deg, var(--color-bg-gradient-start), var(--color-bg-gradient-end));
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    button:disabled {
+      cursor: not-allowed;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 16px;
+      top: -80px;
+      z-index: 100;
+      padding: 10px 14px;
+      border-radius: var(--radius-md);
+      background: var(--color-text);
+      color: white;
+      transition: top var(--motion-base) var(--ease-standard);
+    }
+
+    .skip-link:focus {
+      top: 16px;
+    }
+
+    .page {
+      width: min(100%, 768px);
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+
+    .app-card {
+      overflow: hidden;
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      border-radius: var(--radius-xl);
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: var(--shadow-lg);
+      backdrop-filter: blur(16px);
+    }
+
+    .app-header {
+      padding: 32px 32px 24px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 14px;
+      padding: 6px 10px;
+      border-radius: var(--radius-full);
+      background: var(--color-primary-soft);
+      color: #1E3A8A;
+      font-size: 12px;
+      font-weight: 650;
+      line-height: 16px;
+    }
+
+    .eyebrow-mark {
+      width: 8px;
+      height: 8px;
+      border-radius: var(--radius-full);
+      background: var(--color-primary);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(28px, 5vw, 40px);
+      line-height: 1.15;
+      letter-spacing: -0.04em;
+    }
+
+    .subtitle {
+      max-width: 36rem;
+      margin: 12px 0 0;
+      color: var(--color-text-muted);
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      padding: 0 32px 24px;
+    }
+
+    .summary-card {
+      min-width: 0;
+      padding: 16px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      background: var(--color-surface-subtle);
+    }
+
+    .summary-value {
+      display: block;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 34px;
+      color: var(--color-text);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .summary-label {
+      display: block;
+      margin-top: 2px;
+      color: var(--color-text-muted);
+      font-size: 12px;
+      font-weight: 650;
+      line-height: 16px;
+    }
+
+    .composer {
+      margin: 0 32px 24px;
+      padding: 18px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      background: var(--color-surface);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .composer label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 650;
+      line-height: 20px;
+    }
+
+    .todo-form-row {
+      display: flex;
+      gap: 12px;
+    }
+
+    .todo-input {
+      width: 100%;
+      min-height: 48px;
+      padding: 11px 14px;
+      border: 1px solid var(--color-border-strong);
+      border-radius: var(--radius-md);
+      color: var(--color-text);
+      background: white;
+      font-size: 16px;
+      line-height: 24px;
+      outline: none;
+      transition: border-color var(--motion-fast) var(--ease-standard), box-shadow var(--motion-fast) var(--ease-standard);
+    }
+
+    .todo-input:hover {
+      border-color: #94A3B8;
+    }
+
+    .todo-input:focus {
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px var(--color-focus);
+    }
+
+    .todo-input[aria-invalid="true"] {
+      border-color: var(--color-danger);
+      box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.16);
+    }
+
+    .button-primary {
+      min-width: 112px;
+      min-height: 48px;
+      padding: 0 18px;
+      border: 0;
+      border-radius: var(--radius-md);
+      background: var(--color-primary);
+      color: var(--color-text-inverse);
+      font-size: 16px;
+      font-weight: 650;
+      line-height: 24px;
+      transition: background var(--motion-fast) var(--ease-standard), transform var(--motion-fast) var(--ease-standard), box-shadow var(--motion-fast) var(--ease-standard);
+    }
+
+    .button-primary:hover {
+      background: var(--color-primary-hover);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .button-primary:active {
+      background: var(--color-primary-active);
+      transform: translateY(1px);
+    }
+
+    .button-primary:focus-visible,
+    .delete-button:focus-visible,
+    .todo-checkbox:focus-visible {
+      outline: 3px solid var(--color-focus);
+      outline-offset: 2px;
+    }
+
+    .helper-text,
+    .error-text {
+      min-height: 20px;
+      margin: 8px 0 0;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    .helper-text {
+      color: var(--color-text-muted);
+    }
+
+    .error-text {
+      display: none;
+      color: var(--color-danger);
+      font-weight: 500;
+    }
+
+    .has-error .helper-text {
+      display: none;
+    }
+
+    .has-error .error-text {
+      display: block;
+    }
+
+    .list-section {
+      padding: 0 32px 32px;
+    }
+
+    .section-heading-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 700;
+    }
+
+    .section-meta {
+      color: var(--color-text-muted);
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    .todo-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .todo-item {
+      display: grid;
+      grid-template-columns: 44px minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 10px;
+      min-height: 64px;
+      padding: 10px 12px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      background: var(--color-surface);
+      transition: border-color var(--motion-base) var(--ease-standard), box-shadow var(--motion-base) var(--ease-standard), background var(--motion-base) var(--ease-standard);
+    }
+
+    .todo-item:hover,
+    .todo-item:focus-within {
+      border-color: var(--color-border-strong);
+      box-shadow: var(--shadow-md);
+    }
+
+    .todo-item.completed {
+      background: linear-gradient(0deg, rgba(248, 250, 252, 0.9), rgba(248, 250, 252, 0.9));
+    }
+
+    .checkbox-wrap {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+    }
+
+    .todo-checkbox {
+      width: 22px;
+      height: 22px;
+      accent-color: var(--color-success);
+      cursor: pointer;
+    }
+
+    .todo-content {
+      min-width: 0;
+    }
+
+    .todo-title {
+      display: block;
+      overflow-wrap: anywhere;
+      color: var(--color-text);
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+    }
+
+    .todo-item.completed .todo-title {
+      color: var(--color-text-muted);
+      text-decoration: line-through;
+      text-decoration-thickness: 2px;
+      text-decoration-color: var(--color-success);
+    }
+
+    .todo-status {
+      display: inline-flex;
+      margin-top: 2px;
+      color: var(--color-text-muted);
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    .todo-item.completed .todo-status {
+      color: var(--color-success);
+      font-weight: 650;
+    }
+
+    .delete-button {
+      min-width: 56px;
+      min-height: 44px;
+      padding: 0 12px;
+      border: 0;
+      border-radius: var(--radius-md);
+      background: transparent;
+      color: var(--color-text-muted);
+      font-size: 14px;
+      font-weight: 650;
+      transition: color var(--motion-fast) var(--ease-standard), background var(--motion-fast) var(--ease-standard);
+    }
+
+    .delete-button:hover {
+      background: var(--color-danger-soft);
+      color: var(--color-danger-hover);
+    }
+
+    .empty-state {
+      display: none;
+      padding: 28px 18px;
+      border: 1px dashed var(--color-border-strong);
+      border-radius: var(--radius-lg);
+      background: rgba(248, 250, 252, 0.72);
+      text-align: center;
+    }
+
+    .empty-state svg {
+      display: block;
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 12px;
+      color: var(--color-primary);
+    }
+
+    .empty-state-title {
+      margin: 0;
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 700;
+    }
+
+    .empty-state-text {
+      max-width: 22rem;
+      margin: 6px auto 0;
+      color: var(--color-text-muted);
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    .toast {
+      display: none;
+      margin: 0 32px 32px;
+      padding: 12px 14px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      background: var(--color-text);
+      color: white;
+      font-size: 14px;
+      line-height: 20px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .toast.show {
+      display: block;
+      animation: toast-in var(--motion-slow, 260ms) var(--ease-standard);
+    }
+
+    @keyframes toast-in {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        padding: 24px 16px;
+      }
+
+      .app-header,
+      .list-section {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .summary-grid {
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 8px;
+      }
+
+      .summary-card {
+        padding: 12px;
+      }
+
+      .summary-value {
+        font-size: 24px;
+        line-height: 30px;
+      }
+
+      .composer,
+      .toast {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .todo-form-row {
+        flex-direction: column;
+      }
+
+      .button-primary {
+        width: 100%;
+      }
+
+      .section-heading-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .todo-item {
+        grid-template-columns: 44px minmax(0, 1fr);
+      }
+
+      .delete-button {
+        grid-column: 2;
+        justify-self: start;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+
+  <main id="main-content" class="page" tabindex="-1">
+    <section class="app-card" aria-labelledby="page-title">
+      <header class="app-header">
+        <p class="eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span>个人效率工具</p>
+        <h1 id="page-title">今天要完成什么？</h1>
+        <p class="subtitle">记录任务，逐项完成，保持专注。这个静态原型支持新增、完成、删除和本地保存。</p>
+      </header>
+
+      <section class="summary-grid" aria-label="任务统计">
+        <div class="summary-card">
+          <span id="total-count" class="summary-value">0</span>
+          <span class="summary-label">全部任务</span>
+        </div>
+        <div class="summary-card">
+          <span id="active-count" class="summary-value">0</span>
+          <span class="summary-label">未完成</span>
+        </div>
+        <div class="summary-card">
+          <span id="completed-count" class="summary-value">0</span>
+          <span class="summary-label">已完成</span>
+        </div>
+      </section>
+
+      <form id="todo-form" class="composer" novalidate>
+        <label for="todo-input">新增待办</label>
+        <div class="todo-form-row">
+          <input
+            id="todo-input"
+            class="todo-input"
+            type="text"
+            maxlength="120"
+            placeholder="例如：购买牛奶"
+            autocomplete="off"
+            aria-describedby="todo-helper todo-error"
+          />
+          <button class="button-primary" type="submit">添加任务</button>
+        </div>
+        <p id="todo-helper" class="helper-text">按 Enter 或点击按钮添加，最多 100 个字符。</p>
+        <p id="todo-error" class="error-text" role="alert"></p>
+      </form>
+
+      <section class="list-section" aria-labelledby="list-title">
+        <div class="section-heading-row">
+          <h2 id="list-title" class="section-title">待办列表</h2>
+          <span id="list-meta" class="section-meta">暂无任务</span>
+        </div>
+
+        <ul id="todo-list" class="todo-list" aria-label="待办事项列表"></ul>
+
+        <div id="empty-state" class="empty-state">
+          <svg viewBox="0 0 64 64" aria-hidden="true" fill="none">
+            <rect x="14" y="10" width="36" height="44" rx="8" stroke="currentColor" stroke-width="3" opacity="0.95" />
+            <path d="M23 24h18M23 33h18M23 42h10" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity="0.72" />
+            <path d="M19 12.5C20.6 8.7 25 7 32 7s11.4 1.7 13 5.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity="0.42" />
+          </svg>
+          <p class="empty-state-title">暂无待办</p>
+          <p class="empty-state-text">添加你的第一个任务，开始保持专注。</p>
+        </div>
+      </section>
+
+      <div id="toast" class="toast" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script>
+    const STORAGE_KEY = 'simple-todo-prototype-items';
+    const form = document.querySelector('#todo-form');
+    const input = document.querySelector('#todo-input');
+    const errorText = document.querySelector('#todo-error');
+    const list = document.querySelector('#todo-list');
+    const emptyState = document.querySelector('#empty-state');
+    const totalCount = document.querySelector('#total-count');
+    const activeCount = document.querySelector('#active-count');
+    const completedCount = document.querySelector('#completed-count');
+    const listMeta = document.querySelector('#list-meta');
+    const toast = document.querySelector('#toast');
+
+    let todos = loadTodos();
+    let toastTimer;
+
+    function defaultTodos() {
+      return [
+        {
+          id: 'demo-todo-001',
+          title: '添加第一个待办事项',
+          completed: true,
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString()
+        },
+        {
+          id: 'demo-todo-002',
+          title: '点击复选框完成任务',
+          completed: false,
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString()
+        },
+        {
+          id: 'demo-todo-003',
+          title: '删除不需要的任务',
+          completed: false,
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString()
+        }
+      ];
+    }
+
+    function loadTodos() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) {
+          const initial = defaultTodos();
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(initial));
+          return initial;
+        }
+        const parsed = JSON.parse(raw);
+        if (!Array.isArray(parsed)) return [];
+        return parsed.filter(item => item && typeof item.id === 'string' && typeof item.title === 'string' && typeof item.completed === 'boolean');
+      } catch (error) {
+        showToast('历史数据读取失败，已进入临时模式。');
+        return [];
+      }
+    }
+
+    function saveTodos() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(todos));
+      } catch (error) {
+        showToast('本地保存不可用，刷新后数据可能丢失。');
+      }
+    }
+
+    function render() {
+      list.innerHTML = '';
+
+      todos.forEach(todo => {
+        const item = document.createElement('li');
+        item.className = `todo-item${todo.completed ? ' completed' : ''}`;
+        item.dataset.id = todo.id;
+
+        const checkboxWrap = document.createElement('div');
+        checkboxWrap.className = 'checkbox-wrap';
+
+        const checkbox = document.createElement('input');
+        checkbox.className = 'todo-checkbox';
+        checkbox.type = 'checkbox';
+        checkbox.checked = todo.completed;
+        checkbox.setAttribute('aria-label', `${todo.completed ? '标记为未完成' : '标记为已完成'}：${todo.title}`);
+        checkbox.addEventListener('change', () => toggleTodo(todo.id));
+        checkboxWrap.appendChild(checkbox);
+
+        const content = document.createElement('div');
+        content.className = 'todo-content';
+
+        const title = document.createElement('span');
+        title.className = 'todo-title';
+        title.textContent = todo.title;
+
+        const status = document.createElement('span');
+        status.className = 'todo-status';
+        status.textContent = todo.completed ? '已完成' : '未完成';
+
+        content.appendChild(title);
+        content.appendChild(status);
+
+        const deleteButton = document.createElement('button');
+        deleteButton.className = 'delete-button';
+        deleteButton.type = 'button';
+        deleteButton.textContent = '删除';
+        deleteButton.setAttribute('aria-label', `删除任务：${todo.title}`);
+        deleteButton.addEventListener('click', () => deleteTodo(todo.id));
+
+        item.appendChild(checkboxWrap);
+        item.appendChild(content);
+        item.appendChild(deleteButton);
+        list.appendChild(item);
+      });
+
+      const total = todos.length;
+      const completed = todos.filter(todo => todo.completed).length;
+      const active = total - completed;
+
+      totalCount.textContent = total;
+      activeCount.textContent = active;
+      completedCount.textContent = completed;
+      listMeta.textContent = total === 0 ? '暂无任务' : `${active} 个未完成，${completed} 个已完成`;
+      emptyState.style.display = total === 0 ? 'block' : 'none';
+    }
+
+    function setError(message) {
+      form.classList.toggle('has-error', Boolean(message));
+      input.setAttribute('aria-invalid', message ? 'true' : 'false');
+      errorText.textContent = message || '';
+    }
+
+    function addTodo(title) {
+      const now = new Date().toISOString();
+      todos.unshift({
+        id: `todo-${Date.now()}`,
+        title,
+        completed: false,
+        createdAt: now,
+        updatedAt: now
+      });
+      saveTodos();
+      render();
+    }
+
+    function toggleTodo(id) {
+      todos = todos.map(todo => {
+        if (todo.id !== id) return todo;
+        return {
+          ...todo,
+          completed: !todo.completed,
+          updatedAt: new Date().toISOString()
+        };
+      });
+      saveTodos();
+      render();
+    }
+
+    function deleteTodo(id) {
+      todos = todos.filter(todo => todo.id !== id);
+      saveTodos();
+      render();
+      showToast('任务已删除。');
+    }
+
+    function showToast(message) {
+      if (!toast) return;
+      toast.textContent = message;
+      toast.classList.add('show');
+      window.clearTimeout(toastTimer);
+      toastTimer = window.setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      const value = input.value.trim();
+
+      if (!value) {
+        setError('请输入待办内容。');
+        input.focus();
+        return;
+      }
+
+      if (value.length > 100) {
+        setError('任务内容不能超过 100 个字符。');
+        input.focus();
+        return;
+      }
+
+      setError('');
+      addTodo(value);
+      input.value = '';
+      input.focus();
+    });
+
+    input.addEventListener('input', () => {
+      if (form.classList.contains('has-error')) {
+        setError('');
+      }
+    });
+
+    render();
+  </script>
+</body>
+</html>

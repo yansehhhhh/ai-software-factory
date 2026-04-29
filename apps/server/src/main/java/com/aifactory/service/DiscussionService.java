@@ -6,6 +6,8 @@ import com.aifactory.dto.DiscussionChatResult;
 import com.aifactory.dto.DiscussionMessage;
 import com.aifactory.dto.DiscussionStartResult;
 import com.aifactory.dto.WorkflowStatus;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -18,6 +20,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class DiscussionService {
 
     private final Map<String, DiscussionSession> sessions = new ConcurrentHashMap<>();
+    private final ObjectMapper objectMapper = new ObjectMapper();
     private final WorkflowService workflowService;
     private final ClaudeCodeService claudeCodeService;
 
@@ -35,10 +38,13 @@ public class DiscussionService {
                 taskId,
                 sessionStart.sessionId(),
                 requirement,
-                sessionStart.history()
+                List.of(DiscussionMessage.user("我的需求是：" + requirement))
         );
 
-        List<DiscussionMessage> history = new ArrayList<>(firstTurn.history());
+        ParsedDiscussionResponse parsed = parseDiscussionResponse(firstTurn.content(), firstTurn.isComplete());
+        List<DiscussionMessage> history = new ArrayList<>();
+        history.add(DiscussionMessage.user("我的需求是：" + requirement));
+        history.add(DiscussionMessage.ai(parsed.displayContent(), parsed.options()));
         DiscussionSession session = new DiscussionSession(
                 discussionId,
                 taskId,
@@ -46,11 +52,11 @@ public class DiscussionService {
                 sessionStart.workspaceDir(),
                 requirement,
                 history,
-                firstTurn.isComplete()
+                parsed.complete()
         );
         sessions.put(discussionId, session);
 
-        return new DiscussionStartResult(discussionId, firstTurn.content(), history);
+        return new DiscussionStartResult(discussionId, parsed.displayContent(), history);
     }
 
     public DiscussionChatResult chat(String discussionId, String message) {
@@ -59,19 +65,24 @@ public class DiscussionService {
             throw new IllegalArgumentException("Discussion session not found: " + discussionId);
         }
 
+        List<DiscussionMessage> nextHistory = new ArrayList<>(session.history);
+        nextHistory.add(DiscussionMessage.user(message));
+
         ClaudeMessageResult response = claudeCodeService.sendDiscussionMessage(
                 session.taskId,
                 session.sessionId,
                 message,
-                session.history
+                nextHistory
         );
 
+        ParsedDiscussionResponse parsed = parseDiscussionResponse(response.content(), response.isComplete());
+        nextHistory.add(DiscussionMessage.ai(parsed.displayContent(), parsed.options()));
         session.history.clear();
-        session.history.addAll(response.history());
-        session.completed = response.isComplete() || response.content().contains("[DISCUSSION_COMPLETE]") || response.content().contains("[讨论完成]");
+        session.history.addAll(nextHistory);
+        session.completed = parsed.complete();
 
         return new DiscussionChatResult(
-                session.completed ? "" : response.content(),
+                session.completed ? "" : parsed.displayContent(),
                 session.completed,
                 List.copyOf(session.history)
         );
@@ -97,6 +108,56 @@ public class DiscussionService {
         return List.copyOf(session.history);
     }
 
+    private ParsedDiscussionResponse parseDiscussionResponse(String content, boolean cliComplete) {
+        boolean markerComplete = content != null && (content.contains("[DISCUSSION_COMPLETE]") || content.contains("[讨论完成]"));
+        if (content == null || content.isBlank()) {
+            return new ParsedDiscussionResponse("", List.of(), cliComplete || markerComplete);
+        }
+
+        String cleanedContent = stripMarkdownCodeBlock(content);
+
+        try {
+            JsonNode root = objectMapper.readTree(cleanedContent);
+            boolean complete = cliComplete || markerComplete || root.path("complete").asBoolean(false);
+            String question = root.path("question").asText("").strip();
+            String summary = root.path("summary").asText("").strip();
+            List<String> options = new ArrayList<>();
+            JsonNode optionNodes = root.path("options");
+            if (optionNodes.isArray()) {
+                optionNodes.forEach(option -> {
+                    String value = option.asText("").strip();
+                    if (!value.isEmpty()) {
+                        options.add(value);
+                    }
+                });
+            }
+            String displayContent = complete && !summary.isEmpty() ? summary : question;
+            if (displayContent.isEmpty()) {
+                displayContent = content;
+            }
+            return new ParsedDiscussionResponse(displayContent, complete ? List.of() : options, complete);
+        } catch (Exception ignored) {
+            return new ParsedDiscussionResponse(content, List.of(), cliComplete || markerComplete);
+        }
+    }
+
+    private String stripMarkdownCodeBlock(String content) {
+        if (content == null) {
+            return null;
+        }
+        String stripped = content.strip();
+        if (stripped.startsWith("```json") || stripped.startsWith("```")) {
+            int startIndex = stripped.indexOf('\n');
+            if (startIndex >= 0) {
+                int endIndex = stripped.lastIndexOf("```");
+                if (endIndex > startIndex) {
+                    return stripped.substring(startIndex + 1, endIndex).strip();
+                }
+            }
+        }
+        return stripped;
+    }
+
     private String generateEnrichedRequirement(DiscussionSession session) {
         StringBuilder enriched = new StringBuilder();
         enriched.append(session.requirement).append("\n\n");
@@ -114,6 +175,9 @@ public class DiscussionService {
         }
 
         return enriched.toString();
+    }
+
+    private record ParsedDiscussionResponse(String displayContent, List<String> options, boolean complete) {
     }
 
     private static final class DiscussionSession {

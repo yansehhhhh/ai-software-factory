@@ -33,8 +33,8 @@ class ClaudeEnvironmentControllerTests {
                 true,
                 false,
                 "/tmp/workspace",
-                "workspace/runs",
-                List.of("brainstorming", "writing-plans"),
+                "workspace/runtime",
+                List.of("brainstorming", "writing-plans", "verification-before-completion"),
                 Map.of("bash", true, "edit", true)
         ));
 
@@ -44,7 +44,7 @@ class ClaudeEnvironmentControllerTests {
                 .andExpect(jsonPath("$.cliInstalled").value(true))
                 .andExpect(jsonPath("$.loggedIn").value(false))
                 .andExpect(jsonPath("$.workingDirectory").value("/tmp/workspace"))
-                .andExpect(jsonPath("$.workspaceRoot").value("workspace/runs"))
+                .andExpect(jsonPath("$.workspaceRoot").value("workspace/runtime"))
                 .andExpect(jsonPath("$.availableSkills[0]").value("brainstorming"))
                 .andExpect(jsonPath("$.permissions.bash").value(true));
     }

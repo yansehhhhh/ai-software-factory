@@ -11,7 +11,7 @@
 
 ## 保存位置
 
-`docs/superpowers/plans/YYYY-MM-DD-<feature-name>.md`
+`docs/${项目名称}/产品设计/03-UI设计规范/UI-Design-Spec.md`
 
 ## 核心原则
 

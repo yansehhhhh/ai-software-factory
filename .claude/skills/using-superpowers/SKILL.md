@@ -47,6 +47,8 @@
 ## 在本项目中使用
 
 当用户输入需求时，按以下顺序调用：
-1. `brainstorming` - 需求讨论与设计
-2. `writing-plans` - 制定实现计划
-3. `verification-before-completion` - 完成前验证
+1. `requirements` - 需求分析
+2. `brainstorming` - 需求讨论与设计
+3. `writing-plans` - 制定实现计划
+4. `implementation` - 执行代码实现
+5. `verification-before-completion` - 完成前验证

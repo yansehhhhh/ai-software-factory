@@ -32,33 +32,32 @@ const agents = computed(() => status.value?.agents || []);
 const progressPercent = computed(() => status.value?.progress || 0);
 const recognizedInfoCount = computed(() => discussionMessages.value.filter((message) => message.role === "user").length);
 const workflowSteps = computed(() => {
-  const currentStage = status.value?.currentStage || "";
-  const mapping = [
-    { index: 0, title: "需求输入", description: "已完成" },
-    { index: 1, title: "需求讨论", description: "进行中" },
-    { index: 2, title: "需求分析", description: "等待中" },
-    { index: 3, title: "UI 设计", description: "等待中" },
-    { index: 4, title: "代码生成", description: "等待中" },
-    { index: 5, title: "自动化测试", description: "等待中" }
-  ];
-
-  const activeMap = {
-    "需求讨论": 1,
-    "实现计划": 2,
-    "PRD生成": 2,
-    "UI设计": 3,
-    "验证完成": 5,
-    "已完成": 5
+  const backendSteps = status.value?.steps || [];
+  const inputStep = {
+    index: 0,
+    title: "需求输入",
+    status: backendSteps.length > 0 ? "success" : "running",
+    description: backendSteps.length > 0 ? "已完成" : "进行中"
   };
 
-  const activeIndex = activeMap[currentStage] ?? 1;
-
-  return mapping.map((step, index) => {
-    if (index < activeIndex) return { ...step, status: "success", description: "已完成" };
-    if (index === activeIndex) return { ...step, status: status.value?.status === "error" ? "error" : "running", description: status.value?.status === "error" ? "失败" : "进行中" };
-    return { ...step, status: "pending", description: "等待中" };
-  });
+  return [
+    inputStep,
+    ...backendSteps.map((step) => ({
+      index: step.index,
+      title: step.title,
+      status: step.status,
+      description: stepDescription(step.status)
+    }))
+  ];
 });
+const runningAgent = computed(() => agents.value.find((agent) => agent.status === "running"));
+
+function stepDescription(stepStatus) {
+  if (stepStatus === "success") return "已完成";
+  if (stepStatus === "running") return "进行中";
+  if (stepStatus === "error") return "失败";
+  return "等待中";
+}
 
 async function refreshAll() {
   try {
@@ -149,7 +148,7 @@ async function clearLogPanel() {
 }
 
 function openLink(url) {
-  if (url && result.value?.available === true) {
+  if (url) {
     window.open(url, "_blank", "noopener,noreferrer");
   }
 }
@@ -242,7 +241,7 @@ onBeforeUnmount(() => {
                 <div>
                   <span>当前阶段</span>
                   <strong>{{ status?.currentStage || '需求讨论' }}</strong>
-                  <small>Requirement Agent 执行中</small>
+                  <small>{{ runningAgent ? `${runningAgent.name} 执行中` : '等待阶段启动' }}</small>
                 </div>
               </article>
 
@@ -387,7 +386,7 @@ onBeforeUnmount(() => {
 
 .workflow-stepper {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 8px;
   margin-top: 18px;
   padding-bottom: 12px;

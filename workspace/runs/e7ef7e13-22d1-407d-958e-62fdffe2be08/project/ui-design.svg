@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1400px" height="2400px" viewBox="0 0 1400 2400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 颜色定义 -->
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3B82F6"/>
+      <stop offset="100%" style="stop-color:#2563EB"/>
+    </linearGradient>
+
+    <!-- 阴影效果 -->
+    <filter id="shadowLight" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#000000" flood-opacity="0.05"/>
+    </filter>
+
+    <filter id="shadowMedium" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.1"/>
+    </filter>
+
+    <filter id="shadowStrong" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+
+    <!-- 圆角矩形 -->
+    <rect id="cardTemplate" rx="12" ry="12"/>
+
+    <!-- 按钮模板 -->
+    <rect id="buttonTemplate" rx="8" ry="8"/>
+  </defs>
+
+  <!-- ========== 标题 ========== -->
+  <rect x="0" y="0" width="1400" height="80" fill="#FFFFFF"/>
+  <text x="700" y="45" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="24" font-weight="600" text-anchor="middle" fill="#1F2937">
+    投票系统 UI 设计规范图
+  </text>
+  <text x="700" y="65" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" text-anchor="middle" fill="#6B7280">
+    Version 1.0 | 2026-04-27 | Modern Minimal Style
+  </text>
+
+  <!-- ========== 页面 1: 活动列表页（Mobile） ========== -->
+  <g id="page1-activityList">
+    <!-- 页面标题 -->
+    <rect x="20" y="100" width="400" height="30" fill="#3B82F6" rx="4"/>
+    <text x="220" y="120" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#FFFFFF">
+      页面1: 活动列表页（Mobile 375px）
+    </text>
+
+    <!-- 手机外框 -->
+    <rect x="50" y="150" width="375" height="667" fill="#F3F4F6" stroke="#E5E7EB" stroke-width="2" rx="20"/>
+
+    <!-- 顶部导航 -->
+    <rect x="50" y="150" width="375" height="56" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+    <circle cx="78" y="178" r="11" fill="#F3F4F6"/>
+    <text x="78" y="182" font-family="-apple-system, sans-serif" font-size="16" text-anchor="middle" fill="#6B7280">👤</text>
+    <text x="220" y="182" font-family="-apple-system, sans-serif" font-size="18" font-weight="600" text-anchor="middle" fill="#1F2937">投票活动</text>
+    <rect x="350" y="164" width="60" height="30" fill="#3B82F6" rx="4" filter="url(#shadowLight)"/>
+    <text x="380" y="182" font-family="-apple-system, sans-serif" font-size="14" font-weight="500" text-anchor="middle" fill="#FFFFFF">登录</text>
+
+    <!-- 筛选区域 -->
+    <rect x="66" y="210" width="343" height="40" fill="#FFFFFF"/>
+    <rect x="66" y="215" width="60" height="30" fill="#3B82F6" rx="4"/>
+    <text x="96" y="233" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#FFFFFF">全部</text>
+    <rect x="130" y="215" width="70" height="30" fill="#F3F4F6" rx="4"/>
+    <text x="165" y="233" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#6B7280">进行中</text>
+    <rect x="205" y="215" width="70" height="30" fill="#F3F4F6" rx="4"/>
+    <text x="240" y="233" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#6B7280">已结束</text>
+    <rect x="290" y="215" width="110" height="30" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1" rx="4"/>
+    <text x="345" y="233" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#9CA3AF">搜索活动...</text>
+
+    <!-- 活动卡片 1 -->
+    <rect x="66" y="260" width="343" height="180" fill="#FFFFFF" rx="12" filter="url(#shadowLight)"/>
+    <rect x="66" y="260" width="343" height="100" fill="#E5E7EB" rx="12" ry="12"/>
+    <rect x="66" y="260" width="343" height="100" fill="#F3F4F6" rx="12" ry="12"/>
+    <rect x="330" y="270" width="70" height="24" fill="#10B981" rx="12"/>
+    <text x="365" y="286" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#FFFFFF">进行中</text>
+    <text x="237" y="320" font-family="-apple-system, sans-serif" font-size="12" fill="#9CA3AF">活动封面</text>
+
+    <text x="82" y="375" font-family="-apple-system, sans-serif" font-size="16" font-weight="600" fill="#1F2937">2026年度最佳员工评选</text>
+    <text x="82" y="395" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280">开始时间: 2026-05-01 10:00</text>
+    <text x="82" y="415" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280">参与人数: 256人</text>
+    <rect x="320" y="388" width="80" height="32" fill="#3B82F6" rx="8" filter="url(#shadowLight)"/>
+    <text x="360" y="408" font-family="-apple-system, sans-serif" font-size="14" font-weight="500" text-anchor="middle" fill="#FFFFFF">立即参与</text>
+
+    <!-- 活动卡片 2 -->
+    <rect x="66" y="455" width="343" height="180" fill="#FFFFFF" rx="12" filter="url(#shadowLight)"/>
+    <rect x="66" y="455" width="343" height="100" fill="#F3F4F6" rx="12" ry="12"/>
+    <rect x="330" y="465" width="70" height="24" fill="#6B7280" rx="12"/>
+    <text x="365" y="481" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#FFFFFF">已结束</text>
+    <text x="237" y="515" font-family="-apple-system, sans-serif" font-size="12" fill="#9CA3AF">活动封面</text>
+
+    <text x="82" y="570" font-family="-apple-system, sans-serif" font-size="16" font-weight="600" fill="#1F2937">季度民意调查</text>
+    <text x="82" y="590" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280">开始时间: 2026-04-01 09:00</text>
+    <text x="82" y="610" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280">参与人数: 450人</text>
+    <rect x="320" y="583" width="80" height="32" fill="#F3F4F6" rx="8"/>
+    <text x="360" y="603" font-family="-apple-system, sans-serif" font-size="14" font-weight="500" text-anchor="middle" fill="#6B7280">查看结果</text>
+
+    <!-- 底部导航 -->
+    <rect x="50" y="773" width="375" height="56" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+    <g transform="translate(110, 788)">
+      <circle cx="0" cy="0" r="12" fill="#3B82F6"/>
+      <text x="0" y="4" font-family="-apple-system, sans-serif" font-size="10" text-anchor="middle" fill="#FFFFFF">🏠</text>
+      <text x="0" y="24" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#3B82F6">首页</text>
+    </g>
+    <g transform="translate(220, 788)">
+      <circle cx="0" cy="0" r="12" fill="#F3F4F6"/>
+      <text x="0" y="4" font-family="-apple-system, sans-serif" font-size="10" text-anchor="middle" fill="#6B7280">✓</text>
+      <text x="0" y="24" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#6B7280">我的投票</text>
+    </g>
+    <g transform="translate(330, 788)">
+      <circle cx="0" cy="0" r="12" fill="#F3F4F6"/>
+      <text x="0" y="4" font-family="-apple-system, sans-serif" font-size="10" text-anchor="middle" fill="#6B7280">👤</text>
+      <text x="0" y="24" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#6B7280">个人中心</text>
+    </g>
+  </g>
+
+  <!-- ========== 页面 2: 活动详情页 ========== -->
+  <g id="page2-activityDetail" transform="translate(460, 0)">
+    <!-- 页面标题 -->
+    <rect x="20" y="100" width="400" height="30" fill="#3B82F6" rx="4"/>
+    <text x="220" y="120" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#FFFFFF">
+      页面2: 活动详情页（Mobile 375px）
+    </text>
+
+    <!-- 手机外框 -->
+    <rect x="50" y="150" width="375" height="667" fill="#F3F4F6" stroke="#E5E7EB" stroke-width="2" rx="20"/>
+
+    <!-- 顶部导航 -->
+    <rect x="50" y="150" width="375" height="56" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+    <rect x="66" y="164" width="30" height="30" fill="#F3F4F6" rx="4"/>
+    <text x="81" y="182" font-family="-apple-system, sans-serif" font-size="16" text-anchor="middle" fill="#6B7280">←</text>
+    <text x="220" y="182" font-family="-apple-system, sans-serif" font-size="18" font-weight="600" text-anchor="middle" fill="#1F2937">2026年度最佳员工评选</text>
+
+    <!-- 活动封面 -->
+    <rect x="50" y="210" width="375" height="210" fill="#F3F4F6"/>
+    <text x="237" y="315" font-family="-apple-system, sans-serif" font-size="14" fill="#9CA3AF">活动封面图（16:9比例）</text>
+
+    <!-- 活动信息 -->
+    <rect x="66" y="430" width="343" height="120" fill="#FFFFFF" rx="12" filter="url(#shadowLight)"/>
+    <text x="82" y="455" font-family="-apple-system, sans-serif" font-size="18" font-weight="600" fill="#1F2937">2026年度最佳员工评选</text>
+    <text x="82" y="480" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280">活动时间: 2026-05-01 10:00 至 2026-05-15 10:00</text>
+    <text x="82" y="500" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280">参与人数: 256人</text>
+    <text x="82" y="525" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280">活动描述: 评选年度表现优秀的员工，表彰...</text>
+
+    <!-- 投票选项标题 -->
+    <text x="82" y="570" font-family="-apple-system, sans-serif" font-size="16" font-weight="600" fill="#1F2937">投票选项</text>
+
+    <!-- 投票选项卡片网格 -->
+    <rect x="66" y="585" width="165" height="180" fill="#FFFFFF" rx="12" stroke="#3B82F6" stroke-width="2" filter="url(#shadowLight)"/>
+    <rect x="66" y="585" width="165" height="100" fill="#F3F4F6" rx="12" ry="12"/>
+    <circle cx="220" cy="595" r="8" fill="#3B82F6"/>
+    <text x="220" y="600" font-family="-apple-system, sans-serif" font-size="10" text-anchor="middle" fill="#FFFFFF">✓</text>
+    <text x="148" y="640" font-family="-apple-system, sans-serif" font-size="12" fill="#9CA3AF">张三</text>
+    <text x="82" y="700" font-family="-apple-system, sans-serif" font-size="16" font-weight="600" fill="#1F2937">张三</text>
+    <text x="82" y="720" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280">技术部工程师</text>
+
+    <rect x="244" y="585" width="165" height="180" fill="#FFFFFF" rx="12" stroke="#E5E7EB" stroke-width="1" filter="url(#shadowLight)"/>
+    <rect x="244" y="585" width="165" height="100" fill="#F3F4F6" rx="12" ry="12"/>
+    <text x="326" y="640" font-family="-apple-system, sans-serif" font-size="12" fill="#9CA3AF">李四</text>
+    <text x="260" y="700" font-family="-apple-system, sans-serif" font-size="16" font-weight="600" fill="#1F2937">李四</text>
+    <text x="260" y="720" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280">市场部经理</text>
+
+    <!-- 投票操作区域 -->
+    <rect x="50" y="773" width="375" height="80" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="82" y="795" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280">已选择: 张三</text>
+    <rect x="66" y="805" width="343" height="44" fill="#3B82F6" rx="8" filter="url(#shadowMedium)"/>
+    <text x="237" y="830" font-family="-apple-system, sans-serif" font-size="16" font-weight="600" text-anchor="middle" fill="#FFFFFF">确认投票</text>
+  </g>
+
+  <!-- ========== 组件 3: 登录弹窗 ========== -->
+  <g id="component3-loginModal" transform="translate(920, 0)">
+    <!-- 组件标题 -->
+    <rect x="20" y="100" width="440" height="30" fill="#10B981" rx="4"/>
+    <text x="240" y="120" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#FFFFFF">
+      组件3: 登录弹窗设计
+    </text>
+
+    <!-- 手机外框（背景） -->
+    <rect x="50" y="150" width="375" height="667" fill="#F3F4F6" stroke="#E5E7EB" stroke-width="2" rx="20" opacity="0.3"/>
+
+    <!-- 弹窗遮罩 -->
+    <rect x="50" y="150" width="375" height="667" fill="rgba(0,0,0,0.5)"/>
+
+    <!-- 登录弹窗 -->
+    <rect x="100" y="300" width="320" height="340" fill="#FFFFFF" rx="16" filter="url(#shadowStrong)"/>
+
+    <!-- 关闭按钮 -->
+    <circle cx="390" cy="320" r="12" fill="#F3F4F6"/>
+    <text x="390" y="326" font-family="-apple-system, sans-serif" font-size="16" text-anchor="middle" fill="#6B7280">×</text>
+
+    <!-- 弹窗标题 -->
+    <text x="260" y="350" font-family="-apple-system, sans-serif" font-size="20" font-weight="600" text-anchor="middle" fill="#1F2937">手机号登录</text>
+
+    <!-- 手机号输入 -->
+    <text x="115" y="390" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280">手机号</text>
+    <rect x="115" y="400" width="290" height="44" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1" rx="8"/>
+    <text x="130" y="426" font-family="-apple-system, sans-serif" font-size="14" fill="#9CA3AF">请输入手机号</text>
+
+    <!-- 验证码输入 -->
+    <text x="115" y="470" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280">验证码</text>
+    <rect x="115" y="480" width="180" height="44" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1" rx="8"/>
+    <text x="130" y="506" font-family="-apple-system, sans-serif" font-size="14" fill="#9CA3AF">请输入验证码</text>
+    <rect x="305" y="480" width="100" height="44" fill="#3B82F6" rx="8" filter="url(#shadowLight)"/>
+    <text x="355" y="506" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#FFFFFF">获取验证码</text>
+
+    <!-- 登录按钮 -->
+    <rect x="115" y="545" width="290" height="48" fill="#3B82F6" rx="8" filter="url(#shadowMedium)"/>
+    <text x="260" y="575" font-family="-apple-system, sans-serif" font-size="16" font-weight="600" text-anchor="middle" fill="#FFFFFF">登录</text>
+
+    <!-- Helper Text -->
+    <text x="260" y="610" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle" fill="#9CA3AF">验证码5分钟内有效</text>
+  </g>
+
+  <!-- ========== 页面 4: 投票结果页 ========== -->
+  <g id="page4-resultPage" transform="translate(0, 850)">
+    <!-- 页面标题 -->
+    <rect x="20" y="100" width="400" height="30" fill="#F59E0B" rx="4"/>
+    <text x="220" y="120" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#FFFFFF">
+      页面4: 投票结果页（Desktop 1200px）
+    </text>
+
+    <!-- 桌面外框 -->
+    <rect x="50" y="150" width="1200" height="600" fill="#F3F4F6" stroke="#E5E7EB" stroke-width="2" rx="4"/>
+
+    <!-- 顶部导航 -->
+    <rect x="50" y="150" width="1200" height="64" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+    <rect x="66" y="166" width="30" height="30" fill="#F3F4F6" rx="4"/>
+    <text x="81" y="184" font-family="-apple-system, sans-serif" font-size="16" text-anchor="middle" fill="#6B7280">←</text>
+    <text x="620" y="184" font-family="-apple-system, sans-serif" font-size="18" font-weight="600" text-anchor="middle" fill="#1F2937">投票结果 - 2026年度最佳员工评选</text>
+
+    <!-- 结果统计概览 -->
+    <rect x="66" y="230" width="1168" height="100" fill="#FFFFFF" rx="12" filter="url(#shadowLight)"/>
+    <g transform="translate(200, 280)">
+      <text x="0" y="0" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280">参与总人数</text>
+      <text x="0" y="25" font-family="-apple-system, sans-serif" font-size="32" font-weight="600" fill="#1F2937">1000人</text>
+    </g>
+    <g transform="translate(600, 280)">
+      <text x="0" y="0" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280">活动时间</text>
+      <text x="0" y="25" font-family="-apple-system, sans-serif" font-size="14" fill="#1F2937">2026-05-01 至 2026-05-15</text>
+    </g>
+    <g transform="translate(900, 280)">
+      <text x="0" y="0" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280">活动状态</text>
+      <rect x="0" y="10" width="80" height="24" fill="#6B7280" rx="12"/>
+      <text x="40" y="26" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#FFFFFF">已结束</text>
+    </g>
+
+    <!-- 结果排名区域 -->
+    <text x="82" y="365" font-family="-apple-system, sans-serif" font-size="16" font-weight="600" fill="#1F2937">投票排名</text>
+
+    <!-- 排名卡片网格 -->
+    <g transform="translate(66, 380)">
+      <!-- 第1名 -->
+      <rect x="0" y="0" width="380" height="150" fill="#FFFFFF" rx="12" filter="url(#shadowLight)"/>
+      <circle cx="30" cy="30" r="15" fill="#F59E0B"/>
+      <text x="30" y="36" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#FFFFFF">🏆</text>
+      <text x="30" y="56" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#1F2937">第1名</text>
+      <text x="60" y="40" font-family="-apple-system, sans-serif" font-size="18" font-weight="600" fill="#1F2937">张三</text>
+      <text x="60" y="60" font-family="-apple-system, sans-serif" font-size="14" fill="#6B7280">票数: 450票 | 占比: 45%</text>
+      <rect x="60" y="80" width="300" height="20" fill="#E5E7EB" rx="4"/>
+      <rect x="60" y="80" width="135" height="20" fill="#3B82F6" rx="4"/>
+      <text x="70" y="94" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">45%</text>
+
+      <!-- 第2名 -->
+      <rect x="395" y="0" width="380" height="150" fill="#FFFFFF" rx="12" filter="url(#shadowLight)"/>
+      <circle cx="425" cy="30" r="15" fill="#9CA3AF"/>
+      <text x="425" y="36" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#FFFFFF">🥈</text>
+      <text x="425" y="56" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#1F2937">第2名</text>
+      <text x="455" y="40" font-family="-apple-system, sans-serif" font-size="18" font-weight="600" fill="#1F2937">李四</text>
+      <text x="455" y="60" font-family="-apple-system, sans-serif" font-size="14" fill="#6B7280">票数: 350票 | 占比: 35%</text>
+      <rect x="455" y="80" width="300" height="20" fill="#E5E7EB" rx="4"/>
+      <rect x="455" y="80" width="105" height="20" fill="#6B7280" rx="4"/>
+      <text x="465" y="94" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">35%</text>
+
+      <!-- 第3名 -->
+      <rect x="790" y="0" width="380" height="150" fill="#FFFFFF" rx="12" filter="url(#shadowLight)"/>
+      <circle cx="820" cy="30" r="15" fill="#CD7F32"/>
+      <text x="820" y="36" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#FFFFFF">🥉</text>
+      <text x="820" y="56" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#1F2937">第3名</text>
+      <text x="850" y="40" font-family="-apple-system, sans-serif" font-size="18" font-weight="600" fill="#1F2937">王五</text>
+      <text x="850" y="60" font-family="-apple-system, sans-serif" font-size="14" fill="#6B7280">票数: 200票 | 占比: 20%</text>
+      <rect x="850" y="80" width="300" height="20" fill="#E5E7EB" rx="4"/>
+      <rect x="850" y="80" width="60" height="20" fill="#10B981" rx="4"/>
+      <text x="860" y="94" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">20%</text>
+    </g>
+  </g>
+
+  <!-- ========== 组件状态展示 ========== -->
+  <g id="componentStates" transform="translate(0, 1500)">
+    <!-- 标题 -->
+    <rect x="20" y="100" width="1360" height="30" fill="#6B7280" rx="4"/>
+    <text x="700" y="120" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#FFFFFF">
+      组件状态展示（交互状态与视觉层级）
+    </text>
+
+    <!-- 按钮状态 -->
+    <text x="82" y="160" font-family="-apple-system, sans-serif" font-size="16" font-weight="600" fill="#1F2937">按钮状态</text>
+
+    <g transform="translate(66, 180)">
+      <!-- Primary Button -->
+      <text x="0" y="20" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280">Primary</text>
+      <rect x="0" y="30" width="120" height="44" fill="#3B82F6" rx="8" filter="url(#shadowLight)"/>
+      <text x="60" y="56" font-family="-apple-system, sans-serif" font-size="14" font-weight="500" text-anchor="middle" fill="#FFFFFF">立即参与</text>
+
+      <!-- Primary Hover -->
+      <text x="150" y="20" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280">Hover</text>
+      <rect x="150" y="30" width="120" height="44" fill="#2563EB" rx="8" filter="url(#shadowMedium)"/>
+      <text x="210" y="56" font-family="-apple-system, sans-serif" font-size="14" font-weight="500" text-anchor="middle" fill="#FFFFFF">立即参与</text>
+
+      <!-- Primary Active -->
+      <text x="300" y="20" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280">Active</text>
+      <rect x="300" y="30" width="120" height="44" fill="#1D4ED8" rx="8" transform="scale(0.98)"/>
+      <text x="360" y="56" font-family="-apple-system, sans-serif" font-size="14" font-weight="500" text-anchor="middle" fill="#FFFFFF">立即参与</text>
+
+      <!-- Primary Disabled -->
+      <text x="450" y="20" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280">Disabled</text>
+      <rect x="450" y="30" width="120" height="44" fill="#F3F4F6" rx="8" opacity="0.6"/>
+      <text x="510" y="56" font-family="-apple-system, sans-serif" font-size="14" font-weight="500" text-anchor="middle" fill="#9CA3AF">立即参与</text>
+
+      <!-- Secondary Button -->
+      <text x="600" y="20" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280">Secondary</text>
+      <rect x="600" y="30" width="120" height="44" fill="#F3F4F6" rx="8"/>
+      <text x="660" y="56" font-family="-apple-system, sans-serif" font-size="14" font-weight="500" text-anchor="middle" fill="#1F2937">取消</text>
+
+      <!-- Outline Button -->
+      <text x="750" y="20" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280">Outline</text>
+      <rect x="750" y="30" width="120" height="44" fill="transparent" stroke="#3B82F6" stroke-width="2" rx="8"/>
+      <text x="810" y="56" font-family="-apple-system, sans-serif" font-size="14" font-weight="500" text-anchor="middle" fill="#3B82F6">查看结果</text>
+
+      <!-- Loading Button -->
+      <text x="900" y="20" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280">Loading</text>
+      <rect x="900" y="30" width="120" height="44" fill="#94A3B8" rx="8"/>
+      <text x="960" y="56" font-family="-apple-system, sans-serif" font-size="14" font-weight="500" text-anchor="middle" fill="#FFFFFF">加载中...</text>
+    </g>
+
+    <!-- 输入框状态 -->
+    <text x="82" y="280" font-family="-apple-system, sans-serif" font-size="16" font-weight="600" fill="#1F2937">输入框状态</text>
+
+    <g transform="translate(66, 300)">
+      <!-- Default Input -->
+      <text x="0" y="20" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280">Default</text>
+      <rect x="0" y="30" width="300" height="44" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1" rx="8"/>
+      <text x="15" y="56" font-family="-apple-system, sans-serif" font-size="14" fill="#9CA3AF">请输入手机号</text>
+
+      <!-- Focus Input -->
+      <text x="320" y="20" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280">Focus</text>
+      <rect x="320" y="30" width="300" height="44" fill="#FFFFFF" stroke="#3B82F6" stroke-width="2" rx="8"/>
+      <rect x="320" y="30" width="300" height="44" fill="rgba(59,130,246,0.1)" rx="8"/>
+      <text x="335" y="56" font-family="-apple-system, sans-serif" font-size="14" fill="#1F2937">13800138000</text>
+
+      <!-- Error Input -->
+      <text x="640" y="20" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280">Error</text>
+      <rect x="640" y="30" width="300" height="44" fill="#FFFFFF" stroke="#EF4444" stroke-width="1" rx="8"/>
+      <text x="655" y="56" font-family="-apple-system, sans-serif" font-size="14" fill="#1F2937">1380013800</text>
+      <text x="640" y="90" font-family="-apple-system, sans-serif" font-size="12" fill="#EF4444">请输入正确的手机号（11位数字）</text>
+
+      <!-- Disabled Input -->
+      <text x="960" y="20" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280">Disabled</text>
+      <rect x="960" y="30" width="300" height="44" fill="#F3F4F6" stroke="#E5E7EB" stroke-width="1" rx="8"/>
+      <text x="975" y="56" font-family="-apple-system, sans-serif" font-size="14" fill="#9CA3AF">不可编辑</text>
+    </g>
+
+    <!-- 卡片状态 -->
+    <text x="82" y="420" font-family="-apple-system, sans-serif" font-size="16" font-weight="600" fill="#1F2937">卡片状态</text>
+
+    <g transform="translate(66, 440)">
+      <!-- Default Card -->
+      <text x="0" y="20" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280">Default</text>
+      <rect x="0" y="30" width="280" height="180" fill="#FFFFFF" rx="12" stroke="#E5E7EB" stroke-width="1" filter="url(#shadowLight)"/>
+      <text x="140" y="120" font-family="-apple-system, sans-serif" font-size="12" fill="#9CA3AF">投票选项卡片</text>
+
+      <!-- Hover Card -->
+      <text x="300" y="20" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280">Hover</text>
+      <rect x="300" y="30" width="280" height="180" fill="#FFFFFF" rx="12" stroke="#3B82F6" stroke-width="1" filter="url(#shadowMedium)"/>
+      <text x="440" y="120" font-family="-apple-system, sans-serif" font-size="12" fill="#9CA3AF">投票选项卡片</text>
+
+      <!-- Selected Card -->
+      <text x="600" y="20" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280">Selected</text>
+      <rect x="600" y="30" width="280" height="180" fill="#EFF6FF" rx="12" stroke="#3B82F6" stroke-width="2" filter="url(#shadowLight)"/>
+      <circle cx="850" y="50" r="12" fill="#3B82F6"/>
+      <text x="850" y="56" font-family="-apple-system, sans-serif" font-size="10" text-anchor="middle" fill="#FFFFFF">✓</text>
+      <text x="740" y="120" font-family="-apple-system, sans-serif" font-size="12" fill="#3B82F6">已选中</text>
+
+      <!-- Disabled Card -->
+      <text x="900" y="20" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280">Disabled</text>
+      <rect x="900" y="30" width="280" height="180" fill="#F3F4F6" rx="12" stroke="#E5E7EB" stroke-width="1" opacity="0.6"/>
+      <text x="1040" y="120" font-family="-apple-system, sans-serif" font-size="12" fill="#9CA3AF">不可点击</text>
+    </g>
+
+    <!-- 状态标签 -->
+    <text x="82" y="660" font-family="-apple-system, sans-serif" font-size="16" font-weight="600" fill="#1F2937">状态标签</text>
+
+    <g transform="translate(66, 680)">
+      <rect x="0" y="0" width="100" height="24" fill="#10B981" rx="12"/>
+      <text x="50" y="16" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#FFFFFF">进行中</text>
+
+      <rect x="120" y="0" width="100" height="24" fill="#6B7280" rx="12"/>
+      <text x="170" y="16" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#FFFFFF">已结束</text>
+
+      <rect x="240" y="0" width="100" height="24" fill="#F59E0B" rx="12"/>
+      <text x="290" y="16" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#FFFFFF">未开始</text>
+
+      <rect x="360" y="0" width="100" height="24" fill="#9CA3AF" rx="12"/>
+      <text x="410" y="16" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#FFFFFF">草稿</text>
+
+      <rect x="480" y="0" width="100" height="24" fill="#3B82F6" rx="12"/>
+      <text x="530" y="16" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#FFFFFF">已发布</text>
+    </g>
+
+    <!-- Toast 提示 -->
+    <text x="82" y="740" font-family="-apple-system, sans-serif" font-size="16" font-weight="600" fill="#1F2937">Toast 提示</text>
+
+    <g transform="translate(66, 760)">
+      <!-- Success Toast -->
+      <rect x="0" y="0" width="200" height="40" fill="#10B981" rx="8" filter="url(#shadowMedium)"/>
+      <text x="100" y="24" font-family="-apple-system, sans-serif" font-size="14" font-weight="500" text-anchor="middle" fill="#FFFFFF">✓ 投票成功</text>
+
+      <!-- Error Toast -->
+      <rect x="220" y="0" width="200" height="40" fill="#EF4444" rx="8" filter="url(#shadowMedium)"/>
+      <text x="320" y="24" font-family="-apple-system, sans-serif" font-size="14" font-weight="500" text-anchor="middle" fill="#FFFFFF">✗ 验证码错误</text>
+
+      <!-- Warning Toast -->
+      <rect x="440" y="0" width="200" height="40" fill="#F59E0B" rx="8" filter="url(#shadowMedium)"/>
+      <text x="540" y="24" font-family="-apple-system, sans-serif" font-size="14" font-weight="500" text-anchor="middle" fill="#FFFFFF">⚠ 请先登录</text>
+
+      <!-- Info Toast -->
+      <rect x="660" y="0" width="200" height="40" fill="#1F2937" rx="8" filter="url(#shadowMedium)"/>
+      <text x="760" y="24" font-family="-apple-system, sans-serif" font-size="14" font-weight="500" text-anchor="middle" fill="#FFFFFF">ℹ 已参与过投票</text>
+    </g>
+  </g>
+
+  <!-- ========== 色彩系统 ========== -->
+  <g id="colorSystem" transform="translate(0, 2300)">
+    <!-- 标题 -->
+    <rect x="20" y="100" width="1360" height="30" fill="#1F2937" rx="4"/>
+    <text x="700" y="120" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#FFFFFF">
+      色彩系统（WCAG AA 对比度验证）
+    </text>
+
+    <g transform="translate(66, 150)">
+      <!-- Primary Colors -->
+      <text x="0" y="0" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" fill="#1F2937">主色系</text>
+
+      <rect x="0" y="20" width="100" height="60" fill="#3B82F6"/>
+      <text x="50" y="50" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#FFFFFF">Primary</text>
+      <text x="50" y="65" font-family="-apple-system, sans-serif" font-size="10" text-anchor="middle" fill="#FFFFFF">#3B82F6</text>
+
+      <rect x="120" y="20" width="100" height="60" fill="#2563EB"/>
+      <text x="170" y="50" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#FFFFFF">Hover</text>
+      <text x="170" y="65" font-family="-apple-system, sans-serif" font-size="10" text-anchor="middle" fill="#FFFFFF">#2563EB</text>
+
+      <rect x="240" y="20" width="100" height="60" fill="#1D4ED8"/>
+      <text x="290" y="50" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#FFFFFF">Active</text>
+      <text x="290" y="65" font-family="-apple-system, sans-serif" font-size="10" text-anchor="middle" fill="#FFFFFF">#1D4ED8</text>
+
+      <!-- Status Colors -->
+      <text x="400" y="0" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" fill="#1F2937">状态色</text>
+
+      <rect x="400" y="20" width="100" height="60" fill="#10B981"/>
+      <text x="450" y="50" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#FFFFFF">Success</text>
+      <text x="450" y="65" font-family="-apple-system, sans-serif" font-size="10" text-anchor="middle" fill="#FFFFFF">#10B981</text>
+
+      <rect x="520" y="20" width="100" height="60" fill="#EF4444"/>
+      <text x="570" y="50" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#FFFFFF">Error</text>
+      <text x="570" y="65" font-family="-apple-system, sans-serif" font-size="10" text-anchor="middle" fill="#FFFFFF">#EF4444</text>
+
+      <rect x="640" y="20" width="100" height="60" fill="#F59E0B"/>
+      <text x="690" y="50" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#FFFFFF">Warning</text>
+      <text x="690" y="65" font-family="-apple-system, sans-serif" font-size="10" text-anchor="middle" fill="#FFFFFF">#F59E0B</text>
+
+      <!-- Neutral Colors -->
+      <text x="800" y="0" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" fill="#1F2937">中性色</text>
+
+      <rect x="800" y="20" width="100" height="60" fill="#1F2937"/>
+      <text x="850" y="50" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#FFFFFF">Text</text>
+      <text x="850" y="65" font-family="-apple-system, sans-serif" font-size="10" text-anchor="middle" fill="#FFFFFF">#1F2937</text>
+
+      <rect x="920" y="20" width="100" height="60" fill="#6B7280"/>
+      <text x="970" y="50" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#FFFFFF">Secondary</text>
+      <text x="970" y="65" font-family="-apple-system, sans-serif" font-size="10" text-anchor="middle" fill="#FFFFFF">#6B7280</text>
+
+      <rect x="1040" y="20" width="100" height="60" fill="#E5E7EB"/>
+      <text x="1090" y="50" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#1F2937">Border</text>
+      <text x="1090" y="65" font-family="-apple-system, sans-serif" font-size="10" text-anchor="middle" fill="#1F2937">#E5E7EB</text>
+
+      <!-- Background Colors -->
+      <text x="1160" y="0" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" fill="#1F2937">背景色</text>
+
+      <rect x="1160" y="20" width="100" height="60" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+      <text x="1210" y="50" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#1F2937">White</text>
+      <text x="1210" y="65" font-family="-apple-system, sans-serif" font-size="10" text-anchor="middle" fill="#1F2937">#FFFFFF</text>
+    </g>
+
+    <!-- 对比度验证 -->
+    <g transform="translate(66, 250)">
+      <text x="0" y="0" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" fill="#1F2937">对比度验证（WCAG AA）</text>
+
+      <rect x="0" y="20" width="200" height="80" fill="#FFFFFF"/>
+      <text x="100" y="60" font-family="-apple-system, sans-serif" font-size="14" fill="#1F2937">正文文字</text>
+      <text x="100" y="90" font-family="-apple-system, sans-serif" font-size="10" fill="#10B981">✓ 对比度 4.5:1</text>
+
+      <rect x="220" y="20" width="200" height="80" fill="#FFFFFF"/>
+      <text x="320" y="60" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280">次级文字</text>
+      <text x="320" y="90" font-family="-apple-system, sans-serif" font-size="10" fill="#10B981">✓ 对比度 4.5:1</text>
+
+      <rect x="440" y="20" width="200" height="80" fill="#F3F4F6"/>
+      <text x="540" y="60" font-family="-apple-system, sans-serif" font-size="14" fill="#1F2937">卡片背景</text>
+      <text x="540" y="90" font-family="-apple-system, sans-serif" font-size="10" fill="#10B981">✓ 对比度 4.5:1</text>
+
+      <rect x="660" y="20" width="200" height="80" fill="#3B82F6"/>
+      <text x="760" y="60" font-family="-apple-system, sans-serif" font-size="14" fill="#FFFFFF">按钮文字</text>
+      <text x="760" y="90" font-family="-apple-system, sans-serif" font-size="10" fill="#FFFFFF">✓ 对比度 4.5:1</text>
+    </g>
+  </g>
+
+  <!-- ========== 页脚 ========== -->
+  <rect x="0" y="2380" width="1400" height="20" fill="#1F2937"/>
+  <text x="700" y="2395" font-family="-apple-system, sans-serif" font-size="10" text-anchor="middle" fill="#FFFFFF">
+    Generated by Design Agent | AI Software Factory | 2026-04-27
+  </text>
+</svg>

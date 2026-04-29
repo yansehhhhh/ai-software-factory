@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="900" viewBox="0 0 1280 900" role="img" aria-labelledby="title desc">
+  <title id="title">公司内部投票网页交互流程图</title>
+  <desc id="desc">展示登录角色分流、员工投票提交、管理员创建管理、结果查看和 Excel 导入的页面交互路径。</desc>
+  <defs><style>.bg{fill:#F9FAFB}.node{fill:#fff;stroke:#E5E7EB;stroke-width:1.5}.primary{fill:#EFF6FF;stroke:#2563EB;stroke-width:2}.admin{fill:#FEF3C7;stroke:#F59E0B;stroke-width:2}.employee{fill:#E0F2FE;stroke:#0EA5E9;stroke-width:2}.system{fill:#F3F4F6;stroke:#9CA3AF;stroke-width:2}.danger{fill:#FEF2F2;stroke:#DC2626;stroke-width:2}.text{fill:#111827;font-family:system-ui}.muted{fill:#4B5563;font-family:system-ui}.h{font-size:16px;font-weight:700}.b{font-size:13px}.s{font-size:12px}.arrow{stroke:#4B5563;stroke-width:2;fill:none;marker-end:url(#m)}</style><marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#4B5563"/></marker></defs>
+  <rect class="bg" width="1280" height="900"/>
+  <text x="40" y="52" class="text" font-size="26" font-weight="800">公司内部投票网页 - 交互流程</text><text x="40" y="82" class="muted b">基于 PRD、页面流转图和业务流程图：登录 → 角色分流 → 员工参与 / 管理员创建管理 → 结束后结果公开</text>
+
+  <rect x="520" y="120" width="240" height="72" rx="16" class="primary"/><text x="592" y="150" class="text h">登录页</text><text x="560" y="174" class="muted b">邮箱/工号 + 密码</text>
+  <rect x="540" y="230" width="200" height="70" rx="35" class="system"/><text x="592" y="260" class="text h">角色判断</text><text x="586" y="284" class="muted b">员工 / 管理员</text>
+  <path d="M640 192 L640 230" class="arrow"/>
+
+  <text x="110" y="146" class="text h">员工路径</text>
+  <rect x="70" y="180" width="250" height="72" rx="16" class="employee"/><text x="142" y="210" class="text h">投票列表</text><text x="100" y="234" class="muted b">全部 / 进行中 / 已结束 / 我已提交</text>
+  <rect x="70" y="300" width="250" height="72" rx="16" class="employee"/><text x="142" y="330" class="text h">投票详情</text><text x="96" y="354" class="muted b">实名/匿名提示 + 题目填写</text>
+  <rect x="70" y="420" width="250" height="72" rx="16" class="employee"/><text x="130" y="450" class="text h">提交确认弹窗</text><text x="96" y="474" class="muted b">提交后不可修改</text>
+  <rect x="70" y="540" width="250" height="72" rx="16" class="employee"/><text x="132" y="570" class="text h">已提交状态</text><text x="104" y="594" class="muted b">锁定答案，不允许修改</text>
+  <rect x="70" y="660" width="250" height="72" rx="16" class="employee"/><text x="142" y="690" class="text h">投票结果页</text><text x="98" y="714" class="muted b">结束后查看图表化统计</text>
+  <path d="M540 265 C430 265 420 216 320 216" class="arrow"/><path d="M195 252 L195 300" class="arrow"/><path d="M195 372 L195 420" class="arrow"/><path d="M195 492 L195 540" class="arrow"/><path d="M195 612 L195 660" class="arrow"/>
+
+  <text x="914" y="146" class="text h">管理员路径</text>
+  <rect x="880" y="180" width="280" height="72" rx="16" class="admin"/><text x="960" y="210" class="text h">管理员工作台</text><text x="920" y="234" class="muted b">概览、最近投票、快捷入口</text>
+  <rect x="880" y="300" width="280" height="72" rx="16" class="admin"/><text x="974" y="330" class="text h">创建投票</text><text x="912" y="354" class="muted b">结束时间、模式、单题/多题、题型</text>
+  <rect x="880" y="420" width="280" height="72" rx="16" class="admin"/><text x="974" y="450" class="text h">投票管理</text><text x="920" y="474" class="muted b">进度、提前结束、查看结果</text>
+  <rect x="880" y="540" width="280" height="72" rx="16" class="admin"/><text x="956" y="570" class="text h">员工账号导入</text><text x="920" y="594" class="muted b">Excel 上传、校验、失败原因</text>
+  <rect x="880" y="660" width="280" height="72" rx="16" class="admin"/><text x="956" y="690" class="text h">结果与实名明细</text><text x="910" y="714" class="muted b">匿名只看汇总，实名可看明细</text>
+  <path d="M740 265 C820 265 820 216 880 216" class="arrow"/><path d="M1020 252 L1020 300" class="arrow"/><path d="M1020 372 L1020 420" class="arrow"/><path d="M1020 492 L1020 540" class="arrow"/><path d="M1020 612 L1020 660" class="arrow"/>
+
+  <rect x="470" y="420" width="340" height="82" rx="16" class="system"/><text x="564" y="452" class="text h">系统校验</text><text x="500" y="476" class="muted b">必答题完成 / 未重复提交 / 未过截止时间</text>
+  <path d="M320 456 L470 456" class="arrow"/><path d="M810 456 L880 456" class="arrow"/>
+  <rect x="470" y="550" width="340" height="72" rx="16" class="danger"/><text x="560" y="580" class="text h">错误 / 异常状态</text><text x="500" y="604" class="muted b">账号错误、无权限、题目错误、文件格式错误</text>
+  <path d="M640 502 L640 550" class="arrow"/>
+
+  <rect x="430" y="700" width="420" height="88" rx="16" class="primary"/><text x="542" y="734" class="text h">结果公开规则</text><text x="468" y="760" class="muted b">投票结束后所有员工可查看统计结果；图表显示票数、占比、平均分和文本汇总。</text><text x="468" y="782" class="muted b">匿名投票不展示投票人与答案映射；实名明细仅管理员可见。</text>
+  <path d="M320 696 L430 744" class="arrow"/><path d="M880 696 L850 744" class="arrow"/>
+
+  <rect x="70" y="800" width="1090" height="56" rx="16" fill="#fff" stroke="#E5E7EB"/><text x="92" y="834" class="muted b">关键交互反馈：Loading 禁止重复点击 · 表单错误就近展示 · 提交/提前结束二次确认 · 空状态提供返回或切换筛选 · 图表提供文字摘要和数据标签</text>
+</svg>

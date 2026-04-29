@@ -1,0 +1,23 @@
+{
+  "taskId": "manual-prd-check",
+  "sessionId": "manual-prd-check-1777339144848",
+  "claudeSessionId": "e2c231bb-300c-46fc-abbc-c3399e5c21b7",
+  "workspaceDir": "workspace/runtime/manual-prd-check",
+  "projectDir": "workspace/runtime/manual-prd-check/project",
+  "docsProjectDir": "/Users/yansehhhhh/code/ai-software-factory/docs/温暖文艺风格的静态个人博客/产品设计",
+  "projectName": "温暖文艺风格的静态个人博客",
+  "contextDir": "workspace/runtime/manual-prd-check/context",
+  "requirement": "做一个温暖文艺风格的静态个人博客，包含首页、文章列表和文章详情页，不需要登录和数据库。",
+  "history": [
+    {
+      "role": "user",
+      "content": "[prd] 做一个温暖文艺风格的静态个人博客，包含首页、文章列表和文章详情页，不需要登录和数据库。"
+    },
+    {
+      "role": "ai",
+      "content": "已生成完成，文件路径如下：\n\n`workspace/runtime/manual-prd-check/project/pm-product-pack.md`\n\n内容已包含：\n- 1. 产品需求文档 PRD\n- 2. 用户故事 User Stories\n- 3. WWAS 条目\n- 4. 测试场景 Test Scenarios\n- 5. 样例数据 Dummy Dataset\n- 6. 待确认问题"
+    }
+  ],
+  "createdAt": "2026-04-28T01:19:04.848Z",
+  "provider": "claude-cli"
+}
