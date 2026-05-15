@@ -40,10 +40,16 @@ function startDiscussion() {
   <section class="input-panel">
     <div class="panel-title-row">
       <div class="panel-title-main">
-        <h2>输入需求</h2>
+        <h2>需求输入入口</h2>
+        <span>起点</span>
       </div>
-      <p>描述您想要构建的应用或功能</p>
     </div>
+
+    <div class="step-title-line">
+      <strong>1</strong>
+      <span>输入需求</span>
+    </div>
+    <p class="input-helper">用自然语言描述您想构建的系统或功能</p>
 
     <div class="input-main-row">
       <div class="textarea-shell">
@@ -66,12 +72,7 @@ function startDiscussion() {
       </div>
     </div>
 
-    <div class="quick-examples" aria-label="快速示例">
-      <span>快速示例：</span>
-      <button v-for="example in examples" :key="example" type="button" @click="pickExample(example)">
-        {{ example }}
-      </button>
-    </div>
+    <p class="input-tip">提示：输入越详细，AI 生成的产物越准确</p>
   </section>
 </template>
 
@@ -79,22 +80,20 @@ function startDiscussion() {
 .input-panel {
   background: #ffffff;
   border: 1px solid #edf1f7;
-  border-radius: 16px;
-  padding: 18px 20px;
-  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.04);
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
 }
 
 .panel-title-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 16px;
-  flex-wrap: wrap;
+  margin-bottom: 12px;
 }
 
 .panel-title-main {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .panel-title-row h2 {
@@ -103,17 +102,52 @@ function startDiscussion() {
   font-size: 16px;
 }
 
-.panel-title-row p {
-  margin: 0;
-  color: #9aa4b2;
+.panel-title-main span {
+  border-radius: 999px;
+  background: #dcfce7;
+  color: #16a34a;
+  padding: 4px 9px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.step-title-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.step-title-line strong {
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: #2563eb;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 13px;
 }
 
+.step-title-line span {
+  color: #111827;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.input-helper,
+.input-tip {
+  margin: 0 0 10px;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
 .input-main-row {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 220px;
-  gap: 18px;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .textarea-shell {
@@ -122,14 +156,14 @@ function startDiscussion() {
 
 .textarea-shell textarea {
   width: 100%;
-  min-height: 120px;
+  min-height: 132px;
   resize: none;
   border: 1px solid #dfe7f3;
-  border-radius: 12px;
-  background: #ffffff;
-  padding: 16px 18px 28px;
-  font-size: 15px;
-  line-height: 1.8;
+  border-radius: 10px;
+  background: #fbfdff;
+  padding: 14px 14px 28px;
+  font-size: 13px;
+  line-height: 1.7;
   color: #111827;
   box-sizing: border-box;
   outline: none;
@@ -150,19 +184,19 @@ function startDiscussion() {
 .action-column {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .primary-action {
   width: 100%;
-  min-height: 56px;
+  min-height: 42px;
   border: none;
-  border-radius: 12px;
-  background: linear-gradient(180deg, #2f7cff 0%, #165dff 100%);
+  border-radius: 8px;
+  background: linear-gradient(135deg, #4f46e5 0%, #2563eb 100%);
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   display: inline-flex;
   align-items: center;
@@ -187,28 +221,6 @@ function startDiscussion() {
   font-size: 13px;
 }
 
-.quick-examples {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 12px;
-}
-
-.quick-examples span {
-  color: #7c8798;
-  font-size: 13px;
-}
-
-.quick-examples button {
-  border: 1px solid #eef2f7;
-  border-radius: 999px;
-  background: #f8fafc;
-  color: #475569;
-  font-size: 13px;
-  padding: 8px 14px;
-  cursor: pointer;
-}
 
 @media (max-width: 1180px) {
   .input-main-row {

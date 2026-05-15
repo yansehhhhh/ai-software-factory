@@ -1,0 +1,26 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="540" fill="#F8FAFC"/>
+  <rect x="80" y="72" width="800" height="396" rx="32" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <rect x="112" y="104" width="736" height="92" rx="24" fill="#EFF6FF" stroke="#BFDBFE"/>
+  <text x="144" y="146" fill="#1F2937" font-size="30" font-family="Arial, sans-serif" font-weight="700">PC 设计图已取消</text>
+  <text x="144" y="176" fill="#1D4ED8" font-size="16" font-family="Arial, sans-serif" font-weight="700">本阶段 UI 设计以移动端 H5 主原型为准</text>
+
+  <text x="144" y="248" fill="#1F2937" font-size="20" font-family="Arial, sans-serif" font-weight="700">请改为评审以下移动端 H5 产物：</text>
+  <g font-family="Arial, sans-serif" font-size="16" fill="#475569">
+    <text x="168" y="286">• UI原型/设计稿/index.html：移动端 H5 主原型</text>
+    <text x="168" y="320">• UI原型/设计稿/mobile.svg：移动端 H5 总览图</text>
+    <text x="168" y="354">• UI原型/组件库/component-library.html：移动端 H5 组件库</text>
+    <text x="168" y="388">• UI原型/交互原型/交互说明.md：移动端操作路径</text>
+  </g>
+
+  <rect x="640" y="238" width="150" height="220" rx="28" fill="#111827"/>
+  <rect x="650" y="250" width="130" height="196" rx="20" fill="#F8FAFC"/>
+  <rect x="662" y="270" width="106" height="42" rx="14" fill="#EFF6FF" stroke="#BFDBFE"/>
+  <rect x="662" y="324" width="48" height="38" rx="12" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <rect x="720" y="324" width="48" height="38" rx="12" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <rect x="662" y="374" width="106" height="42" rx="14" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <rect x="650" y="424" width="130" height="22" rx="10" fill="#FFFFFF" stroke="#E5E7EB"/>
+
+  <rect x="144" y="424" width="378" height="44" rx="22" fill="#2563EB"/>
+  <text x="210" y="452" fill="#FFFFFF" font-size="16" font-family="Arial, sans-serif" font-weight="700">继续查看移动端 H5 原型与组件库</text>
+</svg>

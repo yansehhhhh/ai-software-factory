@@ -49,8 +49,7 @@ docs/${项目名称}/
     ├── 01-变更记录/
     │   └── 版本说明.md
     ├── 02-产品需求文档/
-    │   ├── PRD.md
-    │   └── PRD.docx
+    │   └── PRD.md
     ├── 03-UI设计规范/
     │   └── UI-Design-Spec.md
     ├── 04-流程图/
@@ -65,7 +64,7 @@ docs/${项目名称}/
 - 先创建完整的一级目录和必要的二级目录（即使暂不需要也创建空目录）
 - 二级目录带序号，序号用两位数字
 - 文件名使用中文或英文+扩展名
-- 流程图使用 PlantUML（.puml 文件）
+- 流程图使用 PlantUML（.puml 文件），不要额外输出同名 `.svg` 文件
 
 ### 步骤 3：生成各文档
 
@@ -137,17 +136,7 @@ PRD 文档应包含以下章节：
 - 用户故事格式：作为[角色]，我希望[行为]，以便[目的]
 - 验收标准使用 Given-When-Then 格式
 
-#### 3.3 生成 Word 版本（02-产品需求文档/PRD.docx）
-
-在生成 PRD.md 后，使用 Python 的 `python-docx` 库将其转换为 .docx 格式。参考脚本：
-
-```bash
-python scripts/md2docx.py <PRD.md路径> <输出.docx路径>
-```
-
-如果 `python-docx` 未安装，先提示用户安装：`pip install python-docx`。
-
-#### 3.4 UI 设计规范（03-UI设计规范/UI-Design-Spec.md）
+#### 3.3 UI 设计规范（03-UI设计规范/UI-Design-Spec.md）
 
 ```markdown
 # ${项目名称} - UI 设计规范
@@ -184,7 +173,7 @@ python scripts/md2docx.py <PRD.md路径> <输出.docx路径>
 ## 8. 暗色模式（如适用）
 ```
 
-#### 3.5 流程图（04-流程图/）
+#### 3.4 流程图（04-流程图/）
 
 使用 PlantUML 语法生成以下图表：
 
@@ -199,11 +188,13 @@ python scripts/md2docx.py <PRD.md路径> <输出.docx路径>
 
 **页面流转图**（页面流转图.puml，如适用）：
 - 展示各页面/模块之间的跳转关系
+- 只输出 `.puml` 文件，页面会直接预览 PlantUML
+- PlantUML 第一行使用纯 `@startuml`，不要写 `@startuml 页面流转图` 等中文 diagram id
 
 PlantUML 示例：
 
 ```plantuml
-@startuml 业务流程图
+@startuml
 title ${项目名称} - 核心业务流程
 
 actor 用户 as User
@@ -245,13 +236,10 @@ plantuml -png docs/${项目名称}/产品设计/04-流程图/*.puml
   - 建表脚本使用 Flyway 命名（如 `V1.0__init.sql`）
 - PlantUML 文件中的标题和注释使用中文
 - 生成过程中如遇到不确定的业务细节，停下来向用户确认，不要自行编造
-- Word 文档的样式应简洁专业，使用标题层级保持导航清晰
 - 如果项目根目录下已有 `docs/` 目录，直接在现有目录下创建子目录
 
 ## 脚本依赖
 
-本 skill 依赖以下脚本和工具：
+本 skill 依赖以下工具：
 
-- `scripts/md2docx.py`：将 Markdown 转换为 Word 文档
-- `python-docx`：Python 库，用于生成 .docx 文件
 - `plantuml`（可选）：用于将 .puml 文件渲染为图片

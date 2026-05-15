@@ -8,7 +8,7 @@ const props = defineProps({
   }
 });
 
-const emit = defineEmits(["openLink"]);
+const emit = defineEmits(["openLink", "previewProject"]);
 
 const stageLabels = {
   requirement: "需求阶段产物",
@@ -22,13 +22,11 @@ const stageLabels = {
 
 const artifactNameMap = {
   "PRD.md": "prd",
-  "PRD.docx": "需求文档",
   "UI-Design-Spec.md": "UI设计规范",
   "UI-Design.svg": "UI设计图",
   "业务流程图.puml": "业务流程图",
   "信息架构图.puml": "信息架构图",
   "页面流转图.puml": "页面流转图",
-  "页面流转图.svg": "页面流转图预览",
   "术语表.md": "术语表",
   "组件清单.md": "组件清单",
   "交互说明.md": "交互说明",
@@ -110,56 +108,45 @@ function openLink(url) {
     emit("openLink", url);
   }
 }
+
+function previewProject() {
+  emit("previewProject", resultProjectPath.value);
+}
+
+const resultProjectPath = computed(() => {
+  const projectArtifact = (props.result?.artifacts || []).find((artifact) => artifact?.stage === "code" && artifact?.type === "directory" && artifact?.path);
+  if (projectArtifact?.path) return projectArtifact.path;
+  const projectUrl = props.result?.projectUrl || "";
+  const query = projectUrl.split("?")[1] || "";
+  return new URLSearchParams(query).get("path") || projectUrl;
+});
 </script>
 
 <template>
   <section class="result-panel">
     <div class="panel-head">
       <h2>结果与操作</h2>
-      <p>任务完成后可进行以下操作</p>
-    </div>
-
-    <div class="artifact-groups">
-      <div v-for="group in groupedArtifacts" :key="group.stage" class="artifact-group">
-        <h3>{{ group.label }}</h3>
-        <div v-if="group.artifacts.length" class="artifact-list">
-          <button
-            v-for="artifact in group.artifacts"
-            :key="`${artifact.stage}-${artifact.path}`"
-            type="button"
-            class="artifact-item"
-            @click="openLink(artifact.path)"
-          >
-            <span class="artifact-name">{{ artifact.name }}</span>
-            <small class="artifact-type">{{ artifact.type }}</small>
-          </button>
-        </div>
-        <p v-else class="empty-artifacts">等待生成</p>
-      </div>
+      <p>任务完成后可打开产物或下载代码包</p>
     </div>
 
     <div class="result-actions">
-      <button type="button" :disabled="!result?.available" @click="openLink(result.projectUrl)">
-        <span class="action-icon blue">🖥</span>
+      <button type="button" :disabled="!result?.available" @click="previewProject">
+        <span class="action-icon blue">PRJ</span>
         <strong>打开生成的项目</strong>
-        <span>启动前端应用</span>
+        <span>安装依赖并启动预览</span>
       </button>
       <button type="button" :disabled="!result?.available" @click="openLink(result.reportUrl)">
-        <span class="action-icon green">📄</span>
+        <span class="action-icon green">RPT</span>
         <strong>查看测试报告</strong>
         <span>Playwright 报告</span>
       </button>
       <button type="button" :disabled="!result?.available" @click="openLink(result.zipUrl)">
-        <span class="action-icon purple">⬇</span>
+        <span class="action-icon purple">ZIP</span>
         <strong>下载代码包</strong>
         <span>ZIP 压缩包</span>
       </button>
     </div>
 
-    <div v-if="markdownSummary" class="markdown-preview">
-      <h3>PRD / UI 摘要</h3>
-      <pre>{{ markdownSummary }}</pre>
-    </div>
   </section>
 </template>
 
@@ -167,9 +154,9 @@ function openLink(url) {
 .result-panel {
   background: #ffffff;
   border: 1px solid #edf1f7;
-  border-radius: 16px;
-  padding: 18px;
-  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.04);
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
 }
 
 .panel-head h2 {
@@ -256,24 +243,24 @@ function openLink(url) {
 }
 
 .result-actions {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 14px;
 }
 
 .result-actions button {
   border: 1px solid #edf1f7;
-  border-radius: 14px;
-  background: #f8fbff;
-  min-height: 132px;
-  padding: 18px 14px;
-  display: flex;
-  flex-direction: column;
+  border-radius: 10px;
+  background: #fbfdff;
+  min-height: 54px;
+  padding: 9px 11px;
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
   align-items: center;
-  justify-content: center;
-  gap: 8px;
-  text-align: center;
+  justify-content: start;
+  gap: 10px;
+  text-align: left;
   cursor: pointer;
 }
 
@@ -283,14 +270,16 @@ function openLink(url) {
 }
 
 .action-icon {
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 10px;
   font-style: normal;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
 .action-icon.blue {
@@ -310,12 +299,14 @@ function openLink(url) {
 
 .result-actions strong {
   color: #111827;
-  font-size: 16px;
+  font-size: 13px;
 }
 
-.result-actions span:last-child {
+.result-actions button > span:last-child {
+  grid-column: 2;
   color: #7c8798;
-  font-size: 13px;
+  font-size: 11px;
+  margin-top: -16px;
 }
 
 .markdown-preview {

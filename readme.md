@@ -231,11 +231,11 @@ ai-software-factory/
 │           ├── playwright.config.js
 │           └── e2e/
 │
-├── generated/                        # AI 动态生成产物
-│   └── ai-quality-inspector/
-│       ├── frontend/
-│       ├── backend/
-│       ├── tests/
+├── generated/                        # AI 动态生成的前后端工程产物
+│   └── ${项目英文名}/                 # 与 docs/${项目名称}/ 对应，例如 HX-Meeting
+│       ├── frontend/                 # 前端工程代码
+│       ├── backend/                  # 后端工程代码
+│       ├── tests/                    # 工程级自动化测试
 │       └── generation-report.json
 │
 ├── tests/                            # 平台级测试
@@ -249,15 +249,13 @@ ai-software-factory/
 │       │   ├── 01-变更记录/
 │       │   │   └── 版本说明.md
 │       │   ├── 02-产品需求文档/
-│       │   │   ├── PRD.md
-│       │   │   └── PRD.docx
+│       │   │   └── PRD.md
 │       │   ├── 03-UI设计规范/
 │       │   │   └── UI-Design-Spec.md
 │       │   ├── 04-流程图/
 │       │   │   ├── 业务流程图.puml
 │       │   │   ├── 信息架构图.puml
-│       │   │   ├── 页面流转图.puml
-│       │   │   └── 页面流转图.svg
+│       │   │   └── 页面流转图.puml
 │       │   └── 05-附录/
 │       │       └── 术语表.md
 │       ├── UI原型/

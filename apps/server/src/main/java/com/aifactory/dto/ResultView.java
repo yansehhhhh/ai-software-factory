@@ -5,6 +5,7 @@ import java.util.List;
 public record ResultView(
         boolean available,
         boolean designAvailable,
+        String projectName,
         String projectUrl,
         String reportUrl,
         String zipUrl,

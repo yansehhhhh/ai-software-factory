@@ -48,15 +48,21 @@ export const defaultPipeline = [
     status: "queued"
   },
   {
+    id: "backend-development",
+    title: "后端开发",
+    owner: "Backend Agent",
+    status: "queued"
+  },
+  {
     id: "frontend-development",
     title: "前端开发",
     owner: "Frontend Agent",
     status: "queued"
   },
   {
-    id: "backend-development",
-    title: "后端开发",
-    owner: "Backend Agent",
+    id: "development-integration",
+    title: "开发联调",
+    owner: "Frontend Agent",
     status: "queued"
   },
   {
@@ -66,8 +72,8 @@ export const defaultPipeline = [
     status: "queued"
   },
   {
-    id: "playwright-execution",
-    title: "Playwright执行",
+    id: "e2e-acceptance-testing",
+    title: "E2E验收测试",
     owner: "QA Agent",
     status: "queued"
   },

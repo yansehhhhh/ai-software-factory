@@ -1,0 +1,459 @@
+{
+  "schemaVersion" : 1,
+  "taskId" : "6b74f1b8-1725-4755-877f-ea35e6436020",
+  "requirement" : "恢复流程：移动端应用：会议室预约系统",
+  "sessionId" : "workflow-6b74f1b8-1725-4755-877f-ea35e6436020",
+  "status" : "awaiting_review",
+  "currentStage" : "架构设计",
+  "currentArtifactType" : "架构设计",
+  "designProgressMessage" : "架构设计 已完成，请确认产物或提交修订反馈",
+  "progress" : 53,
+  "estimatedRemaining" : "等待确认",
+  "estimatedCompletion" : "等待用户确认",
+  "error" : null,
+  "updatedAt" : "2026-05-11T05:41:21.795724Z",
+  "result" : {
+    "available" : true,
+    "designAvailable" : true,
+    "projectName" : "移动端应用：会议室预约系统",
+    "projectUrl" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E6%81%A2%E5%A4%8D%E6%B5%81%E7%A8%8B%EF%BC%9A%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1",
+    "reportUrl" : null,
+    "zipUrl" : null,
+    "prdMarkdown" : "移动端应用：会议室预约系统 的设计产物已生成：\n- 版本说明.md\n- PRD\n- 需求文档 Word\n- UI 设计规范\n- 业务流程图\n- 信息架构图\n- 页面流转图\n- 术语表\n- UI 设计规范\n- HTML 原型\n- 桌面端设计图\n- 移动端设计图\n- 组件清单\n- 组件库 HTML\n- 组件库设计图\n- 交互说明\n- 交互流程图\n- 响应式断点参考\n- 响应式 HTML 预览\n- 移动端适配图",
+    "pageSpecs" : [ ],
+    "componentSpecs" : [ ],
+    "userFlowSpecs" : [ ],
+    "uiGuidelines" : [ ],
+    "artifacts" : [ {
+      "stage" : "requirement",
+      "name" : "版本说明.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F01-%E5%8F%98%E6%9B%B4%E8%AE%B0%E5%BD%95%2F%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E.md",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "PRD",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F02-%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%2FPRD.md",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "需求文档 Word",
+      "type" : "word",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F02-%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%2FPRD.docx",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "UI 设计规范",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F03-UI%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83%2FUI-Design-Spec.md",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "业务流程图",
+      "type" : "plantuml",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F04-%E6%B5%81%E7%A8%8B%E5%9B%BE%2F%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E5%9B%BE.puml",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "信息架构图",
+      "type" : "plantuml",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F04-%E6%B5%81%E7%A8%8B%E5%9B%BE%2F%E4%BF%A1%E6%81%AF%E6%9E%B6%E6%9E%84%E5%9B%BE.puml",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "页面流转图",
+      "type" : "plantuml",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F04-%E6%B5%81%E7%A8%8B%E5%9B%BE%2F%E9%A1%B5%E9%9D%A2%E6%B5%81%E8%BD%AC%E5%9B%BE.puml",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "术语表",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F05-%E9%99%84%E5%BD%95%2F%E6%9C%AF%E8%AF%AD%E8%A1%A8.md",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "UI 设计规范",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F03-UI%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83%2FUI-Design-Spec.md",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "HTML 原型",
+      "type" : "html",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E8%AE%BE%E8%AE%A1%E7%A8%BF%2Findex.html",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "桌面端设计图",
+      "type" : "image",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E8%AE%BE%E8%AE%A1%E7%A8%BF%2Fdesktop.svg",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "移动端设计图",
+      "type" : "image",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E8%AE%BE%E8%AE%A1%E7%A8%BF%2Fmobile.svg",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "组件清单",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%BB%84%E4%BB%B6%E5%BA%93%2F%E7%BB%84%E4%BB%B6%E6%B8%85%E5%8D%95.md",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "组件库 HTML",
+      "type" : "html",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%BB%84%E4%BB%B6%E5%BA%93%2Fcomponent-library.html",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "组件库设计图",
+      "type" : "image",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%BB%84%E4%BB%B6%E5%BA%93%2Fcomponent-library.svg",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "交互说明",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E4%BA%A4%E4%BA%92%E5%8E%9F%E5%9E%8B%2F%E4%BA%A4%E4%BA%92%E8%AF%B4%E6%98%8E.md",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "交互流程图",
+      "type" : "image",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E4%BA%A4%E4%BA%92%E5%8E%9F%E5%9E%8B%2Finteraction-flow.svg",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "响应式断点参考",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%2F%E5%93%8D%E5%BA%94%E5%BC%8F%E6%96%AD%E7%82%B9%E5%8F%82%E8%80%83.md",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "响应式 HTML 预览",
+      "type" : "html",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%2Fresponsive-preview.html",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "移动端适配图",
+      "type" : "image",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%2Fmobile-preview.svg",
+      "downloadable" : true
+    }, {
+      "stage" : "architecture",
+      "name" : "系统架构设计",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E6%81%A2%E5%A4%8D%E6%B5%81%E7%A8%8B%EF%BC%9A%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%2F01-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%2F%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1.md",
+      "downloadable" : true
+    }, {
+      "stage" : "architecture",
+      "name" : "系统架构图",
+      "type" : "plantuml",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E6%81%A2%E5%A4%8D%E6%B5%81%E7%A8%8B%EF%BC%9A%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%2F01-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%2F%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%9B%BE.puml",
+      "downloadable" : true
+    }, {
+      "stage" : "architecture",
+      "name" : "系统架构图预览",
+      "type" : "image",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E6%81%A2%E5%A4%8D%E6%B5%81%E7%A8%8B%EF%BC%9A%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%2F01-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%2F%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%9B%BE.svg",
+      "downloadable" : true
+    }, {
+      "stage" : "architecture",
+      "name" : "部署架构",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E6%81%A2%E5%A4%8D%E6%B5%81%E7%A8%8B%EF%BC%9A%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%2F03-%E9%83%A8%E7%BD%B2%E6%9E%B6%E6%9E%84%2F%E9%83%A8%E7%BD%B2%E6%9E%B6%E6%9E%84.md",
+      "downloadable" : true
+    }, {
+      "stage" : "architecture",
+      "name" : "技术选型",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E6%81%A2%E5%A4%8D%E6%B5%81%E7%A8%8B%EF%BC%9A%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%2F04-%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%2F%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B.md",
+      "downloadable" : true
+    } ]
+  },
+  "logs" : [ {
+    "time" : "11:22:27",
+    "agent" : "Orchestrator",
+    "level" : "info",
+    "message" : "已从历史项目恢复：移动端应用：会议室预约系统"
+  }, {
+    "time" : "11:27:38",
+    "agent" : "OpenSpec",
+    "level" : "info",
+    "message" : "开始探索修订阶段修订：UI设计"
+  }, {
+    "time" : "11:30:43",
+    "agent" : "OpenSpec",
+    "level" : "info",
+    "message" : "已进入 `/opsx:explore` 探索模式，并仅做读取/分析，未修改任何文件。\n\n## 探索结论\n\n当前 UI 设计阶段产物整体完整，允许范围内文件齐全：\n\n```text\ndocs/移动端应用：会议室预约系统/\n├── 产品设计/03-UI设计规范/UI-Design-Spec.md\n└── UI原型/\n    ├── 设计稿/index.html、desktop.svg、mobile.svg\n    ├── 组件库/组件清单.md、component-library.html、component-library.svg\n    ├── 交互原型/交互说明.md、interaction-flow.svg\n    └── 移动端适配/响应式断点参考.md、responsive-preview.html、mobile-preview.svg\n```\n\n同时检查到 OpenSpec 当前存在 `revise-ui-design`，状态为 `complete`。本次 `changeId=未创建`，且用户尚未填写具体反馈，因此更适合先做“通用修订建议收敛”，不建议直接进入改稿。\n\n## 阶段修订建议\n\n### 1. 补强 UI 设计规范的“可执行性”\n\n`UI-Design-Spec.md` 当前偏阶段总览，已经覆盖页面、状态、业务规则和移动端可用性，但可进一步补充：\n\n- 设计令牌索引：主色、状态色、字号、圆角、阴影、间距与组件库保持一致。\n- 页面优先级：明确 V1.0 必须优先评审的关键页面。\n- 状态命名映射：尤其是 `已取消`、`自动释放`、`违规记录` 的关系，避免产品、测试、开发理解不一致。\n- 验收清单：增加“UI 阶段验收项”，例如状态可见性、底部安全区、320px 无横向滚动、扫码失败态可恢复等。\n\n### 2. 补齐高风险业务场景原型\n\n当前 `index.html` 已覆盖主链路，但部分场景仍可加强：\n\n| 场景 | 当前情况 | 建议 |\n|---|---|---|\n| 贵宾服务确认 | 管理首页有入口，但缺少独立详情页 | 增加“服务确认详情 / 拒绝原因 / 确认结果” |\n| 二维码管理 | 有会议室维护和重新生成弹窗 | 增加“二维码详情、旧码失效、生成成功提示” |\n| 审批冲突 | 文档有说明，原型主要展示冲突通过 | 增加“审批时会议室已被占用，禁止通过”的异常态 |\n| 发起转让 | 有接收转让页，缺少选择接收人页 | 增加“搜索同事、限制期不可选、责任提示” |\n| SSO 失效 | 文档有空态表述，原型状态页较弱 | 增加“重新通过化学通进入”的恢复路径 |\n\n### 3. 修正或澄清容易误解的展示\n\n原型中“预约详情 / 签到”页面的状态轨迹同时展示了：\n\n```text\n扫码签到：待签到\n未签到处理：自动释放\n```\n\n这在设计评审中可能被理解为“自动释放已发生”。建议后续修订时改为更明确的表达，例如：\n\n```text\n未签到处理：未触发 / 逾期后自动释放\n```\n\n或将自动释放放入规则提示，而不是当前状态轨迹。\n\n### 4. 保持 HTML、SVG、Markdown 三类产物一致\n\n如果后续修改 `index.html` 或组件库 HTML，需要同步检查：\n\n- `desktop.svg`\n- `mobile.svg`\n- `component-library.svg`\n- `interaction-flow.svg`\n- `mobile-preview.svg`\n- 对应 Markdown 说明\n\n否则前端结果面板中可能出现“HTML 原型已更新，但 SVG 评审图仍是旧版本”的不一致。\n\n### 5. 增强移动端适配验证说明\n\n`响应式断点参考.md` 已较完整。后续可补充一小节“原型验证建议”：\n\n- 320px 宽度检查筛选表单是否换行。\n- 375px / 390px 检查底部导航与 CTA 是否遮挡内容。\n- 430px+ 检查内容最大宽度与居中策略。\n- 横屏下检查审批详情、预约填写页底部固定操作是否可见。\n\n## 主要风险\n\n1. **无具体用户反馈，修订方向可能发散**  \n   当前只能基于完整性和一致性提出建议，无法判断用户真正不满意的是视觉风格、交互路径、业务覆盖还是响应式表现。\n\n2. **阶段产物联动成本较高**  \n   UI 原型包含 HTML、SVG、Markdown 多种产物，任一处改动都可能需要同步多份文件。\n\n3. **业务状态命名存在潜在歧义**  \n   PRD 中“系统自动取消”和 UI 中“自动释放”表达目的不同，但如果不做映射说明，后续开发和测试可能产生状态枚举差异。\n\n4. **管理员链路原型深度略低于普通用户链路**  \n   普通用户预约、签到、转让较完整；管理员的服务确认、二维码详情、审批冲突态可以继续细化。\n\n5. **移动端 H5 与真实 WebView 行为仍需验证**  \n   文档已写安全区和 WebView 兼容要求，但当前探索未运行浏览器或截图验证，后续若进入实施应做实际预览检查。\n\n## 下一步计划建议\n\n建议按以下顺序进入修订：\n\n1. **先确认修订目标**\n   - 是偏视觉美化？\n   - 偏业务场景补全？\n   - 偏移动端适配？\n   - 偏与 PRD / 流程图一致性？\n\n2. **优先做低风险文档修订**\n   - 更新 `UI-Design-Spec.md`\n   - 增加状态映射、验收清单、关键页面覆盖说明\n\n3. **再补强交互说明**\n   - 更新 `UI原型/交互原型/交互说明.md`\n   - 补充服务确认、审批冲突、二维码失效、SSO 失效、发起转让等路径\n\n4. **最后同步原型文件**\n   - 修改 `设计稿/index.html`\n   - 必要时同步 SVG 评审图和响应式预览\n\n5. **修订完成后做一致性检查**\n   - 检查 PRD、UI 规范、组件清单、交互说明、HTML 原型的状态名和业务规则是否一致。\n\n当前建议不要直接修改，先让用户补充具体反馈或选择修订方向。"
+  }, {
+    "time" : "11:31:28",
+    "agent" : "OpenSpec",
+    "level" : "info",
+    "message" : "开始制定计划阶段修订：UI设计"
+  }, {
+    "time" : "11:35:51",
+    "agent" : "OpenSpec",
+    "level" : "info",
+    "message" : "已创建/补齐 OpenSpec change：`revise-ui-design`\n\n位置：\n- `openspec/changes/revise-ui-design/`\n\n已生成产物：\n- `proposal.md`：说明本次 UI 设计阶段修订的原因、范围与影响。\n- `design.md`：定义无具体反馈时的受控轻量修订策略。\n- `specs/ui-design-revision/spec.md`：约束修订范围、业务规则保留、一致性、移动端可用性等要求。\n- `tasks.md`：后续 `/opsx:apply` 可执行的修订任务清单。\n\n校验结果：\n- `openspec status --change revise-ui-design` 显示 `4/4 artifacts complete`\n- 当前 OpenSpec change 已 ready for implementation。\n- 本次仅创建/更新 OpenSpec 变更文件，未修改阶段产物本身。\n\n下一步可运行：\n- `/opsx:apply revise-ui-design`"
+  }, {
+    "time" : "11:38:35",
+    "agent" : "OpenSpec",
+    "level" : "info",
+    "message" : "开始执行计划阶段修订：UI设计"
+  }, {
+    "time" : "11:47:51",
+    "agent" : "OpenSpec",
+    "level" : "info",
+    "message" : "## Implementation Complete\n\n**Change:** `revise-ui-design`  \n**Schema:** `spec-driven`  \n**Progress:** 11/11 tasks complete\n\n### 本次完成的修订\n\n- 统一 UI 阶段产物中的业务用语：\n  - `预定权限` → `预约权限`\n  - `二维码签到` → `扫码签到`\n  - `超2小时 / 15分钟 / 30天内` 等文案统一为空格规范写法\n- 对齐状态与动作标签：\n  - 补充/统一 `签到失败`、`转让待确认`、`已转让`、`转让失效`、`二维码已生成`、`旧二维码失效`\n  - 将会议室二维码动作统一为 `查看二维码 / 重新生成二维码`\n- 校验 UI 设计规范中的原型文件引用，当前列出的 `UI原型/` 路径均存在。\n- 轻量修订响应式说明与预览，强化：\n  - 44px 触控热区\n  - bottom safe-area\n  - 底部固定操作不遮挡\n  - 状态/错误提示不得仅依赖颜色\n- 复核核心业务规则未改变：\n  - 30 天预约窗口\n  - 15 分钟时间粒度\n  - 超 2 小时审批\n  - 贵宾服务确认\n  - 扫码签到\n  - 未签到自动释放\n  - 取消/转让截止\n  - 违规限制\n  - 会议室二维码维护\n\n### 修改文件\n\n本次按允许范围修订了以下 UI 阶段产物：\n\n- `docs/移动端应用：会议室预约系统/产品设计/03-UI设计规范/UI-Design-Spec.md`\n- `docs/移动端应用：会议室预约系统/UI原型/交互原型/交互说明.md`\n- `docs/移动端应用：会议室预约系统/UI原型/交互原型/interaction-flow.svg`\n- `docs/移动端应用：会议室预约系统/UI原型/组件库/组件清单.md`\n- `docs/移动端应用：会议室预约系统/UI原型/组件库/component-library.html`\n- `docs/移动端应用：会议室预约系统/UI原型/组件库/component-library.svg`\n- `docs/移动端应用：会议室预约系统/UI原型/设计稿/index.html`\n- `docs/移动端应用：会议室预约系统/UI原型/设计稿/desktop.svg`\n- `docs/移动端应用：会议室预约系统/UI原型/设计稿/mobile.svg`\n- `docs/移动端应用：会议室预约系统/UI原型/移动端适配/响应式断点参考.md`\n- `docs/移动端应用：会议室预约系统/UI原型/移动端适配/responsive-preview.html`\n- `docs/移动端应用：会议室预约系统/UI原型/移动端适配/mobile-preview.svg`\n\n### 范围说明\n\n未修改产品需求、架构设计、数据库设计、前后端代码或测试产物。当前工作区存在较多本次操作前已有的范围外变更；本次修订操作仅写入上述 UI 设计阶段允许范围内文件。"
+  }, {
+    "time" : "13:33:32",
+    "agent" : "Orchestrator",
+    "level" : "info",
+    "message" : "UI设计 已确认，继续执行架构设计"
+  }, {
+    "time" : "13:33:32",
+    "agent" : "Architecture Agent",
+    "level" : "info",
+    "message" : "开始生成前后端架构设计产物"
+  }, {
+    "time" : "13:41:21",
+    "agent" : "Architecture Agent",
+    "level" : "info",
+    "message" : "架构设计产物生成完成"
+  }, {
+    "time" : "13:41:21",
+    "agent" : "Orchestrator",
+    "level" : "info",
+    "message" : "架构设计 已进入等待用户确认"
+  } ],
+  "steps" : [ {
+    "index" : 1,
+    "key" : "requirements",
+    "title" : "需求分析",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "需求摘要整理完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 2,
+    "key" : "brainstorming",
+    "title" : "需求讨论",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "需求讨论结论整理完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 3,
+    "key" : "writing-plans",
+    "title" : "制定计划",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "阶段化实现计划整理完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 4,
+    "key" : "product-design-artifacts",
+    "title" : "需求产物生成",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "需求阶段产物生成完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 5,
+    "key" : "ui-design",
+    "title" : "UI设计",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "UI设计已确认",
+    "duration" : "7864s",
+    "error" : null
+  }, {
+    "index" : 6,
+    "key" : "architecture-design",
+    "title" : "架构设计",
+    "status" : "awaiting_review",
+    "progress" : 100,
+    "detail" : "等待用户确认",
+    "duration" : "8333s",
+    "error" : null
+  }, {
+    "index" : 7,
+    "key" : "api-design",
+    "title" : "接口设计",
+    "status" : "pending",
+    "progress" : 0,
+    "detail" : "等待上一步完成",
+    "duration" : "--",
+    "error" : null
+  }, {
+    "index" : 8,
+    "key" : "database-design",
+    "title" : "数据库设计",
+    "status" : "pending",
+    "progress" : 0,
+    "detail" : "等待上一步完成",
+    "duration" : "--",
+    "error" : null
+  }, {
+    "index" : 9,
+    "key" : "frontend-development",
+    "title" : "前端开发",
+    "status" : "pending",
+    "progress" : 0,
+    "detail" : "等待上一步完成",
+    "duration" : "--",
+    "error" : null
+  }, {
+    "index" : 10,
+    "key" : "backend-development",
+    "title" : "后端开发",
+    "status" : "pending",
+    "progress" : 0,
+    "detail" : "等待上一步完成",
+    "duration" : "--",
+    "error" : null
+  }, {
+    "index" : 11,
+    "key" : "test-case-generation",
+    "title" : "测试用例生成",
+    "status" : "pending",
+    "progress" : 0,
+    "detail" : "等待上一步完成",
+    "duration" : "--",
+    "error" : null
+  }, {
+    "index" : 12,
+    "key" : "playwright-execution",
+    "title" : "Playwright执行",
+    "status" : "pending",
+    "progress" : 0,
+    "detail" : "等待上一步完成",
+    "duration" : "--",
+    "error" : null
+  }, {
+    "index" : 13,
+    "key" : "verification-before-completion",
+    "title" : "完成前验证",
+    "status" : "pending",
+    "progress" : 0,
+    "detail" : "等待上一步完成",
+    "duration" : "--",
+    "error" : null
+  }, {
+    "index" : 14,
+    "key" : "delivery",
+    "title" : "交付",
+    "status" : "pending",
+    "progress" : 0,
+    "detail" : "等待上一步完成",
+    "duration" : "--",
+    "error" : null
+  } ],
+  "agents" : [ {
+    "name" : "产品经理",
+    "role" : "需求分析、需求讨论、PRD 与产品产物",
+    "status" : "success",
+    "model" : "product-manager",
+    "duration" : "0s",
+    "progress" : 100
+  }, {
+    "name" : "UI设计师",
+    "role" : "UI 原型、交互说明、设计规范",
+    "status" : "success",
+    "model" : "ui-designer",
+    "duration" : "7864s",
+    "progress" : 100
+  }, {
+    "name" : "架构师",
+    "role" : "系统架构、接口设计、数据库设计",
+    "status" : "success",
+    "model" : "architect",
+    "duration" : "8333s",
+    "progress" : 100
+  }, {
+    "name" : "前端开发工程师",
+    "role" : "前端页面、组件、交互与接口对接",
+    "status" : "pending",
+    "model" : "frontend-engineer",
+    "duration" : "--",
+    "progress" : 0
+  }, {
+    "name" : "后端开发工程师",
+    "role" : "后端接口、服务、数据库相关开发",
+    "status" : "pending",
+    "model" : "backend-engineer",
+    "duration" : "--",
+    "progress" : 0
+  }, {
+    "name" : "测试工程师",
+    "role" : "测试用例、E2E、验证报告与缺陷反馈",
+    "status" : "pending",
+    "model" : "test-engineer",
+    "duration" : "--",
+    "progress" : 0
+  }, {
+    "name" : "运维工程师",
+    "role" : "部署、环境、数据库运维与交付检查",
+    "status" : "pending",
+    "model" : "ops-engineer",
+    "duration" : "--",
+    "progress" : 0
+  } ],
+  "review" : {
+    "workflowRunId" : "6b74f1b8-1725-4755-877f-ea35e6436020",
+    "stageKey" : "architecture-design",
+    "stageTitle" : "架构设计",
+    "status" : "awaiting_review",
+    "nextStageKey" : "api-design",
+    "nextStageTitle" : "接口设计",
+    "artifacts" : [ {
+      "stage" : "architecture",
+      "name" : "系统架构设计",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E6%81%A2%E5%A4%8D%E6%B5%81%E7%A8%8B%EF%BC%9A%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%2F01-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%2F%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1.md",
+      "downloadable" : true
+    }, {
+      "stage" : "architecture",
+      "name" : "系统架构图",
+      "type" : "plantuml",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E6%81%A2%E5%A4%8D%E6%B5%81%E7%A8%8B%EF%BC%9A%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%2F01-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%2F%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%9B%BE.puml",
+      "downloadable" : true
+    }, {
+      "stage" : "architecture",
+      "name" : "系统架构图预览",
+      "type" : "image",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E6%81%A2%E5%A4%8D%E6%B5%81%E7%A8%8B%EF%BC%9A%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%2F01-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%2F%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%9B%BE.svg",
+      "downloadable" : true
+    }, {
+      "stage" : "architecture",
+      "name" : "部署架构",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E6%81%A2%E5%A4%8D%E6%B5%81%E7%A8%8B%EF%BC%9A%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%2F03-%E9%83%A8%E7%BD%B2%E6%9E%B6%E6%9E%84%2F%E9%83%A8%E7%BD%B2%E6%9E%B6%E6%9E%84.md",
+      "downloadable" : true
+    }, {
+      "stage" : "architecture",
+      "name" : "技术选型",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E6%81%A2%E5%A4%8D%E6%B5%81%E7%A8%8B%EF%BC%9A%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%2F04-%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%2F%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B.md",
+      "downloadable" : true
+    } ],
+    "userFeedback" : "",
+    "revisionMessages" : [ ],
+    "revision" : null
+  },
+  "revision" : null,
+  "reviewFeedback" : "",
+  "revisionMessages" : [ ],
+  "nextStageIndex" : 6,
+  "approvedStageKeys" : [ "requirements", "brainstorming", "writing-plans", "product-design-artifacts", "ui-design" ]
+}

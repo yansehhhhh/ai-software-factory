@@ -6,6 +6,8 @@ import com.aifactory.dto.ClaudeMessageResult;
 import com.aifactory.dto.ClaudeRunResult;
 import com.aifactory.dto.ClaudeSessionStartResult;
 import com.aifactory.dto.DiscussionMessage;
+import com.aifactory.dto.OpenSpecRunResult;
+import com.aifactory.dto.StageRevisionContext;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
@@ -37,7 +39,7 @@ public class ClaudeCodeService {
     private static RestTemplate createRunTemplate(ClaudeRunnerConfig config) {
         var factory = new SimpleClientHttpRequestFactory();
         factory.setConnectTimeout((int) config.connectTimeoutMillis());
-        factory.setReadTimeout(0);
+        factory.setReadTimeout((int) config.readTimeoutMillis());
         return new RestTemplate(factory);
     }
 
@@ -76,31 +78,56 @@ public class ClaudeCodeService {
     }
 
     public ClaudeRunResult runGenerate(String taskId, String sessionId, String prompt) {
-        return runTask(taskId, sessionId, "generate", prompt);
+        return runGenerate(taskId, sessionId, prompt, "");
+    }
+
+    public ClaudeRunResult runGenerate(String taskId, String sessionId, String prompt, String agentId) {
+        return runTask(taskId, sessionId, "generate", prompt, agentId);
     }
 
     public ClaudeRunResult runBackend(String taskId, String sessionId, String prompt) {
-        return runTask(taskId, sessionId, "backend", prompt);
+        return runBackend(taskId, sessionId, prompt, "");
+    }
+
+    public ClaudeRunResult runBackend(String taskId, String sessionId, String prompt, String agentId) {
+        return runTask(taskId, sessionId, "backend", prompt, agentId);
     }
 
     public ClaudeRunResult runTestCases(String taskId, String sessionId, String prompt) {
-        return runTask(taskId, sessionId, "test-cases", prompt);
+        return runTestCases(taskId, sessionId, prompt, "");
+    }
+
+    public ClaudeRunResult runTestCases(String taskId, String sessionId, String prompt, String agentId) {
+        return runTask(taskId, sessionId, "test-cases", prompt, agentId);
     }
 
     public ClaudeRunResult runPlaywright(String taskId, String sessionId, String prompt) {
-        return runTask(taskId, sessionId, "playwright", prompt);
+        return runPlaywright(taskId, sessionId, prompt, "");
+    }
+
+    public ClaudeRunResult runPlaywright(String taskId, String sessionId, String prompt, String agentId) {
+        return runTask(taskId, sessionId, "playwright", prompt, agentId);
     }
 
     public ClaudeRunResult runFixTests(String taskId, String sessionId, String prompt) {
-        return runTask(taskId, sessionId, "fix-tests", prompt);
+        return runFixTests(taskId, sessionId, prompt, "");
+    }
+
+    public ClaudeRunResult runFixTests(String taskId, String sessionId, String prompt, String agentId) {
+        return runTask(taskId, sessionId, "fix-tests", prompt, agentId);
     }
 
     public ClaudeRunResult runTask(String taskId, String sessionId, String mode, String prompt) {
+        return runTask(taskId, sessionId, mode, prompt, "");
+    }
+
+    public ClaudeRunResult runTask(String taskId, String sessionId, String mode, String prompt, String agentId) {
         HttpEntity<Map<String, Object>> request = new HttpEntity<>(Map.of(
                 "taskId", taskId,
                 "sessionId", sessionId == null ? "" : sessionId,
                 "mode", mode,
                 "prompt", prompt,
+                "agentId", agentId == null ? "" : agentId,
                 "workspaceRoot", config.workspaceRoot()
         ));
         ResponseEntity<ClaudeRunResult> response = runTemplate.exchange(
@@ -112,15 +139,31 @@ public class ClaudeCodeService {
         return response.getBody();
     }
 
+    public OpenSpecRunResult runOpenSpecAction(String action, StageRevisionContext context) {
+        HttpEntity<Map<String, Object>> request = new HttpEntity<>(Map.of(
+                "taskId", context.workflowRunId(),
+                "action", action,
+                "context", context,
+                "workspaceRoot", config.workspaceRoot()
+        ));
+        ResponseEntity<OpenSpecRunResult> response = runTemplate.exchange(
+                config.baseUrl() + "/claude/openspec",
+                HttpMethod.POST,
+                request,
+                OpenSpecRunResult.class
+        );
+        return response.getBody();
+    }
+
     private String buildDiscussionPrompt(String latestMessage, List<DiscussionMessage> history) {
         StringBuilder builder = new StringBuilder();
-        builder.append("你是 Requirement Agent，请基于以下讨论历史继续需求澄清。每次只提出一个问题。\n");
-        builder.append("请只输出 JSON，不要输出 Markdown 或额外解释。JSON 结构为：{\"question\":\"一个中文问题；如果已足够明确则为空字符串\",\"options\":[\"2到4个可选答案\"],\"complete\":false,\"summary\":\"完成时用不超过5条中文 bullet 总结\"}。\n");
-        builder.append("如果需求已经足够明确，complete 必须为 true，question 和 options 可以为空，summary 必须包含已确认需求。\n\n");
+        builder.append("你是 Requirement Agent，请基于以下讨论历史继续需求澄清。\n");
+        builder.append("请使用中文 Markdown 输出，支持标题、列表、表格和代码块。每次只提出一个核心问题；如果需要给选项，请用 Markdown 列表呈现 2 到 4 个选项。\n");
+        builder.append("如果需求已经足够明确，请在回复末尾单独一行输出 [DISCUSSION_COMPLETE]，并用不超过 5 条中文 bullet 总结已确认需求。\n");
+        builder.append("不要输出 JSON，除非用户明确要求。\n\n");
         for (DiscussionMessage message : history) {
             builder.append(message.role()).append(": ").append(message.content()).append("\n");
         }
-        builder.append("user: ").append(latestMessage);
         return builder.toString();
     }
 }

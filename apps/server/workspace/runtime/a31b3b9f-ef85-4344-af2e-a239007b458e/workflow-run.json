@@ -1,0 +1,576 @@
+{
+  "schemaVersion" : 1,
+  "taskId" : "a31b3b9f-ef85-4344-af2e-a239007b458e",
+  "requirement" : "恢复流程：移动端应用：会议室预约系统",
+  "sessionId" : "workflow-a31b3b9f-ef85-4344-af2e-a239007b458e",
+  "status" : "awaiting_review",
+  "currentStage" : "完成前验证",
+  "currentArtifactType" : "验证结果",
+  "designProgressMessage" : "完成前验证 已从历史项目恢复，请确认产物或提交修订反馈",
+  "progress" : 97,
+  "estimatedRemaining" : "等待确认",
+  "estimatedCompletion" : "等待用户确认",
+  "error" : null,
+  "updatedAt" : "2026-05-12T07:19:36.061660Z",
+  "result" : {
+    "available" : true,
+    "designAvailable" : true,
+    "projectName" : "移动端应用：会议室预约系统",
+    "projectUrl" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fgenerated%2FHX-Meeting",
+    "reportUrl" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%2Ftest-report.md",
+    "zipUrl" : null,
+    "prdMarkdown" : "移动端应用：会议室预约系统 的设计产物已生成：\n- 版本说明.md\n- PRD\n- 需求文档 Word\n- UI 设计规范\n- 业务流程图\n- 信息架构图\n- 页面流转图\n- 术语表\n- UI 设计规范\n- HTML 原型\n- 桌面端设计图\n- 移动端设计图\n- 组件清单\n- 组件库 HTML\n- 组件库设计图\n- 交互说明\n- 交互流程图\n- 响应式断点参考\n- 响应式 HTML 预览\n- 移动端适配图\n- 系统架构图\n- 系统架构设计\n- OpenAPI.md\n- 部署架构设计.md\n- 技术选型说明.md\n- V1__create_hx_meeting_schema.sql\n- 数据字典\n- V2__seed_hx_meeting_demo_data.sql\n- 前端工程\n- 后端工程\n- dev-integration.spec.js\n- dev-integration-report.md\n- 测试报告\n- 测试用例摘要\n- 功能测试用例.md\n- 系统架构图\n- 系统架构设计\n- OpenAPI.md\n- 部署架构设计.md\n- 技术选型说明.md",
+    "pageSpecs" : [ ],
+    "componentSpecs" : [ ],
+    "userFlowSpecs" : [ ],
+    "uiGuidelines" : [ ],
+    "artifacts" : [ {
+      "stage" : "requirement",
+      "name" : "版本说明.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F01-%E5%8F%98%E6%9B%B4%E8%AE%B0%E5%BD%95%2F%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E.md",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "PRD",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F02-%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%2FPRD.md",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "需求文档 Word",
+      "type" : "word",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F02-%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%2FPRD.docx",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "UI 设计规范",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F03-UI%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83%2FUI-Design-Spec.md",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "业务流程图",
+      "type" : "plantuml",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F04-%E6%B5%81%E7%A8%8B%E5%9B%BE%2F%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E5%9B%BE.puml",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "信息架构图",
+      "type" : "plantuml",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F04-%E6%B5%81%E7%A8%8B%E5%9B%BE%2F%E4%BF%A1%E6%81%AF%E6%9E%B6%E6%9E%84%E5%9B%BE.puml",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "页面流转图",
+      "type" : "plantuml",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F04-%E6%B5%81%E7%A8%8B%E5%9B%BE%2F%E9%A1%B5%E9%9D%A2%E6%B5%81%E8%BD%AC%E5%9B%BE.puml",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "术语表",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F05-%E9%99%84%E5%BD%95%2F%E6%9C%AF%E8%AF%AD%E8%A1%A8.md",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "UI 设计规范",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F03-UI%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83%2FUI-Design-Spec.md",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "HTML 原型",
+      "type" : "html",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E8%AE%BE%E8%AE%A1%E7%A8%BF%2Findex.html",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "桌面端设计图",
+      "type" : "image",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E8%AE%BE%E8%AE%A1%E7%A8%BF%2Fdesktop.svg",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "移动端设计图",
+      "type" : "image",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E8%AE%BE%E8%AE%A1%E7%A8%BF%2Fmobile.svg",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "组件清单",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%BB%84%E4%BB%B6%E5%BA%93%2F%E7%BB%84%E4%BB%B6%E6%B8%85%E5%8D%95.md",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "组件库 HTML",
+      "type" : "html",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%BB%84%E4%BB%B6%E5%BA%93%2Fcomponent-library.html",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "组件库设计图",
+      "type" : "image",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%BB%84%E4%BB%B6%E5%BA%93%2Fcomponent-library.svg",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "交互说明",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E4%BA%A4%E4%BA%92%E5%8E%9F%E5%9E%8B%2F%E4%BA%A4%E4%BA%92%E8%AF%B4%E6%98%8E.md",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "交互流程图",
+      "type" : "image",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E4%BA%A4%E4%BA%92%E5%8E%9F%E5%9E%8B%2Finteraction-flow.svg",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "响应式断点参考",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%2F%E5%93%8D%E5%BA%94%E5%BC%8F%E6%96%AD%E7%82%B9%E5%8F%82%E8%80%83.md",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "响应式 HTML 预览",
+      "type" : "html",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%2Fresponsive-preview.html",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "移动端适配图",
+      "type" : "image",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%2Fmobile-preview.svg",
+      "downloadable" : true
+    }, {
+      "stage" : "architecture",
+      "name" : "系统架构图",
+      "type" : "plantuml",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%2F01-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%2F%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%9B%BE.puml",
+      "downloadable" : true
+    }, {
+      "stage" : "architecture",
+      "name" : "系统架构设计",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%2F01-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%2F%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1.md",
+      "downloadable" : true
+    }, {
+      "stage" : "architecture",
+      "name" : "OpenAPI.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%2F02-%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1%2F%E6%8E%A5%E5%8F%A3%E5%AE%9A%E4%B9%89%2FOpenAPI.md",
+      "downloadable" : true
+    }, {
+      "stage" : "architecture",
+      "name" : "部署架构设计.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%2F03-%E9%83%A8%E7%BD%B2%E6%9E%B6%E6%9E%84%2F%E9%83%A8%E7%BD%B2%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1.md",
+      "downloadable" : true
+    }, {
+      "stage" : "architecture",
+      "name" : "技术选型说明.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%2F04-%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%2F%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%E8%AF%B4%E6%98%8E.md",
+      "downloadable" : true
+    }, {
+      "stage" : "database",
+      "name" : "V1__create_hx_meeting_schema.sql",
+      "type" : "sql",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%2F%E5%BB%BA%E8%A1%A8%E8%84%9A%E6%9C%AC%2FV1__create_hx_meeting_schema.sql",
+      "downloadable" : true
+    }, {
+      "stage" : "database",
+      "name" : "数据字典",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%2F%E6%95%B0%E6%8D%AE%E5%AD%97%E5%85%B8%2F%E6%95%B0%E6%8D%AE%E5%AD%97%E5%85%B8.md",
+      "downloadable" : true
+    }, {
+      "stage" : "database",
+      "name" : "V2__seed_hx_meeting_demo_data.sql",
+      "type" : "sql",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%2F%E6%95%B0%E6%8D%AE%E8%BF%81%E7%A7%BB%E8%84%9A%E6%9C%AC%2FV2__seed_hx_meeting_demo_data.sql",
+      "downloadable" : true
+    }, {
+      "stage" : "code",
+      "name" : "前端工程",
+      "type" : "directory",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fgenerated%2FHX-Meeting%2Ffrontend",
+      "downloadable" : true
+    }, {
+      "stage" : "code",
+      "name" : "后端工程",
+      "type" : "directory",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fgenerated%2FHX-Meeting%2Fbackend",
+      "downloadable" : true
+    }, {
+      "stage" : "test-docs",
+      "name" : "dev-integration.spec.js",
+      "type" : "directory",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2Fe2e%2Fdev-integration.spec.js",
+      "downloadable" : true
+    }, {
+      "stage" : "test-docs",
+      "name" : "dev-integration-report.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%2Fdev-integration-report.md",
+      "downloadable" : true
+    }, {
+      "stage" : "test-docs",
+      "name" : "测试报告",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%2Ftest-report.md",
+      "downloadable" : true
+    }, {
+      "stage" : "test-docs",
+      "name" : "测试用例摘要",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%2Ftest-case-summary.md",
+      "downloadable" : true
+    }, {
+      "stage" : "test-docs",
+      "name" : "功能测试用例.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%2F%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B.md",
+      "downloadable" : true
+    }, {
+      "stage" : "misc",
+      "name" : "系统架构图",
+      "type" : "plantuml",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E5%85%B6%E4%BB%96%E6%96%87%E6%A1%A3%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E9%94%99%E8%AF%AF%E4%BA%A7%E7%89%A9%E5%A4%87%E4%BB%BD-20260511140007%2F01-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%2F%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%9B%BE.puml",
+      "downloadable" : true
+    }, {
+      "stage" : "misc",
+      "name" : "系统架构设计",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E5%85%B6%E4%BB%96%E6%96%87%E6%A1%A3%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E9%94%99%E8%AF%AF%E4%BA%A7%E7%89%A9%E5%A4%87%E4%BB%BD-20260511140007%2F01-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%2F%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1.md",
+      "downloadable" : true
+    }, {
+      "stage" : "misc",
+      "name" : "OpenAPI.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E5%85%B6%E4%BB%96%E6%96%87%E6%A1%A3%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E9%94%99%E8%AF%AF%E4%BA%A7%E7%89%A9%E5%A4%87%E4%BB%BD-20260511140007%2F02-%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1%2F%E6%8E%A5%E5%8F%A3%E5%AE%9A%E4%B9%89%2FOpenAPI.md",
+      "downloadable" : true
+    }, {
+      "stage" : "misc",
+      "name" : "部署架构设计.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E5%85%B6%E4%BB%96%E6%96%87%E6%A1%A3%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E9%94%99%E8%AF%AF%E4%BA%A7%E7%89%A9%E5%A4%87%E4%BB%BD-20260511140007%2F03-%E9%83%A8%E7%BD%B2%E6%9E%B6%E6%9E%84%2F%E9%83%A8%E7%BD%B2%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1.md",
+      "downloadable" : true
+    }, {
+      "stage" : "misc",
+      "name" : "技术选型说明.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E5%85%B6%E4%BB%96%E6%96%87%E6%A1%A3%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E9%94%99%E8%AF%AF%E4%BA%A7%E7%89%A9%E5%A4%87%E4%BB%BD-20260511140007%2F04-%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%2F%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%E8%AF%B4%E6%98%8E.md",
+      "downloadable" : true
+    } ]
+  },
+  "logs" : [ ],
+  "steps" : [ {
+    "index" : 1,
+    "key" : "requirements",
+    "title" : "需求分析",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "需求摘要整理完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 2,
+    "key" : "brainstorming",
+    "title" : "需求讨论",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "需求讨论结论整理完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 3,
+    "key" : "writing-plans",
+    "title" : "制定计划",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "阶段化实现计划整理完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 4,
+    "key" : "product-design-artifacts",
+    "title" : "需求产物生成",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "需求阶段产物生成完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 5,
+    "key" : "ui-design",
+    "title" : "UI设计",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "UI 设计产物生成完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 6,
+    "key" : "architecture-design",
+    "title" : "架构设计",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "架构设计产物生成完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 7,
+    "key" : "api-design",
+    "title" : "接口设计",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "接口设计产物生成完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 8,
+    "key" : "database-design",
+    "title" : "数据库设计",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "数据库设计产物生成完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 9,
+    "key" : "backend-development",
+    "title" : "后端开发",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "后端代码已从 generated 目录恢复",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 10,
+    "key" : "frontend-development",
+    "title" : "前端开发",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "前端代码已从 generated 目录恢复",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 11,
+    "key" : "development-integration",
+    "title" : "开发联调",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "开发联调完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 12,
+    "key" : "test-case-generation",
+    "title" : "测试用例生成",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "测试用例生成完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 13,
+    "key" : "e2e-acceptance-testing",
+    "title" : "E2E验收测试",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "E2E 验收测试完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 14,
+    "key" : "verification-before-completion",
+    "title" : "完成前验证",
+    "status" : "awaiting_review",
+    "progress" : 100,
+    "detail" : "等待用户确认",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 15,
+    "key" : "delivery",
+    "title" : "交付",
+    "status" : "pending",
+    "progress" : 0,
+    "detail" : "等待上一步完成",
+    "duration" : "--",
+    "error" : null
+  } ],
+  "agents" : [ {
+    "name" : "产品经理",
+    "role" : "需求分析、需求讨论、PRD 与产品产物",
+    "status" : "success",
+    "model" : "product-manager",
+    "duration" : "0s",
+    "progress" : 100
+  }, {
+    "name" : "UI设计师",
+    "role" : "UI 原型、交互说明、设计规范",
+    "status" : "success",
+    "model" : "ui-designer",
+    "duration" : "0s",
+    "progress" : 100
+  }, {
+    "name" : "架构师",
+    "role" : "系统架构、接口设计、数据库设计",
+    "status" : "success",
+    "model" : "architect",
+    "duration" : "0s",
+    "progress" : 100
+  }, {
+    "name" : "后端开发工程师",
+    "role" : "后端接口、服务、数据库相关开发",
+    "status" : "success",
+    "model" : "backend-engineer",
+    "duration" : "0s",
+    "progress" : 100
+  }, {
+    "name" : "前端开发工程师",
+    "role" : "前端页面、组件、交互与接口对接",
+    "status" : "success",
+    "model" : "frontend-engineer",
+    "duration" : "0s",
+    "progress" : 100
+  }, {
+    "name" : "测试工程师",
+    "role" : "测试用例、E2E、验证报告与缺陷反馈",
+    "status" : "success",
+    "model" : "test-engineer",
+    "duration" : "0s",
+    "progress" : 100
+  }, {
+    "name" : "运维工程师",
+    "role" : "部署、环境、数据库运维与交付检查",
+    "status" : "pending",
+    "model" : "ops-engineer",
+    "duration" : "--",
+    "progress" : 0
+  } ],
+  "review" : {
+    "workflowRunId" : "a31b3b9f-ef85-4344-af2e-a239007b458e",
+    "stageKey" : "verification-before-completion",
+    "stageTitle" : "完成前验证",
+    "status" : "awaiting_review",
+    "nextStageKey" : "delivery",
+    "nextStageTitle" : "交付",
+    "artifacts" : [ {
+      "stage" : "test-docs",
+      "name" : "dev-integration.spec.js",
+      "type" : "directory",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2Fe2e%2Fdev-integration.spec.js",
+      "downloadable" : true
+    }, {
+      "stage" : "test-docs",
+      "name" : "dev-integration-report.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%2Fdev-integration-report.md",
+      "downloadable" : true
+    }, {
+      "stage" : "test-docs",
+      "name" : "测试报告",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%2Ftest-report.md",
+      "downloadable" : true
+    }, {
+      "stage" : "test-docs",
+      "name" : "测试用例摘要",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%2Ftest-case-summary.md",
+      "downloadable" : true
+    }, {
+      "stage" : "test-docs",
+      "name" : "功能测试用例.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%2F%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B.md",
+      "downloadable" : true
+    } ],
+    "userFeedback" : "反馈类型：验收/测试辅助\n反馈内容：\n支持?token=admin切换管理员身份，?token=user切换普通用户",
+    "revisionMessages" : [ {
+      "role" : "user",
+      "content" : "反馈类型：验收/测试辅助\n反馈内容：\n支持?token=admin切换管理员身份，?token=user切换普通用户",
+      "options" : [ ],
+      "time" : null
+    }, {
+      "role" : "ai",
+      "content" : "已收到修订反馈。\n\n我的初步评估：\n- 反馈类型：验收/测试辅助\n- 影响范围：后端、测试\n- 处理建议：这类反馈可作为当前阶段的验收辅助处理，建议限制在预览/测试环境，并补充测试说明。\n\n下一步可以点击“探索修订”让我进一步分析修改方案；如果修改点已经明确，也可以直接点击“制定计划”。",
+      "options" : [ ],
+      "time" : null
+    }, {
+      "role" : "ai",
+      "content" : "正在探索修订「完成前验证」阶段修订，请稍候……",
+      "options" : [ ],
+      "time" : null
+    }, {
+      "role" : "ai",
+      "content" : "开始探索修订阶段修订：完成前验证",
+      "options" : [ ],
+      "time" : "15:14:55"
+    } ],
+    "revision" : {
+      "workflowRunId" : "a31b3b9f-ef85-4344-af2e-a239007b458e",
+      "stageKey" : "verification-before-completion",
+      "stageTitle" : "完成前验证",
+      "projectName" : "移动端应用：会议室预约系统",
+      "artifactPaths" : [ "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2Fe2e%2Fdev-integration.spec.js", "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%2Fdev-integration-report.md", "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%2Ftest-report.md", "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%2Ftest-case-summary.md", "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%2F%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B.md" ],
+      "userFeedback" : "反馈类型：验收/测试辅助\n反馈内容：\n支持?token=admin切换管理员身份，?token=user切换普通用户",
+      "changeId" : null,
+      "status" : "feedback_submitted",
+      "proposalStatus" : "未创建",
+      "applyStatus" : "未执行",
+      "archiveStatus" : "未归档",
+      "updatedAt" : "15:19:09",
+      "allowedPaths" : "docs/移动端应用：会议室预约系统/测试/ 和 generated/{项目英文名}/frontend、generated/{项目英文名}/backend"
+    }
+  },
+  "revision" : {
+    "workflowRunId" : "a31b3b9f-ef85-4344-af2e-a239007b458e",
+    "stageKey" : "verification-before-completion",
+    "stageTitle" : "完成前验证",
+    "projectName" : "移动端应用：会议室预约系统",
+    "artifactPaths" : [ "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2Fe2e%2Fdev-integration.spec.js", "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%2Fdev-integration-report.md", "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%2Ftest-report.md", "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%2Ftest-case-summary.md", "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%2F%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B.md" ],
+    "userFeedback" : "反馈类型：验收/测试辅助\n反馈内容：\n支持?token=admin切换管理员身份，?token=user切换普通用户",
+    "changeId" : null,
+    "status" : "feedback_submitted",
+    "proposalStatus" : "未创建",
+    "applyStatus" : "未执行",
+    "archiveStatus" : "未归档",
+    "updatedAt" : "15:19:09",
+    "allowedPaths" : "docs/移动端应用：会议室预约系统/测试/ 和 generated/{项目英文名}/frontend、generated/{项目英文名}/backend"
+  },
+  "reviewFeedback" : "反馈类型：验收/测试辅助\n反馈内容：\n支持?token=admin切换管理员身份，?token=user切换普通用户",
+  "revisionMessages" : [ {
+    "role" : "user",
+    "content" : "反馈类型：验收/测试辅助\n反馈内容：\n支持?token=admin切换管理员身份，?token=user切换普通用户",
+    "options" : [ ],
+    "time" : null
+  }, {
+    "role" : "ai",
+    "content" : "已收到修订反馈。\n\n我的初步评估：\n- 反馈类型：验收/测试辅助\n- 影响范围：后端、测试\n- 处理建议：这类反馈可作为当前阶段的验收辅助处理，建议限制在预览/测试环境，并补充测试说明。\n\n下一步可以点击“探索修订”让我进一步分析修改方案；如果修改点已经明确，也可以直接点击“制定计划”。",
+    "options" : [ ],
+    "time" : null
+  }, {
+    "role" : "ai",
+    "content" : "正在探索修订「完成前验证」阶段修订，请稍候……",
+    "options" : [ ],
+    "time" : null
+  }, {
+    "role" : "ai",
+    "content" : "开始探索修订阶段修订：完成前验证",
+    "options" : [ ],
+    "time" : "15:14:55"
+  }, {
+    "role" : "ai",
+    "content" : "已进入 `/opsx:explore` 探索模式；本次仅阅读与搜索现有产物/代码，未修改文件、未实现代码。\n\n## 当前发现\n\n- 当前后端真实 token 映射已存在：\n  - `demo-sso-token` → 普通用户 `u_1001`\n  - `admin-token` → 管理员 `u_admin_1`\n- 当前前端 API client 从 `localStorage.hx_meeting_token` 读取 token，默认回退 `demo-sso-token`。\n- 当前 E2E 脚本里写入的是 `localStorage.hx_token`，与前端实际读取的 `hx_meeting_token` 不一致；目前普通用户场景主要依赖默认 token 才能通过。\n- 当前测试产物已覆盖：\n  - 普通用户不请求管理员看板\n  - 管理员 token 可访问管理接口\n  - 预约页点击前不默认查询会议室\n\n## 阶段修订建议\n\n### 1. 补充“URL token 身份切换”验收点\n\n建议在完成前验证阶段明确新增验证规则：\n\n```text\n?token=user  → 普通用户身份 → demo-sso-token\n?token=admin → 管理员身份 → admin-token\n```\n\n验证目标：\n\n```text\n┌──────────────┐\n│ 访问 URL     │\n└──────┬───────┘\n       │\n       ▼\n┌────────────────────┐\n│ 读取 query token    │\n└──────┬─────────────┘\n       │\n       ├── user  ──▶ hx_meeting_token = demo-sso-token\n       │\n       └── admin ─▶ hx_meeting_token = admin-token\n```\n\n### 2. 建议修订 E2E 脚本覆盖身份切换\n\n文件：  \n`docs/移动端应用：会议室预约系统/测试/e2e/dev-integration.spec.js`\n\n建议新增或调整用例：\n\n- `?token=user`：\n  - 访问 `/?token=user`\n  - 验证 `/auth/me` 返回普通用户\n  - 验证不主动请求 `/admin/dashboard`\n  - 验证管理入口不可见或不可用\n\n- `?token=admin`：\n  - 访问 `/?token=admin`\n  - 验证 `/auth/me` 返回管理员角色\n  - 验证 `/admin/dashboard` 返回 200\n  - 验证管理看板或管理入口可见\n\n同时建议把现有 E2E 中的：\n\n```js\nwindow.localStorage.setItem('hx_token', 'demo-sso-token')\n```\n\n修订为与前端一致的：\n\n```js\nwindow.localStorage.setItem('hx_meeting_token', 'demo-sso-token')\n```\n\n或优先改为通过 URL 查询参数驱动，避免测试绕过真实入口。\n\n### 3. 建议修订测试用例文档\n\n文件：  \n`docs/移动端应用：会议室预约系统/测试/测试用例/功能测试用例.md`\n\n建议新增：\n\n- `TC-001A 通过 ?token=user 切换普通用户`\n- `TC-001B 通过 ?token=admin 切换管理员`\n- 或在现有 `TC-001`、`TC-017` 中补充 URL 入口说明\n\n建议预期结果写清：\n\n- `?token=user` 不应访问管理员看板接口\n- `?token=admin` 应能访问管理员看板接口\n- URL 中的 `admin/user` 是演示别名，不是直接后端 Bearer token\n\n### 4. 建议修订测试摘要\n\n文件：  \n`docs/移动端应用：会议室预约系统/测试/测试用例/test-case-summary.md`\n\n建议在“用户身份与权限”分组中补充：\n\n- URL query token 身份切换\n- 普通用户/管理员身份切换后的权限边界\n- 通过准则增加：\n  - `?token=user` 必须进入普通用户上下文\n  - `?token=admin` 必须进入管理员上下文\n  - token 切换后应持久化到 `hx_meeting_token`\n\n### 5. 建议修订测试报告\n\n文件：\n\n- `docs/移动端应用：会议室预约系统/测试/测试报告/dev-integration-report.md`\n- `docs/移动端应用：会议室预约系统/测试/测试报告/test-report.md`\n\n建议在下一轮验证完成后补充结果表：\n\n| 场景 | URL | 预期身份 | 预期结果 |\n| --- | --- | --- | --- |\n| 普通用户切换 | `/?token=user` | 普通用户 | `/auth/me` 返回普通用户，不请求管理看板 |\n| 管理员切换 | `/?token=admin` | 管理员 | `/auth/me` 返回管理员，管理看板 200 |\n\n## 风险\n\n1. **当前前端尚未发现 query token 解析逻辑**  \n   如果只改测试文档而不改前端，`?token=admin` 可能不会生效。\n\n2. **E2E 当前 localStorage key 与前端不一致**  \n   当前脚本使用 `hx_token`，前端读取 `hx_meeting_token`，后续验证应修正，否则测试可能存在误判。\n\n3. **URL token 不应直接作为真实 Bearer token**  \n   建议 `admin/user` 仅作为演示别名映射到内部 demo token，避免把真实 token 暴露在 URL。\n\n4. **身份切换后的缓存问题**  \n   如果用户先访问 `?token=admin` 再访问 `?token=user`，需要明确是否覆盖本地 token，避免权限状态残留。\n\n5. **管理员页面加载可能触发额外接口**  \n   管理员身份下允许访问管理接口，但普通用户身份下仍需保持“不主动请求管理员看板”的既有验收准则。\n\n## 下一步计划\n\n1. 在 apply 阶段修订前端身份入口逻辑：支持 `?token=admin` / `?token=user` 映射并写入 `hx_meeting_token`。\n2. 修订 E2E：新增 URL token 身份切换用例，并修正现有 localStorage key。\n3. 修订测试用例摘要与功能测试用例，补充 query token 验收准则。\n4. 重新运行前端构建与完成前验证 E2E。\n5. 更新两份测试报告中的验证命令、通过结果和遗留风险。",
+    "options" : [ ],
+    "time" : null
+  } ],
+  "nextStageIndex" : 14,
+  "approvedStageKeys" : [ "requirements", "brainstorming", "writing-plans", "product-design-artifacts", "ui-design", "architecture-design", "api-design", "database-design", "backend-development", "frontend-development", "development-integration", "test-case-generation", "e2e-acceptance-testing" ]
+}

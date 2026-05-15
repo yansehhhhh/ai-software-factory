@@ -1,0 +1,751 @@
+{
+  "schemaVersion" : 1,
+  "taskId" : "31fa5e29-3475-44ea-afed-2c3ca3fa53e4",
+  "requirement" : "恢复流程：移动端应用：会议室预约系统",
+  "sessionId" : "workflow-31fa5e29-3475-44ea-afed-2c3ca3fa53e4",
+  "status" : "awaiting_review",
+  "currentStage" : "完成前验证",
+  "currentArtifactType" : "验证结果",
+  "designProgressMessage" : "完成前验证 已从历史项目恢复，请确认产物或提交修订反馈",
+  "progress" : 97,
+  "estimatedRemaining" : "等待确认",
+  "estimatedCompletion" : "等待用户确认",
+  "error" : null,
+  "updatedAt" : "2026-05-12T10:00:35.264288Z",
+  "result" : {
+    "available" : true,
+    "designAvailable" : true,
+    "projectName" : "移动端应用：会议室预约系统",
+    "projectUrl" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fgenerated%2FHX-Meeting",
+    "reportUrl" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%2Ftest-report.md",
+    "zipUrl" : null,
+    "prdMarkdown" : "移动端应用：会议室预约系统 的设计产物已生成：\n- 版本说明.md\n- PRD\n- 需求文档 Word\n- UI 设计规范\n- 业务流程图\n- 信息架构图\n- 页面流转图\n- 术语表\n- UI 设计规范\n- HTML 原型\n- 桌面端设计图\n- 移动端设计图\n- 组件清单\n- 组件库 HTML\n- 组件库设计图\n- 交互说明\n- 交互流程图\n- 响应式断点参考\n- 响应式 HTML 预览\n- 移动端适配图\n- 系统架构图\n- 系统架构设计\n- OpenAPI.md\n- 部署架构设计.md\n- 技术选型说明.md\n- V1__create_hx_meeting_schema.sql\n- 数据字典\n- V2__seed_hx_meeting_demo_data.sql\n- 前端工程\n- 后端工程\n- dev-integration.spec.js\n- dev-integration-report.md\n- 测试报告\n- 测试用例摘要\n- 功能测试用例.md\n- 系统架构图\n- 系统架构设计\n- OpenAPI.md\n- 部署架构设计.md\n- 技术选型说明.md",
+    "pageSpecs" : [ ],
+    "componentSpecs" : [ ],
+    "userFlowSpecs" : [ ],
+    "uiGuidelines" : [ ],
+    "artifacts" : [ {
+      "stage" : "requirement",
+      "name" : "版本说明.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F01-%E5%8F%98%E6%9B%B4%E8%AE%B0%E5%BD%95%2F%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E.md",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "PRD",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F02-%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%2FPRD.md",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "需求文档 Word",
+      "type" : "word",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F02-%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%2FPRD.docx",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "UI 设计规范",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F03-UI%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83%2FUI-Design-Spec.md",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "业务流程图",
+      "type" : "plantuml",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F04-%E6%B5%81%E7%A8%8B%E5%9B%BE%2F%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E5%9B%BE.puml",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "信息架构图",
+      "type" : "plantuml",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F04-%E6%B5%81%E7%A8%8B%E5%9B%BE%2F%E4%BF%A1%E6%81%AF%E6%9E%B6%E6%9E%84%E5%9B%BE.puml",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "页面流转图",
+      "type" : "plantuml",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F04-%E6%B5%81%E7%A8%8B%E5%9B%BE%2F%E9%A1%B5%E9%9D%A2%E6%B5%81%E8%BD%AC%E5%9B%BE.puml",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "术语表",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F05-%E9%99%84%E5%BD%95%2F%E6%9C%AF%E8%AF%AD%E8%A1%A8.md",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "UI 设计规范",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F03-UI%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83%2FUI-Design-Spec.md",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "HTML 原型",
+      "type" : "html",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E8%AE%BE%E8%AE%A1%E7%A8%BF%2Findex.html",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "桌面端设计图",
+      "type" : "image",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E8%AE%BE%E8%AE%A1%E7%A8%BF%2Fdesktop.svg",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "移动端设计图",
+      "type" : "image",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E8%AE%BE%E8%AE%A1%E7%A8%BF%2Fmobile.svg",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "组件清单",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%BB%84%E4%BB%B6%E5%BA%93%2F%E7%BB%84%E4%BB%B6%E6%B8%85%E5%8D%95.md",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "组件库 HTML",
+      "type" : "html",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%BB%84%E4%BB%B6%E5%BA%93%2Fcomponent-library.html",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "组件库设计图",
+      "type" : "image",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%BB%84%E4%BB%B6%E5%BA%93%2Fcomponent-library.svg",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "交互说明",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E4%BA%A4%E4%BA%92%E5%8E%9F%E5%9E%8B%2F%E4%BA%A4%E4%BA%92%E8%AF%B4%E6%98%8E.md",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "交互流程图",
+      "type" : "image",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E4%BA%A4%E4%BA%92%E5%8E%9F%E5%9E%8B%2Finteraction-flow.svg",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "响应式断点参考",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%2F%E5%93%8D%E5%BA%94%E5%BC%8F%E6%96%AD%E7%82%B9%E5%8F%82%E8%80%83.md",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "响应式 HTML 预览",
+      "type" : "html",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%2Fresponsive-preview.html",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "移动端适配图",
+      "type" : "image",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%2Fmobile-preview.svg",
+      "downloadable" : true
+    }, {
+      "stage" : "architecture",
+      "name" : "系统架构图",
+      "type" : "plantuml",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%2F01-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%2F%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%9B%BE.puml",
+      "downloadable" : true
+    }, {
+      "stage" : "architecture",
+      "name" : "系统架构设计",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%2F01-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%2F%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1.md",
+      "downloadable" : true
+    }, {
+      "stage" : "architecture",
+      "name" : "OpenAPI.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%2F02-%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1%2F%E6%8E%A5%E5%8F%A3%E5%AE%9A%E4%B9%89%2FOpenAPI.md",
+      "downloadable" : true
+    }, {
+      "stage" : "architecture",
+      "name" : "部署架构设计.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%2F03-%E9%83%A8%E7%BD%B2%E6%9E%B6%E6%9E%84%2F%E9%83%A8%E7%BD%B2%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1.md",
+      "downloadable" : true
+    }, {
+      "stage" : "architecture",
+      "name" : "技术选型说明.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%2F04-%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%2F%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%E8%AF%B4%E6%98%8E.md",
+      "downloadable" : true
+    }, {
+      "stage" : "database",
+      "name" : "V1__create_hx_meeting_schema.sql",
+      "type" : "sql",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%2F%E5%BB%BA%E8%A1%A8%E8%84%9A%E6%9C%AC%2FV1__create_hx_meeting_schema.sql",
+      "downloadable" : true
+    }, {
+      "stage" : "database",
+      "name" : "数据字典",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%2F%E6%95%B0%E6%8D%AE%E5%AD%97%E5%85%B8%2F%E6%95%B0%E6%8D%AE%E5%AD%97%E5%85%B8.md",
+      "downloadable" : true
+    }, {
+      "stage" : "database",
+      "name" : "V2__seed_hx_meeting_demo_data.sql",
+      "type" : "sql",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%2F%E6%95%B0%E6%8D%AE%E8%BF%81%E7%A7%BB%E8%84%9A%E6%9C%AC%2FV2__seed_hx_meeting_demo_data.sql",
+      "downloadable" : true
+    }, {
+      "stage" : "code",
+      "name" : "前端工程",
+      "type" : "directory",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fgenerated%2FHX-Meeting%2Ffrontend",
+      "downloadable" : true
+    }, {
+      "stage" : "code",
+      "name" : "后端工程",
+      "type" : "directory",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fgenerated%2FHX-Meeting%2Fbackend",
+      "downloadable" : true
+    }, {
+      "stage" : "test-docs",
+      "name" : "dev-integration.spec.js",
+      "type" : "directory",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2Fe2e%2Fdev-integration.spec.js",
+      "downloadable" : true
+    }, {
+      "stage" : "test-docs",
+      "name" : "dev-integration-report.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%2Fdev-integration-report.md",
+      "downloadable" : true
+    }, {
+      "stage" : "test-docs",
+      "name" : "测试报告",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%2Ftest-report.md",
+      "downloadable" : true
+    }, {
+      "stage" : "test-docs",
+      "name" : "测试用例摘要",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%2Ftest-case-summary.md",
+      "downloadable" : true
+    }, {
+      "stage" : "test-docs",
+      "name" : "功能测试用例.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%2F%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B.md",
+      "downloadable" : true
+    }, {
+      "stage" : "misc",
+      "name" : "系统架构图",
+      "type" : "plantuml",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E5%85%B6%E4%BB%96%E6%96%87%E6%A1%A3%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E9%94%99%E8%AF%AF%E4%BA%A7%E7%89%A9%E5%A4%87%E4%BB%BD-20260511140007%2F01-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%2F%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%9B%BE.puml",
+      "downloadable" : true
+    }, {
+      "stage" : "misc",
+      "name" : "系统架构设计",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E5%85%B6%E4%BB%96%E6%96%87%E6%A1%A3%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E9%94%99%E8%AF%AF%E4%BA%A7%E7%89%A9%E5%A4%87%E4%BB%BD-20260511140007%2F01-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%2F%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1.md",
+      "downloadable" : true
+    }, {
+      "stage" : "misc",
+      "name" : "OpenAPI.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E5%85%B6%E4%BB%96%E6%96%87%E6%A1%A3%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E9%94%99%E8%AF%AF%E4%BA%A7%E7%89%A9%E5%A4%87%E4%BB%BD-20260511140007%2F02-%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1%2F%E6%8E%A5%E5%8F%A3%E5%AE%9A%E4%B9%89%2FOpenAPI.md",
+      "downloadable" : true
+    }, {
+      "stage" : "misc",
+      "name" : "部署架构设计.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E5%85%B6%E4%BB%96%E6%96%87%E6%A1%A3%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E9%94%99%E8%AF%AF%E4%BA%A7%E7%89%A9%E5%A4%87%E4%BB%BD-20260511140007%2F03-%E9%83%A8%E7%BD%B2%E6%9E%B6%E6%9E%84%2F%E9%83%A8%E7%BD%B2%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1.md",
+      "downloadable" : true
+    }, {
+      "stage" : "misc",
+      "name" : "技术选型说明.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E5%85%B6%E4%BB%96%E6%96%87%E6%A1%A3%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E9%94%99%E8%AF%AF%E4%BA%A7%E7%89%A9%E5%A4%87%E4%BB%BD-20260511140007%2F04-%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%2F%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%E8%AF%B4%E6%98%8E.md",
+      "downloadable" : true
+    } ]
+  },
+  "logs" : [ {
+    "time" : "17:06:10",
+    "agent" : "Orchestrator",
+    "level" : "info",
+    "message" : "已从历史项目恢复：移动端应用：会议室预约系统"
+  }, {
+    "time" : "17:09:40",
+    "agent" : "OpenSpec",
+    "level" : "info",
+    "message" : "已记录 完成前验证 阶段修订反馈"
+  }, {
+    "time" : "17:11:16",
+    "agent" : "OpenSpec",
+    "level" : "info",
+    "message" : "已记录 完成前验证 阶段修订反馈"
+  }, {
+    "time" : "17:11:50",
+    "agent" : "OpenSpec",
+    "level" : "info",
+    "message" : "已记录 完成前验证 阶段修订反馈"
+  }, {
+    "time" : "17:11:59",
+    "agent" : "OpenSpec",
+    "level" : "info",
+    "message" : "开始探索修订阶段修订：完成前验证"
+  }, {
+    "time" : "17:26:46",
+    "agent" : "OpenSpec",
+    "level" : "info",
+    "message" : "完成探索修订阶段修订：完成前验证"
+  }, {
+    "time" : "17:59:34",
+    "agent" : "OpenSpec",
+    "level" : "info",
+    "message" : "已记录 完成前验证 阶段修订反馈"
+  }, {
+    "time" : "17:59:46",
+    "agent" : "OpenSpec",
+    "level" : "info",
+    "message" : "已记录 完成前验证 阶段修订反馈"
+  }, {
+    "time" : "18:00:06",
+    "agent" : "OpenSpec",
+    "level" : "info",
+    "message" : "已记录 完成前验证 阶段修订反馈"
+  }, {
+    "time" : "18:00:35",
+    "agent" : "OpenSpec",
+    "level" : "info",
+    "message" : "已记录 完成前验证 阶段修订反馈"
+  } ],
+  "steps" : [ {
+    "index" : 1,
+    "key" : "requirements",
+    "title" : "需求分析",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "需求摘要整理完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 2,
+    "key" : "brainstorming",
+    "title" : "需求讨论",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "需求讨论结论整理完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 3,
+    "key" : "writing-plans",
+    "title" : "制定计划",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "阶段化实现计划整理完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 4,
+    "key" : "product-design-artifacts",
+    "title" : "需求产物生成",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "需求阶段产物生成完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 5,
+    "key" : "ui-design",
+    "title" : "UI设计",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "UI 设计产物生成完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 6,
+    "key" : "architecture-design",
+    "title" : "架构设计",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "架构设计产物生成完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 7,
+    "key" : "api-design",
+    "title" : "接口设计",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "接口设计产物生成完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 8,
+    "key" : "database-design",
+    "title" : "数据库设计",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "数据库设计产物生成完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 9,
+    "key" : "backend-development",
+    "title" : "后端开发",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "后端代码已从 generated 目录恢复",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 10,
+    "key" : "frontend-development",
+    "title" : "前端开发",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "前端代码已从 generated 目录恢复",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 11,
+    "key" : "development-integration",
+    "title" : "开发联调",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "开发联调完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 12,
+    "key" : "test-case-generation",
+    "title" : "测试用例生成",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "测试用例生成完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 13,
+    "key" : "e2e-acceptance-testing",
+    "title" : "E2E验收测试",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "E2E 验收测试完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 14,
+    "key" : "verification-before-completion",
+    "title" : "完成前验证",
+    "status" : "awaiting_review",
+    "progress" : 100,
+    "detail" : "等待用户确认",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 15,
+    "key" : "delivery",
+    "title" : "交付",
+    "status" : "pending",
+    "progress" : 0,
+    "detail" : "等待上一步完成",
+    "duration" : "--",
+    "error" : null
+  } ],
+  "agents" : [ {
+    "name" : "产品经理",
+    "role" : "需求分析、需求讨论、PRD 与产品产物",
+    "status" : "success",
+    "model" : "product-manager",
+    "duration" : "0s",
+    "progress" : 100
+  }, {
+    "name" : "UI设计师",
+    "role" : "UI 原型、交互说明、设计规范",
+    "status" : "success",
+    "model" : "ui-designer",
+    "duration" : "0s",
+    "progress" : 100
+  }, {
+    "name" : "架构师",
+    "role" : "系统架构、接口设计、数据库设计",
+    "status" : "success",
+    "model" : "architect",
+    "duration" : "0s",
+    "progress" : 100
+  }, {
+    "name" : "后端开发工程师",
+    "role" : "后端接口、服务、数据库相关开发",
+    "status" : "success",
+    "model" : "backend-engineer",
+    "duration" : "0s",
+    "progress" : 100
+  }, {
+    "name" : "前端开发工程师",
+    "role" : "前端页面、组件、交互与接口对接",
+    "status" : "success",
+    "model" : "frontend-engineer",
+    "duration" : "0s",
+    "progress" : 100
+  }, {
+    "name" : "测试工程师",
+    "role" : "测试用例、E2E、验证报告与缺陷反馈",
+    "status" : "success",
+    "model" : "test-engineer",
+    "duration" : "0s",
+    "progress" : 100
+  }, {
+    "name" : "运维工程师",
+    "role" : "部署、环境、数据库运维与交付检查",
+    "status" : "pending",
+    "model" : "ops-engineer",
+    "duration" : "--",
+    "progress" : 0
+  } ],
+  "review" : {
+    "workflowRunId" : "31fa5e29-3475-44ea-afed-2c3ca3fa53e4",
+    "stageKey" : "verification-before-completion",
+    "stageTitle" : "完成前验证",
+    "status" : "awaiting_review",
+    "nextStageKey" : "delivery",
+    "nextStageTitle" : "交付",
+    "artifacts" : [ {
+      "stage" : "test-docs",
+      "name" : "dev-integration.spec.js",
+      "type" : "directory",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2Fe2e%2Fdev-integration.spec.js",
+      "downloadable" : true
+    }, {
+      "stage" : "test-docs",
+      "name" : "dev-integration-report.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%2Fdev-integration-report.md",
+      "downloadable" : true
+    }, {
+      "stage" : "test-docs",
+      "name" : "测试报告",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%2Ftest-report.md",
+      "downloadable" : true
+    }, {
+      "stage" : "test-docs",
+      "name" : "测试用例摘要",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%2Ftest-case-summary.md",
+      "downloadable" : true
+    }, {
+      "stage" : "test-docs",
+      "name" : "功能测试用例.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%2F%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B.md",
+      "downloadable" : true
+    } ],
+    "userFeedback" : "1、普通用户权限时，从首页切换到其他菜单，再次点击底部首页，页面会白屏报错只展示页面标题；2、管理员权限下的会议室管理功能不可用，无法新增、编辑、查看二维码；3、删除所有mock数据，初始状态应该没有通知/会议室/预约。只改了测试相关产物不行的，bug修复需要改前后端代码",
+    "revisionMessages" : [ {
+      "role" : "user",
+      "content" : "反馈类型：缺陷修复\n反馈内容：\n1、普通用户权限时，从首页切换到其他菜单，再次点击底部首页，页面会白屏报错只展示页面标题",
+      "options" : [ ],
+      "time" : null
+    }, {
+      "role" : "ai",
+      "content" : "已收到修订反馈。\n\n我的初步评估：\n- 反馈类型：缺陷修复\n- 影响范围：前端、后端\n- 处理建议：这类反馈可作为当前阶段缺陷修复处理，修复后需要重新验证相关产物。\n\n下一步可以点击“探索修订”让我进一步分析修改方案；如果修改点已经明确，也可以直接点击“制定计划”。",
+      "options" : [ ],
+      "time" : null
+    }, {
+      "role" : "user",
+      "content" : "反馈类型：缺陷修复\n反馈内容：\n1、普通用户权限时，从首页切换到其他菜单，再次点击底部首页，页面会白屏报错只展示页面标题；2、管理员权限下的会议室管理功能不可用，无法新增、编辑、查看二维码；3、删除所有mock",
+      "options" : [ ],
+      "time" : null
+    }, {
+      "role" : "ai",
+      "content" : "已收到修订反馈。\n\n我的初步评估：\n- 反馈类型：缺陷修复\n- 影响范围：前端、后端\n- 处理建议：这类反馈可作为当前阶段缺陷修复处理，修复后需要重新验证相关产物。\n\n下一步可以点击“探索修订”让我进一步分析修改方案；如果修改点已经明确，也可以直接点击“制定计划”。",
+      "options" : [ ],
+      "time" : null
+    }, {
+      "role" : "user",
+      "content" : "反馈类型：缺陷修复\n反馈内容：\n1、普通用户权限时，从首页切换到其他菜单，再次点击底部首页，页面会白屏报错只展示页面标题；2、管理员权限下的会议室管理功能不可用，无法新增、编辑、查看二维码；3、删除所有mock数据，初始状态应该没有通知/会议室/预约",
+      "options" : [ ],
+      "time" : null
+    }, {
+      "role" : "ai",
+      "content" : "已收到修订反馈。\n\n我的初步评估：\n- 反馈类型：缺陷修复\n- 影响范围：前端、后端\n- 处理建议：这类反馈可作为当前阶段缺陷修复处理，修复后需要重新验证相关产物。\n\n下一步可以点击“探索修订”让我进一步分析修改方案；如果修改点已经明确，也可以直接点击“制定计划”。",
+      "options" : [ ],
+      "time" : null
+    }, {
+      "role" : "ai",
+      "content" : "正在探索修订「完成前验证」阶段修订，请稍候……",
+      "options" : [ ],
+      "time" : null
+    }, {
+      "role" : "ai",
+      "content" : "开始探索修订阶段修订：完成前验证",
+      "options" : [ ],
+      "time" : "17:11:59"
+    }, {
+      "role" : "ai",
+      "content" : "已按 `/opsx:explore` 仅做只读探索，未修改代码或文档。\n\n## 探索结论\n\n当前真实目录中已存在目标产物与生成工程：\n\n- 测试产物：\n  - `docs/移动端应用：会议室预约系统/测试/e2e/dev-integration.spec.js`\n  - `docs/移动端应用：会议室预约系统/测试/测试报告/dev-integration-report.md`\n  - `docs/移动端应用：会议室预约系统/测试/测试报告/test-report.md`\n  - `docs/移动端应用：会议室预约系统/测试/测试用例/test-case-summary.md`\n  - `docs/移动端应用：会议室预约系统/测试/测试用例/功能测试用例.md`\n- 生成工程：\n  - `generated/HX-Meeting/frontend`\n  - `generated/HX-Meeting/backend`\n\n当前测试报告仍声称“开发联调通过 / E2E 通过”，但用户反馈暴露出未覆盖或未通过的关键缺陷，应修订为“完成前验证未通过，需回退到修复阶段”。\n\n## 针对 3 个反馈的阶段修订建议\n\n### 1. 普通用户底部首页白屏\n\n可疑点：\n\n- `generated/HX-Meeting/frontend/src/views/meeting/HomeView.vue`\n- `generated/HX-Meeting/frontend/src/views/meeting/BookingDetailView.vue`\n- `generated/HX-Meeting/frontend/src/components/layout/BottomNavigation.vue`\n\n风险点：\n\n- 首页直接访问 `todayBooking.room.name`，若初始状态没有预约或后端返回预约结构缺少 `room`，容易触发运行时异常。\n- 预约详情页有 `store.bookings.find(...) || store.todayBooking` 回退逻辑，可能在错误路由或空数据时展示不一致状态。\n- 当前 E2E 只验证 `/home?token=user` 能看到“待办提醒”，没有覆盖“首页 -> 其他菜单 -> 底部首页”的回归路径，也没有监听页面错误。\n\n建议补充测试：\n\n- 普通用户进入 `/home?token=user`\n- 点击底部“预约 / 我的 / 通知”\n- 再点击底部“首页”\n- 断言页面不白屏、无 `pageerror`、标题和首页内容正常展示\n- 在无预约数据场景下也必须通过\n\n### 2. 管理员会议室管理不可用\n\n可疑点：\n\n- `generated/HX-Meeting/frontend/src/views/admin/RoomAdminView.vue`\n- `generated/HX-Meeting/frontend/src/api/hxMeeting.js`\n- `generated/HX-Meeting/backend/src/main/java/com/hxmeeting/controller/RoomController.java`\n- `generated/HX-Meeting/backend/src/main/java/com/hxmeeting/service/RoomService.java`\n\n发现：\n\n- 后端已有：\n  - `POST /admin/rooms`\n  - `PUT /admin/rooms/{id}`\n  - `POST /admin/rooms/{id}/qrcode:regenerate`\n- 前端 `RoomAdminView.vue` 仍直接使用 `demoState.rooms`。\n- “新增”按钮只是 toast：`演示模式：新增表单已预留接口 POST /admin/rooms`\n- “编辑”实际只是本地切换 enabled / toast，并未调用真实接口。\n- “查看二维码”只是确认重新生成二维码，没有真正展示二维码 payload。\n- `adminApi` 目前只有 `regenerateQr`，缺少创建、更新、管理端会议室列表或详情封装。\n\n建议补充测试：\n\n- 管理员访问 `/admin/rooms?token=admin`\n- 新增会议室应发起 `POST /api/hx-meeting/v1/admin/rooms`\n- 编辑会议室应发起 `PUT /api/hx-meeting/v1/admin/rooms/{id}`\n- 查看 / 重新生成二维码应发起 `POST /api/hx-meeting/v1/admin/rooms/{id}/qrcode:regenerate`\n- 页面应展示二维码版本、状态、payload 或可扫码内容\n- 普通用户访问管理接口仍应 403\n\n### 3. 删除所有 mock 数据，初始状态无通知 / 会议室 / 预约\n\n可疑点：\n\n- 前端 mock：\n  - `generated/HX-Meeting/frontend/src/utils/demoData.js`\n  - `generated/HX-Meeting/frontend/src/api/hxMeeting.js`\n- 后端种子：\n  - `generated/HX-Meeting/backend/src/main/resources/db/migration/V2__seed_hx_meeting_demo_data.sql`\n  - `docs/移动端应用：会议室预约系统/数据库设计/数据迁移脚本/V2__seed_hx_meeting_demo_data.sql`\n\n发现：\n\n- 前端仍保留大量 `demoState.rooms / bookings / notifications`。\n- 后端 V2 种子当前包含用户、部门、角色、会议室、二维码。\n- 未发现后端种子插入预约或通知。\n- 用户反馈要求“初始状态应该没有通知/会议室/预约”，意味着至少应删除：\n  - 前端 demo 会议室 / 预约 / 通知默认数据\n  - 后端会议室和二维码 seed\n  - 如有预约 / 通知 seed，也应删除\n- 但仍可能需要保留基础用户与管理员账号，否则 `demo-sso-token` / `admin-token` 无法登录验证。\n\n建议澄清：\n\n- “删除所有 mock 数据”是否包括测试登录用户、管理员用户、部门、角色？\n- 如果全部删除，当前 token 登录链路会失效；更合理的是保留“账号基础数据”，清空“业务数据”：通知、会议室、二维码、预约、审批、服务、违规、转让。\n\n## 建议修订当前阶段产物\n\n### `dev-integration.spec.js`\n\n建议新增 / 调整用例：\n\n1. 普通用户底部导航回首页不白屏。\n2. 空初始状态验证：\n   - `/notifications` 展示空态或 0 未读\n   - `/bookings` 展示无预约空态\n   - 查询会议室返回空列表\n3. 管理员会议室管理真实接口验证：\n   - 新增会议室\n   - 编辑会议室\n   - 重新生成 / 查看二维码\n4. 页面错误监听：\n   - `page.on('pageerror')`\n   - `console.error` 可作为辅助失败信号\n\n### `test-case-summary.md`\n\n建议新增 P0 分组：\n\n- 空初始数据验证\n- 底部导航回归验证\n- 管理员会议室 CRUD 与二维码验证\n\n并将当前“P0 全部通过”改为“存在缺陷，待修复后复验”。\n\n### `功能测试用例.md`\n\n建议追加：\n\n- TC-021 普通用户从其他菜单返回首页不白屏\n- TC-022 初始状态无通知\n- TC-023 初始状态无会议室\n- TC-024 初始状态无预约\n- TC-025 管理员新增会议室\n- TC-026 管理员编辑会议室\n- TC-027 管理员查看 / 重新生成二维码\n\n### `dev-integration-report.md` / `test-report.md`\n\n建议修订结论：\n\n- 当前不应继续写“通过”。\n- 应标记为“验证未通过 / 待修复”。\n- 明确列出 3 个用户反馈缺陷和待补充验证命令。\n- 原有“3 passed”只能作为旧验证记录，不能作为当前缺陷反馈后的最终验收结论。\n\n## 风险\n\n1. 清空会议室后，原 happy path “查询会议室并提交预约”会失效，需要测试先由管理员创建会议室，再执行预约。\n2. 如果删除基础用户 / 角色数据，会导致 auth/me、管理员 token 验证失败。\n3. 前端仍保留 demoData，即使默认 `VITE_USE_DEMO=false`，管理页直接引用 `demoState.rooms`，会继续表现为 mock 数据。\n4. 二维码接口返回实体字段可能与 OpenAPI 期望不完全一致，前端展示和测试断言需统一。\n5. H2 文件数据库存在残留风险，空初始状态测试需要干净库或隔离 profile。\n\n## 下一步计划\n\n1. 先修订测试产物，把当前阶段结论改为“未通过”，补充上述缺陷回归用例。\n2. 进入实现修复阶段后处理：\n   - 首页 / 详情页空数据防护与空态展示\n   - 管理员会议室管理接入真实 API\n   - 清空业务 mock / seed 数据，仅保留必要登录账号\n3. 修复后重新运行：\n   - 前端构建\n   - 后端测试\n   - 完成前验证 E2E\n4. 以最新命令输出更新测试报告，只有新验证通过后再恢复“验收通过”结论。",
+      "options" : [ ],
+      "time" : null
+    }, {
+      "role" : "user",
+      "content" : "只改了测试相关产物不行的，bu g",
+      "options" : [ ],
+      "time" : null
+    }, {
+      "role" : "ai",
+      "content" : "已收到修订反馈。\n\n我的初步评估：\n- 反馈类型：缺陷修复\n- 影响范围：测试\n- 处理建议：这类反馈可作为当前阶段缺陷修复处理，修复后需要重新验证相关产物。\n\n下一步可以点击“探索修订”让我进一步分析修改方案；如果修改点已经明确，也可以直接点击“制定计划”。",
+      "options" : [ ],
+      "time" : null
+    }, {
+      "role" : "user",
+      "content" : "只改了测试相关产物不行的，bu g",
+      "options" : [ ],
+      "time" : null
+    }, {
+      "role" : "ai",
+      "content" : "已收到修订反馈。\n\n我的初步评估：\n- 反馈类型：缺陷修复\n- 影响范围：测试\n- 处理建议：这类反馈可作为当前阶段缺陷修复处理，修复后需要重新验证相关产物。\n\n下一步可以点击“探索修订”让我进一步分析修改方案；如果修改点已经明确，也可以直接点击“制定计划”。",
+      "options" : [ ],
+      "time" : null
+    }, {
+      "role" : "user",
+      "content" : "只改了测试相关产物不行的，bug修复需要改前后端代码",
+      "options" : [ ],
+      "time" : null
+    }, {
+      "role" : "ai",
+      "content" : "已收到修订反馈。\n\n我的初步评估：\n- 反馈类型：缺陷修复\n- 影响范围：后端、测试\n- 处理建议：这类反馈可作为当前阶段缺陷修复处理，修复后需要重新验证相关产物。\n\n下一步可以点击“探索修订”让我进一步分析修改方案；如果修改点已经明确，也可以直接点击“制定计划”。",
+      "options" : [ ],
+      "time" : null
+    }, {
+      "role" : "user",
+      "content" : "1、普通用户权限时，从首页切换到其他菜单，再次点击底部首页，页面会白屏报错只展示页面标题；2、管理员权限下的会议室管理功能不可用，无法新增、编辑、查看二维码；3、删除所有mock数据，初始状态应该没有通知/会议室/预约。只改了测试相关产物不行的，bug修复需要改前后端代码",
+      "options" : [ ],
+      "time" : null
+    }, {
+      "role" : "ai",
+      "content" : "已收到修订反馈。\n\n我的初步评估：\n- 反馈类型：缺陷修复\n- 影响范围：前端、后端、测试\n- 处理建议：这类反馈可作为当前阶段缺陷修复处理，修复后需要重新验证相关产物。\n\n下一步可以点击“探索修订”让我进一步分析修改方案；如果修改点已经明确，也可以直接点击“制定计划”。",
+      "options" : [ ],
+      "time" : null
+    } ],
+    "revision" : {
+      "workflowRunId" : "31fa5e29-3475-44ea-afed-2c3ca3fa53e4",
+      "stageKey" : "verification-before-completion",
+      "stageTitle" : "完成前验证",
+      "projectName" : "移动端应用：会议室预约系统",
+      "artifactPaths" : [ "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2Fe2e%2Fdev-integration.spec.js", "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%2Fdev-integration-report.md", "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%2Ftest-report.md", "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%2Ftest-case-summary.md", "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%2F%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B.md" ],
+      "userFeedback" : "1、普通用户权限时，从首页切换到其他菜单，再次点击底部首页，页面会白屏报错只展示页面标题；2、管理员权限下的会议室管理功能不可用，无法新增、编辑、查看二维码；3、删除所有mock数据，初始状态应该没有通知/会议室/预约。只改了测试相关产物不行的，bug修复需要改前后端代码",
+      "changeId" : "revise-verification-before-completion",
+      "status" : "feedback_submitted",
+      "proposalStatus" : "未创建",
+      "applyStatus" : "未执行",
+      "archiveStatus" : "未归档",
+      "updatedAt" : "18:00:35",
+      "allowedPaths" : "docs/移动端应用：会议室预约系统/测试/ 和 generated/{项目英文名}/frontend、generated/{项目英文名}/backend"
+    }
+  },
+  "revision" : {
+    "workflowRunId" : "31fa5e29-3475-44ea-afed-2c3ca3fa53e4",
+    "stageKey" : "verification-before-completion",
+    "stageTitle" : "完成前验证",
+    "projectName" : "移动端应用：会议室预约系统",
+    "artifactPaths" : [ "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2Fe2e%2Fdev-integration.spec.js", "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%2Fdev-integration-report.md", "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%2Ftest-report.md", "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%2Ftest-case-summary.md", "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%2F%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B.md" ],
+    "userFeedback" : "1、普通用户权限时，从首页切换到其他菜单，再次点击底部首页，页面会白屏报错只展示页面标题；2、管理员权限下的会议室管理功能不可用，无法新增、编辑、查看二维码；3、删除所有mock数据，初始状态应该没有通知/会议室/预约。只改了测试相关产物不行的，bug修复需要改前后端代码",
+    "changeId" : "revise-verification-before-completion",
+    "status" : "feedback_submitted",
+    "proposalStatus" : "未创建",
+    "applyStatus" : "未执行",
+    "archiveStatus" : "未归档",
+    "updatedAt" : "18:00:35",
+    "allowedPaths" : "docs/移动端应用：会议室预约系统/测试/ 和 generated/{项目英文名}/frontend、generated/{项目英文名}/backend"
+  },
+  "reviewFeedback" : "1、普通用户权限时，从首页切换到其他菜单，再次点击底部首页，页面会白屏报错只展示页面标题；2、管理员权限下的会议室管理功能不可用，无法新增、编辑、查看二维码；3、删除所有mock数据，初始状态应该没有通知/会议室/预约。只改了测试相关产物不行的，bug修复需要改前后端代码",
+  "revisionMessages" : [ {
+    "role" : "user",
+    "content" : "反馈类型：缺陷修复\n反馈内容：\n1、普通用户权限时，从首页切换到其他菜单，再次点击底部首页，页面会白屏报错只展示页面标题",
+    "options" : [ ],
+    "time" : null
+  }, {
+    "role" : "ai",
+    "content" : "已收到修订反馈。\n\n我的初步评估：\n- 反馈类型：缺陷修复\n- 影响范围：前端、后端\n- 处理建议：这类反馈可作为当前阶段缺陷修复处理，修复后需要重新验证相关产物。\n\n下一步可以点击“探索修订”让我进一步分析修改方案；如果修改点已经明确，也可以直接点击“制定计划”。",
+    "options" : [ ],
+    "time" : null
+  }, {
+    "role" : "user",
+    "content" : "反馈类型：缺陷修复\n反馈内容：\n1、普通用户权限时，从首页切换到其他菜单，再次点击底部首页，页面会白屏报错只展示页面标题；2、管理员权限下的会议室管理功能不可用，无法新增、编辑、查看二维码；3、删除所有mock",
+    "options" : [ ],
+    "time" : null
+  }, {
+    "role" : "ai",
+    "content" : "已收到修订反馈。\n\n我的初步评估：\n- 反馈类型：缺陷修复\n- 影响范围：前端、后端\n- 处理建议：这类反馈可作为当前阶段缺陷修复处理，修复后需要重新验证相关产物。\n\n下一步可以点击“探索修订”让我进一步分析修改方案；如果修改点已经明确，也可以直接点击“制定计划”。",
+    "options" : [ ],
+    "time" : null
+  }, {
+    "role" : "user",
+    "content" : "反馈类型：缺陷修复\n反馈内容：\n1、普通用户权限时，从首页切换到其他菜单，再次点击底部首页，页面会白屏报错只展示页面标题；2、管理员权限下的会议室管理功能不可用，无法新增、编辑、查看二维码；3、删除所有mock数据，初始状态应该没有通知/会议室/预约",
+    "options" : [ ],
+    "time" : null
+  }, {
+    "role" : "ai",
+    "content" : "已收到修订反馈。\n\n我的初步评估：\n- 反馈类型：缺陷修复\n- 影响范围：前端、后端\n- 处理建议：这类反馈可作为当前阶段缺陷修复处理，修复后需要重新验证相关产物。\n\n下一步可以点击“探索修订”让我进一步分析修改方案；如果修改点已经明确，也可以直接点击“制定计划”。",
+    "options" : [ ],
+    "time" : null
+  }, {
+    "role" : "ai",
+    "content" : "正在探索修订「完成前验证」阶段修订，请稍候……",
+    "options" : [ ],
+    "time" : null
+  }, {
+    "role" : "ai",
+    "content" : "开始探索修订阶段修订：完成前验证",
+    "options" : [ ],
+    "time" : "17:11:59"
+  }, {
+    "role" : "ai",
+    "content" : "已按 `/opsx:explore` 仅做只读探索，未修改代码或文档。\n\n## 探索结论\n\n当前真实目录中已存在目标产物与生成工程：\n\n- 测试产物：\n  - `docs/移动端应用：会议室预约系统/测试/e2e/dev-integration.spec.js`\n  - `docs/移动端应用：会议室预约系统/测试/测试报告/dev-integration-report.md`\n  - `docs/移动端应用：会议室预约系统/测试/测试报告/test-report.md`\n  - `docs/移动端应用：会议室预约系统/测试/测试用例/test-case-summary.md`\n  - `docs/移动端应用：会议室预约系统/测试/测试用例/功能测试用例.md`\n- 生成工程：\n  - `generated/HX-Meeting/frontend`\n  - `generated/HX-Meeting/backend`\n\n当前测试报告仍声称“开发联调通过 / E2E 通过”，但用户反馈暴露出未覆盖或未通过的关键缺陷，应修订为“完成前验证未通过，需回退到修复阶段”。\n\n## 针对 3 个反馈的阶段修订建议\n\n### 1. 普通用户底部首页白屏\n\n可疑点：\n\n- `generated/HX-Meeting/frontend/src/views/meeting/HomeView.vue`\n- `generated/HX-Meeting/frontend/src/views/meeting/BookingDetailView.vue`\n- `generated/HX-Meeting/frontend/src/components/layout/BottomNavigation.vue`\n\n风险点：\n\n- 首页直接访问 `todayBooking.room.name`，若初始状态没有预约或后端返回预约结构缺少 `room`，容易触发运行时异常。\n- 预约详情页有 `store.bookings.find(...) || store.todayBooking` 回退逻辑，可能在错误路由或空数据时展示不一致状态。\n- 当前 E2E 只验证 `/home?token=user` 能看到“待办提醒”，没有覆盖“首页 -> 其他菜单 -> 底部首页”的回归路径，也没有监听页面错误。\n\n建议补充测试：\n\n- 普通用户进入 `/home?token=user`\n- 点击底部“预约 / 我的 / 通知”\n- 再点击底部“首页”\n- 断言页面不白屏、无 `pageerror`、标题和首页内容正常展示\n- 在无预约数据场景下也必须通过\n\n### 2. 管理员会议室管理不可用\n\n可疑点：\n\n- `generated/HX-Meeting/frontend/src/views/admin/RoomAdminView.vue`\n- `generated/HX-Meeting/frontend/src/api/hxMeeting.js`\n- `generated/HX-Meeting/backend/src/main/java/com/hxmeeting/controller/RoomController.java`\n- `generated/HX-Meeting/backend/src/main/java/com/hxmeeting/service/RoomService.java`\n\n发现：\n\n- 后端已有：\n  - `POST /admin/rooms`\n  - `PUT /admin/rooms/{id}`\n  - `POST /admin/rooms/{id}/qrcode:regenerate`\n- 前端 `RoomAdminView.vue` 仍直接使用 `demoState.rooms`。\n- “新增”按钮只是 toast：`演示模式：新增表单已预留接口 POST /admin/rooms`\n- “编辑”实际只是本地切换 enabled / toast，并未调用真实接口。\n- “查看二维码”只是确认重新生成二维码，没有真正展示二维码 payload。\n- `adminApi` 目前只有 `regenerateQr`，缺少创建、更新、管理端会议室列表或详情封装。\n\n建议补充测试：\n\n- 管理员访问 `/admin/rooms?token=admin`\n- 新增会议室应发起 `POST /api/hx-meeting/v1/admin/rooms`\n- 编辑会议室应发起 `PUT /api/hx-meeting/v1/admin/rooms/{id}`\n- 查看 / 重新生成二维码应发起 `POST /api/hx-meeting/v1/admin/rooms/{id}/qrcode:regenerate`\n- 页面应展示二维码版本、状态、payload 或可扫码内容\n- 普通用户访问管理接口仍应 403\n\n### 3. 删除所有 mock 数据，初始状态无通知 / 会议室 / 预约\n\n可疑点：\n\n- 前端 mock：\n  - `generated/HX-Meeting/frontend/src/utils/demoData.js`\n  - `generated/HX-Meeting/frontend/src/api/hxMeeting.js`\n- 后端种子：\n  - `generated/HX-Meeting/backend/src/main/resources/db/migration/V2__seed_hx_meeting_demo_data.sql`\n  - `docs/移动端应用：会议室预约系统/数据库设计/数据迁移脚本/V2__seed_hx_meeting_demo_data.sql`\n\n发现：\n\n- 前端仍保留大量 `demoState.rooms / bookings / notifications`。\n- 后端 V2 种子当前包含用户、部门、角色、会议室、二维码。\n- 未发现后端种子插入预约或通知。\n- 用户反馈要求“初始状态应该没有通知/会议室/预约”，意味着至少应删除：\n  - 前端 demo 会议室 / 预约 / 通知默认数据\n  - 后端会议室和二维码 seed\n  - 如有预约 / 通知 seed，也应删除\n- 但仍可能需要保留基础用户与管理员账号，否则 `demo-sso-token` / `admin-token` 无法登录验证。\n\n建议澄清：\n\n- “删除所有 mock 数据”是否包括测试登录用户、管理员用户、部门、角色？\n- 如果全部删除，当前 token 登录链路会失效；更合理的是保留“账号基础数据”，清空“业务数据”：通知、会议室、二维码、预约、审批、服务、违规、转让。\n\n## 建议修订当前阶段产物\n\n### `dev-integration.spec.js`\n\n建议新增 / 调整用例：\n\n1. 普通用户底部导航回首页不白屏。\n2. 空初始状态验证：\n   - `/notifications` 展示空态或 0 未读\n   - `/bookings` 展示无预约空态\n   - 查询会议室返回空列表\n3. 管理员会议室管理真实接口验证：\n   - 新增会议室\n   - 编辑会议室\n   - 重新生成 / 查看二维码\n4. 页面错误监听：\n   - `page.on('pageerror')`\n   - `console.error` 可作为辅助失败信号\n\n### `test-case-summary.md`\n\n建议新增 P0 分组：\n\n- 空初始数据验证\n- 底部导航回归验证\n- 管理员会议室 CRUD 与二维码验证\n\n并将当前“P0 全部通过”改为“存在缺陷，待修复后复验”。\n\n### `功能测试用例.md`\n\n建议追加：\n\n- TC-021 普通用户从其他菜单返回首页不白屏\n- TC-022 初始状态无通知\n- TC-023 初始状态无会议室\n- TC-024 初始状态无预约\n- TC-025 管理员新增会议室\n- TC-026 管理员编辑会议室\n- TC-027 管理员查看 / 重新生成二维码\n\n### `dev-integration-report.md` / `test-report.md`\n\n建议修订结论：\n\n- 当前不应继续写“通过”。\n- 应标记为“验证未通过 / 待修复”。\n- 明确列出 3 个用户反馈缺陷和待补充验证命令。\n- 原有“3 passed”只能作为旧验证记录，不能作为当前缺陷反馈后的最终验收结论。\n\n## 风险\n\n1. 清空会议室后，原 happy path “查询会议室并提交预约”会失效，需要测试先由管理员创建会议室，再执行预约。\n2. 如果删除基础用户 / 角色数据，会导致 auth/me、管理员 token 验证失败。\n3. 前端仍保留 demoData，即使默认 `VITE_USE_DEMO=false`，管理页直接引用 `demoState.rooms`，会继续表现为 mock 数据。\n4. 二维码接口返回实体字段可能与 OpenAPI 期望不完全一致，前端展示和测试断言需统一。\n5. H2 文件数据库存在残留风险，空初始状态测试需要干净库或隔离 profile。\n\n## 下一步计划\n\n1. 先修订测试产物，把当前阶段结论改为“未通过”，补充上述缺陷回归用例。\n2. 进入实现修复阶段后处理：\n   - 首页 / 详情页空数据防护与空态展示\n   - 管理员会议室管理接入真实 API\n   - 清空业务 mock / seed 数据，仅保留必要登录账号\n3. 修复后重新运行：\n   - 前端构建\n   - 后端测试\n   - 完成前验证 E2E\n4. 以最新命令输出更新测试报告，只有新验证通过后再恢复“验收通过”结论。",
+    "options" : [ ],
+    "time" : null
+  }, {
+    "role" : "user",
+    "content" : "只改了测试相关产物不行的，bu g",
+    "options" : [ ],
+    "time" : null
+  }, {
+    "role" : "ai",
+    "content" : "已收到修订反馈。\n\n我的初步评估：\n- 反馈类型：缺陷修复\n- 影响范围：测试\n- 处理建议：这类反馈可作为当前阶段缺陷修复处理，修复后需要重新验证相关产物。\n\n下一步可以点击“探索修订”让我进一步分析修改方案；如果修改点已经明确，也可以直接点击“制定计划”。",
+    "options" : [ ],
+    "time" : null
+  }, {
+    "role" : "user",
+    "content" : "只改了测试相关产物不行的，bu g",
+    "options" : [ ],
+    "time" : null
+  }, {
+    "role" : "ai",
+    "content" : "已收到修订反馈。\n\n我的初步评估：\n- 反馈类型：缺陷修复\n- 影响范围：测试\n- 处理建议：这类反馈可作为当前阶段缺陷修复处理，修复后需要重新验证相关产物。\n\n下一步可以点击“探索修订”让我进一步分析修改方案；如果修改点已经明确，也可以直接点击“制定计划”。",
+    "options" : [ ],
+    "time" : null
+  }, {
+    "role" : "user",
+    "content" : "只改了测试相关产物不行的，bug修复需要改前后端代码",
+    "options" : [ ],
+    "time" : null
+  }, {
+    "role" : "ai",
+    "content" : "已收到修订反馈。\n\n我的初步评估：\n- 反馈类型：缺陷修复\n- 影响范围：后端、测试\n- 处理建议：这类反馈可作为当前阶段缺陷修复处理，修复后需要重新验证相关产物。\n\n下一步可以点击“探索修订”让我进一步分析修改方案；如果修改点已经明确，也可以直接点击“制定计划”。",
+    "options" : [ ],
+    "time" : null
+  }, {
+    "role" : "user",
+    "content" : "1、普通用户权限时，从首页切换到其他菜单，再次点击底部首页，页面会白屏报错只展示页面标题；2、管理员权限下的会议室管理功能不可用，无法新增、编辑、查看二维码；3、删除所有mock数据，初始状态应该没有通知/会议室/预约。只改了测试相关产物不行的，bug修复需要改前后端代码",
+    "options" : [ ],
+    "time" : null
+  }, {
+    "role" : "ai",
+    "content" : "已收到修订反馈。\n\n我的初步评估：\n- 反馈类型：缺陷修复\n- 影响范围：前端、后端、测试\n- 处理建议：这类反馈可作为当前阶段缺陷修复处理，修复后需要重新验证相关产物。\n\n下一步可以点击“探索修订”让我进一步分析修改方案；如果修改点已经明确，也可以直接点击“制定计划”。",
+    "options" : [ ],
+    "time" : null
+  } ],
+  "nextStageIndex" : 14,
+  "approvedStageKeys" : [ "requirements", "brainstorming", "writing-plans", "product-design-artifacts", "ui-design", "architecture-design", "api-design", "database-design", "backend-development", "frontend-development", "development-integration", "test-case-generation", "e2e-acceptance-testing" ]
+}

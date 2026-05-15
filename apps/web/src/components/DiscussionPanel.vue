@@ -1,5 +1,6 @@
 <script setup>
 import { computed, nextTick, ref, watch } from "vue";
+import MarkdownMessage from "@/components/MarkdownMessage.vue";
 
 const props = defineProps({
   messages: {
@@ -120,7 +121,9 @@ watch(() => props.messages.length, async () => {
           >
             <div class="message-avatar">{{ roleLabel(msg.role) }}</div>
             <div class="message-bubble">
-              <div class="message-content">{{ msg.content }}</div>
+              <div class="message-content">
+                <MarkdownMessage :content="msg.content" />
+              </div>
               <div v-if="msg.role === 'ai' && index === latestAiIndex && msg.options?.length" class="option-list">
                 <button
                   v-for="option in msg.options"
@@ -306,7 +309,6 @@ watch(() => props.messages.length, async () => {
   padding: 14px 16px;
   font-size: 14px;
   line-height: 1.7;
-  white-space: pre-wrap;
 }
 
 .option-list {

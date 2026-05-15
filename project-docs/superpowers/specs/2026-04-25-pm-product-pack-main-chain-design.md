@@ -131,8 +131,8 @@
 `.claude/skills/prd-generator` 当前可以生成：
 
 - `PRD.md`
-- `PRD.docx`
 - `UI-Design-Spec.md`
+- PlantUML 流程图 `.puml`
 - PlantUML 流程图 `.puml`
 - 可选 PlantUML PNG 流程图预览
 

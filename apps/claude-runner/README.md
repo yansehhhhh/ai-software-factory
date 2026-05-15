@@ -19,16 +19,26 @@ yarn workspace @ai-factory/claude-runner dev
 - `POST /claude/session/close`
 - `POST /claude/run`
 
-## Workspace
+## Workspace 与生成产物
 
-所有任务运行在：
+任务运行时上下文保留在：
 
 ```text
-workspace/runs/{taskId}/
+workspace/runtime/{taskId}/
 ```
 
-目录包含：
-- `project/`
+运行时目录包含：
 - `logs/`
 - `context/`
 - `metadata.json`
+
+前后端工程代码不写入运行时 workspace，而是按项目英文名写入：
+
+```text
+generated/{项目英文名}/
+├── frontend/
+├── backend/
+└── tests/
+```
+
+例如 `docs/移动端应用：会议室预约系统` 对应的工程目录为 `generated/HX-Meeting/`。

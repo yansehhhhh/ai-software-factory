@@ -18,6 +18,7 @@ public record WorkflowStatus(
         List<String> examples,
         List<StepStatus> steps,
         List<AgentStatus> agents,
+        StageReviewState review,
         String error
 ) {
 }

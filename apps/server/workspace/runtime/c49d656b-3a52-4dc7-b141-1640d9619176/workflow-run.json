@@ -1,0 +1,606 @@
+{
+  "schemaVersion" : 1,
+  "taskId" : "c49d656b-3a52-4dc7-b141-1640d9619176",
+  "requirement" : "做一个 UI 恢复演练系统",
+  "sessionId" : "workflow-c49d656b-3a52-4dc7-b141-1640d9619176",
+  "status" : "success",
+  "currentStage" : "已完成",
+  "currentArtifactType" : "生成结果",
+  "designProgressMessage" : "阶段化软件工厂链路已完成",
+  "progress" : 100,
+  "estimatedRemaining" : "00:00",
+  "estimatedCompletion" : "已完成",
+  "error" : null,
+  "updatedAt" : "2026-05-13T06:01:08.722096Z",
+  "result" : {
+    "available" : true,
+    "designAvailable" : true,
+    "projectName" : "recovered-ui-design",
+    "projectUrl" : "/api/artifacts?path=workspace%2Fruntime%2Ftask-recover%2Fproject",
+    "reportUrl" : "/api/artifacts?path=workspace%2Fruntime%2Ftask-recover%2Fproject%2Ftest-report.md",
+    "zipUrl" : "/api/artifacts?path=workspace%2Fruntime%2Ftask-recover%2Fproject%2Fproject.zip",
+    "prdMarkdown" : "recovered-ui-design 的设计产物已生成：\n- PRD\n- UI 设计规范",
+    "pageSpecs" : [ ],
+    "componentSpecs" : [ ],
+    "userFlowSpecs" : [ ],
+    "uiGuidelines" : [ "UI 设计规范 已生成", "HTML 原型 已生成", "桌面端设计图 已生成", "移动端设计图 已生成", "组件清单 已生成", "交互说明 已生成", "响应式断点参考 已生成" ],
+    "artifacts" : [ {
+      "stage" : "requirement",
+      "name" : "PRD",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=target%2Fdocs%2Frecovered-ui-design%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F02-%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%2FPRD.md",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "UI 设计规范",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=target%2Fdocs%2Frecovered-ui-design%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F03-UI%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83%2FUI-Design-Spec.md",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "UI 设计规范",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=target%2Fdocs%2Frecovered-ui-design%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F03-UI%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83%2FUI-Design-Spec.md",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "HTML 原型",
+      "type" : "html",
+      "path" : "/api/artifacts?path=target%2Fdocs%2Frecovered-ui-design%2FUI%E5%8E%9F%E5%9E%8B%2F%E8%AE%BE%E8%AE%A1%E7%A8%BF%2Findex.html",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "桌面端设计图",
+      "type" : "image",
+      "path" : "/api/artifacts?path=target%2Fdocs%2Frecovered-ui-design%2FUI%E5%8E%9F%E5%9E%8B%2F%E8%AE%BE%E8%AE%A1%E7%A8%BF%2Fdesktop.svg",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "移动端设计图",
+      "type" : "image",
+      "path" : "/api/artifacts?path=target%2Fdocs%2Frecovered-ui-design%2FUI%E5%8E%9F%E5%9E%8B%2F%E8%AE%BE%E8%AE%A1%E7%A8%BF%2Fmobile.svg",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "组件清单",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=target%2Fdocs%2Frecovered-ui-design%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%BB%84%E4%BB%B6%E5%BA%93%2F%E7%BB%84%E4%BB%B6%E6%B8%85%E5%8D%95.md",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "交互说明",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=target%2Fdocs%2Frecovered-ui-design%2FUI%E5%8E%9F%E5%9E%8B%2F%E4%BA%A4%E4%BA%92%E5%8E%9F%E5%9E%8B%2F%E4%BA%A4%E4%BA%92%E8%AF%B4%E6%98%8E.md",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "响应式断点参考",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=target%2Fdocs%2Frecovered-ui-design%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%2F%E5%93%8D%E5%BA%94%E5%BC%8F%E6%96%AD%E7%82%B9%E5%8F%82%E8%80%83.md",
+      "downloadable" : true
+    }, {
+      "stage" : "code",
+      "name" : "生成项目",
+      "type" : "directory",
+      "path" : "/api/artifacts?path=workspace%2Fruntime%2Ftask-recover%2Fproject",
+      "downloadable" : true
+    }, {
+      "stage" : "development-integration",
+      "name" : "dev-integration-report.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=docs%2Frecovered-ui-design%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%2Fdev-integration-report.md",
+      "downloadable" : true
+    }, {
+      "stage" : "test-case-generation",
+      "name" : "测试用例摘要",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=docs%2Frecovered-ui-design%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%2Ftest-case-summary.md",
+      "downloadable" : true
+    }, {
+      "stage" : "test-case-generation",
+      "name" : "功能测试用例.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=docs%2Frecovered-ui-design%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%2F%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B.md",
+      "downloadable" : true
+    }, {
+      "stage" : "e2e-acceptance-testing",
+      "name" : "测试报告",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=docs%2Frecovered-ui-design%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%2Ftest-report.md",
+      "downloadable" : true
+    } ]
+  },
+  "logs" : [ {
+    "time" : "14:01:06",
+    "agent" : "Orchestrator",
+    "level" : "info",
+    "message" : "任务已创建"
+  }, {
+    "time" : "14:01:06",
+    "agent" : "Requirement Agent",
+    "level" : "info",
+    "message" : "开始整理需求输入并生成需求摘要"
+  }, {
+    "time" : "14:01:06",
+    "agent" : "Requirement Agent",
+    "level" : "info",
+    "message" : "需求摘要整理完成"
+  }, {
+    "time" : "14:01:06",
+    "agent" : "Requirement Agent",
+    "level" : "info",
+    "message" : "开始整理需求讨论结论"
+  }, {
+    "time" : "14:01:06",
+    "agent" : "Requirement Agent",
+    "level" : "info",
+    "message" : "需求讨论结论整理完成"
+  }, {
+    "time" : "14:01:06",
+    "agent" : "Product Agent",
+    "level" : "info",
+    "message" : "开始制定阶段化实现计划"
+  }, {
+    "time" : "14:01:06",
+    "agent" : "Product Agent",
+    "level" : "info",
+    "message" : "阶段化实现计划整理完成"
+  }, {
+    "time" : "14:01:06",
+    "agent" : "Product Agent",
+    "level" : "info",
+    "message" : "开始生成变更记录、PRD、流程图和附录等需求产物"
+  }, {
+    "time" : "14:01:06",
+    "agent" : "Product Agent",
+    "level" : "info",
+    "message" : "需求阶段产物生成完成"
+  }, {
+    "time" : "14:01:06",
+    "agent" : "Orchestrator",
+    "level" : "info",
+    "message" : "需求产物生成 已进入等待用户确认"
+  }, {
+    "time" : "14:01:06",
+    "agent" : "Orchestrator",
+    "level" : "info",
+    "message" : "需求产物生成 已确认，继续执行UI设计"
+  }, {
+    "time" : "14:01:06",
+    "agent" : "Design Agent",
+    "level" : "info",
+    "message" : "开始根据需求文档生成 UI 设计规范和设计图"
+  }, {
+    "time" : "14:01:06",
+    "agent" : "Design Agent",
+    "level" : "warn",
+    "message" : "UI 设计阶段 HTTP 返回超时，开始根据已落盘产物尝试恢复阶段状态"
+  }, {
+    "time" : "14:01:06",
+    "agent" : "Design Agent",
+    "level" : "info",
+    "message" : "已根据 UI 原型文件恢复 UI 设计阶段结果"
+  }, {
+    "time" : "14:01:06",
+    "agent" : "Design Agent",
+    "level" : "info",
+    "message" : "UI 设计产物生成完成"
+  }, {
+    "time" : "14:01:06",
+    "agent" : "Orchestrator",
+    "level" : "info",
+    "message" : "UI设计 已进入等待用户确认"
+  }, {
+    "time" : "14:01:07",
+    "agent" : "Orchestrator",
+    "level" : "info",
+    "message" : "UI设计 已确认，继续执行架构设计"
+  }, {
+    "time" : "14:01:07",
+    "agent" : "Architecture Agent",
+    "level" : "info",
+    "message" : "开始生成前后端架构设计产物"
+  }, {
+    "time" : "14:01:07",
+    "agent" : "Architecture Agent",
+    "level" : "info",
+    "message" : "架构设计产物生成完成"
+  }, {
+    "time" : "14:01:07",
+    "agent" : "Orchestrator",
+    "level" : "info",
+    "message" : "架构设计 已进入等待用户确认"
+  }, {
+    "time" : "14:01:07",
+    "agent" : "Orchestrator",
+    "level" : "info",
+    "message" : "架构设计 已确认，继续执行接口设计"
+  }, {
+    "time" : "14:01:07",
+    "agent" : "API Agent",
+    "level" : "info",
+    "message" : "开始生成接口清单与 OpenAPI 定义"
+  }, {
+    "time" : "14:01:07",
+    "agent" : "API Agent",
+    "level" : "info",
+    "message" : "接口设计产物生成完成"
+  }, {
+    "time" : "14:01:07",
+    "agent" : "Orchestrator",
+    "level" : "info",
+    "message" : "接口设计 已进入等待用户确认"
+  }, {
+    "time" : "14:01:07",
+    "agent" : "Orchestrator",
+    "level" : "info",
+    "message" : "接口设计 已确认，继续执行数据库设计"
+  }, {
+    "time" : "14:01:07",
+    "agent" : "Database Agent",
+    "level" : "info",
+    "message" : "开始生成数据字典、建表脚本和迁移脚本"
+  }, {
+    "time" : "14:01:07",
+    "agent" : "Database Agent",
+    "level" : "info",
+    "message" : "数据库设计产物生成完成"
+  }, {
+    "time" : "14:01:07",
+    "agent" : "Orchestrator",
+    "level" : "info",
+    "message" : "数据库设计 已进入等待用户确认"
+  }, {
+    "time" : "14:01:07",
+    "agent" : "Orchestrator",
+    "level" : "info",
+    "message" : "数据库设计 已确认，继续执行后端开发"
+  }, {
+    "time" : "14:01:07",
+    "agent" : "Backend Agent",
+    "level" : "info",
+    "message" : "开始根据数据库和接口设计生成可运行后端代码"
+  }, {
+    "time" : "14:01:07",
+    "agent" : "Backend Agent",
+    "level" : "info",
+    "message" : "后端代码生成完成"
+  }, {
+    "time" : "14:01:07",
+    "agent" : "Orchestrator",
+    "level" : "info",
+    "message" : "后端开发 已进入等待用户确认"
+  }, {
+    "time" : "14:01:07",
+    "agent" : "Orchestrator",
+    "level" : "info",
+    "message" : "后端开发 已确认，继续执行前端开发"
+  }, {
+    "time" : "14:01:07",
+    "agent" : "Frontend Agent",
+    "level" : "info",
+    "message" : "开始基于真实后端接口生成前端代码"
+  }, {
+    "time" : "14:01:07",
+    "agent" : "Frontend Agent",
+    "level" : "info",
+    "message" : "前端开发阶段完成"
+  }, {
+    "time" : "14:01:07",
+    "agent" : "Orchestrator",
+    "level" : "info",
+    "message" : "前端开发 已进入等待用户确认"
+  }, {
+    "time" : "14:01:07",
+    "agent" : "Orchestrator",
+    "level" : "info",
+    "message" : "前端开发 已确认，继续执行开发联调"
+  }, {
+    "time" : "14:01:07",
+    "agent" : "Integration Agent",
+    "level" : "info",
+    "message" : "开始启动前后端并执行开发自测联调"
+  }, {
+    "time" : "14:01:07",
+    "agent" : "Integration Agent",
+    "level" : "info",
+    "message" : "开发联调完成"
+  }, {
+    "time" : "14:01:07",
+    "agent" : "Orchestrator",
+    "level" : "info",
+    "message" : "开发联调 已进入等待用户确认"
+  }, {
+    "time" : "14:01:07",
+    "agent" : "Orchestrator",
+    "level" : "info",
+    "message" : "开发联调 已确认，继续执行测试用例生成"
+  }, {
+    "time" : "14:01:08",
+    "agent" : "Test Agent",
+    "level" : "info",
+    "message" : "开始生成测试用例和 E2E 验收测试"
+  }, {
+    "time" : "14:01:08",
+    "agent" : "Test Agent",
+    "level" : "info",
+    "message" : "测试用例生成完成"
+  }, {
+    "time" : "14:01:08",
+    "agent" : "Orchestrator",
+    "level" : "info",
+    "message" : "测试用例生成 已进入等待用户确认"
+  }, {
+    "time" : "14:01:08",
+    "agent" : "Orchestrator",
+    "level" : "info",
+    "message" : "测试用例生成 已确认，继续执行E2E验收测试"
+  }, {
+    "time" : "14:01:08",
+    "agent" : "Test Agent",
+    "level" : "info",
+    "message" : "开始执行 E2E 验收测试"
+  }, {
+    "time" : "14:01:08",
+    "agent" : "Test Agent",
+    "level" : "info",
+    "message" : "E2E 验收测试完成"
+  }, {
+    "time" : "14:01:08",
+    "agent" : "Orchestrator",
+    "level" : "info",
+    "message" : "E2E验收测试 已进入等待用户确认"
+  }, {
+    "time" : "14:01:08",
+    "agent" : "Orchestrator",
+    "level" : "info",
+    "message" : "E2E验收测试 已确认，继续执行完成前验证"
+  }, {
+    "time" : "14:01:08",
+    "agent" : "Test Agent",
+    "level" : "info",
+    "message" : "开始执行完成前验证与测试修复"
+  }, {
+    "time" : "14:01:08",
+    "agent" : "Test Agent",
+    "level" : "info",
+    "message" : "开始第 1 轮测试修复"
+  }, {
+    "time" : "14:01:08",
+    "agent" : "Test Agent",
+    "level" : "info",
+    "message" : "第 1 轮测试修复完成"
+  }, {
+    "time" : "14:01:08",
+    "agent" : "Test Agent",
+    "level" : "info",
+    "message" : "开始第 2 轮测试修复"
+  }, {
+    "time" : "14:01:08",
+    "agent" : "Test Agent",
+    "level" : "info",
+    "message" : "第 2 轮测试修复完成"
+  }, {
+    "time" : "14:01:08",
+    "agent" : "Test Agent",
+    "level" : "info",
+    "message" : "完成前验证与测试修复完成"
+  }, {
+    "time" : "14:01:08",
+    "agent" : "Orchestrator",
+    "level" : "info",
+    "message" : "完成前验证 已进入等待用户确认"
+  }, {
+    "time" : "14:01:08",
+    "agent" : "Orchestrator",
+    "level" : "info",
+    "message" : "完成前验证 已确认，继续执行交付"
+  }, {
+    "time" : "14:01:08",
+    "agent" : "Ops Agent",
+    "level" : "info",
+    "message" : "开始整理最终交付结果"
+  }, {
+    "time" : "14:01:08",
+    "agent" : "Ops Agent",
+    "level" : "info",
+    "message" : "全流程执行完成，可查看生成结果"
+  }, {
+    "time" : "14:01:08",
+    "agent" : "Orchestrator",
+    "level" : "info",
+    "message" : "全流程执行完成，可查看生成结果"
+  } ],
+  "steps" : [ {
+    "index" : 1,
+    "key" : "requirements",
+    "title" : "需求分析",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "需求摘要整理完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 2,
+    "key" : "brainstorming",
+    "title" : "需求讨论",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "需求讨论结论整理完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 3,
+    "key" : "writing-plans",
+    "title" : "制定计划",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "阶段化实现计划整理完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 4,
+    "key" : "product-design-artifacts",
+    "title" : "需求产物生成",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "需求产物生成已确认",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 5,
+    "key" : "ui-design",
+    "title" : "UI设计",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "UI设计已确认",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 6,
+    "key" : "architecture-design",
+    "title" : "架构设计",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "架构设计已确认",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 7,
+    "key" : "api-design",
+    "title" : "接口设计",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "接口设计已确认",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 8,
+    "key" : "database-design",
+    "title" : "数据库设计",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "数据库设计已确认",
+    "duration" : "1s",
+    "error" : null
+  }, {
+    "index" : 9,
+    "key" : "backend-development",
+    "title" : "后端开发",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "后端开发已确认",
+    "duration" : "1s",
+    "error" : null
+  }, {
+    "index" : 10,
+    "key" : "frontend-development",
+    "title" : "前端开发",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "前端开发已确认",
+    "duration" : "1s",
+    "error" : null
+  }, {
+    "index" : 11,
+    "key" : "development-integration",
+    "title" : "开发联调",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "开发联调已确认",
+    "duration" : "1s",
+    "error" : null
+  }, {
+    "index" : 12,
+    "key" : "test-case-generation",
+    "title" : "测试用例生成",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "测试用例生成已确认",
+    "duration" : "1s",
+    "error" : null
+  }, {
+    "index" : 13,
+    "key" : "e2e-acceptance-testing",
+    "title" : "E2E验收测试",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "E2E验收测试已确认",
+    "duration" : "1s",
+    "error" : null
+  }, {
+    "index" : 14,
+    "key" : "verification-before-completion",
+    "title" : "完成前验证",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "完成前验证已确认",
+    "duration" : "1s",
+    "error" : null
+  }, {
+    "index" : 15,
+    "key" : "delivery",
+    "title" : "交付",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "全流程执行完成，可查看生成结果",
+    "duration" : "2s",
+    "error" : null
+  } ],
+  "agents" : [ {
+    "name" : "产品经理",
+    "role" : "需求分析、需求讨论、PRD 与产品产物",
+    "status" : "success",
+    "model" : "product-manager",
+    "duration" : "0s",
+    "progress" : 100
+  }, {
+    "name" : "UI设计师",
+    "role" : "UI 原型、交互说明、设计规范",
+    "status" : "success",
+    "model" : "ui-designer",
+    "duration" : "0s",
+    "progress" : 100
+  }, {
+    "name" : "架构师",
+    "role" : "系统架构、接口设计、数据库设计",
+    "status" : "success",
+    "model" : "architect",
+    "duration" : "1s",
+    "progress" : 100
+  }, {
+    "name" : "后端开发工程师",
+    "role" : "后端接口、服务、数据库相关开发",
+    "status" : "success",
+    "model" : "backend-engineer",
+    "duration" : "1s",
+    "progress" : 100
+  }, {
+    "name" : "前端开发工程师",
+    "role" : "前端页面、组件、交互与接口对接",
+    "status" : "success",
+    "model" : "frontend-engineer",
+    "duration" : "1s",
+    "progress" : 100
+  }, {
+    "name" : "测试工程师",
+    "role" : "测试用例、E2E、验证报告与缺陷反馈",
+    "status" : "success",
+    "model" : "test-engineer",
+    "duration" : "1s",
+    "progress" : 100
+  }, {
+    "name" : "运维工程师",
+    "role" : "部署、环境、数据库运维与交付检查",
+    "status" : "success",
+    "model" : "ops-engineer",
+    "duration" : "2s",
+    "progress" : 100
+  } ],
+  "review" : null,
+  "revision" : null,
+  "reviewFeedback" : "",
+  "revisionMessages" : [ ],
+  "nextStageIndex" : 14,
+  "approvedStageKeys" : [ "product-design-artifacts", "ui-design", "architecture-design", "api-design", "database-design", "backend-development", "frontend-development", "development-integration", "test-case-generation", "e2e-acceptance-testing", "verification-before-completion" ]
+}

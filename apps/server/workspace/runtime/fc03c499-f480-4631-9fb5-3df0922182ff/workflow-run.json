@@ -1,0 +1,274 @@
+{
+  "schemaVersion" : 1,
+  "taskId" : "fc03c499-f480-4631-9fb5-3df0922182ff",
+  "requirement" : "恢复流程：OpenSpec修订消息展示修复",
+  "sessionId" : "workflow-fc03c499-f480-4631-9fb5-3df0922182ff",
+  "status" : "awaiting_review",
+  "currentStage" : "需求产物生成",
+  "currentArtifactType" : "需求阶段产物",
+  "designProgressMessage" : "需求产物生成 已从历史项目恢复，请确认产物或提交修订反馈",
+  "progress" : 34,
+  "estimatedRemaining" : "等待确认",
+  "estimatedCompletion" : "等待用户确认",
+  "error" : null,
+  "updatedAt" : "2026-05-12T07:14:17.213162Z",
+  "result" : {
+    "available" : true,
+    "designAvailable" : true,
+    "projectName" : "OpenSpec修订消息展示修复",
+    "projectUrl" : null,
+    "reportUrl" : null,
+    "zipUrl" : null,
+    "prdMarkdown" : "OpenSpec修订消息展示修复 的设计产物已生成：\n- PRD\n- UI 设计规范\n- UI 设计规范",
+    "pageSpecs" : [ ],
+    "componentSpecs" : [ ],
+    "userFlowSpecs" : [ ],
+    "uiGuidelines" : [ ],
+    "artifacts" : [ {
+      "stage" : "requirement",
+      "name" : "PRD",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2FOpenSpec%E4%BF%AE%E8%AE%A2%E6%B6%88%E6%81%AF%E5%B1%95%E7%A4%BA%E4%BF%AE%E5%A4%8D%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F02-%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%2FPRD.md",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "UI 设计规范",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2FOpenSpec%E4%BF%AE%E8%AE%A2%E6%B6%88%E6%81%AF%E5%B1%95%E7%A4%BA%E4%BF%AE%E5%A4%8D%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F03-UI%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83%2FUI-Design-Spec.md",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "UI 设计规范",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2FOpenSpec%E4%BF%AE%E8%AE%A2%E6%B6%88%E6%81%AF%E5%B1%95%E7%A4%BA%E4%BF%AE%E5%A4%8D%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F03-UI%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83%2FUI-Design-Spec.md",
+      "downloadable" : true
+    } ]
+  },
+  "logs" : [ {
+    "time" : "15:14:17",
+    "agent" : "Orchestrator",
+    "level" : "info",
+    "message" : "已从历史项目恢复：OpenSpec修订消息展示修复"
+  } ],
+  "steps" : [ {
+    "index" : 1,
+    "key" : "requirements",
+    "title" : "需求分析",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "需求摘要整理完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 2,
+    "key" : "brainstorming",
+    "title" : "需求讨论",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "需求讨论结论整理完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 3,
+    "key" : "writing-plans",
+    "title" : "制定计划",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "阶段化实现计划整理完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 4,
+    "key" : "product-design-artifacts",
+    "title" : "需求产物生成",
+    "status" : "awaiting_review",
+    "progress" : 100,
+    "detail" : "等待用户确认",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 5,
+    "key" : "ui-design",
+    "title" : "UI设计",
+    "status" : "pending",
+    "progress" : 0,
+    "detail" : "等待上一步完成",
+    "duration" : "--",
+    "error" : null
+  }, {
+    "index" : 6,
+    "key" : "architecture-design",
+    "title" : "架构设计",
+    "status" : "pending",
+    "progress" : 0,
+    "detail" : "等待上一步完成",
+    "duration" : "--",
+    "error" : null
+  }, {
+    "index" : 7,
+    "key" : "api-design",
+    "title" : "接口设计",
+    "status" : "pending",
+    "progress" : 0,
+    "detail" : "等待上一步完成",
+    "duration" : "--",
+    "error" : null
+  }, {
+    "index" : 8,
+    "key" : "database-design",
+    "title" : "数据库设计",
+    "status" : "pending",
+    "progress" : 0,
+    "detail" : "等待上一步完成",
+    "duration" : "--",
+    "error" : null
+  }, {
+    "index" : 9,
+    "key" : "backend-development",
+    "title" : "后端开发",
+    "status" : "pending",
+    "progress" : 0,
+    "detail" : "等待上一步完成",
+    "duration" : "--",
+    "error" : null
+  }, {
+    "index" : 10,
+    "key" : "frontend-development",
+    "title" : "前端开发",
+    "status" : "pending",
+    "progress" : 0,
+    "detail" : "等待上一步完成",
+    "duration" : "--",
+    "error" : null
+  }, {
+    "index" : 11,
+    "key" : "development-integration",
+    "title" : "开发联调",
+    "status" : "pending",
+    "progress" : 0,
+    "detail" : "等待上一步完成",
+    "duration" : "--",
+    "error" : null
+  }, {
+    "index" : 12,
+    "key" : "test-case-generation",
+    "title" : "测试用例生成",
+    "status" : "pending",
+    "progress" : 0,
+    "detail" : "等待上一步完成",
+    "duration" : "--",
+    "error" : null
+  }, {
+    "index" : 13,
+    "key" : "e2e-acceptance-testing",
+    "title" : "E2E验收测试",
+    "status" : "pending",
+    "progress" : 0,
+    "detail" : "等待上一步完成",
+    "duration" : "--",
+    "error" : null
+  }, {
+    "index" : 14,
+    "key" : "verification-before-completion",
+    "title" : "完成前验证",
+    "status" : "pending",
+    "progress" : 0,
+    "detail" : "等待上一步完成",
+    "duration" : "--",
+    "error" : null
+  }, {
+    "index" : 15,
+    "key" : "delivery",
+    "title" : "交付",
+    "status" : "pending",
+    "progress" : 0,
+    "detail" : "等待上一步完成",
+    "duration" : "--",
+    "error" : null
+  } ],
+  "agents" : [ {
+    "name" : "产品经理",
+    "role" : "需求分析、需求讨论、PRD 与产品产物",
+    "status" : "success",
+    "model" : "product-manager",
+    "duration" : "0s",
+    "progress" : 100
+  }, {
+    "name" : "UI设计师",
+    "role" : "UI 原型、交互说明、设计规范",
+    "status" : "pending",
+    "model" : "ui-designer",
+    "duration" : "--",
+    "progress" : 0
+  }, {
+    "name" : "架构师",
+    "role" : "系统架构、接口设计、数据库设计",
+    "status" : "pending",
+    "model" : "architect",
+    "duration" : "--",
+    "progress" : 0
+  }, {
+    "name" : "后端开发工程师",
+    "role" : "后端接口、服务、数据库相关开发",
+    "status" : "pending",
+    "model" : "backend-engineer",
+    "duration" : "--",
+    "progress" : 0
+  }, {
+    "name" : "前端开发工程师",
+    "role" : "前端页面、组件、交互与接口对接",
+    "status" : "pending",
+    "model" : "frontend-engineer",
+    "duration" : "--",
+    "progress" : 0
+  }, {
+    "name" : "测试工程师",
+    "role" : "测试用例、E2E、验证报告与缺陷反馈",
+    "status" : "pending",
+    "model" : "test-engineer",
+    "duration" : "--",
+    "progress" : 0
+  }, {
+    "name" : "运维工程师",
+    "role" : "部署、环境、数据库运维与交付检查",
+    "status" : "pending",
+    "model" : "ops-engineer",
+    "duration" : "--",
+    "progress" : 0
+  } ],
+  "review" : {
+    "workflowRunId" : "fc03c499-f480-4631-9fb5-3df0922182ff",
+    "stageKey" : "product-design-artifacts",
+    "stageTitle" : "需求产物生成",
+    "status" : "awaiting_review",
+    "nextStageKey" : "ui-design",
+    "nextStageTitle" : "UI设计",
+    "artifacts" : [ {
+      "stage" : "requirement",
+      "name" : "PRD",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2FOpenSpec%E4%BF%AE%E8%AE%A2%E6%B6%88%E6%81%AF%E5%B1%95%E7%A4%BA%E4%BF%AE%E5%A4%8D%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F02-%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%2FPRD.md",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "UI 设计规范",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2FOpenSpec%E4%BF%AE%E8%AE%A2%E6%B6%88%E6%81%AF%E5%B1%95%E7%A4%BA%E4%BF%AE%E5%A4%8D%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F03-UI%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83%2FUI-Design-Spec.md",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "UI 设计规范",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2FOpenSpec%E4%BF%AE%E8%AE%A2%E6%B6%88%E6%81%AF%E5%B1%95%E7%A4%BA%E4%BF%AE%E5%A4%8D%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F03-UI%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83%2FUI-Design-Spec.md",
+      "downloadable" : true
+    } ],
+    "userFeedback" : null,
+    "revisionMessages" : [ ],
+    "revision" : null
+  },
+  "revision" : null,
+  "reviewFeedback" : null,
+  "revisionMessages" : [ ],
+  "nextStageIndex" : 4,
+  "approvedStageKeys" : [ "requirements", "brainstorming", "writing-plans" ]
+}

@@ -1,0 +1,523 @@
+{
+  "schemaVersion" : 1,
+  "taskId" : "854b0973-4c46-405c-92d8-4dc1cfb70b39",
+  "requirement" : "恢复流程：移动端应用：会议室预约系统",
+  "sessionId" : "workflow-854b0973-4c46-405c-92d8-4dc1cfb70b39",
+  "status" : "awaiting_review",
+  "currentStage" : "完成前验证",
+  "currentArtifactType" : "验证结果",
+  "designProgressMessage" : "完成前验证 已从历史项目恢复，请确认产物或提交修订反馈",
+  "progress" : 97,
+  "estimatedRemaining" : "等待确认",
+  "estimatedCompletion" : "等待用户确认",
+  "error" : null,
+  "updatedAt" : "2026-05-12T02:16:18.604579Z",
+  "result" : {
+    "available" : true,
+    "designAvailable" : true,
+    "projectName" : "移动端应用：会议室预约系统",
+    "projectUrl" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fgenerated%2FHX-Meeting",
+    "reportUrl" : null,
+    "zipUrl" : null,
+    "prdMarkdown" : "移动端应用：会议室预约系统 的设计产物已生成：\n- 版本说明.md\n- PRD\n- 需求文档 Word\n- UI 设计规范\n- 业务流程图\n- 信息架构图\n- 页面流转图\n- 术语表\n- UI 设计规范\n- HTML 原型\n- 桌面端设计图\n- 移动端设计图\n- 组件清单\n- 组件库 HTML\n- 组件库设计图\n- 交互说明\n- 交互流程图\n- 响应式断点参考\n- 响应式 HTML 预览\n- 移动端适配图\n- 系统架构图\n- 系统架构设计\n- OpenAPI.md\n- 部署架构设计.md\n- 技术选型说明.md\n- V1__create_hx_meeting_schema.sql\n- 数据字典\n- V2__seed_hx_meeting_demo_data.sql\n- 前端工程\n- 后端工程\n- dev-integration.spec.js\n- 系统架构图\n- 系统架构设计\n- OpenAPI.md\n- 部署架构设计.md\n- 技术选型说明.md",
+    "pageSpecs" : [ ],
+    "componentSpecs" : [ ],
+    "userFlowSpecs" : [ ],
+    "uiGuidelines" : [ ],
+    "artifacts" : [ {
+      "stage" : "requirement",
+      "name" : "版本说明.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F01-%E5%8F%98%E6%9B%B4%E8%AE%B0%E5%BD%95%2F%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E.md",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "PRD",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F02-%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%2FPRD.md",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "需求文档 Word",
+      "type" : "word",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F02-%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%2FPRD.docx",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "UI 设计规范",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F03-UI%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83%2FUI-Design-Spec.md",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "业务流程图",
+      "type" : "plantuml",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F04-%E6%B5%81%E7%A8%8B%E5%9B%BE%2F%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E5%9B%BE.puml",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "信息架构图",
+      "type" : "plantuml",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F04-%E6%B5%81%E7%A8%8B%E5%9B%BE%2F%E4%BF%A1%E6%81%AF%E6%9E%B6%E6%9E%84%E5%9B%BE.puml",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "页面流转图",
+      "type" : "plantuml",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F04-%E6%B5%81%E7%A8%8B%E5%9B%BE%2F%E9%A1%B5%E9%9D%A2%E6%B5%81%E8%BD%AC%E5%9B%BE.puml",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "术语表",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F05-%E9%99%84%E5%BD%95%2F%E6%9C%AF%E8%AF%AD%E8%A1%A8.md",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "UI 设计规范",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F03-UI%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83%2FUI-Design-Spec.md",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "HTML 原型",
+      "type" : "html",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E8%AE%BE%E8%AE%A1%E7%A8%BF%2Findex.html",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "桌面端设计图",
+      "type" : "image",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E8%AE%BE%E8%AE%A1%E7%A8%BF%2Fdesktop.svg",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "移动端设计图",
+      "type" : "image",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E8%AE%BE%E8%AE%A1%E7%A8%BF%2Fmobile.svg",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "组件清单",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%BB%84%E4%BB%B6%E5%BA%93%2F%E7%BB%84%E4%BB%B6%E6%B8%85%E5%8D%95.md",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "组件库 HTML",
+      "type" : "html",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%BB%84%E4%BB%B6%E5%BA%93%2Fcomponent-library.html",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "组件库设计图",
+      "type" : "image",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%BB%84%E4%BB%B6%E5%BA%93%2Fcomponent-library.svg",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "交互说明",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E4%BA%A4%E4%BA%92%E5%8E%9F%E5%9E%8B%2F%E4%BA%A4%E4%BA%92%E8%AF%B4%E6%98%8E.md",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "交互流程图",
+      "type" : "image",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E4%BA%A4%E4%BA%92%E5%8E%9F%E5%9E%8B%2Finteraction-flow.svg",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "响应式断点参考",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%2F%E5%93%8D%E5%BA%94%E5%BC%8F%E6%96%AD%E7%82%B9%E5%8F%82%E8%80%83.md",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "响应式 HTML 预览",
+      "type" : "html",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%2Fresponsive-preview.html",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "移动端适配图",
+      "type" : "image",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%2Fmobile-preview.svg",
+      "downloadable" : true
+    }, {
+      "stage" : "architecture",
+      "name" : "系统架构图",
+      "type" : "plantuml",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%2F01-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%2F%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%9B%BE.puml",
+      "downloadable" : true
+    }, {
+      "stage" : "architecture",
+      "name" : "系统架构设计",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%2F01-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%2F%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1.md",
+      "downloadable" : true
+    }, {
+      "stage" : "architecture",
+      "name" : "OpenAPI.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%2F02-%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1%2F%E6%8E%A5%E5%8F%A3%E5%AE%9A%E4%B9%89%2FOpenAPI.md",
+      "downloadable" : true
+    }, {
+      "stage" : "architecture",
+      "name" : "部署架构设计.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%2F03-%E9%83%A8%E7%BD%B2%E6%9E%B6%E6%9E%84%2F%E9%83%A8%E7%BD%B2%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1.md",
+      "downloadable" : true
+    }, {
+      "stage" : "architecture",
+      "name" : "技术选型说明.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%2F04-%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%2F%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%E8%AF%B4%E6%98%8E.md",
+      "downloadable" : true
+    }, {
+      "stage" : "database",
+      "name" : "V1__create_hx_meeting_schema.sql",
+      "type" : "sql",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%2F%E5%BB%BA%E8%A1%A8%E8%84%9A%E6%9C%AC%2FV1__create_hx_meeting_schema.sql",
+      "downloadable" : true
+    }, {
+      "stage" : "database",
+      "name" : "数据字典",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%2F%E6%95%B0%E6%8D%AE%E5%AD%97%E5%85%B8%2F%E6%95%B0%E6%8D%AE%E5%AD%97%E5%85%B8.md",
+      "downloadable" : true
+    }, {
+      "stage" : "database",
+      "name" : "V2__seed_hx_meeting_demo_data.sql",
+      "type" : "sql",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%2F%E6%95%B0%E6%8D%AE%E8%BF%81%E7%A7%BB%E8%84%9A%E6%9C%AC%2FV2__seed_hx_meeting_demo_data.sql",
+      "downloadable" : true
+    }, {
+      "stage" : "code",
+      "name" : "前端工程",
+      "type" : "directory",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fgenerated%2FHX-Meeting%2Ffrontend",
+      "downloadable" : true
+    }, {
+      "stage" : "code",
+      "name" : "后端工程",
+      "type" : "directory",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fgenerated%2FHX-Meeting%2Fbackend",
+      "downloadable" : true
+    }, {
+      "stage" : "test-docs",
+      "name" : "dev-integration.spec.js",
+      "type" : "directory",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2Fe2e%2Fdev-integration.spec.js",
+      "downloadable" : true
+    }, {
+      "stage" : "misc",
+      "name" : "系统架构图",
+      "type" : "plantuml",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E5%85%B6%E4%BB%96%E6%96%87%E6%A1%A3%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E9%94%99%E8%AF%AF%E4%BA%A7%E7%89%A9%E5%A4%87%E4%BB%BD-20260511140007%2F01-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%2F%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%9B%BE.puml",
+      "downloadable" : true
+    }, {
+      "stage" : "misc",
+      "name" : "系统架构设计",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E5%85%B6%E4%BB%96%E6%96%87%E6%A1%A3%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E9%94%99%E8%AF%AF%E4%BA%A7%E7%89%A9%E5%A4%87%E4%BB%BD-20260511140007%2F01-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%2F%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1.md",
+      "downloadable" : true
+    }, {
+      "stage" : "misc",
+      "name" : "OpenAPI.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E5%85%B6%E4%BB%96%E6%96%87%E6%A1%A3%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E9%94%99%E8%AF%AF%E4%BA%A7%E7%89%A9%E5%A4%87%E4%BB%BD-20260511140007%2F02-%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1%2F%E6%8E%A5%E5%8F%A3%E5%AE%9A%E4%B9%89%2FOpenAPI.md",
+      "downloadable" : true
+    }, {
+      "stage" : "misc",
+      "name" : "部署架构设计.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E5%85%B6%E4%BB%96%E6%96%87%E6%A1%A3%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E9%94%99%E8%AF%AF%E4%BA%A7%E7%89%A9%E5%A4%87%E4%BB%BD-20260511140007%2F03-%E9%83%A8%E7%BD%B2%E6%9E%B6%E6%9E%84%2F%E9%83%A8%E7%BD%B2%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1.md",
+      "downloadable" : true
+    }, {
+      "stage" : "misc",
+      "name" : "技术选型说明.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E5%85%B6%E4%BB%96%E6%96%87%E6%A1%A3%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E9%94%99%E8%AF%AF%E4%BA%A7%E7%89%A9%E5%A4%87%E4%BB%BD-20260511140007%2F04-%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%2F%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%E8%AF%B4%E6%98%8E.md",
+      "downloadable" : true
+    } ]
+  },
+  "logs" : [ {
+    "time" : "10:08:22",
+    "agent" : "Orchestrator",
+    "level" : "info",
+    "message" : "已从历史项目恢复：移动端应用：会议室预约系统"
+  }, {
+    "time" : "10:09:18",
+    "agent" : "OpenSpec",
+    "level" : "info",
+    "message" : "开始探索修订阶段修订：完成前验证"
+  }, {
+    "time" : "10:12:46",
+    "agent" : "OpenSpec",
+    "level" : "info",
+    "message" : "已进入 `/opsx:explore` 探索模式，本次未修改任何文件。\n\n## 当前阶段产物观察\n\n当前完成前验证产物只有：\n\n```text\ndocs/移动端应用：会议室预约系统/测试/e2e/dev-integration.spec.js\n```\n\n它主要覆盖两个联调场景：\n\n```text\n真实前后端联调\n├─ happy path：查询会议室 → 选择会议室 → 提交 2 小时内预约\n└─ 错误状态：预置冲突 → 查询占用状态 → API 返回 TIME_CONFLICT\n```\n\n关联生成工程为：\n\n```text\ngenerated/HX-Meeting/\n├─ frontend\n├─ backend\n├─ playwright.config.js\n└─ tests\n```\n\n## 建议修订点\n\n### 1. 修正 token 初始化键名不一致\n\n测试中写入的是：\n\n```js\nwindow.localStorage.setItem('hx_token', 'demo-sso-token')\n```\n\n但前端 API client 实际读取的是：\n\n```js\nwindow.localStorage.getItem('hx_meeting_token') || 'demo-sso-token'\n```\n\n因为有默认 token，目前测试不会失败，但这会削弱“真实登录态注入”的验证意义。\n\n建议把测试中的 `hx_token` 改为 `hx_meeting_token`，或同时写入两个键以兼容旧实现。\n\n风险：低。属于测试产物修订，不影响业务代码。\n\n---\n\n### 2. happy path 当前断言文案与真实前端不匹配\n\n测试断言：\n\n```js\nawait expect(page.getByText('预约已生效。')).toBeVisible()\n```\n\n但当前结果页实际文案是：\n\n```text\n预约已生效并占用会议室，请在签到窗口内扫码签到。\n```\n\n建议改为更稳定的断言，例如：\n\n- `预约成功`\n- `预约已生效并占用会议室`\n- 或断言 URL 进入 `/booking/result/`\n\n风险：低。当前测试大概率会因文案不一致失败。\n\n---\n\n### 3. 2 小时内预约应避免触发审批路径\n\n测试标题写的是“提交 2 小时内预约”，当前时间为：\n\n```text\n09:00 - 10:30\n```\n\n确实是 90 分钟，符合 `RESERVED` 预期。建议保留，并增加一条显式断言：\n\n```js\nexpect(bookingPayload.data.approvalRequired).toBe(false)\n```\n\n这样能明确验证“非审批预约直接生效”。\n\n风险：低。\n\n---\n\n### 4. TIME_CONFLICT 场景只验证了后端错误，没有真正验证“前端展示冲突提示”\n\n测试名称是：\n\n```text\n错误状态：真实后端返回 TIME_CONFLICT 后前端展示冲突提示\n```\n\n但当前后半段实际通过 `request.post` 直接调用后端，并没有让前端点击提交后展示 toast：\n\n```js\nconst conflictResponse = await request.post(...)\nexpect(conflictResponse.status()).toBe(409)\nexpect(conflictPayload.code).toBe('TIME_CONFLICT')\n```\n\n前端只验证了被占用会议室按钮变为“当前时间不可选”。\n\n建议二选一：\n\n#### 方案 A：调整测试标题，保持现状\n\n改成：\n\n```text\n错误状态：真实后端返回 TIME_CONFLICT 且前端展示占用不可选\n```\n\n优点：修改小，稳定。\n\n#### 方案 B：补充真正的前端冲突提交验证\n\n流程大致为：\n\n```text\n查询可用会议室\n→ 选中会议室进入填写页\n→ 使用 request 预置同时间冲突预约\n→ 前端点击提交预约\n→ 等待 POST /bookings 返回 409\n→ 断言 toast 展示“所选会议室在该时间段已被占用，请重新选择。”\n```\n\n优点：更符合测试标题和验证目标。\n\n风险：中。需要保证前端已选中的会议室在预置冲突后提交时确实触发 409；测试顺序要谨慎设计。\n\n---\n\n### 5. 时间选择有潜在日期边界风险\n\n测试使用：\n\n```js\nplusDaysDate(1)\nplusDaysDate(4)\n```\n\n这能避免“预约时间早于当前时间”问题，比写死日期更好。\n\n但前端组件 `RoomFilterPanel.vue` 里 `today/maxDate` 是写死的：\n\n```js\nnew Date('2026-05-11T09:00:00')\n```\n\n而校验函数 `validateBookingFilter` 使用真实当前时间。随着日期变化，前端输入框 `min/max` 与校验逻辑会逐渐不一致。\n\n这属于生成前端实现风险，不建议在当前 `/opsx:explore` 直接修改，但如果后续进入 apply 阶段，可以考虑修订。\n\n风险：中。未来日期推进后，E2E 可能出现不可预期失败。\n\n---\n\n### 6. Playwright 配置报告路径疑似错误\n\n`generated/HX-Meeting/playwright.config.js` 中：\n\n```js\nconst reportRoot = '/Users/.../docs/目标应用名称：移动端应用：会议室预约系统 原始业务需求： 恢/测试/测试报告'\n```\n\n该路径看起来像生成时把提示词残片拼进了目录名，而不是当前项目目录：\n\n```text\ndocs/移动端应用：会议室预约系统/测试/测试报告\n```\n\n建议后续修订为当前真实项目测试报告路径。\n\n风险：中。会导致测试报告输出到错误目录，影响“完成前验证”阶段产物归档。\n\n---\n\n### 7. `generated/HX-Meeting/tests` 为空\n\nPlaywright 配置指向：\n\n```js\ntestDir: './tests/e2e'\n```\n\n但当前：\n\n```text\ngenerated/HX-Meeting/tests\n```\n\n为空。实际阶段产物测试在：\n\n```text\ndocs/移动端应用：会议室预约系统/测试/e2e/dev-integration.spec.js\n```\n\n建议后续明确一种执行方式：\n\n#### 方案 A：以 docs 测试文件为准\n\n运行时显式指定测试文件：\n\n```bash\nnpx playwright test ../../docs/移动端应用：会议室预约系统/测试/e2e/dev-integration.spec.js\n```\n\n#### 方案 B：同步或复制到 generated/HX-Meeting/tests/e2e\n\n让 `generated/HX-Meeting/playwright.config.js` 可以默认发现测试。\n\n风险：中。若验证命令默认从 `generated/HX-Meeting` 执行，当前配置可能找不到测试。\n\n---\n\n## 风险汇总\n\n| 风险 | 等级 | 说明 |\n|---|---:|---|\n| 结果页断言文案不匹配 | 高 | 当前 `预约已生效。` 与真实页面文案不同 |\n| 测试标题与实际验证不完全一致 | 中 | 声称验证前端冲突提示，但实际只验证 API 409 |\n| 报告输出路径错误 | 中 | 测试报告可能无法归档到当前项目测试目录 |\n| 测试文件位置与 Playwright testDir 不一致 | 中 | 默认执行可能找不到测试 |\n| token key 不一致 | 低 | 有默认 token 兜底，但验证意义不足 |\n| 前端日期硬编码 | 中 | 随时间推进可能导致 E2E 失败 |\n\n## 下一步计划\n\n建议进入修订实现阶段时，按最小变更顺序处理：\n\n1. 修订 `docs/移动端应用：会议室预约系统/测试/e2e/dev-integration.spec.js`\n   - token key 改为 `hx_meeting_token`\n   - happy path 文案断言改为当前真实页面文案或标题\n   - 增加 `approvalRequired === false` 断言\n   - 冲突场景标题与实际断言对齐，或补充前端 toast 验证\n\n2. 检查并修订 `generated/HX-Meeting/playwright.config.js`\n   - 报告路径改为：\n     ```text\n     docs/移动端应用：会议室预约系统/测试/测试报告\n     ```\n   - 明确 testDir 与阶段测试文件位置关系\n\n3. 如允许扩展前端修订，再评估：\n   - 将 `RoomFilterPanel.vue` 中写死的 `2026-05-11T09:00:00` 改为动态当前日期\n\n4. 修订后执行验证：\n   - 后端启动在 `8080`\n   - 前端启动在 `5173`\n   - API 代理目标保持 `http://localhost:8080`\n   - 运行 Playwright 联调测试并归档报告到当前项目测试目录。"
+  }, {
+    "time" : "10:16:18",
+    "agent" : "OpenSpec",
+    "level" : "info",
+    "message" : "开始探索修订阶段修订：完成前验证"
+  } ],
+  "steps" : [ {
+    "index" : 1,
+    "key" : "requirements",
+    "title" : "需求分析",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "需求摘要整理完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 2,
+    "key" : "brainstorming",
+    "title" : "需求讨论",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "需求讨论结论整理完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 3,
+    "key" : "writing-plans",
+    "title" : "制定计划",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "阶段化实现计划整理完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 4,
+    "key" : "product-design-artifacts",
+    "title" : "需求产物生成",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "需求阶段产物生成完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 5,
+    "key" : "ui-design",
+    "title" : "UI设计",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "UI 设计产物生成完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 6,
+    "key" : "architecture-design",
+    "title" : "架构设计",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "架构设计产物生成完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 7,
+    "key" : "api-design",
+    "title" : "接口设计",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "接口设计产物生成完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 8,
+    "key" : "database-design",
+    "title" : "数据库设计",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "数据库设计产物生成完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 9,
+    "key" : "backend-development",
+    "title" : "后端开发",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "后端代码已从 generated 目录恢复",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 10,
+    "key" : "frontend-development",
+    "title" : "前端开发",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "前端代码已从 generated 目录恢复",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 11,
+    "key" : "development-integration",
+    "title" : "开发联调",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "开发联调完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 12,
+    "key" : "test-case-generation",
+    "title" : "测试用例生成",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "测试用例生成完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 13,
+    "key" : "e2e-acceptance-testing",
+    "title" : "E2E验收测试",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "E2E 验收测试完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 14,
+    "key" : "verification-before-completion",
+    "title" : "完成前验证",
+    "status" : "awaiting_review",
+    "progress" : 100,
+    "detail" : "等待用户确认",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 15,
+    "key" : "delivery",
+    "title" : "交付",
+    "status" : "pending",
+    "progress" : 0,
+    "detail" : "等待上一步完成",
+    "duration" : "--",
+    "error" : null
+  } ],
+  "agents" : [ {
+    "name" : "产品经理",
+    "role" : "需求分析、需求讨论、PRD 与产品产物",
+    "status" : "success",
+    "model" : "product-manager",
+    "duration" : "0s",
+    "progress" : 100
+  }, {
+    "name" : "UI设计师",
+    "role" : "UI 原型、交互说明、设计规范",
+    "status" : "success",
+    "model" : "ui-designer",
+    "duration" : "0s",
+    "progress" : 100
+  }, {
+    "name" : "架构师",
+    "role" : "系统架构、接口设计、数据库设计",
+    "status" : "success",
+    "model" : "architect",
+    "duration" : "0s",
+    "progress" : 100
+  }, {
+    "name" : "后端开发工程师",
+    "role" : "后端接口、服务、数据库相关开发",
+    "status" : "success",
+    "model" : "backend-engineer",
+    "duration" : "0s",
+    "progress" : 100
+  }, {
+    "name" : "前端开发工程师",
+    "role" : "前端页面、组件、交互与接口对接",
+    "status" : "success",
+    "model" : "frontend-engineer",
+    "duration" : "0s",
+    "progress" : 100
+  }, {
+    "name" : "测试工程师",
+    "role" : "测试用例、E2E、验证报告与缺陷反馈",
+    "status" : "success",
+    "model" : "test-engineer",
+    "duration" : "0s",
+    "progress" : 100
+  }, {
+    "name" : "运维工程师",
+    "role" : "部署、环境、数据库运维与交付检查",
+    "status" : "pending",
+    "model" : "ops-engineer",
+    "duration" : "--",
+    "progress" : 0
+  } ],
+  "review" : {
+    "workflowRunId" : "854b0973-4c46-405c-92d8-4dc1cfb70b39",
+    "stageKey" : "verification-before-completion",
+    "stageTitle" : "完成前验证",
+    "status" : "awaiting_review",
+    "nextStageKey" : "delivery",
+    "nextStageTitle" : "交付",
+    "artifacts" : [ {
+      "stage" : "test-docs",
+      "name" : "dev-integration.spec.js",
+      "type" : "directory",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2Fe2e%2Fdev-integration.spec.js",
+      "downloadable" : true
+    } ],
+    "userFeedback" : null,
+    "revisionMessages" : [ {
+      "role" : "ai",
+      "content" : "正在探索修订「完成前验证」阶段修订，请稍候……",
+      "options" : [ ]
+    }, {
+      "role" : "ai",
+      "content" : "已进入 `/opsx:explore` 探索模式，本次未修改任何文件。\n\n## 当前阶段产物观察\n\n当前完成前验证产物只有：\n\n```text\ndocs/移动端应用：会议室预约系统/测试/e2e/dev-integration.spec.js\n```\n\n它主要覆盖两个联调场景：\n\n```text\n真实前后端联调\n├─ happy path：查询会议室 → 选择会议室 → 提交 2 小时内预约\n└─ 错误状态：预置冲突 → 查询占用状态 → API 返回 TIME_CONFLICT\n```\n\n关联生成工程为：\n\n```text\ngenerated/HX-Meeting/\n├─ frontend\n├─ backend\n├─ playwright.config.js\n└─ tests\n```\n\n## 建议修订点\n\n### 1. 修正 token 初始化键名不一致\n\n测试中写入的是：\n\n```js\nwindow.localStorage.setItem('hx_token', 'demo-sso-token')\n```\n\n但前端 API client 实际读取的是：\n\n```js\nwindow.localStorage.getItem('hx_meeting_token') || 'demo-sso-token'\n```\n\n因为有默认 token，目前测试不会失败，但这会削弱“真实登录态注入”的验证意义。\n\n建议把测试中的 `hx_token` 改为 `hx_meeting_token`，或同时写入两个键以兼容旧实现。\n\n风险：低。属于测试产物修订，不影响业务代码。\n\n---\n\n### 2. happy path 当前断言文案与真实前端不匹配\n\n测试断言：\n\n```js\nawait expect(page.getByText('预约已生效。')).toBeVisible()\n```\n\n但当前结果页实际文案是：\n\n```text\n预约已生效并占用会议室，请在签到窗口内扫码签到。\n```\n\n建议改为更稳定的断言，例如：\n\n- `预约成功`\n- `预约已生效并占用会议室`\n- 或断言 URL 进入 `/booking/result/`\n\n风险：低。当前测试大概率会因文案不一致失败。\n\n---\n\n### 3. 2 小时内预约应避免触发审批路径\n\n测试标题写的是“提交 2 小时内预约”，当前时间为：\n\n```text\n09:00 - 10:30\n```\n\n确实是 90 分钟，符合 `RESERVED` 预期。建议保留，并增加一条显式断言：\n\n```js\nexpect(bookingPayload.data.approvalRequired).toBe(false)\n```\n\n这样能明确验证“非审批预约直接生效”。\n\n风险：低。\n\n---\n\n### 4. TIME_CONFLICT 场景只验证了后端错误，没有真正验证“前端展示冲突提示”\n\n测试名称是：\n\n```text\n错误状态：真实后端返回 TIME_CONFLICT 后前端展示冲突提示\n```\n\n但当前后半段实际通过 `request.post` 直接调用后端，并没有让前端点击提交后展示 toast：\n\n```js\nconst conflictResponse = await request.post(...)\nexpect(conflictResponse.status()).toBe(409)\nexpect(conflictPayload.code).toBe('TIME_CONFLICT')\n```\n\n前端只验证了被占用会议室按钮变为“当前时间不可选”。\n\n建议二选一：\n\n#### 方案 A：调整测试标题，保持现状\n\n改成：\n\n```text\n错误状态：真实后端返回 TIME_CONFLICT 且前端展示占用不可选\n```\n\n优点：修改小，稳定。\n\n#### 方案 B：补充真正的前端冲突提交验证\n\n流程大致为：\n\n```text\n查询可用会议室\n→ 选中会议室进入填写页\n→ 使用 request 预置同时间冲突预约\n→ 前端点击提交预约\n→ 等待 POST /bookings 返回 409\n→ 断言 toast 展示“所选会议室在该时间段已被占用，请重新选择。”\n```\n\n优点：更符合测试标题和验证目标。\n\n风险：中。需要保证前端已选中的会议室在预置冲突后提交时确实触发 409；测试顺序要谨慎设计。\n\n---\n\n### 5. 时间选择有潜在日期边界风险\n\n测试使用：\n\n```js\nplusDaysDate(1)\nplusDaysDate(4)\n```\n\n这能避免“预约时间早于当前时间”问题，比写死日期更好。\n\n但前端组件 `RoomFilterPanel.vue` 里 `today/maxDate` 是写死的：\n\n```js\nnew Date('2026-05-11T09:00:00')\n```\n\n而校验函数 `validateBookingFilter` 使用真实当前时间。随着日期变化，前端输入框 `min/max` 与校验逻辑会逐渐不一致。\n\n这属于生成前端实现风险，不建议在当前 `/opsx:explore` 直接修改，但如果后续进入 apply 阶段，可以考虑修订。\n\n风险：中。未来日期推进后，E2E 可能出现不可预期失败。\n\n---\n\n### 6. Playwright 配置报告路径疑似错误\n\n`generated/HX-Meeting/playwright.config.js` 中：\n\n```js\nconst reportRoot = '/Users/.../docs/目标应用名称：移动端应用：会议室预约系统 原始业务需求： 恢/测试/测试报告'\n```\n\n该路径看起来像生成时把提示词残片拼进了目录名，而不是当前项目目录：\n\n```text\ndocs/移动端应用：会议室预约系统/测试/测试报告\n```\n\n建议后续修订为当前真实项目测试报告路径。\n\n风险：中。会导致测试报告输出到错误目录，影响“完成前验证”阶段产物归档。\n\n---\n\n### 7. `generated/HX-Meeting/tests` 为空\n\nPlaywright 配置指向：\n\n```js\ntestDir: './tests/e2e'\n```\n\n但当前：\n\n```text\ngenerated/HX-Meeting/tests\n```\n\n为空。实际阶段产物测试在：\n\n```text\ndocs/移动端应用：会议室预约系统/测试/e2e/dev-integration.spec.js\n```\n\n建议后续明确一种执行方式：\n\n#### 方案 A：以 docs 测试文件为准\n\n运行时显式指定测试文件：\n\n```bash\nnpx playwright test ../../docs/移动端应用：会议室预约系统/测试/e2e/dev-integration.spec.js\n```\n\n#### 方案 B：同步或复制到 generated/HX-Meeting/tests/e2e\n\n让 `generated/HX-Meeting/playwright.config.js` 可以默认发现测试。\n\n风险：中。若验证命令默认从 `generated/HX-Meeting` 执行，当前配置可能找不到测试。\n\n---\n\n## 风险汇总\n\n| 风险 | 等级 | 说明 |\n|---|---:|---|\n| 结果页断言文案不匹配 | 高 | 当前 `预约已生效。` 与真实页面文案不同 |\n| 测试标题与实际验证不完全一致 | 中 | 声称验证前端冲突提示，但实际只验证 API 409 |\n| 报告输出路径错误 | 中 | 测试报告可能无法归档到当前项目测试目录 |\n| 测试文件位置与 Playwright testDir 不一致 | 中 | 默认执行可能找不到测试 |\n| token key 不一致 | 低 | 有默认 token 兜底，但验证意义不足 |\n| 前端日期硬编码 | 中 | 随时间推进可能导致 E2E 失败 |\n\n## 下一步计划\n\n建议进入修订实现阶段时，按最小变更顺序处理：\n\n1. 修订 `docs/移动端应用：会议室预约系统/测试/e2e/dev-integration.spec.js`\n   - token key 改为 `hx_meeting_token`\n   - happy path 文案断言改为当前真实页面文案或标题\n   - 增加 `approvalRequired === false` 断言\n   - 冲突场景标题与实际断言对齐，或补充前端 toast 验证\n\n2. 检查并修订 `generated/HX-Meeting/playwright.config.js`\n   - 报告路径改为：\n     ```text\n     docs/移动端应用：会议室预约系统/测试/测试报告\n     ```\n   - 明确 testDir 与阶段测试文件位置关系\n\n3. 如允许扩展前端修订，再评估：\n   - 将 `RoomFilterPanel.vue` 中写死的 `2026-05-11T09:00:00` 改为动态当前日期\n\n4. 修订后执行验证：\n   - 后端启动在 `8080`\n   - 前端启动在 `5173`\n   - API 代理目标保持 `http://localhost:8080`\n   - 运行 Playwright 联调测试并归档报告到当前项目测试目录。",
+      "options" : [ ]
+    } ],
+    "revision" : {
+      "workflowRunId" : "854b0973-4c46-405c-92d8-4dc1cfb70b39",
+      "stageKey" : "verification-before-completion",
+      "stageTitle" : "完成前验证",
+      "projectName" : "移动端应用：会议室预约系统",
+      "artifactPaths" : [ "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2Fe2e%2Fdev-integration.spec.js" ],
+      "userFeedback" : null,
+      "changeId" : null,
+      "status" : "revision_discussing",
+      "proposalStatus" : "未创建",
+      "applyStatus" : "未执行",
+      "archiveStatus" : "未归档",
+      "updatedAt" : "10:16:18",
+      "allowedPaths" : "docs/移动端应用：会议室预约系统/测试/ 和 generated/{项目英文名}/frontend、generated/{项目英文名}/backend"
+    }
+  },
+  "revision" : {
+    "workflowRunId" : "854b0973-4c46-405c-92d8-4dc1cfb70b39",
+    "stageKey" : "verification-before-completion",
+    "stageTitle" : "完成前验证",
+    "projectName" : "移动端应用：会议室预约系统",
+    "artifactPaths" : [ "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2Fe2e%2Fdev-integration.spec.js" ],
+    "userFeedback" : null,
+    "changeId" : null,
+    "status" : "revision_discussing",
+    "proposalStatus" : "未创建",
+    "applyStatus" : "未执行",
+    "archiveStatus" : "未归档",
+    "updatedAt" : "10:16:18",
+    "allowedPaths" : "docs/移动端应用：会议室预约系统/测试/ 和 generated/{项目英文名}/frontend、generated/{项目英文名}/backend"
+  },
+  "reviewFeedback" : null,
+  "revisionMessages" : [ {
+    "role" : "ai",
+    "content" : "正在探索修订「完成前验证」阶段修订，请稍候……",
+    "options" : [ ]
+  }, {
+    "role" : "ai",
+    "content" : "已进入 `/opsx:explore` 探索模式，本次未修改任何文件。\n\n## 当前阶段产物观察\n\n当前完成前验证产物只有：\n\n```text\ndocs/移动端应用：会议室预约系统/测试/e2e/dev-integration.spec.js\n```\n\n它主要覆盖两个联调场景：\n\n```text\n真实前后端联调\n├─ happy path：查询会议室 → 选择会议室 → 提交 2 小时内预约\n└─ 错误状态：预置冲突 → 查询占用状态 → API 返回 TIME_CONFLICT\n```\n\n关联生成工程为：\n\n```text\ngenerated/HX-Meeting/\n├─ frontend\n├─ backend\n├─ playwright.config.js\n└─ tests\n```\n\n## 建议修订点\n\n### 1. 修正 token 初始化键名不一致\n\n测试中写入的是：\n\n```js\nwindow.localStorage.setItem('hx_token', 'demo-sso-token')\n```\n\n但前端 API client 实际读取的是：\n\n```js\nwindow.localStorage.getItem('hx_meeting_token') || 'demo-sso-token'\n```\n\n因为有默认 token，目前测试不会失败，但这会削弱“真实登录态注入”的验证意义。\n\n建议把测试中的 `hx_token` 改为 `hx_meeting_token`，或同时写入两个键以兼容旧实现。\n\n风险：低。属于测试产物修订，不影响业务代码。\n\n---\n\n### 2. happy path 当前断言文案与真实前端不匹配\n\n测试断言：\n\n```js\nawait expect(page.getByText('预约已生效。')).toBeVisible()\n```\n\n但当前结果页实际文案是：\n\n```text\n预约已生效并占用会议室，请在签到窗口内扫码签到。\n```\n\n建议改为更稳定的断言，例如：\n\n- `预约成功`\n- `预约已生效并占用会议室`\n- 或断言 URL 进入 `/booking/result/`\n\n风险：低。当前测试大概率会因文案不一致失败。\n\n---\n\n### 3. 2 小时内预约应避免触发审批路径\n\n测试标题写的是“提交 2 小时内预约”，当前时间为：\n\n```text\n09:00 - 10:30\n```\n\n确实是 90 分钟，符合 `RESERVED` 预期。建议保留，并增加一条显式断言：\n\n```js\nexpect(bookingPayload.data.approvalRequired).toBe(false)\n```\n\n这样能明确验证“非审批预约直接生效”。\n\n风险：低。\n\n---\n\n### 4. TIME_CONFLICT 场景只验证了后端错误，没有真正验证“前端展示冲突提示”\n\n测试名称是：\n\n```text\n错误状态：真实后端返回 TIME_CONFLICT 后前端展示冲突提示\n```\n\n但当前后半段实际通过 `request.post` 直接调用后端，并没有让前端点击提交后展示 toast：\n\n```js\nconst conflictResponse = await request.post(...)\nexpect(conflictResponse.status()).toBe(409)\nexpect(conflictPayload.code).toBe('TIME_CONFLICT')\n```\n\n前端只验证了被占用会议室按钮变为“当前时间不可选”。\n\n建议二选一：\n\n#### 方案 A：调整测试标题，保持现状\n\n改成：\n\n```text\n错误状态：真实后端返回 TIME_CONFLICT 且前端展示占用不可选\n```\n\n优点：修改小，稳定。\n\n#### 方案 B：补充真正的前端冲突提交验证\n\n流程大致为：\n\n```text\n查询可用会议室\n→ 选中会议室进入填写页\n→ 使用 request 预置同时间冲突预约\n→ 前端点击提交预约\n→ 等待 POST /bookings 返回 409\n→ 断言 toast 展示“所选会议室在该时间段已被占用，请重新选择。”\n```\n\n优点：更符合测试标题和验证目标。\n\n风险：中。需要保证前端已选中的会议室在预置冲突后提交时确实触发 409；测试顺序要谨慎设计。\n\n---\n\n### 5. 时间选择有潜在日期边界风险\n\n测试使用：\n\n```js\nplusDaysDate(1)\nplusDaysDate(4)\n```\n\n这能避免“预约时间早于当前时间”问题，比写死日期更好。\n\n但前端组件 `RoomFilterPanel.vue` 里 `today/maxDate` 是写死的：\n\n```js\nnew Date('2026-05-11T09:00:00')\n```\n\n而校验函数 `validateBookingFilter` 使用真实当前时间。随着日期变化，前端输入框 `min/max` 与校验逻辑会逐渐不一致。\n\n这属于生成前端实现风险，不建议在当前 `/opsx:explore` 直接修改，但如果后续进入 apply 阶段，可以考虑修订。\n\n风险：中。未来日期推进后，E2E 可能出现不可预期失败。\n\n---\n\n### 6. Playwright 配置报告路径疑似错误\n\n`generated/HX-Meeting/playwright.config.js` 中：\n\n```js\nconst reportRoot = '/Users/.../docs/目标应用名称：移动端应用：会议室预约系统 原始业务需求： 恢/测试/测试报告'\n```\n\n该路径看起来像生成时把提示词残片拼进了目录名，而不是当前项目目录：\n\n```text\ndocs/移动端应用：会议室预约系统/测试/测试报告\n```\n\n建议后续修订为当前真实项目测试报告路径。\n\n风险：中。会导致测试报告输出到错误目录，影响“完成前验证”阶段产物归档。\n\n---\n\n### 7. `generated/HX-Meeting/tests` 为空\n\nPlaywright 配置指向：\n\n```js\ntestDir: './tests/e2e'\n```\n\n但当前：\n\n```text\ngenerated/HX-Meeting/tests\n```\n\n为空。实际阶段产物测试在：\n\n```text\ndocs/移动端应用：会议室预约系统/测试/e2e/dev-integration.spec.js\n```\n\n建议后续明确一种执行方式：\n\n#### 方案 A：以 docs 测试文件为准\n\n运行时显式指定测试文件：\n\n```bash\nnpx playwright test ../../docs/移动端应用：会议室预约系统/测试/e2e/dev-integration.spec.js\n```\n\n#### 方案 B：同步或复制到 generated/HX-Meeting/tests/e2e\n\n让 `generated/HX-Meeting/playwright.config.js` 可以默认发现测试。\n\n风险：中。若验证命令默认从 `generated/HX-Meeting` 执行，当前配置可能找不到测试。\n\n---\n\n## 风险汇总\n\n| 风险 | 等级 | 说明 |\n|---|---:|---|\n| 结果页断言文案不匹配 | 高 | 当前 `预约已生效。` 与真实页面文案不同 |\n| 测试标题与实际验证不完全一致 | 中 | 声称验证前端冲突提示，但实际只验证 API 409 |\n| 报告输出路径错误 | 中 | 测试报告可能无法归档到当前项目测试目录 |\n| 测试文件位置与 Playwright testDir 不一致 | 中 | 默认执行可能找不到测试 |\n| token key 不一致 | 低 | 有默认 token 兜底，但验证意义不足 |\n| 前端日期硬编码 | 中 | 随时间推进可能导致 E2E 失败 |\n\n## 下一步计划\n\n建议进入修订实现阶段时，按最小变更顺序处理：\n\n1. 修订 `docs/移动端应用：会议室预约系统/测试/e2e/dev-integration.spec.js`\n   - token key 改为 `hx_meeting_token`\n   - happy path 文案断言改为当前真实页面文案或标题\n   - 增加 `approvalRequired === false` 断言\n   - 冲突场景标题与实际断言对齐，或补充前端 toast 验证\n\n2. 检查并修订 `generated/HX-Meeting/playwright.config.js`\n   - 报告路径改为：\n     ```text\n     docs/移动端应用：会议室预约系统/测试/测试报告\n     ```\n   - 明确 testDir 与阶段测试文件位置关系\n\n3. 如允许扩展前端修订，再评估：\n   - 将 `RoomFilterPanel.vue` 中写死的 `2026-05-11T09:00:00` 改为动态当前日期\n\n4. 修订后执行验证：\n   - 后端启动在 `8080`\n   - 前端启动在 `5173`\n   - API 代理目标保持 `http://localhost:8080`\n   - 运行 Playwright 联调测试并归档报告到当前项目测试目录。",
+    "options" : [ ]
+  }, {
+    "role" : "ai",
+    "content" : "正在探索修订「完成前验证」阶段修订，请稍候……",
+    "options" : [ ]
+  } ],
+  "nextStageIndex" : 14,
+  "approvedStageKeys" : [ "requirements", "brainstorming", "writing-plans", "product-design-artifacts", "ui-design", "architecture-design", "api-design", "database-design", "backend-development", "frontend-development", "development-integration", "test-case-generation", "e2e-acceptance-testing" ]
+}

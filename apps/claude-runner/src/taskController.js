@@ -1,6 +1,7 @@
 import {
   checkEnvironment,
   closeSession,
+  runOpenSpecAction,
   runTask,
   sendMessage,
   startSession
@@ -63,6 +64,12 @@ export async function handleClaudeRequest(req, res) {
       const body = await readJsonBody(req);
       validateRequired(body, ["taskId", "mode", "prompt"]);
       return sendJson(res, 200, await runTask(body));
+    }
+
+    if (req.method === "POST" && req.url === "/claude/openspec") {
+      const body = await readJsonBody(req);
+      validateRequired(body, ["taskId", "action", "context"]);
+      return sendJson(res, 200, await runOpenSpecAction(body));
     }
 
     return sendJson(res, 404, { error: "Not Found" });

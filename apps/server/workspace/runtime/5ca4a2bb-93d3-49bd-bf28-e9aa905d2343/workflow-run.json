@@ -1,0 +1,732 @@
+{
+  "schemaVersion" : 1,
+  "taskId" : "5ca4a2bb-93d3-49bd-bf28-e9aa905d2343",
+  "requirement" : "恢复流程：移动端应用：会议室预约系统",
+  "sessionId" : "workflow-5ca4a2bb-93d3-49bd-bf28-e9aa905d2343",
+  "status" : "awaiting_review",
+  "currentStage" : "完成前验证",
+  "currentArtifactType" : "验证结果",
+  "designProgressMessage" : "完成前验证 已从历史项目恢复，请确认产物或提交修订反馈",
+  "progress" : 97,
+  "estimatedRemaining" : "等待确认",
+  "estimatedCompletion" : "等待用户确认",
+  "error" : null,
+  "updatedAt" : "2026-05-12T06:35:20.952785Z",
+  "result" : {
+    "available" : true,
+    "designAvailable" : true,
+    "projectName" : "移动端应用：会议室预约系统",
+    "projectUrl" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fgenerated%2FHX-Meeting",
+    "reportUrl" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%2Ftest-report.md",
+    "zipUrl" : null,
+    "prdMarkdown" : "移动端应用：会议室预约系统 的设计产物已生成：\n- 版本说明.md\n- PRD\n- 需求文档 Word\n- UI 设计规范\n- 业务流程图\n- 信息架构图\n- 页面流转图\n- 术语表\n- UI 设计规范\n- HTML 原型\n- 桌面端设计图\n- 移动端设计图\n- 组件清单\n- 组件库 HTML\n- 组件库设计图\n- 交互说明\n- 交互流程图\n- 响应式断点参考\n- 响应式 HTML 预览\n- 移动端适配图\n- 系统架构图\n- 系统架构设计\n- OpenAPI.md\n- 部署架构设计.md\n- 技术选型说明.md\n- V1__create_hx_meeting_schema.sql\n- 数据字典\n- V2__seed_hx_meeting_demo_data.sql\n- 前端工程\n- 后端工程\n- dev-integration.spec.js\n- dev-integration-report.md\n- 测试报告\n- 测试用例摘要\n- 功能测试用例.md\n- 系统架构图\n- 系统架构设计\n- OpenAPI.md\n- 部署架构设计.md\n- 技术选型说明.md",
+    "pageSpecs" : [ ],
+    "componentSpecs" : [ ],
+    "userFlowSpecs" : [ ],
+    "uiGuidelines" : [ ],
+    "artifacts" : [ {
+      "stage" : "requirement",
+      "name" : "版本说明.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F01-%E5%8F%98%E6%9B%B4%E8%AE%B0%E5%BD%95%2F%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E.md",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "PRD",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F02-%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%2FPRD.md",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "需求文档 Word",
+      "type" : "word",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F02-%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%2FPRD.docx",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "UI 设计规范",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F03-UI%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83%2FUI-Design-Spec.md",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "业务流程图",
+      "type" : "plantuml",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F04-%E6%B5%81%E7%A8%8B%E5%9B%BE%2F%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E5%9B%BE.puml",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "信息架构图",
+      "type" : "plantuml",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F04-%E6%B5%81%E7%A8%8B%E5%9B%BE%2F%E4%BF%A1%E6%81%AF%E6%9E%B6%E6%9E%84%E5%9B%BE.puml",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "页面流转图",
+      "type" : "plantuml",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F04-%E6%B5%81%E7%A8%8B%E5%9B%BE%2F%E9%A1%B5%E9%9D%A2%E6%B5%81%E8%BD%AC%E5%9B%BE.puml",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "术语表",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F05-%E9%99%84%E5%BD%95%2F%E6%9C%AF%E8%AF%AD%E8%A1%A8.md",
+      "downloadable" : true
+    }, {
+      "stage" : "requirement",
+      "name" : "UI 设计规范",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%2F03-UI%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83%2FUI-Design-Spec.md",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "HTML 原型",
+      "type" : "html",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E8%AE%BE%E8%AE%A1%E7%A8%BF%2Findex.html",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "桌面端设计图",
+      "type" : "image",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E8%AE%BE%E8%AE%A1%E7%A8%BF%2Fdesktop.svg",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "移动端设计图",
+      "type" : "image",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E8%AE%BE%E8%AE%A1%E7%A8%BF%2Fmobile.svg",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "组件清单",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%BB%84%E4%BB%B6%E5%BA%93%2F%E7%BB%84%E4%BB%B6%E6%B8%85%E5%8D%95.md",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "组件库 HTML",
+      "type" : "html",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%BB%84%E4%BB%B6%E5%BA%93%2Fcomponent-library.html",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "组件库设计图",
+      "type" : "image",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%BB%84%E4%BB%B6%E5%BA%93%2Fcomponent-library.svg",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "交互说明",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E4%BA%A4%E4%BA%92%E5%8E%9F%E5%9E%8B%2F%E4%BA%A4%E4%BA%92%E8%AF%B4%E6%98%8E.md",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "交互流程图",
+      "type" : "image",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E4%BA%A4%E4%BA%92%E5%8E%9F%E5%9E%8B%2Finteraction-flow.svg",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "响应式断点参考",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%2F%E5%93%8D%E5%BA%94%E5%BC%8F%E6%96%AD%E7%82%B9%E5%8F%82%E8%80%83.md",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "响应式 HTML 预览",
+      "type" : "html",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%2Fresponsive-preview.html",
+      "downloadable" : true
+    }, {
+      "stage" : "ui-prototype",
+      "name" : "移动端适配图",
+      "type" : "image",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2FUI%E5%8E%9F%E5%9E%8B%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%2Fmobile-preview.svg",
+      "downloadable" : true
+    }, {
+      "stage" : "architecture",
+      "name" : "系统架构图",
+      "type" : "plantuml",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%2F01-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%2F%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%9B%BE.puml",
+      "downloadable" : true
+    }, {
+      "stage" : "architecture",
+      "name" : "系统架构设计",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%2F01-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%2F%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1.md",
+      "downloadable" : true
+    }, {
+      "stage" : "architecture",
+      "name" : "OpenAPI.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%2F02-%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1%2F%E6%8E%A5%E5%8F%A3%E5%AE%9A%E4%B9%89%2FOpenAPI.md",
+      "downloadable" : true
+    }, {
+      "stage" : "architecture",
+      "name" : "部署架构设计.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%2F03-%E9%83%A8%E7%BD%B2%E6%9E%B6%E6%9E%84%2F%E9%83%A8%E7%BD%B2%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1.md",
+      "downloadable" : true
+    }, {
+      "stage" : "architecture",
+      "name" : "技术选型说明.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%2F04-%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%2F%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%E8%AF%B4%E6%98%8E.md",
+      "downloadable" : true
+    }, {
+      "stage" : "database",
+      "name" : "V1__create_hx_meeting_schema.sql",
+      "type" : "sql",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%2F%E5%BB%BA%E8%A1%A8%E8%84%9A%E6%9C%AC%2FV1__create_hx_meeting_schema.sql",
+      "downloadable" : true
+    }, {
+      "stage" : "database",
+      "name" : "数据字典",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%2F%E6%95%B0%E6%8D%AE%E5%AD%97%E5%85%B8%2F%E6%95%B0%E6%8D%AE%E5%AD%97%E5%85%B8.md",
+      "downloadable" : true
+    }, {
+      "stage" : "database",
+      "name" : "V2__seed_hx_meeting_demo_data.sql",
+      "type" : "sql",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%2F%E6%95%B0%E6%8D%AE%E8%BF%81%E7%A7%BB%E8%84%9A%E6%9C%AC%2FV2__seed_hx_meeting_demo_data.sql",
+      "downloadable" : true
+    }, {
+      "stage" : "code",
+      "name" : "前端工程",
+      "type" : "directory",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fgenerated%2FHX-Meeting%2Ffrontend",
+      "downloadable" : true
+    }, {
+      "stage" : "code",
+      "name" : "后端工程",
+      "type" : "directory",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fgenerated%2FHX-Meeting%2Fbackend",
+      "downloadable" : true
+    }, {
+      "stage" : "test-docs",
+      "name" : "dev-integration.spec.js",
+      "type" : "directory",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2Fe2e%2Fdev-integration.spec.js",
+      "downloadable" : true
+    }, {
+      "stage" : "test-docs",
+      "name" : "dev-integration-report.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%2Fdev-integration-report.md",
+      "downloadable" : true
+    }, {
+      "stage" : "test-docs",
+      "name" : "测试报告",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%2Ftest-report.md",
+      "downloadable" : true
+    }, {
+      "stage" : "test-docs",
+      "name" : "测试用例摘要",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%2Ftest-case-summary.md",
+      "downloadable" : true
+    }, {
+      "stage" : "test-docs",
+      "name" : "功能测试用例.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%2F%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B.md",
+      "downloadable" : true
+    }, {
+      "stage" : "misc",
+      "name" : "系统架构图",
+      "type" : "plantuml",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E5%85%B6%E4%BB%96%E6%96%87%E6%A1%A3%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E9%94%99%E8%AF%AF%E4%BA%A7%E7%89%A9%E5%A4%87%E4%BB%BD-20260511140007%2F01-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%2F%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%9B%BE.puml",
+      "downloadable" : true
+    }, {
+      "stage" : "misc",
+      "name" : "系统架构设计",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E5%85%B6%E4%BB%96%E6%96%87%E6%A1%A3%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E9%94%99%E8%AF%AF%E4%BA%A7%E7%89%A9%E5%A4%87%E4%BB%BD-20260511140007%2F01-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%2F%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1.md",
+      "downloadable" : true
+    }, {
+      "stage" : "misc",
+      "name" : "OpenAPI.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E5%85%B6%E4%BB%96%E6%96%87%E6%A1%A3%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E9%94%99%E8%AF%AF%E4%BA%A7%E7%89%A9%E5%A4%87%E4%BB%BD-20260511140007%2F02-%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1%2F%E6%8E%A5%E5%8F%A3%E5%AE%9A%E4%B9%89%2FOpenAPI.md",
+      "downloadable" : true
+    }, {
+      "stage" : "misc",
+      "name" : "部署架构设计.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E5%85%B6%E4%BB%96%E6%96%87%E6%A1%A3%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E9%94%99%E8%AF%AF%E4%BA%A7%E7%89%A9%E5%A4%87%E4%BB%BD-20260511140007%2F03-%E9%83%A8%E7%BD%B2%E6%9E%B6%E6%9E%84%2F%E9%83%A8%E7%BD%B2%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1.md",
+      "downloadable" : true
+    }, {
+      "stage" : "misc",
+      "name" : "技术选型说明.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E5%85%B6%E4%BB%96%E6%96%87%E6%A1%A3%2F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E9%94%99%E8%AF%AF%E4%BA%A7%E7%89%A9%E5%A4%87%E4%BB%BD-20260511140007%2F04-%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%2F%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%E8%AF%B4%E6%98%8E.md",
+      "downloadable" : true
+    } ]
+  },
+  "logs" : [ {
+    "time" : "14:01:10",
+    "agent" : "OpenSpec",
+    "level" : "info",
+    "message" : "开始探索修订阶段修订：完成前验证"
+  }, {
+    "time" : "14:04:18",
+    "agent" : "OpenSpec",
+    "level" : "info",
+    "message" : "已进入 explore 模式，仅做了读取与分析，未修改任何文件。\n\n## 当前发现\n\n当前阶段产物集中在：\n\n```text\ndocs/移动端应用：会议室预约系统/测试/\n├── e2e/dev-integration.spec.js\n├── 测试报告/dev-integration-report.md\n├── 测试报告/test-report.md\n└── 测试用例/\n    ├── test-case-summary.md\n    └── 功能测试用例.md\n```\n\n生成工程位置为：\n\n```text\ngenerated/HX-Meeting/frontend\ngenerated/HX-Meeting/backend\n```\n\n现有身份链路大致是：\n\n```text\n前端 localStorage hx_meeting_token\n        │\n        ▼\nAuthorization: Bearer <token>\n        │\n        ▼\n后端 DemoExternalPlatformAdapter\n        │\n        ├─ demo-sso-token → u_1001 / 张三 / 普通用户\n        └─ admin-token    → u_admin_1 / 管理员 / ADMIN\n```\n\n当前前端 `generated/HX-Meeting/frontend/src/api/client.js` 读取的是：\n\n```js\nwindow.localStorage.getItem('hx_meeting_token') || 'demo-sso-token'\n```\n\n但当前 E2E 脚本里使用的是：\n\n```js\nwindow.localStorage.setItem('hx_token', 'demo-sso-token')\n```\n\n也就是说测试里的 key 与真实 client 使用的 key 不一致，目前能通过主要依赖默认回退到 `demo-sso-token`。\n\n## 针对用户反馈的修订建议\n\n用户反馈是：\n\n> 支持 `?token=admin` 切换管理员身份，`?token=user` 切换普通用户\n\n建议将本次阶段修订目标定义为“验收/测试辅助身份切换能力补充验证”，重点修改测试产物，并在后续实现阶段视情况调整生成前端。\n\n### 1. 推荐的身份映射\n\n建议不要直接让后端接受 `Bearer admin` / `Bearer user`，而是在前端 URL 层做别名映射：\n\n```text\n?token=user  → hx_meeting_token = demo-sso-token\n?token=admin → hx_meeting_token = admin-token\n```\n\n原因：\n\n- 后端已有稳定 demo token：`demo-sso-token`、`admin-token`\n- 测试报告和现有接口验收已经围绕这两个 token 编写\n- `?token=admin/user` 更像前端预览调试入口，不一定需要污染后端鉴权语义\n\n建议链路：\n\n```text\n访问 /admin?token=admin\n        │\n        ▼\n前端启动时读取 query.token\n        │\n        ▼\nadmin → admin-token\n        │\n        ▼\n写入 localStorage.hx_meeting_token\n        │\n        ▼\n后续 API 自动携带 Authorization: Bearer admin-token\n        │\n        ▼\n管理接口返回 200\n```\n\n普通用户：\n\n```text\n访问 /home?token=user 或 /booking?token=user\n        │\n        ▼\nuser → demo-sso-token\n        │\n        ▼\nauth/me 返回 张三\n        │\n        ▼\n访问 /admin/dashboard 返回 403\n```\n\n### 2. `dev-integration.spec.js` 建议补充的验证点\n\n当前 E2E 已验证普通用户预约和冲突场景，但没有覆盖 query token 切换。\n\n建议新增或调整以下场景：\n\n| 场景 | URL | 预期 |\n| --- | --- | --- |\n| 普通用户切换 | `/home?token=user` 或 `/booking?token=user` | `/auth/me` 返回张三，普通用户页面正常 |\n| 管理员切换 | `/admin?token=admin` | 管理首页真实接口返回 200，展示管理员数据 |\n| 普通用户访问管理端 | `/admin?token=user` | `/admin/dashboard` 返回 403 或前端展示无权限 |\n| 无 token 默认行为 | `/home` | 默认仍为普通用户 `demo-sso-token` |\n\n同时建议修正测试脚本里的 localStorage key：\n\n```text\nhx_token → hx_meeting_token\n```\n\n否则后续一旦默认 token 逻辑变化，测试可能误判。\n\n### 3. `功能测试用例.md` 建议新增/修订用例\n\n建议在“用户身份与权限”部分增加两条 P0 用例：\n\n```text\nTC-021 URL token 切换普通用户身份\n- 前置条件：前端预览和生成后端已启动\n- 操作步骤：访问 /home?token=user 或 /booking?token=user\n- 预期结果：前端将身份切换为普通用户；/auth/me 返回张三；管理接口仍返回 403\n\nTC-022 URL token 切换管理员身份\n- 前置条件：前端预览和生成后端已启动\n- 操作步骤：访问 /admin?token=admin\n- 预期结果：前端将身份切换为管理员；/admin/dashboard 返回 200；管理首页展示审批、服务确认、违规等管理数据\n```\n\n### 4. `test-case-summary.md` 建议调整\n\n当前摘要里“用户身份与权限”是：\n\n```text\nSSO token、普通用户、管理员权限 | P0 | 4\n```\n\n建议改为覆盖：\n\n```text\nSSO token、URL token 切换、普通用户、管理员权限\n```\n\n用例数也应同步增加，例如从 4 调整为 6。\n\n通过准则建议新增：\n\n```text\n- 前端访问 ?token=user 应切换为普通用户身份，访问 ?token=admin 应切换为管理员身份。\n- URL token 切换后，后续 API 请求应使用对应 Authorization token。\n```\n\n### 5. `test-report.md` 和 `dev-integration-report.md` 建议补充验收项\n\n两个报告建议补充“待修订/新增验证项”，例如：\n\n| 验证项 | 预期 |\n| --- | --- |\n| `/home?token=user` | 普通用户身份，`/auth/me` 返回张三 |\n| `/admin?token=admin` | 管理员身份，管理接口返回 200 |\n| `/admin?token=user` | 普通用户访问管理接口返回 403 |\n\n如果后续真正执行验证，再把“建议验证项”改为“已验证项”。\n\n## 风险\n\n1. **当前前端未发现 query token 处理逻辑**  \n   目前读取身份只看 `localStorage.hx_meeting_token`，未看到 `?token=admin/user` 的解析逻辑。因此仅修改测试产物会暴露失败，真正通过验收还需要生成前端补充 query token 初始化逻辑。\n\n2. **E2E 现有 token key 不一致**  \n   测试脚本使用 `hx_token`，真实 client 使用 `hx_meeting_token`。这会让测试结果依赖默认 token，容易产生“测试通过但切换逻辑未生效”的假阳性。\n\n3. **管理员入口依赖前端路由与接口时序**  \n   如果访问 `/admin?token=admin` 时页面组件先发起接口请求，再写入 localStorage，可能第一次请求仍使用旧身份。实现时应在 app/router 初始化前完成 query token 同步。\n\n4. **是否清理 URL query 需要确认**  \n   可以保留 `?token=admin` 便于测试，也可以写入 localStorage 后 `replaceState` 清理 URL。测试辅助场景下建议先保留，方便验收人员确认当前身份入口。\n\n5. **后端是否需要接受 `admin/user` 作为 Bearer token 需谨慎**  \n   更推荐前端映射到现有 `admin-token/demo-sso-token`。如果后端也接受 `admin/user`，需要同步更新接口验收文档，避免 token 语义混乱。\n\n## 下一步计划\n\n建议后续进入修订/实现阶段时按最小变更推进：\n\n1. 修订测试用例文档，增加 `?token=user` / `?token=admin` 验收场景。\n2. 修订 E2E 脚本设计，覆盖 URL token 切换身份。\n3. 修正 E2E 中 `hx_token` 与 `hx_meeting_token` 的 key 不一致问题。\n4. 如允许实现，再在 `generated/HX-Meeting/frontend` 增加 query token 初始化逻辑：\n   - `user → demo-sso-token`\n   - `admin → admin-token`\n5. 重新执行开发联调验证，并更新 `test-report.md`、`dev-integration-report.md` 的实际结果。"
+  }, {
+    "time" : "14:08:46",
+    "agent" : "OpenSpec",
+    "level" : "info",
+    "message" : "已记录 完成前验证 阶段修订反馈"
+  }, {
+    "time" : "14:09:05",
+    "agent" : "OpenSpec",
+    "level" : "info",
+    "message" : "开始探索修订阶段修订：完成前验证"
+  }, {
+    "time" : "14:12:12",
+    "agent" : "OpenSpec",
+    "level" : "info",
+    "message" : "已按 `/opsx:explore` 只读探索，未修改任何文件。\n\n## 关键发现\n\n### 1. 非管理员仍会触发管理看板请求\n\n位置：`generated/HX-Meeting/frontend/src/stores/appStore.js`\n\n当前 `bootstrap()` 在应用启动时并发请求：\n\n```js\nauthApi.me(),\nbookingsApi.my(),\nnotificationsApi.list(),\nviolationsApi.mySummary(),\nadminApi.dashboard(),\ntransfersApi.pendingMine()\n```\n\n这意味着即使普通用户进入普通首页/预约页，也会请求：\n\n```text\n/api/hx-meeting/v1/admin/dashboard\n```\n\n虽然后端返回 403，但用户反馈要求的是“非管理员角色不要请求”，因此测试产物不应继续把“普通用户请求管理接口返回 403”作为前端验收目标。\n\n### 2. 进入预约菜单会默认请求会议室列表\n\n位置：`generated/HX-Meeting/frontend/src/views/meeting/BookingSearchView.vue`\n\n当前组件挂载时执行：\n\n```js\nonMounted(searchRooms)\n```\n\n因此进入 `/booking` 会自动请求：\n\n```text\n/api/hx-meeting/v1/rooms\n```\n\n这与用户反馈“进入预约菜单不要默认请求一次 rooms”冲突。期望行为应改为：用户点击“查询可用会议室”后才请求。\n\n### 3. 测试产物中存在需要修订的断言/描述\n\n#### `docs/移动端应用：会议室预约系统/测试/e2e/dev-integration.spec.js`\n\n现有 E2E 的 happy path 在点击“查询可用会议室”前才创建 `waitForResponse`，这一点方向是对的；但缺少两个回归断言：\n\n- 普通用户启动/进入普通页面时不应请求 `/admin/dashboard`\n- 进入 `/booking` 后、点击“查询可用会议室”前不应请求 `/rooms`\n\n建议补充网络监听型断言，而不是只依赖 403/200 接口结果。\n\n#### `功能测试用例.md`\n\n需要调整：\n\n- TC-003：明确“进入预约页不自动查询会议室；填写筛选条件并点击查询后才调用 `/rooms`”\n- TC-016：当前写法是“普通用户请求 `/admin/dashboard` 返回 403”，建议改为“普通用户前端流程不发起 `/admin/dashboard`；若直接请求接口，后端仍返回 403 作为兜底权限校验”\n- TC-017：保留管理员进入管理首页请求 `/admin/dashboard`\n\n#### `test-case-summary.md`\n\n当前通过准则：\n\n```text\n管理端接口在普通用户 token 下返回 403，在管理员 token 下返回 200。\n```\n\n建议拆成两层：\n\n- 前端行为：普通用户流程不得触发管理端 dashboard 请求\n- 后端兜底：普通用户直接访问管理接口仍返回 403\n\n#### `test-report.md` / `dev-integration-report.md`\n\n当前报告把“普通用户访问管理接口返回 403”作为已验证项。建议补充/替换为：\n\n- 普通用户前端初始化未触发 `/admin/dashboard`\n- 管理员上下文进入管理首页才触发 `/admin/dashboard`\n- 进入预约页不自动触发 `/rooms`，点击查询后才触发\n\n## 建议的阶段修订方向\n\n```text\n普通用户启动\n   │\n   ├─ auth/me\n   ├─ bookings/my\n   ├─ notifications\n   ├─ violations/my-summary\n   ├─ transfers/pending-mine\n   └─ 不请求 admin/dashboard\n\n进入预约菜单 /booking\n   │\n   ├─ 展示筛选表单\n   ├─ 不自动请求 rooms\n   └─ 点击“查询可用会议室”\n          └─ GET /rooms\n```\n\n## 风险\n\n1. **现有测试报告与真实实现不一致**\n   - 文档目前可能将 403 视为验收通过，但用户要求前端根本不要发起请求。\n\n2. **修订测试后，当前前端实现大概率无法通过**\n   - 因为 `bootstrap()` 无条件调用 `adminApi.dashboard()`\n   - `BookingSearchView` 挂载时无条件 `searchRooms()`\n\n3. **管理员数据依赖风险**\n   - 如果移除全局 dashboard 请求，需要确保管理员首页或管理员模式仍能在合适时机加载 dashboard，否则管理端导航 badge 和首页统计可能为空。\n\n4. **预约页空态文案风险**\n   - 去掉默认查询后，当前“暂无可用会议室”空态可能误导用户，应区分“未查询”和“查询无结果”。\n\n## 下一步计划\n\n1. 修订测试用例文档：\n   - 调整 TC-003、TC-016、通过准则和报告描述。\n\n2. 修订 E2E 脚本设计：\n   - 增加普通用户前端流程“不请求 `/admin/dashboard`”断言。\n   - 增加进入 `/booking` 后点击查询前“不请求 `/rooms`”断言。\n   - 保留点击查询后 `/rooms` 成功的 happy path。\n\n3. 后续进入 apply 阶段时再改实现：\n   - `appStore.bootstrap()` 先获取用户，再仅管理员请求 `adminApi.dashboard()`。\n   - `BookingSearchView.vue` 移除 `onMounted(searchRooms)`，改为用户点击查询后加载。\n   - 必要时增加“请先设置筛选条件并点击查询”的初始态。"
+  }, {
+    "time" : "14:13:00",
+    "agent" : "OpenSpec",
+    "level" : "info",
+    "message" : "开始制定计划阶段修订：完成前验证"
+  }, {
+    "time" : "14:18:09",
+    "agent" : "OpenSpec",
+    "level" : "info",
+    "message" : "已创建 OpenSpec change：`revise-verification-before-completion`\n\n位置：\n- `openspec/changes/revise-verification-before-completion/`\n\n已生成产物：\n- `proposal.md`：说明本次阶段修订的原因、变更内容、影响范围。\n- `design.md`：说明前端请求门控、预约页显式查询、E2E 网络断言的实现方案。\n- `specs/verification-network-guardrails/spec.md`：新增网络请求防护规范。\n- `tasks.md`：拆分后续实现任务清单。\n\n最终状态：\n- `openspec status --change \"revise-verification-before-completion\"` 显示 `4/4 artifacts complete`\n- All artifacts complete，已可进入实现阶段。\n\n下一步可执行：\n```bash\n/opsx:apply revise-verification-before-completion\n```"
+  }, {
+    "time" : "14:18:33",
+    "agent" : "OpenSpec",
+    "level" : "info",
+    "message" : "开始执行计划阶段修订：完成前验证"
+  }, {
+    "time" : "14:35:20",
+    "agent" : "OpenSpec",
+    "level" : "info",
+    "message" : "## Implementation Complete\n\n**Change:** revise-verification-before-completion  \n**Schema:** spec-driven  \n**Progress:** 11/11 tasks complete ✓\n\n### 本次修改文件\n\n- `generated/HX-Meeting/frontend/src/stores/appStore.js`\n  - `bootstrap` 改为先请求 `authApi.me()`。\n  - 仅当用户角色包含 `ADMIN` 时请求 `/api/hx-meeting/v1/admin/dashboard`。\n  - 普通用户 `adminDashboard` 保持 `null`。\n\n- `generated/HX-Meeting/frontend/src/views/meeting/BookingSearchView.vue`\n  - 移除进入预约页时自动执行的 `searchRooms`。\n  - 保留点击“查询可用会议室”触发 `roomsApi.list`。\n  - 修正空楼栋筛选不再传 `building=`，避免查询结果为空。\n\n- `docs/移动端应用：会议室预约系统/测试/e2e/dev-integration.spec.js`\n  - 新增普通用户启动/进入预约页不请求 `/admin/dashboard` 断言。\n  - 新增进入 `/booking` 后点击查询前不请求 GET `/rooms`、点击后才请求的断言。\n  - 调整 E2E 可通过 `PLAYWRIGHT_BASE_URL` 直接指定前端地址。\n\n- `docs/移动端应用：会议室预约系统/测试/测试用例/功能测试用例.md`\n  - 新增普通用户不触发管理看板请求用例。\n  - 新增预约菜单不默认查询会议室用例。\n\n- `docs/移动端应用：会议室预约系统/测试/测试用例/test-case-summary.md`\n  - 更新用例分组数量与通过准则，纳入两个网络请求回归点。\n\n- `docs/移动端应用：会议室预约系统/测试/测试报告/dev-integration-report.md`\n  - 更新本次反馈项验证结论与执行命令。\n\n- `docs/移动端应用：会议室预约系统/测试/测试报告/test-report.md`\n  - 更新接口验收结果、关键问题修复和验证命令。\n\n- `openspec/changes/revise-verification-before-completion/tasks.md`\n  - 11 项任务已全部标记完成。\n\n### 验证结果\n\n- 前端构建通过：\n  - `npm --prefix generated/HX-Meeting/frontend run build`\n\n- E2E 验证通过：\n  - `API_BASE_URL=\"http://127.0.0.1:50006/api/hx-meeting/v1\" PLAYWRIGHT_BASE_URL=\"http://127.0.0.1:4173\" npx playwright test -c \"docs/移动端应用：会议室预约系统/测试/e2e\"`\n  - 结果：`3 passed`\n\nAll tasks complete! 可使用 `/opsx:archive revise-verification-before-completion` 归档该 change。"
+  } ],
+  "steps" : [ {
+    "index" : 1,
+    "key" : "requirements",
+    "title" : "需求分析",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "需求摘要整理完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 2,
+    "key" : "brainstorming",
+    "title" : "需求讨论",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "需求讨论结论整理完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 3,
+    "key" : "writing-plans",
+    "title" : "制定计划",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "阶段化实现计划整理完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 4,
+    "key" : "product-design-artifacts",
+    "title" : "需求产物生成",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "需求阶段产物生成完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 5,
+    "key" : "ui-design",
+    "title" : "UI设计",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "UI 设计产物生成完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 6,
+    "key" : "architecture-design",
+    "title" : "架构设计",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "架构设计产物生成完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 7,
+    "key" : "api-design",
+    "title" : "接口设计",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "接口设计产物生成完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 8,
+    "key" : "database-design",
+    "title" : "数据库设计",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "数据库设计产物生成完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 9,
+    "key" : "backend-development",
+    "title" : "后端开发",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "后端代码已从 generated 目录恢复",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 10,
+    "key" : "frontend-development",
+    "title" : "前端开发",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "前端代码已从 generated 目录恢复",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 11,
+    "key" : "development-integration",
+    "title" : "开发联调",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "开发联调完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 12,
+    "key" : "test-case-generation",
+    "title" : "测试用例生成",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "测试用例生成完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 13,
+    "key" : "e2e-acceptance-testing",
+    "title" : "E2E验收测试",
+    "status" : "success",
+    "progress" : 100,
+    "detail" : "E2E 验收测试完成",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 14,
+    "key" : "verification-before-completion",
+    "title" : "完成前验证",
+    "status" : "awaiting_review",
+    "progress" : 100,
+    "detail" : "等待用户确认",
+    "duration" : "0s",
+    "error" : null
+  }, {
+    "index" : 15,
+    "key" : "delivery",
+    "title" : "交付",
+    "status" : "pending",
+    "progress" : 0,
+    "detail" : "等待上一步完成",
+    "duration" : "--",
+    "error" : null
+  } ],
+  "agents" : [ {
+    "name" : "产品经理",
+    "role" : "需求分析、需求讨论、PRD 与产品产物",
+    "status" : "success",
+    "model" : "product-manager",
+    "duration" : "0s",
+    "progress" : 100
+  }, {
+    "name" : "UI设计师",
+    "role" : "UI 原型、交互说明、设计规范",
+    "status" : "success",
+    "model" : "ui-designer",
+    "duration" : "0s",
+    "progress" : 100
+  }, {
+    "name" : "架构师",
+    "role" : "系统架构、接口设计、数据库设计",
+    "status" : "success",
+    "model" : "architect",
+    "duration" : "0s",
+    "progress" : 100
+  }, {
+    "name" : "后端开发工程师",
+    "role" : "后端接口、服务、数据库相关开发",
+    "status" : "success",
+    "model" : "backend-engineer",
+    "duration" : "0s",
+    "progress" : 100
+  }, {
+    "name" : "前端开发工程师",
+    "role" : "前端页面、组件、交互与接口对接",
+    "status" : "success",
+    "model" : "frontend-engineer",
+    "duration" : "0s",
+    "progress" : 100
+  }, {
+    "name" : "测试工程师",
+    "role" : "测试用例、E2E、验证报告与缺陷反馈",
+    "status" : "success",
+    "model" : "test-engineer",
+    "duration" : "0s",
+    "progress" : 100
+  }, {
+    "name" : "运维工程师",
+    "role" : "部署、环境、数据库运维与交付检查",
+    "status" : "pending",
+    "model" : "ops-engineer",
+    "duration" : "--",
+    "progress" : 0
+  } ],
+  "review" : {
+    "workflowRunId" : "5ca4a2bb-93d3-49bd-bf28-e9aa905d2343",
+    "stageKey" : "verification-before-completion",
+    "stageTitle" : "完成前验证",
+    "status" : "awaiting_review",
+    "nextStageKey" : "delivery",
+    "nextStageTitle" : "交付",
+    "artifacts" : [ {
+      "stage" : "test-docs",
+      "name" : "dev-integration.spec.js",
+      "type" : "directory",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2Fe2e%2Fdev-integration.spec.js",
+      "downloadable" : true
+    }, {
+      "stage" : "test-docs",
+      "name" : "dev-integration-report.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%2Fdev-integration-report.md",
+      "downloadable" : true
+    }, {
+      "stage" : "test-docs",
+      "name" : "测试报告",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%2Ftest-report.md",
+      "downloadable" : true
+    }, {
+      "stage" : "test-docs",
+      "name" : "测试用例摘要",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%2Ftest-case-summary.md",
+      "downloadable" : true
+    }, {
+      "stage" : "test-docs",
+      "name" : "功能测试用例.md",
+      "type" : "markdown",
+      "path" : "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%2F%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B.md",
+      "downloadable" : true
+    } ],
+    "userFeedback" : "非管理员角色不要请求/api/hx-meeting/v1/admin/dashboard，进入预约菜单不要默认请求一次/api/hx-meeting/v1/rooms",
+    "revisionMessages" : [ {
+      "role" : "user",
+      "content" : "反馈类型：验收/测试辅助\n反馈内容：\n支持?token=admin切换管理员身份，?token=user切换普通用户",
+      "options" : [ ]
+    }, {
+      "role" : "ai",
+      "content" : "已收到修订反馈。\n\n我的初步评估：\n- 反馈类型：验收/测试辅助\n- 影响范围：后端、测试\n- 处理建议：这类反馈可作为当前阶段的验收辅助处理，建议限制在预览/测试环境，并补充测试说明。\n\n下一步可以点击“探索修订”让我进一步分析修改方案；如果修改点已经明确，也可以直接点击“制定计划”。",
+      "options" : [ ]
+    }, {
+      "role" : "ai",
+      "content" : "13:52:49 已记录 完成前验证 阶段修订反馈",
+      "options" : [ ]
+    }, {
+      "role" : "ai",
+      "content" : "正在探索修订「完成前验证」阶段修订，请稍候……",
+      "options" : [ ]
+    }, {
+      "role" : "ai",
+      "content" : "13:53:00 开始探索修订阶段修订：完成前验证",
+      "options" : [ ]
+    }, {
+      "role" : "ai",
+      "content" : "已进入 `/opsx:explore` 并仅做探索，未修改代码或阶段产物。\n\n## 当前发现\n\n用户反馈是：支持 URL 查询参数切换身份：\n\n- `?token=admin`：切换管理员身份\n- `?token=user`：切换普通用户\n\n当前产物和实现现状：\n\n```text\n前端当前读取 token：\nlocalStorage.hx_meeting_token || demo-sso-token\n\n后端当前识别 token：\ndemo-sso-token -> 普通用户 张三\nadmin-token    -> 管理员\n\n测试脚本当前写入：\nlocalStorage.hx_token = demo-sso-token\n```\n\n这里有一个明显不一致点：前端实际读取的是 `hx_meeting_token`，但 E2E 脚本写的是 `hx_token`。当前之所以可能仍能通过，是因为前端默认 fallback 到 `demo-sso-token`。\n\n## 阶段修订建议\n\n### 1. 测试用例需补充“URL token 身份切换”场景\n\n建议在 `docs/移动端应用：会议室预约系统/测试/测试用例/功能测试用例.md` 增补或调整身份权限用例：\n\n- 普通用户访问：`/home?token=user`\n  - 预期身份为张三 / USER。\n  - 管理端接口返回 403。\n- 管理员访问：`/admin?token=admin`\n  - 预期身份为管理员 / ADMIN。\n  - 管理看板接口返回 200。\n- 未携带 token 参数时：\n  - 可继续使用默认普通用户身份，或沿用 localStorage 中的历史身份；需明确预期。\n\n### 2. E2E 脚本需验证 URL 参数入口，而不是只写 localStorage\n\n当前 `dev-integration.spec.js` 主要依赖接口 token 和本地存储。下一步实现时建议改为覆盖：\n\n```text\npage.goto('/home?token=user')\n  -> /auth/me 返回张三\n\npage.goto('/admin?token=admin')\n  -> /auth/me 返回管理员\n  -> /admin/dashboard 返回 200\n\npage.goto('/admin?token=user')\n  -> /admin/dashboard 返回 403 或页面展示无权限提示\n```\n\n同时应将脚本中的 `hx_token` 修正为前端真实使用的 `hx_meeting_token`，或直接改成 URL 参数驱动，避免隐性 fallback 掩盖问题。\n\n### 3. 测试报告需增加验收口径\n\n建议更新：\n\n- `测试报告/dev-integration-report.md`\n- `测试报告/test-report.md`\n- `测试用例/test-case-summary.md`\n\n增加说明：\n\n| 场景 | URL | 预期 |\n| --- | --- | --- |\n| 普通用户切换 | `?token=user` | 后端按普通用户 token 请求，管理接口 403 |\n| 管理员切换 | `?token=admin` | 后端按管理员 token 请求，管理接口 200 |\n| 身份切换后刷新 | 保留或重新解析 URL token | 身份不串号 |\n\n### 4. 生成前端可能需要小范围实现变更\n\n虽然本次不实现，但从代码看，前端目前没有解析 `location.search` 的 `token` 参数。后续 `/opsx:apply` 时可能需要在 `generated/HX-Meeting/frontend` 内补充一个 token 映射逻辑：\n\n```text\n?token=user  -> demo-sso-token\n?token=admin -> admin-token\n```\n\n合理落点可能是：\n\n- `generated/HX-Meeting/frontend/src/main.js`\n- 或 `generated/HX-Meeting/frontend/src/api/client.js`\n- 或新增轻量 token 初始化工具\n\n建议优先在应用启动时解析一次，并写入 `localStorage.hx_meeting_token`，这样现有 API client 不需要大改。\n\n## 风险\n\n1. **命名歧义风险**  \n   用户反馈里的 `admin` / `user` 不是后端真实 token，后端真实 token 是 `admin-token` / `demo-sso-token`，需要前端做映射。\n\n2. **localStorage 状态污染风险**  \n   如果先访问 `?token=admin` 后再访问不带参数页面，可能继续保持管理员身份。测试报告中需要明确这是预期还是需要清理。\n\n3. **测试误判风险**  \n   当前 E2E 写入 `hx_token`，但前端读取 `hx_meeting_token`。如果不修正，测试可能没有真正验证身份切换能力。\n\n4. **管理端页面错误展示风险**  \n   普通用户访问 `/admin?token=user` 时，接口 403 是预期，但页面是否有友好提示需要额外确认。\n\n## 下一步计划\n\n如果进入实现修订阶段，建议顺序如下：\n\n1. 在测试用例文档中补充 `?token=admin/user` 验收场景。\n2. 在前端加入 URL token 参数解析与映射。\n3. 修正 E2E 脚本，改用 URL 参数验证普通用户和管理员身份切换。\n4. 重新运行联调/E2E 验证。\n5. 更新 `test-report.md` 与 `dev-integration-report.md`，记录新验收结果和遗留风险。",
+      "options" : [ ]
+    }, {
+      "role" : "ai",
+      "content" : "正在探索修订「完成前验证」阶段修订，请稍候……",
+      "options" : [ ]
+    }, {
+      "role" : "ai",
+      "content" : "14:01:10 开始探索修订阶段修订：完成前验证",
+      "options" : [ ]
+    }, {
+      "role" : "ai",
+      "content" : "已进入 explore 模式，仅做了读取与分析，未修改任何文件。\n\n## 当前发现\n\n当前阶段产物集中在：\n\n```text\ndocs/移动端应用：会议室预约系统/测试/\n├── e2e/dev-integration.spec.js\n├── 测试报告/dev-integration-report.md\n├── 测试报告/test-report.md\n└── 测试用例/\n    ├── test-case-summary.md\n    └── 功能测试用例.md\n```\n\n生成工程位置为：\n\n```text\ngenerated/HX-Meeting/frontend\ngenerated/HX-Meeting/backend\n```\n\n现有身份链路大致是：\n\n```text\n前端 localStorage hx_meeting_token\n        │\n        ▼\nAuthorization: Bearer <token>\n        │\n        ▼\n后端 DemoExternalPlatformAdapter\n        │\n        ├─ demo-sso-token → u_1001 / 张三 / 普通用户\n        └─ admin-token    → u_admin_1 / 管理员 / ADMIN\n```\n\n当前前端 `generated/HX-Meeting/frontend/src/api/client.js` 读取的是：\n\n```js\nwindow.localStorage.getItem('hx_meeting_token') || 'demo-sso-token'\n```\n\n但当前 E2E 脚本里使用的是：\n\n```js\nwindow.localStorage.setItem('hx_token', 'demo-sso-token')\n```\n\n也就是说测试里的 key 与真实 client 使用的 key 不一致，目前能通过主要依赖默认回退到 `demo-sso-token`。\n\n## 针对用户反馈的修订建议\n\n用户反馈是：\n\n> 支持 `?token=admin` 切换管理员身份，`?token=user` 切换普通用户\n\n建议将本次阶段修订目标定义为“验收/测试辅助身份切换能力补充验证”，重点修改测试产物，并在后续实现阶段视情况调整生成前端。\n\n### 1. 推荐的身份映射\n\n建议不要直接让后端接受 `Bearer admin` / `Bearer user`，而是在前端 URL 层做别名映射：\n\n```text\n?token=user  → hx_meeting_token = demo-sso-token\n?token=admin → hx_meeting_token = admin-token\n```\n\n原因：\n\n- 后端已有稳定 demo token：`demo-sso-token`、`admin-token`\n- 测试报告和现有接口验收已经围绕这两个 token 编写\n- `?token=admin/user` 更像前端预览调试入口，不一定需要污染后端鉴权语义\n\n建议链路：\n\n```text\n访问 /admin?token=admin\n        │\n        ▼\n前端启动时读取 query.token\n        │\n        ▼\nadmin → admin-token\n        │\n        ▼\n写入 localStorage.hx_meeting_token\n        │\n        ▼\n后续 API 自动携带 Authorization: Bearer admin-token\n        │\n        ▼\n管理接口返回 200\n```\n\n普通用户：\n\n```text\n访问 /home?token=user 或 /booking?token=user\n        │\n        ▼\nuser → demo-sso-token\n        │\n        ▼\nauth/me 返回 张三\n        │\n        ▼\n访问 /admin/dashboard 返回 403\n```\n\n### 2. `dev-integration.spec.js` 建议补充的验证点\n\n当前 E2E 已验证普通用户预约和冲突场景，但没有覆盖 query token 切换。\n\n建议新增或调整以下场景：\n\n| 场景 | URL | 预期 |\n| --- | --- | --- |\n| 普通用户切换 | `/home?token=user` 或 `/booking?token=user` | `/auth/me` 返回张三，普通用户页面正常 |\n| 管理员切换 | `/admin?token=admin` | 管理首页真实接口返回 200，展示管理员数据 |\n| 普通用户访问管理端 | `/admin?token=user` | `/admin/dashboard` 返回 403 或前端展示无权限 |\n| 无 token 默认行为 | `/home` | 默认仍为普通用户 `demo-sso-token` |\n\n同时建议修正测试脚本里的 localStorage key：\n\n```text\nhx_token → hx_meeting_token\n```\n\n否则后续一旦默认 token 逻辑变化，测试可能误判。\n\n### 3. `功能测试用例.md` 建议新增/修订用例\n\n建议在“用户身份与权限”部分增加两条 P0 用例：\n\n```text\nTC-021 URL token 切换普通用户身份\n- 前置条件：前端预览和生成后端已启动\n- 操作步骤：访问 /home?token=user 或 /booking?token=user\n- 预期结果：前端将身份切换为普通用户；/auth/me 返回张三；管理接口仍返回 403\n\nTC-022 URL token 切换管理员身份\n- 前置条件：前端预览和生成后端已启动\n- 操作步骤：访问 /admin?token=admin\n- 预期结果：前端将身份切换为管理员；/admin/dashboard 返回 200；管理首页展示审批、服务确认、违规等管理数据\n```\n\n### 4. `test-case-summary.md` 建议调整\n\n当前摘要里“用户身份与权限”是：\n\n```text\nSSO token、普通用户、管理员权限 | P0 | 4\n```\n\n建议改为覆盖：\n\n```text\nSSO token、URL token 切换、普通用户、管理员权限\n```\n\n用例数也应同步增加，例如从 4 调整为 6。\n\n通过准则建议新增：\n\n```text\n- 前端访问 ?token=user 应切换为普通用户身份，访问 ?token=admin 应切换为管理员身份。\n- URL token 切换后，后续 API 请求应使用对应 Authorization token。\n```\n\n### 5. `test-report.md` 和 `dev-integration-report.md` 建议补充验收项\n\n两个报告建议补充“待修订/新增验证项”，例如：\n\n| 验证项 | 预期 |\n| --- | --- |\n| `/home?token=user` | 普通用户身份，`/auth/me` 返回张三 |\n| `/admin?token=admin` | 管理员身份，管理接口返回 200 |\n| `/admin?token=user` | 普通用户访问管理接口返回 403 |\n\n如果后续真正执行验证，再把“建议验证项”改为“已验证项”。\n\n## 风险\n\n1. **当前前端未发现 query token 处理逻辑**  \n   目前读取身份只看 `localStorage.hx_meeting_token`，未看到 `?token=admin/user` 的解析逻辑。因此仅修改测试产物会暴露失败，真正通过验收还需要生成前端补充 query token 初始化逻辑。\n\n2. **E2E 现有 token key 不一致**  \n   测试脚本使用 `hx_token`，真实 client 使用 `hx_meeting_token`。这会让测试结果依赖默认 token，容易产生“测试通过但切换逻辑未生效”的假阳性。\n\n3. **管理员入口依赖前端路由与接口时序**  \n   如果访问 `/admin?token=admin` 时页面组件先发起接口请求，再写入 localStorage，可能第一次请求仍使用旧身份。实现时应在 app/router 初始化前完成 query token 同步。\n\n4. **是否清理 URL query 需要确认**  \n   可以保留 `?token=admin` 便于测试，也可以写入 localStorage 后 `replaceState` 清理 URL。测试辅助场景下建议先保留，方便验收人员确认当前身份入口。\n\n5. **后端是否需要接受 `admin/user` 作为 Bearer token 需谨慎**  \n   更推荐前端映射到现有 `admin-token/demo-sso-token`。如果后端也接受 `admin/user`，需要同步更新接口验收文档，避免 token 语义混乱。\n\n## 下一步计划\n\n建议后续进入修订/实现阶段时按最小变更推进：\n\n1. 修订测试用例文档，增加 `?token=user` / `?token=admin` 验收场景。\n2. 修订 E2E 脚本设计，覆盖 URL token 切换身份。\n3. 修正 E2E 中 `hx_token` 与 `hx_meeting_token` 的 key 不一致问题。\n4. 如允许实现，再在 `generated/HX-Meeting/frontend` 增加 query token 初始化逻辑：\n   - `user → demo-sso-token`\n   - `admin → admin-token`\n5. 重新执行开发联调验证，并更新 `test-report.md`、`dev-integration-report.md` 的实际结果。",
+      "options" : [ ]
+    }, {
+      "role" : "user",
+      "content" : "非管理员角色不要请求/api/hx-meeting/v1/admin/dashboard，进入预约菜单不要默认请求一次/api/hx-meeting/v1/rooms",
+      "options" : [ ]
+    }, {
+      "role" : "ai",
+      "content" : "已收到修订反馈。\n\n我的初步评估：\n- 反馈类型：缺陷修复\n- 影响范围：待进一步确认\n- 处理建议：这类反馈可作为当前阶段缺陷修复处理，修复后需要重新验证相关产物。\n\n下一步可以点击“探索修订”让我进一步分析修改方案；如果修改点已经明确，也可以直接点击“制定计划”。",
+      "options" : [ ]
+    }, {
+      "role" : "ai",
+      "content" : "正在探索修订「完成前验证」阶段修订，请稍候……",
+      "options" : [ ]
+    }, {
+      "role" : "ai",
+      "content" : "14:09:05 开始探索修订阶段修订：完成前验证",
+      "options" : [ ]
+    }, {
+      "role" : "ai",
+      "content" : "已按 `/opsx:explore` 只读探索，未修改任何文件。\n\n## 关键发现\n\n### 1. 非管理员仍会触发管理看板请求\n\n位置：`generated/HX-Meeting/frontend/src/stores/appStore.js`\n\n当前 `bootstrap()` 在应用启动时并发请求：\n\n```js\nauthApi.me(),\nbookingsApi.my(),\nnotificationsApi.list(),\nviolationsApi.mySummary(),\nadminApi.dashboard(),\ntransfersApi.pendingMine()\n```\n\n这意味着即使普通用户进入普通首页/预约页，也会请求：\n\n```text\n/api/hx-meeting/v1/admin/dashboard\n```\n\n虽然后端返回 403，但用户反馈要求的是“非管理员角色不要请求”，因此测试产物不应继续把“普通用户请求管理接口返回 403”作为前端验收目标。\n\n### 2. 进入预约菜单会默认请求会议室列表\n\n位置：`generated/HX-Meeting/frontend/src/views/meeting/BookingSearchView.vue`\n\n当前组件挂载时执行：\n\n```js\nonMounted(searchRooms)\n```\n\n因此进入 `/booking` 会自动请求：\n\n```text\n/api/hx-meeting/v1/rooms\n```\n\n这与用户反馈“进入预约菜单不要默认请求一次 rooms”冲突。期望行为应改为：用户点击“查询可用会议室”后才请求。\n\n### 3. 测试产物中存在需要修订的断言/描述\n\n#### `docs/移动端应用：会议室预约系统/测试/e2e/dev-integration.spec.js`\n\n现有 E2E 的 happy path 在点击“查询可用会议室”前才创建 `waitForResponse`，这一点方向是对的；但缺少两个回归断言：\n\n- 普通用户启动/进入普通页面时不应请求 `/admin/dashboard`\n- 进入 `/booking` 后、点击“查询可用会议室”前不应请求 `/rooms`\n\n建议补充网络监听型断言，而不是只依赖 403/200 接口结果。\n\n#### `功能测试用例.md`\n\n需要调整：\n\n- TC-003：明确“进入预约页不自动查询会议室；填写筛选条件并点击查询后才调用 `/rooms`”\n- TC-016：当前写法是“普通用户请求 `/admin/dashboard` 返回 403”，建议改为“普通用户前端流程不发起 `/admin/dashboard`；若直接请求接口，后端仍返回 403 作为兜底权限校验”\n- TC-017：保留管理员进入管理首页请求 `/admin/dashboard`\n\n#### `test-case-summary.md`\n\n当前通过准则：\n\n```text\n管理端接口在普通用户 token 下返回 403，在管理员 token 下返回 200。\n```\n\n建议拆成两层：\n\n- 前端行为：普通用户流程不得触发管理端 dashboard 请求\n- 后端兜底：普通用户直接访问管理接口仍返回 403\n\n#### `test-report.md` / `dev-integration-report.md`\n\n当前报告把“普通用户访问管理接口返回 403”作为已验证项。建议补充/替换为：\n\n- 普通用户前端初始化未触发 `/admin/dashboard`\n- 管理员上下文进入管理首页才触发 `/admin/dashboard`\n- 进入预约页不自动触发 `/rooms`，点击查询后才触发\n\n## 建议的阶段修订方向\n\n```text\n普通用户启动\n   │\n   ├─ auth/me\n   ├─ bookings/my\n   ├─ notifications\n   ├─ violations/my-summary\n   ├─ transfers/pending-mine\n   └─ 不请求 admin/dashboard\n\n进入预约菜单 /booking\n   │\n   ├─ 展示筛选表单\n   ├─ 不自动请求 rooms\n   └─ 点击“查询可用会议室”\n          └─ GET /rooms\n```\n\n## 风险\n\n1. **现有测试报告与真实实现不一致**\n   - 文档目前可能将 403 视为验收通过，但用户要求前端根本不要发起请求。\n\n2. **修订测试后，当前前端实现大概率无法通过**\n   - 因为 `bootstrap()` 无条件调用 `adminApi.dashboard()`\n   - `BookingSearchView` 挂载时无条件 `searchRooms()`\n\n3. **管理员数据依赖风险**\n   - 如果移除全局 dashboard 请求，需要确保管理员首页或管理员模式仍能在合适时机加载 dashboard，否则管理端导航 badge 和首页统计可能为空。\n\n4. **预约页空态文案风险**\n   - 去掉默认查询后，当前“暂无可用会议室”空态可能误导用户，应区分“未查询”和“查询无结果”。\n\n## 下一步计划\n\n1. 修订测试用例文档：\n   - 调整 TC-003、TC-016、通过准则和报告描述。\n\n2. 修订 E2E 脚本设计：\n   - 增加普通用户前端流程“不请求 `/admin/dashboard`”断言。\n   - 增加进入 `/booking` 后点击查询前“不请求 `/rooms`”断言。\n   - 保留点击查询后 `/rooms` 成功的 happy path。\n\n3. 后续进入 apply 阶段时再改实现：\n   - `appStore.bootstrap()` 先获取用户，再仅管理员请求 `adminApi.dashboard()`。\n   - `BookingSearchView.vue` 移除 `onMounted(searchRooms)`，改为用户点击查询后加载。\n   - 必要时增加“请先设置筛选条件并点击查询”的初始态。",
+      "options" : [ ]
+    }, {
+      "role" : "ai",
+      "content" : "正在制定计划「完成前验证」阶段修订，请稍候……",
+      "options" : [ ]
+    }, {
+      "role" : "ai",
+      "content" : "14:13:00 开始制定计划阶段修订：完成前验证",
+      "options" : [ ]
+    }, {
+      "role" : "ai",
+      "content" : "已创建 OpenSpec change：`revise-verification-before-completion`\n\n位置：\n- `openspec/changes/revise-verification-before-completion/`\n\n已生成产物：\n- `proposal.md`：说明本次阶段修订的原因、变更内容、影响范围。\n- `design.md`：说明前端请求门控、预约页显式查询、E2E 网络断言的实现方案。\n- `specs/verification-network-guardrails/spec.md`：新增网络请求防护规范。\n- `tasks.md`：拆分后续实现任务清单。\n\n最终状态：\n- `openspec status --change \"revise-verification-before-completion\"` 显示 `4/4 artifacts complete`\n- All artifacts complete，已可进入实现阶段。\n\n下一步可执行：\n```bash\n/opsx:apply revise-verification-before-completion\n```",
+      "options" : [ ]
+    }, {
+      "role" : "ai",
+      "content" : "正在执行计划「完成前验证」阶段修订，请稍候……",
+      "options" : [ ]
+    }, {
+      "role" : "ai",
+      "content" : "14:18:33 开始执行计划阶段修订：完成前验证",
+      "options" : [ ]
+    } ],
+    "revision" : {
+      "workflowRunId" : "5ca4a2bb-93d3-49bd-bf28-e9aa905d2343",
+      "stageKey" : "verification-before-completion",
+      "stageTitle" : "完成前验证",
+      "projectName" : "移动端应用：会议室预约系统",
+      "artifactPaths" : [ "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2Fe2e%2Fdev-integration.spec.js", "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%2Fdev-integration-report.md", "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%2Ftest-report.md", "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%2Ftest-case-summary.md", "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%2F%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B.md" ],
+      "userFeedback" : "非管理员角色不要请求/api/hx-meeting/v1/admin/dashboard，进入预约菜单不要默认请求一次/api/hx-meeting/v1/rooms",
+      "changeId" : "revise-verification-before-completion",
+      "status" : "revision_applied",
+      "proposalStatus" : "已创建",
+      "applyStatus" : "已执行",
+      "archiveStatus" : "未归档",
+      "updatedAt" : "14:35:20",
+      "allowedPaths" : "docs/移动端应用：会议室预约系统/测试/ 和 generated/{项目英文名}/frontend、generated/{项目英文名}/backend"
+    }
+  },
+  "revision" : {
+    "workflowRunId" : "5ca4a2bb-93d3-49bd-bf28-e9aa905d2343",
+    "stageKey" : "verification-before-completion",
+    "stageTitle" : "完成前验证",
+    "projectName" : "移动端应用：会议室预约系统",
+    "artifactPaths" : [ "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2Fe2e%2Fdev-integration.spec.js", "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%2Fdev-integration-report.md", "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%2Ftest-report.md", "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%2Ftest-case-summary.md", "/api/artifacts?path=%2FUsers%2Fyansehhhhh%2Fcode%2Fai-software-factory%2Fdocs%2F%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BC%9A%E8%AE%AE%E5%AE%A4%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F%2F%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%2F%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B.md" ],
+    "userFeedback" : "非管理员角色不要请求/api/hx-meeting/v1/admin/dashboard，进入预约菜单不要默认请求一次/api/hx-meeting/v1/rooms",
+    "changeId" : "revise-verification-before-completion",
+    "status" : "revision_applied",
+    "proposalStatus" : "已创建",
+    "applyStatus" : "已执行",
+    "archiveStatus" : "未归档",
+    "updatedAt" : "14:35:20",
+    "allowedPaths" : "docs/移动端应用：会议室预约系统/测试/ 和 generated/{项目英文名}/frontend、generated/{项目英文名}/backend"
+  },
+  "reviewFeedback" : "非管理员角色不要请求/api/hx-meeting/v1/admin/dashboard，进入预约菜单不要默认请求一次/api/hx-meeting/v1/rooms",
+  "revisionMessages" : [ {
+    "role" : "user",
+    "content" : "反馈类型：验收/测试辅助\n反馈内容：\n支持?token=admin切换管理员身份，?token=user切换普通用户",
+    "options" : [ ]
+  }, {
+    "role" : "ai",
+    "content" : "已收到修订反馈。\n\n我的初步评估：\n- 反馈类型：验收/测试辅助\n- 影响范围：后端、测试\n- 处理建议：这类反馈可作为当前阶段的验收辅助处理，建议限制在预览/测试环境，并补充测试说明。\n\n下一步可以点击“探索修订”让我进一步分析修改方案；如果修改点已经明确，也可以直接点击“制定计划”。",
+    "options" : [ ]
+  }, {
+    "role" : "ai",
+    "content" : "13:52:49 已记录 完成前验证 阶段修订反馈",
+    "options" : [ ]
+  }, {
+    "role" : "ai",
+    "content" : "正在探索修订「完成前验证」阶段修订，请稍候……",
+    "options" : [ ]
+  }, {
+    "role" : "ai",
+    "content" : "13:53:00 开始探索修订阶段修订：完成前验证",
+    "options" : [ ]
+  }, {
+    "role" : "ai",
+    "content" : "已进入 `/opsx:explore` 并仅做探索，未修改代码或阶段产物。\n\n## 当前发现\n\n用户反馈是：支持 URL 查询参数切换身份：\n\n- `?token=admin`：切换管理员身份\n- `?token=user`：切换普通用户\n\n当前产物和实现现状：\n\n```text\n前端当前读取 token：\nlocalStorage.hx_meeting_token || demo-sso-token\n\n后端当前识别 token：\ndemo-sso-token -> 普通用户 张三\nadmin-token    -> 管理员\n\n测试脚本当前写入：\nlocalStorage.hx_token = demo-sso-token\n```\n\n这里有一个明显不一致点：前端实际读取的是 `hx_meeting_token`，但 E2E 脚本写的是 `hx_token`。当前之所以可能仍能通过，是因为前端默认 fallback 到 `demo-sso-token`。\n\n## 阶段修订建议\n\n### 1. 测试用例需补充“URL token 身份切换”场景\n\n建议在 `docs/移动端应用：会议室预约系统/测试/测试用例/功能测试用例.md` 增补或调整身份权限用例：\n\n- 普通用户访问：`/home?token=user`\n  - 预期身份为张三 / USER。\n  - 管理端接口返回 403。\n- 管理员访问：`/admin?token=admin`\n  - 预期身份为管理员 / ADMIN。\n  - 管理看板接口返回 200。\n- 未携带 token 参数时：\n  - 可继续使用默认普通用户身份，或沿用 localStorage 中的历史身份；需明确预期。\n\n### 2. E2E 脚本需验证 URL 参数入口，而不是只写 localStorage\n\n当前 `dev-integration.spec.js` 主要依赖接口 token 和本地存储。下一步实现时建议改为覆盖：\n\n```text\npage.goto('/home?token=user')\n  -> /auth/me 返回张三\n\npage.goto('/admin?token=admin')\n  -> /auth/me 返回管理员\n  -> /admin/dashboard 返回 200\n\npage.goto('/admin?token=user')\n  -> /admin/dashboard 返回 403 或页面展示无权限提示\n```\n\n同时应将脚本中的 `hx_token` 修正为前端真实使用的 `hx_meeting_token`，或直接改成 URL 参数驱动，避免隐性 fallback 掩盖问题。\n\n### 3. 测试报告需增加验收口径\n\n建议更新：\n\n- `测试报告/dev-integration-report.md`\n- `测试报告/test-report.md`\n- `测试用例/test-case-summary.md`\n\n增加说明：\n\n| 场景 | URL | 预期 |\n| --- | --- | --- |\n| 普通用户切换 | `?token=user` | 后端按普通用户 token 请求，管理接口 403 |\n| 管理员切换 | `?token=admin` | 后端按管理员 token 请求，管理接口 200 |\n| 身份切换后刷新 | 保留或重新解析 URL token | 身份不串号 |\n\n### 4. 生成前端可能需要小范围实现变更\n\n虽然本次不实现，但从代码看，前端目前没有解析 `location.search` 的 `token` 参数。后续 `/opsx:apply` 时可能需要在 `generated/HX-Meeting/frontend` 内补充一个 token 映射逻辑：\n\n```text\n?token=user  -> demo-sso-token\n?token=admin -> admin-token\n```\n\n合理落点可能是：\n\n- `generated/HX-Meeting/frontend/src/main.js`\n- 或 `generated/HX-Meeting/frontend/src/api/client.js`\n- 或新增轻量 token 初始化工具\n\n建议优先在应用启动时解析一次，并写入 `localStorage.hx_meeting_token`，这样现有 API client 不需要大改。\n\n## 风险\n\n1. **命名歧义风险**  \n   用户反馈里的 `admin` / `user` 不是后端真实 token，后端真实 token 是 `admin-token` / `demo-sso-token`，需要前端做映射。\n\n2. **localStorage 状态污染风险**  \n   如果先访问 `?token=admin` 后再访问不带参数页面，可能继续保持管理员身份。测试报告中需要明确这是预期还是需要清理。\n\n3. **测试误判风险**  \n   当前 E2E 写入 `hx_token`，但前端读取 `hx_meeting_token`。如果不修正，测试可能没有真正验证身份切换能力。\n\n4. **管理端页面错误展示风险**  \n   普通用户访问 `/admin?token=user` 时，接口 403 是预期，但页面是否有友好提示需要额外确认。\n\n## 下一步计划\n\n如果进入实现修订阶段，建议顺序如下：\n\n1. 在测试用例文档中补充 `?token=admin/user` 验收场景。\n2. 在前端加入 URL token 参数解析与映射。\n3. 修正 E2E 脚本，改用 URL 参数验证普通用户和管理员身份切换。\n4. 重新运行联调/E2E 验证。\n5. 更新 `test-report.md` 与 `dev-integration-report.md`，记录新验收结果和遗留风险。",
+    "options" : [ ]
+  }, {
+    "role" : "ai",
+    "content" : "正在探索修订「完成前验证」阶段修订，请稍候……",
+    "options" : [ ]
+  }, {
+    "role" : "ai",
+    "content" : "14:01:10 开始探索修订阶段修订：完成前验证",
+    "options" : [ ]
+  }, {
+    "role" : "ai",
+    "content" : "已进入 explore 模式，仅做了读取与分析，未修改任何文件。\n\n## 当前发现\n\n当前阶段产物集中在：\n\n```text\ndocs/移动端应用：会议室预约系统/测试/\n├── e2e/dev-integration.spec.js\n├── 测试报告/dev-integration-report.md\n├── 测试报告/test-report.md\n└── 测试用例/\n    ├── test-case-summary.md\n    └── 功能测试用例.md\n```\n\n生成工程位置为：\n\n```text\ngenerated/HX-Meeting/frontend\ngenerated/HX-Meeting/backend\n```\n\n现有身份链路大致是：\n\n```text\n前端 localStorage hx_meeting_token\n        │\n        ▼\nAuthorization: Bearer <token>\n        │\n        ▼\n后端 DemoExternalPlatformAdapter\n        │\n        ├─ demo-sso-token → u_1001 / 张三 / 普通用户\n        └─ admin-token    → u_admin_1 / 管理员 / ADMIN\n```\n\n当前前端 `generated/HX-Meeting/frontend/src/api/client.js` 读取的是：\n\n```js\nwindow.localStorage.getItem('hx_meeting_token') || 'demo-sso-token'\n```\n\n但当前 E2E 脚本里使用的是：\n\n```js\nwindow.localStorage.setItem('hx_token', 'demo-sso-token')\n```\n\n也就是说测试里的 key 与真实 client 使用的 key 不一致，目前能通过主要依赖默认回退到 `demo-sso-token`。\n\n## 针对用户反馈的修订建议\n\n用户反馈是：\n\n> 支持 `?token=admin` 切换管理员身份，`?token=user` 切换普通用户\n\n建议将本次阶段修订目标定义为“验收/测试辅助身份切换能力补充验证”，重点修改测试产物，并在后续实现阶段视情况调整生成前端。\n\n### 1. 推荐的身份映射\n\n建议不要直接让后端接受 `Bearer admin` / `Bearer user`，而是在前端 URL 层做别名映射：\n\n```text\n?token=user  → hx_meeting_token = demo-sso-token\n?token=admin → hx_meeting_token = admin-token\n```\n\n原因：\n\n- 后端已有稳定 demo token：`demo-sso-token`、`admin-token`\n- 测试报告和现有接口验收已经围绕这两个 token 编写\n- `?token=admin/user` 更像前端预览调试入口，不一定需要污染后端鉴权语义\n\n建议链路：\n\n```text\n访问 /admin?token=admin\n        │\n        ▼\n前端启动时读取 query.token\n        │\n        ▼\nadmin → admin-token\n        │\n        ▼\n写入 localStorage.hx_meeting_token\n        │\n        ▼\n后续 API 自动携带 Authorization: Bearer admin-token\n        │\n        ▼\n管理接口返回 200\n```\n\n普通用户：\n\n```text\n访问 /home?token=user 或 /booking?token=user\n        │\n        ▼\nuser → demo-sso-token\n        │\n        ▼\nauth/me 返回 张三\n        │\n        ▼\n访问 /admin/dashboard 返回 403\n```\n\n### 2. `dev-integration.spec.js` 建议补充的验证点\n\n当前 E2E 已验证普通用户预约和冲突场景，但没有覆盖 query token 切换。\n\n建议新增或调整以下场景：\n\n| 场景 | URL | 预期 |\n| --- | --- | --- |\n| 普通用户切换 | `/home?token=user` 或 `/booking?token=user` | `/auth/me` 返回张三，普通用户页面正常 |\n| 管理员切换 | `/admin?token=admin` | 管理首页真实接口返回 200，展示管理员数据 |\n| 普通用户访问管理端 | `/admin?token=user` | `/admin/dashboard` 返回 403 或前端展示无权限 |\n| 无 token 默认行为 | `/home` | 默认仍为普通用户 `demo-sso-token` |\n\n同时建议修正测试脚本里的 localStorage key：\n\n```text\nhx_token → hx_meeting_token\n```\n\n否则后续一旦默认 token 逻辑变化，测试可能误判。\n\n### 3. `功能测试用例.md` 建议新增/修订用例\n\n建议在“用户身份与权限”部分增加两条 P0 用例：\n\n```text\nTC-021 URL token 切换普通用户身份\n- 前置条件：前端预览和生成后端已启动\n- 操作步骤：访问 /home?token=user 或 /booking?token=user\n- 预期结果：前端将身份切换为普通用户；/auth/me 返回张三；管理接口仍返回 403\n\nTC-022 URL token 切换管理员身份\n- 前置条件：前端预览和生成后端已启动\n- 操作步骤：访问 /admin?token=admin\n- 预期结果：前端将身份切换为管理员；/admin/dashboard 返回 200；管理首页展示审批、服务确认、违规等管理数据\n```\n\n### 4. `test-case-summary.md` 建议调整\n\n当前摘要里“用户身份与权限”是：\n\n```text\nSSO token、普通用户、管理员权限 | P0 | 4\n```\n\n建议改为覆盖：\n\n```text\nSSO token、URL token 切换、普通用户、管理员权限\n```\n\n用例数也应同步增加，例如从 4 调整为 6。\n\n通过准则建议新增：\n\n```text\n- 前端访问 ?token=user 应切换为普通用户身份，访问 ?token=admin 应切换为管理员身份。\n- URL token 切换后，后续 API 请求应使用对应 Authorization token。\n```\n\n### 5. `test-report.md` 和 `dev-integration-report.md` 建议补充验收项\n\n两个报告建议补充“待修订/新增验证项”，例如：\n\n| 验证项 | 预期 |\n| --- | --- |\n| `/home?token=user` | 普通用户身份，`/auth/me` 返回张三 |\n| `/admin?token=admin` | 管理员身份，管理接口返回 200 |\n| `/admin?token=user` | 普通用户访问管理接口返回 403 |\n\n如果后续真正执行验证，再把“建议验证项”改为“已验证项”。\n\n## 风险\n\n1. **当前前端未发现 query token 处理逻辑**  \n   目前读取身份只看 `localStorage.hx_meeting_token`，未看到 `?token=admin/user` 的解析逻辑。因此仅修改测试产物会暴露失败，真正通过验收还需要生成前端补充 query token 初始化逻辑。\n\n2. **E2E 现有 token key 不一致**  \n   测试脚本使用 `hx_token`，真实 client 使用 `hx_meeting_token`。这会让测试结果依赖默认 token，容易产生“测试通过但切换逻辑未生效”的假阳性。\n\n3. **管理员入口依赖前端路由与接口时序**  \n   如果访问 `/admin?token=admin` 时页面组件先发起接口请求，再写入 localStorage，可能第一次请求仍使用旧身份。实现时应在 app/router 初始化前完成 query token 同步。\n\n4. **是否清理 URL query 需要确认**  \n   可以保留 `?token=admin` 便于测试，也可以写入 localStorage 后 `replaceState` 清理 URL。测试辅助场景下建议先保留，方便验收人员确认当前身份入口。\n\n5. **后端是否需要接受 `admin/user` 作为 Bearer token 需谨慎**  \n   更推荐前端映射到现有 `admin-token/demo-sso-token`。如果后端也接受 `admin/user`，需要同步更新接口验收文档，避免 token 语义混乱。\n\n## 下一步计划\n\n建议后续进入修订/实现阶段时按最小变更推进：\n\n1. 修订测试用例文档，增加 `?token=user` / `?token=admin` 验收场景。\n2. 修订 E2E 脚本设计，覆盖 URL token 切换身份。\n3. 修正 E2E 中 `hx_token` 与 `hx_meeting_token` 的 key 不一致问题。\n4. 如允许实现，再在 `generated/HX-Meeting/frontend` 增加 query token 初始化逻辑：\n   - `user → demo-sso-token`\n   - `admin → admin-token`\n5. 重新执行开发联调验证，并更新 `test-report.md`、`dev-integration-report.md` 的实际结果。",
+    "options" : [ ]
+  }, {
+    "role" : "user",
+    "content" : "非管理员角色不要请求/api/hx-meeting/v1/admin/dashboard，进入预约菜单不要默认请求一次/api/hx-meeting/v1/rooms",
+    "options" : [ ]
+  }, {
+    "role" : "ai",
+    "content" : "已收到修订反馈。\n\n我的初步评估：\n- 反馈类型：缺陷修复\n- 影响范围：待进一步确认\n- 处理建议：这类反馈可作为当前阶段缺陷修复处理，修复后需要重新验证相关产物。\n\n下一步可以点击“探索修订”让我进一步分析修改方案；如果修改点已经明确，也可以直接点击“制定计划”。",
+    "options" : [ ]
+  }, {
+    "role" : "ai",
+    "content" : "正在探索修订「完成前验证」阶段修订，请稍候……",
+    "options" : [ ]
+  }, {
+    "role" : "ai",
+    "content" : "14:09:05 开始探索修订阶段修订：完成前验证",
+    "options" : [ ]
+  }, {
+    "role" : "ai",
+    "content" : "已按 `/opsx:explore` 只读探索，未修改任何文件。\n\n## 关键发现\n\n### 1. 非管理员仍会触发管理看板请求\n\n位置：`generated/HX-Meeting/frontend/src/stores/appStore.js`\n\n当前 `bootstrap()` 在应用启动时并发请求：\n\n```js\nauthApi.me(),\nbookingsApi.my(),\nnotificationsApi.list(),\nviolationsApi.mySummary(),\nadminApi.dashboard(),\ntransfersApi.pendingMine()\n```\n\n这意味着即使普通用户进入普通首页/预约页，也会请求：\n\n```text\n/api/hx-meeting/v1/admin/dashboard\n```\n\n虽然后端返回 403，但用户反馈要求的是“非管理员角色不要请求”，因此测试产物不应继续把“普通用户请求管理接口返回 403”作为前端验收目标。\n\n### 2. 进入预约菜单会默认请求会议室列表\n\n位置：`generated/HX-Meeting/frontend/src/views/meeting/BookingSearchView.vue`\n\n当前组件挂载时执行：\n\n```js\nonMounted(searchRooms)\n```\n\n因此进入 `/booking` 会自动请求：\n\n```text\n/api/hx-meeting/v1/rooms\n```\n\n这与用户反馈“进入预约菜单不要默认请求一次 rooms”冲突。期望行为应改为：用户点击“查询可用会议室”后才请求。\n\n### 3. 测试产物中存在需要修订的断言/描述\n\n#### `docs/移动端应用：会议室预约系统/测试/e2e/dev-integration.spec.js`\n\n现有 E2E 的 happy path 在点击“查询可用会议室”前才创建 `waitForResponse`，这一点方向是对的；但缺少两个回归断言：\n\n- 普通用户启动/进入普通页面时不应请求 `/admin/dashboard`\n- 进入 `/booking` 后、点击“查询可用会议室”前不应请求 `/rooms`\n\n建议补充网络监听型断言，而不是只依赖 403/200 接口结果。\n\n#### `功能测试用例.md`\n\n需要调整：\n\n- TC-003：明确“进入预约页不自动查询会议室；填写筛选条件并点击查询后才调用 `/rooms`”\n- TC-016：当前写法是“普通用户请求 `/admin/dashboard` 返回 403”，建议改为“普通用户前端流程不发起 `/admin/dashboard`；若直接请求接口，后端仍返回 403 作为兜底权限校验”\n- TC-017：保留管理员进入管理首页请求 `/admin/dashboard`\n\n#### `test-case-summary.md`\n\n当前通过准则：\n\n```text\n管理端接口在普通用户 token 下返回 403，在管理员 token 下返回 200。\n```\n\n建议拆成两层：\n\n- 前端行为：普通用户流程不得触发管理端 dashboard 请求\n- 后端兜底：普通用户直接访问管理接口仍返回 403\n\n#### `test-report.md` / `dev-integration-report.md`\n\n当前报告把“普通用户访问管理接口返回 403”作为已验证项。建议补充/替换为：\n\n- 普通用户前端初始化未触发 `/admin/dashboard`\n- 管理员上下文进入管理首页才触发 `/admin/dashboard`\n- 进入预约页不自动触发 `/rooms`，点击查询后才触发\n\n## 建议的阶段修订方向\n\n```text\n普通用户启动\n   │\n   ├─ auth/me\n   ├─ bookings/my\n   ├─ notifications\n   ├─ violations/my-summary\n   ├─ transfers/pending-mine\n   └─ 不请求 admin/dashboard\n\n进入预约菜单 /booking\n   │\n   ├─ 展示筛选表单\n   ├─ 不自动请求 rooms\n   └─ 点击“查询可用会议室”\n          └─ GET /rooms\n```\n\n## 风险\n\n1. **现有测试报告与真实实现不一致**\n   - 文档目前可能将 403 视为验收通过，但用户要求前端根本不要发起请求。\n\n2. **修订测试后，当前前端实现大概率无法通过**\n   - 因为 `bootstrap()` 无条件调用 `adminApi.dashboard()`\n   - `BookingSearchView` 挂载时无条件 `searchRooms()`\n\n3. **管理员数据依赖风险**\n   - 如果移除全局 dashboard 请求，需要确保管理员首页或管理员模式仍能在合适时机加载 dashboard，否则管理端导航 badge 和首页统计可能为空。\n\n4. **预约页空态文案风险**\n   - 去掉默认查询后，当前“暂无可用会议室”空态可能误导用户，应区分“未查询”和“查询无结果”。\n\n## 下一步计划\n\n1. 修订测试用例文档：\n   - 调整 TC-003、TC-016、通过准则和报告描述。\n\n2. 修订 E2E 脚本设计：\n   - 增加普通用户前端流程“不请求 `/admin/dashboard`”断言。\n   - 增加进入 `/booking` 后点击查询前“不请求 `/rooms`”断言。\n   - 保留点击查询后 `/rooms` 成功的 happy path。\n\n3. 后续进入 apply 阶段时再改实现：\n   - `appStore.bootstrap()` 先获取用户，再仅管理员请求 `adminApi.dashboard()`。\n   - `BookingSearchView.vue` 移除 `onMounted(searchRooms)`，改为用户点击查询后加载。\n   - 必要时增加“请先设置筛选条件并点击查询”的初始态。",
+    "options" : [ ]
+  }, {
+    "role" : "ai",
+    "content" : "正在制定计划「完成前验证」阶段修订，请稍候……",
+    "options" : [ ]
+  }, {
+    "role" : "ai",
+    "content" : "14:13:00 开始制定计划阶段修订：完成前验证",
+    "options" : [ ]
+  }, {
+    "role" : "ai",
+    "content" : "已创建 OpenSpec change：`revise-verification-before-completion`\n\n位置：\n- `openspec/changes/revise-verification-before-completion/`\n\n已生成产物：\n- `proposal.md`：说明本次阶段修订的原因、变更内容、影响范围。\n- `design.md`：说明前端请求门控、预约页显式查询、E2E 网络断言的实现方案。\n- `specs/verification-network-guardrails/spec.md`：新增网络请求防护规范。\n- `tasks.md`：拆分后续实现任务清单。\n\n最终状态：\n- `openspec status --change \"revise-verification-before-completion\"` 显示 `4/4 artifacts complete`\n- All artifacts complete，已可进入实现阶段。\n\n下一步可执行：\n```bash\n/opsx:apply revise-verification-before-completion\n```",
+    "options" : [ ]
+  }, {
+    "role" : "ai",
+    "content" : "正在执行计划「完成前验证」阶段修订，请稍候……",
+    "options" : [ ]
+  }, {
+    "role" : "ai",
+    "content" : "14:18:33 开始执行计划阶段修订：完成前验证",
+    "options" : [ ]
+  }, {
+    "role" : "ai",
+    "content" : "## Implementation Complete\n\n**Change:** revise-verification-before-completion  \n**Schema:** spec-driven  \n**Progress:** 11/11 tasks complete ✓\n\n### 本次修改文件\n\n- `generated/HX-Meeting/frontend/src/stores/appStore.js`\n  - `bootstrap` 改为先请求 `authApi.me()`。\n  - 仅当用户角色包含 `ADMIN` 时请求 `/api/hx-meeting/v1/admin/dashboard`。\n  - 普通用户 `adminDashboard` 保持 `null`。\n\n- `generated/HX-Meeting/frontend/src/views/meeting/BookingSearchView.vue`\n  - 移除进入预约页时自动执行的 `searchRooms`。\n  - 保留点击“查询可用会议室”触发 `roomsApi.list`。\n  - 修正空楼栋筛选不再传 `building=`，避免查询结果为空。\n\n- `docs/移动端应用：会议室预约系统/测试/e2e/dev-integration.spec.js`\n  - 新增普通用户启动/进入预约页不请求 `/admin/dashboard` 断言。\n  - 新增进入 `/booking` 后点击查询前不请求 GET `/rooms`、点击后才请求的断言。\n  - 调整 E2E 可通过 `PLAYWRIGHT_BASE_URL` 直接指定前端地址。\n\n- `docs/移动端应用：会议室预约系统/测试/测试用例/功能测试用例.md`\n  - 新增普通用户不触发管理看板请求用例。\n  - 新增预约菜单不默认查询会议室用例。\n\n- `docs/移动端应用：会议室预约系统/测试/测试用例/test-case-summary.md`\n  - 更新用例分组数量与通过准则，纳入两个网络请求回归点。\n\n- `docs/移动端应用：会议室预约系统/测试/测试报告/dev-integration-report.md`\n  - 更新本次反馈项验证结论与执行命令。\n\n- `docs/移动端应用：会议室预约系统/测试/测试报告/test-report.md`\n  - 更新接口验收结果、关键问题修复和验证命令。\n\n- `openspec/changes/revise-verification-before-completion/tasks.md`\n  - 11 项任务已全部标记完成。\n\n### 验证结果\n\n- 前端构建通过：\n  - `npm --prefix generated/HX-Meeting/frontend run build`\n\n- E2E 验证通过：\n  - `API_BASE_URL=\"http://127.0.0.1:50006/api/hx-meeting/v1\" PLAYWRIGHT_BASE_URL=\"http://127.0.0.1:4173\" npx playwright test -c \"docs/移动端应用：会议室预约系统/测试/e2e\"`\n  - 结果：`3 passed`\n\nAll tasks complete! 可使用 `/opsx:archive revise-verification-before-completion` 归档该 change。",
+    "options" : [ ]
+  } ],
+  "nextStageIndex" : 14,
+  "approvedStageKeys" : [ "requirements", "brainstorming", "writing-plans", "product-design-artifacts", "ui-design", "architecture-design", "api-design", "database-design", "backend-development", "frontend-development", "development-integration", "test-case-generation", "e2e-acceptance-testing" ]
+}

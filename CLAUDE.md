@@ -6,7 +6,7 @@
 - `apps/web`：平台前端，Vue 3 页面、组件、路由和状态管理。
 - `apps/server`：平台后端，Spring Boot 控制器、服务、工作流编排、模型路由和运行时 skill 适配。
 - `packages/`：平台运行时可复用模块，包括 agents、workflows、skills、templates。
-- `generated/`：AI 生成的演示应用与产物输出目录。
+- `generated/`：AI 生成的前后端工程产物输出目录，按 `generated/{项目英文名}/frontend`、`generated/{项目英文名}/backend` 归档。
 - `docs/${需求或项目名称}/`：主链路交付产物目录，包含产品设计、UI原型、架构设计、数据库设计、测试和其他文档。
 - `tests/`：平台级测试与端到端验证。
 - `.claude/skills/`：供 Claude Code 使用的作者工具层 skills。
@@ -18,6 +18,7 @@
 - 运行时能力优先放在 `packages/` 和 `apps/server`，不要把平台运行时逻辑塞进 `.claude/`。
 - 测试优先复用现有 Playwright 与 `tests/` 目录，必要时再补充最小测试。
 - 涉及生成 demo 或样例时，优先参考 `apps/inspector-demo`、`generated/`、`scripts/` 现有内容。
+- 文档书写时优先使用中文，除非特殊要求，例如插件格式要求标题英文之类的可保留英文。
 
 ## 重要区分
 - `.claude/skills/` 是 Claude Code 使用的作者工具层说明，不是平台运行时模块。
@@ -37,12 +38,10 @@ docs/${需求或项目名称}/
 ├── 产品设计/
 │   ├── 01-变更记录/版本说明.md
 │   ├── 02-产品需求文档/PRD.md
-│   ├── 02-产品需求文档/PRD.docx
 │   ├── 03-UI设计规范/UI-Design-Spec.md
 │   ├── 04-流程图/业务流程图.puml
 │   ├── 04-流程图/信息架构图.puml
 │   ├── 04-流程图/页面流转图.puml
-│   ├── 04-流程图/页面流转图.svg
 │   └── 05-附录/术语表.md
 ├── UI原型/
 │   ├── 设计稿/

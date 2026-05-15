@@ -4,6 +4,16 @@ import path from "node:path";
 import process from "node:process";
 import { spawn } from "node:child_process";
 const sessions = new Map();
+const AGENT_PROMPT_MAX_BYTES = 64 * 1024;
+const ALLOWED_AGENT_IDS = new Set([
+  "product-manager",
+  "ui-designer",
+  "architect",
+  "frontend-engineer",
+  "backend-engineer",
+  "test-engineer",
+  "ops-engineer"
+]);
 
 function repoRoot() {
   if (process.env.REPO_ROOT) {
@@ -22,15 +32,71 @@ function repoRoot() {
 }
 
 function defaultWorkspaceRoot() {
-  return path.resolve(process.cwd(), "workspace", "runtime");
+  return path.resolve(repoRoot(), "workspace", "runtime");
+}
+
+function resolveWorkspaceRoot(workspaceRoot = defaultWorkspaceRoot()) {
+  if (!workspaceRoot || workspaceRoot.trim().length === 0) {
+    return defaultWorkspaceRoot();
+  }
+
+  return path.isAbsolute(workspaceRoot) ? workspaceRoot : path.resolve(repoRoot(), workspaceRoot);
 }
 
 function defaultDocsRoot() {
   return path.resolve(repoRoot(), "docs");
 }
 
+function defaultGeneratedRoot() {
+  return path.resolve(repoRoot(), "generated");
+}
+
 async function ensureDirectory(dirPath) {
   await mkdir(dirPath, { recursive: true });
+}
+
+function stripFrontmatter(content) {
+  if (!content.startsWith("---")) {
+    return content.trim();
+  }
+
+  const endIndex = content.indexOf("\n---", 3);
+  if (endIndex < 0) {
+    return content.trim();
+  }
+
+  return content.slice(endIndex + 4).trim();
+}
+
+async function loadAgentPrompt(agentId) {
+  if (!agentId || !ALLOWED_AGENT_IDS.has(agentId)) {
+    return { prompt: "", agentId: "" };
+  }
+
+  const agentsDir = path.resolve(repoRoot(), ".claude", "agents");
+  const agentPath = path.resolve(agentsDir, `${agentId}.md`);
+  const relativePath = path.relative(agentsDir, agentPath);
+  if (relativePath.startsWith("..") || path.isAbsolute(relativePath)) {
+    return { prompt: "", agentId: "" };
+  }
+
+  try {
+    const content = await readFile(agentPath, "utf8");
+    if (Buffer.byteLength(content, "utf8") > AGENT_PROMPT_MAX_BYTES) {
+      return { prompt: "", agentId: "" };
+    }
+    return { prompt: stripFrontmatter(content), agentId };
+  } catch {
+    return { prompt: "", agentId: "" };
+  }
+}
+
+function mergeSystemPrompt(agentPrompt, modePrompt) {
+  if (!agentPrompt) {
+    return modePrompt;
+  }
+
+  return `${agentPrompt}\n\n--- Runtime Mode Instructions ---\n${modePrompt}`;
 }
 
 function normalizeProjectName(value) {
@@ -39,6 +105,33 @@ function normalizeProjectName(value) {
     .replace(/\s+/g, " ")
     .trim();
   return sanitized || "未命名项目";
+}
+
+function javaStringHash(value) {
+  let hash = 0;
+  for (let index = 0; index < value.length; index += 1) {
+    hash = Math.imul(31, hash) + value.charCodeAt(index);
+    hash |= 0;
+  }
+  return hash === -2147483648 ? 2147483648 : Math.abs(hash);
+}
+
+function deriveGeneratedProjectName(projectName) {
+  const aliases = new Map([
+    ["移动端应用：会议室预约系统", "HX-Meeting"],
+    ["HX-Meeting 会议室预约系统", "HX-Meeting"],
+    ["会议室预约系统", "HX-Meeting"]
+  ]);
+  const normalized = normalizeProjectName(projectName || "");
+  if (aliases.has(normalized)) {
+    return aliases.get(normalized);
+  }
+  const ascii = normalized
+    .replace(/[^a-zA-Z0-9\s_-]/g, " ")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
+  return ascii || `Project-${javaStringHash(normalized).toString(36)}`;
 }
 
 function deriveProjectName(requirement) {
@@ -109,17 +202,26 @@ function artifactPaths(projectRoot) {
 }
 
 async function ensureWorkspace(taskId, requirement = "", workspaceRoot = defaultWorkspaceRoot(), docsRoot = defaultDocsRoot()) {
-  const taskRoot = path.join(workspaceRoot, taskId);
-  const projectDir = path.join(taskRoot, "project");
+  const resolvedWorkspaceRoot = resolveWorkspaceRoot(workspaceRoot);
+  const taskRoot = path.join(resolvedWorkspaceRoot, taskId);
   const logsDir = path.join(taskRoot, "logs");
   const contextDir = path.join(taskRoot, "context");
   const projectName = deriveProjectName(requirement);
+  const generatedProjectName = deriveGeneratedProjectName(projectName);
+  const generatedProjectRoot = path.join(defaultGeneratedRoot(), generatedProjectName);
+  const projectDir = generatedProjectRoot;
+  const frontendDir = path.join(generatedProjectRoot, "frontend");
+  const backendDir = path.join(generatedProjectRoot, "backend");
+  const testsDir = path.join(generatedProjectRoot, "tests");
   const projectRoot = path.join(docsRoot, projectName);
   const artifactDir = artifactPaths(projectRoot);
 
   await Promise.all([
     ensureDirectory(taskRoot),
     ensureDirectory(projectDir),
+    ensureDirectory(frontendDir),
+    ensureDirectory(backendDir),
+    ensureDirectory(testsDir),
     ensureDirectory(logsDir),
     ensureDirectory(contextDir),
     ensureDirectory(projectRoot),
@@ -155,10 +257,10 @@ async function ensureWorkspace(taskId, requirement = "", workspaceRoot = default
   try {
     await access(metadataPath, constants.F_OK);
   } catch {
-    await writeFile(metadataPath, JSON.stringify({ taskId, projectName, createdAt: new Date().toISOString() }, null, 2));
+    await writeFile(metadataPath, JSON.stringify({ taskId, projectName, generatedProjectName, generatedProjectRoot, createdAt: new Date().toISOString() }, null, 2));
   }
 
-  return { taskRoot, projectDir, logsDir, contextDir, metadataPath, projectName, projectRoot, projectDesignDir: artifactDir.projectDesignDir, artifactDir };
+  return { taskRoot, projectDir, frontendDir, backendDir, testsDir, generatedProjectName, generatedProjectRoot, logsDir, contextDir, metadataPath, projectName, projectRoot, projectDesignDir: artifactDir.projectDesignDir, artifactDir };
 }
 
 function createSessionId(taskId) {
@@ -171,12 +273,23 @@ async function persistJson(contextDir, fileName, content) {
   return target;
 }
 
-async function convertMarkdownToDocx(markdownFile, docxFile) {
-  const scriptPath = path.join(repoRoot(), ".claude", "skills", "markdown-to-docx", "scripts", "md2docx.py");
+async function loadPersistedSession(taskId, workspaceRoot = defaultWorkspaceRoot()) {
+  if (!taskId) {
+    return null;
+  }
+
+  const resolvedWorkspaceRoot = resolveWorkspaceRoot(workspaceRoot);
+  const sessionPath = path.join(resolvedWorkspaceRoot, taskId, "context", "session.json");
   try {
-    await runProcess("python3", [scriptPath, markdownFile, docxFile]);
-  } catch (error) {
-    throw new Error(`Markdown 转 Word 失败：${error.message}`);
+    const content = await readFile(sessionPath, "utf8");
+    const session = JSON.parse(content);
+    if (session?.taskId !== taskId || !session?.sessionId) {
+      return null;
+    }
+    sessions.set(taskId, session);
+    return session;
+  } catch {
+    return null;
   }
 }
 
@@ -225,8 +338,10 @@ function discussionSystemPrompt() {
   return [
     "你是 Requirement Agent。",
     "目标是帮助用户逐步澄清需求。",
-    "每次只提出一个问题。",
-    "如果需求已经足够明确，请只输出 [DISCUSSION_COMPLETE]，然后用不超过 5 条中文 bullet 总结已确认需求。"
+    "请使用中文 Markdown 输出，支持标题、列表、表格和代码块。",
+    "每次只提出一个核心问题；如果需要给选项，请用 Markdown 列表呈现 2 到 4 个选项。",
+    "如果需求已经足够明确，请在回复末尾单独一行输出 [DISCUSSION_COMPLETE]，并用不超过 5 条中文 bullet 总结已确认需求。",
+    "不要输出 JSON，除非用户明确要求。"
   ].join("\n");
 }
 
@@ -260,20 +375,22 @@ function runSystemPrompt(mode, workspace) {
       `工作目录是 ${workspace.projectDir}。`
     ].join("\n"),
     generate: [
-      "你是 Developer Agent。",
-      `请在目录 ${workspace.projectDir} 内生成工程代码。`,
+      "你是 Frontend Developer Agent。",
+      `请在目录 ${workspace.frontendDir} 内生成真实可运行的前端工程代码。`,
+      "必须基于原始需求、PRD、UI 设计规范、UI 原型、组件库、交互说明、响应式设计、架构设计和接口设计生成，不要生成通用模板。",
+      "优先生成 Vue 3 / Vite 前端，包含 package.json、src、入口文件、页面/组件、基础样式和 README。",
       "可以直接读写该目录下文件。",
-      "完成后请用中文总结已生成内容，并列出关键文件。"
+      "完成后请用中文总结已生成内容、运行命令、构建命令，并列出关键文件。"
     ].join("\n"),
     backend: [
       "你是 Backend Developer Agent。",
-      `请在目录 ${path.join(workspace.projectDir, "backend")} 内生成可运行的后端代码。`,
+      `请在目录 ${workspace.backendDir} 内生成可运行的后端代码。`,
       "优先生成 Spring Boot 后端，遵循 controller -> service -> workflow/skill 分层。",
       "完成后请总结接口、运行命令、测试命令和关键文件。"
     ].join("\n"),
     "test-cases": [
       "你是 QA Case Agent。",
-      `请在目录 ${path.join(workspace.projectDir, "tests")} 内生成测试用例文档和 Playwright 测试代码。`,
+      `请在目录 ${workspace.testsDir} 内生成测试用例文档和 Playwright 测试代码。`,
       "测试需覆盖核心路径、校验、错误状态、权限/角色和前后端联动。",
       "完成后请总结测试范围和关键文件。"
     ].join("\n"),
@@ -294,7 +411,7 @@ function runSystemPrompt(mode, workspace) {
 }
 
 function buildAllowedTools(mode) {
-  if (["generate", "backend", "test-cases", "playwright", "fix-tests"].includes(mode)) {
+  if (["generate", "backend", "test-cases", "playwright", "fix-tests", "openspec"].includes(mode)) {
     return ["Read", "Write", "Edit", "Bash"];
   }
   return ["Read", "Write", "Edit"];
@@ -351,15 +468,41 @@ function buildModePrompt(mode, prompt, workspace) {
     ].join("\n");
   }
 
+  if (mode === "generate") {
+    return [
+      "/project-scaffold-skill",
+      "",
+      "本次为 AI 软件工厂自动化主链路，请不要等待用户确认，也不要反问。",
+      "请生成真实前端工程代码，不要只输出说明文档。",
+      "必须先读取上下文中列出的本地产物路径，并以 PRD、UI 规范、UI 原型、组件库、交互说明、响应式断点、架构设计、接口设计、数据库设计和已生成后端代码为实现依据。",
+      "禁止只按原始需求生成通用模板；禁止实现 ai-software-factory 平台本身。",
+      `前端代码必须写入 ${workspace.frontendDir}。`,
+      `请读取并遵循产品设计目录：${workspace.artifactDir.projectDesignDir}。`,
+      `请读取并遵循 UI 原型目录：${workspace.artifactDir.uiPrototypeDir}。`,
+      `必须读取并遵循后端工程目录：${workspace.backendDir}。`,
+      "重点参考 PRD.md、UI-Design-Spec.md、index.html、组件清单.md、交互说明.md、响应式断点参考.md、架构设计、接口设计、数据库设计、后端 controller、DTO、entity、README 和 application 配置。",
+      "优先生成 Vue 3 / Vite 工程，必须包含 package.json、src/main.js 或 src/main.ts、页面/组件、样式、API client、README.md。",
+      "必须基于后端真实接口实现请求，核心业务操作必须调用后端 API。完全禁止 mock、demoData、本地假数据、伪造成功响应或静态假交互；如果后端接口不可用，应显示真实错误状态。",
+      "界面必须体现需求中的业务对象、核心流程、表单、状态和结果展示，不要生成默认欢迎页或通用 Dashboard。",
+      "最终回复只输出已生成文件清单、运行命令、构建命令和关键说明。",
+      "",
+      "上下文：",
+      prompt
+    ].join("\n");
+  }
+
   if (mode === "backend") {
     return [
       "/springboot-api-skill",
       "",
       "本次为 AI 软件工厂自动化主链路，请不要等待用户确认，也不要反问。",
       "请基于需求、PRD、UI 原型、架构设计、接口设计和数据库设计生成真实后端代码。",
-      `后端代码必须写入 ${path.join(workspace.projectDir, "backend")}。`,
-      "优先生成 Spring Boot 项目，遵循 controller -> service -> workflow/skill 分层。",
-      "必须包含 README.md、pom.xml、应用入口、controller、service、必要 DTO/model、配置文件和最小测试。",
+      "必须先读取上下文中列出的本地产物路径，并以 PRD、架构设计、接口设计、数据库设计、UI 交互和业务流程为实现依据。",
+      "禁止只按原始需求生成通用 CRUD；禁止实现 ai-software-factory 平台本身。",
+      `后端代码必须写入 ${workspace.backendDir}。`,
+      "必须生成可运行 Spring Boot 项目，遵循 controller -> service -> workflow/adapter -> repository 分层。",
+      "必须使用 H2 + Flyway 作为默认本地开发配置，启动后自动建表并初始化演示数据；必须额外提供 application-prod.yml 生产 profile，使用 PostgreSQL 或 MySQL 连接配置占位，并在 README 中说明如何切换生产数据库。",
+      "必须包含 README.md、pom.xml、应用入口、controller、service、repository、entity、DTO、application.yml、application-prod.yml、db/migration/V1__*.sql、db/migration/V2__*.sql 和最小测试。",
       "不要覆盖前端代码；如需联调，只能补充必要的接口说明或配置。",
       "最终回复只输出已生成文件清单、运行命令、测试命令和关键接口。",
       "",
@@ -374,8 +517,8 @@ function buildModePrompt(mode, prompt, workspace) {
       "",
       "本次为 AI 软件工厂自动化主链路，请不要等待用户确认，也不要反问。",
       "请基于需求产物、前端代码、后端代码、接口设计和数据库设计生成真实测试产物。",
-      `测试用例文档目录是 ${path.join(workspace.projectDir, "tests", "test-cases")}。`,
-      `Playwright 测试目录是 ${path.join(workspace.projectDir, "tests", "e2e")}。`,
+      `测试用例文档目录是 ${workspace.artifactDir.testCasesDir}。`,
+      `Playwright 测试目录是 ${path.join(workspace.artifactDir.testDir, "e2e")}。`,
       "必须生成 Markdown 测试用例，且生成至少一个可运行的 Playwright spec。",
       "测试覆盖 happy path、表单校验、错误状态、权限/角色、核心业务流程和前后端联动。",
       "最终回复只输出测试范围、文件清单和执行方式。",
@@ -390,12 +533,12 @@ function buildModePrompt(mode, prompt, workspace) {
       "/playwright-test-skill",
       "",
       "本次为 AI 软件工厂自动化主链路，请不要等待用户确认，也不要反问。",
-      `请在生成工程目录 ${workspace.projectDir} 内执行或准备执行 Playwright 测试。`,
+      `请在生成工程目录 ${workspace.projectDir} 内执行或准备执行 Playwright 测试；测试用例和测试报告产物保留在 ${workspace.artifactDir.testDir}。`,
       "如果缺少项目内 Playwright 配置或 npm scripts，可以在生成工程目录内补齐最小配置。",
       "不要修改平台根目录配置。",
-      `必须将执行摘要写入 ${path.join(workspace.projectDir, "test-report.md")}。`,
-      `如生成 HTML 报告，请保留在 ${path.join(workspace.projectDir, "playwright-report")}。`,
-      `如生成测试结果，请保留在 ${path.join(workspace.projectDir, "test-results")}。`,
+      `必须将执行摘要写入 ${path.join(workspace.artifactDir.testReportsDir, "test-report.md")}。`,
+      `如生成 HTML 报告，请保留在 ${path.join(workspace.artifactDir.testReportsDir, "playwright-report")}。`,
+      `如生成测试结果，请保留在 ${path.join(workspace.artifactDir.testReportsDir, "test-results")}。`,
       "最终回复必须包含通过/失败数量、报告路径和失败项处理建议。",
       "",
       "上下文：",
@@ -406,11 +549,14 @@ function buildModePrompt(mode, prompt, workspace) {
   if (mode === "architecture") {
     return [
       "本次为 AI 软件工厂自动化主链路，请不要等待用户确认，也不要反问。",
-      "请基于需求、PRD 和 UI 原型上下文生成架构设计产物。",
-      "必须覆盖：系统架构、模块职责、数据流、部署架构、技术选型、关键风险与约束。",
+      "你正在为目标业务应用生成架构设计产物，不是在分析 ai-software-factory 平台或当前仓库本身。",
+      "必须读取上下文中列出的 PRD、UI 规范、流程图、术语表、UI 原型、组件清单、交互说明和响应式断点参考。",
+      "禁止把 apps/web、apps/server、Claude Runner、AI 软件工厂编排链路写入目标应用架构，除非业务需求本身明确要求。",
+      `架构设计输出目录是 ${workspace.artifactDir.architectureDir}。`,
+      "必须覆盖：目标业务系统架构、模块职责、数据流、部署架构、技术选型、关键风险与约束。",
       "请使用结构化中文 Markdown 输出。",
       "",
-      "需求：",
+      "目标应用上下文：",
       prompt
     ].join("\n");
   }
@@ -418,11 +564,12 @@ function buildModePrompt(mode, prompt, workspace) {
   if (mode === "api") {
     return [
       "本次为 AI 软件工厂自动化主链路，请不要等待用户确认，也不要反问。",
-      "请基于需求、PRD、UI 原型和架构设计生成接口设计产物。",
+      "你正在为目标业务应用生成接口设计产物，不是在分析 ai-software-factory 平台或当前仓库本身。",
+      "必须读取上下文中列出的 PRD、UI 原型和架构设计产物。",
       "必须覆盖：接口清单、资源模型、请求/响应字段、错误码、分页过滤约定、OpenAPI 3.0 定义要点。",
       "请使用结构化中文 Markdown 输出，并包含可转换为 openapi.yaml 的接口信息。",
       "",
-      "需求：",
+      "目标应用上下文：",
       prompt
     ].join("\n");
   }
@@ -430,17 +577,91 @@ function buildModePrompt(mode, prompt, workspace) {
   if (mode === "database") {
     return [
       "本次为 AI 软件工厂自动化主链路，请不要等待用户确认，也不要反问。",
-      "请基于需求、PRD、接口设计和架构设计生成数据库设计产物。",
+      "你正在为目标业务应用生成数据库设计产物，不是在分析 ai-software-factory 平台或当前仓库本身。",
+      "必须读取上下文中列出的 PRD、接口设计和架构设计产物。",
       "必须覆盖：数据字典、核心表、字段类型、主键外键、索引建议、DDL、迁移脚本。",
       "请使用结构化中文 Markdown 输出，并包含可转换为 SQL 文件的表结构信息。",
       "",
-      "需求：",
+      "目标应用上下文：",
       prompt
     ].join("\n");
   }
 
   return prompt;
 }
+
+function isMissingConversationError(error) {
+  const message = error?.message || "";
+  return message.includes("No conversation found with session ID") || message.includes("No conversation found");
+}
+
+function changeIdCandidates(context) {
+  const candidates = [];
+  if (context?.changeId) {
+    candidates.push(context.changeId);
+  }
+  if (context?.stageKey) {
+    candidates.push(`revise-${context.stageKey}`);
+    if (context?.workflowRunId) {
+      candidates.push(`revise-${context.stageKey}-${String(context.workflowRunId).slice(0, 8)}`);
+    }
+  }
+  return Array.from(new Set(candidates.filter(Boolean)));
+}
+
+function changeRoot(changeId) {
+  return path.join(repoRoot(), "openspec", "changes", changeId);
+}
+
+function isOpenSpecChangeReady(changeId) {
+  const root = changeRoot(changeId);
+  return existsSync(path.join(root, "proposal.md")) && existsSync(path.join(root, "tasks.md"));
+}
+
+async function isOpenSpecChangeCompleted(changeId) {
+  if (existsSync(path.join(repoRoot(), "openspec", "changes", "archive", changeId))) {
+    return true;
+  }
+  const tasks = await readTextIfExists(path.join(changeRoot(changeId), "tasks.md"));
+  if (!tasks) {
+    return false;
+  }
+  const taskLines = tasks.split("\n").filter((line) => /^\s*- \[[ xX]\]/.test(line));
+  return taskLines.length > 0 && taskLines.every((line) => /^\s*- \[[xX]\]/.test(line));
+}
+
+async function reusableChangeId(context) {
+  for (const changeId of changeIdCandidates(context)) {
+    if (isOpenSpecChangeReady(changeId) && !(await isOpenSpecChangeCompleted(changeId))) {
+      return changeId;
+    }
+  }
+  return "";
+}
+
+function existingChangeId(context) {
+  for (const changeId of changeIdCandidates(context)) {
+    if (isOpenSpecChangeReady(changeId)) {
+      return changeId;
+    }
+  }
+  return "";
+}
+
+function nextAvailableChangeId(context) {
+  const base = context?.stageKey ? `revise-${context.stageKey}` : `revise-${Date.now()}`;
+  if (!existsSync(changeRoot(base)) && !existsSync(path.join(repoRoot(), "openspec", "changes", "archive", base))) {
+    return base;
+  }
+  for (let index = 2; index < 100; index += 1) {
+    const candidate = `${base}-${index}`;
+    if (!existsSync(changeRoot(candidate)) && !existsSync(path.join(repoRoot(), "openspec", "changes", "archive", candidate))) {
+      return candidate;
+    }
+  }
+  return `${base}-${Date.now()}`;
+}
+
 
 async function runClaudeCommand({ prompt, cwd, systemPrompt, resumeSessionId, allowedTools }) {
   const args = [
@@ -460,15 +681,26 @@ async function runClaudeCommand({ prompt, cwd, systemPrompt, resumeSessionId, al
     args.splice(0, 0, "--resume", resumeSessionId);
   }
 
-  const { stdout, stderr } = await runProcess("claude", args, {
-    cwd,
-    env: {
-      ...process.env,
-      CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: "1"
+  let processOutput;
+  try {
+    processOutput = await runProcess("claude", args, {
+      cwd,
+      env: {
+        ...process.env,
+        CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: "1"
+      }
+    });
+  } catch (error) {
+    if (error.stdout) {
+      const recoveredPayload = parseClaudeOutput(error.stdout, error.stderr || "");
+      if (!recoveredPayload.is_error && (recoveredPayload.result || recoveredPayload.session_id)) {
+        return recoveredPayload;
+      }
     }
-  });
+    throw error;
+  }
 
-  const payload = parseClaudeOutput(stdout, stderr);
+  const payload = parseClaudeOutput(processOutput.stdout, processOutput.stderr);
   if (payload.is_error) {
     throw new Error(payload.result || payload.api_error_status || "Claude CLI returned an error");
   }
@@ -497,7 +729,12 @@ function runProcess(command, args, options = {}) {
       if (code === 0) {
         resolve({ stdout, stderr });
       } else {
-        reject(new Error(stderr.trim() || `Command failed with exit code ${code}`));
+        const detail = [stderr.trim(), stdout.trim().split("\n").slice(-3).join("\n").trim()].filter(Boolean).join("\n");
+        const error = new Error(detail || `Command failed with exit code ${code}`);
+        error.exitCode = code;
+        error.stdout = stdout;
+        error.stderr = stderr;
+        reject(error);
       }
     });
 
@@ -833,31 +1070,6 @@ function buildArchitectureDoc(content) {
     "## 数据流",
     "用户需求 → 需求讨论 → 产物生成 → 架构/API/数据库设计 → 代码开发 → 验证交付。"
   ].join("\n");
-}
-
-function buildPageFlowSvg(content) {
-  const summary = escapeXml(contentSummary(content, "需求阶段页面流转覆盖输入、讨论、产物展示和后续设计入口。"));
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="520" viewBox="0 0 1180 520">
-  <rect width="1180" height="520" fill="#f8fafc"/>
-  <text x="72" y="80" font-family="Arial, PingFang SC, sans-serif" font-size="34" font-weight="700" fill="#172033">页面流转图</text>
-  <g font-family="Arial, PingFang SC, sans-serif" font-size="18" font-weight="700" fill="#172033">
-    <rect x="88" y="176" width="190" height="104" rx="24" fill="#ffffff" stroke="#bfdbfe" stroke-width="2"/>
-    <text x="138" y="236">需求输入</text>
-    <path d="M294 228 H406" stroke="#2563eb" stroke-width="6" stroke-linecap="round"/>
-    <path d="M396 216 L416 228 L396 240" fill="none" stroke="#2563eb" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="428" y="176" width="190" height="104" rx="24" fill="#ffffff" stroke="#bfdbfe" stroke-width="2"/>
-    <text x="478" y="236">需求讨论</text>
-    <path d="M634 228 H746" stroke="#2563eb" stroke-width="6" stroke-linecap="round"/>
-    <path d="M736 216 L756 228 L736 240" fill="none" stroke="#2563eb" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="768" y="176" width="190" height="104" rx="24" fill="#ffffff" stroke="#bfdbfe" stroke-width="2"/>
-    <text x="818" y="236">产物展示</text>
-    <path d="M863 296 V354" stroke="#2563eb" stroke-width="6" stroke-linecap="round"/>
-    <path d="M851 344 L863 364 L875 344" fill="none" stroke="#2563eb" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="768" y="376" width="190" height="104" rx="24" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
-    <text x="818" y="436">后续设计</text>
-  </g>
-  <text x="72" y="344" font-family="Arial, PingFang SC, sans-serif" font-size="18" fill="#475569">${summary}</text>
-</svg>`;
 }
 
 function buildSystemArchitecturePuml(content) {
@@ -1278,13 +1490,11 @@ function escapeXml(value) {
 async function writeModeArtifacts(mode, workspace, content) {
   if (mode === "prd") {
     const prdMarkdownFile = path.join(workspace.artifactDir.requirementDir, "PRD.md");
-    const prdDocxFile = path.join(workspace.artifactDir.requirementDir, "PRD.docx");
     const versionFile = path.join(workspace.artifactDir.changeLogDir, "版本说明.md");
     const uiSpecFile = path.join(workspace.artifactDir.uiDir, "UI-Design-Spec.md");
     const businessFlowFile = path.join(workspace.artifactDir.flowDir, "业务流程图.puml");
     const infoArchitectureFile = path.join(workspace.artifactDir.flowDir, "信息架构图.puml");
     const pageFlowFile = path.join(workspace.artifactDir.flowDir, "页面流转图.puml");
-    const pageFlowSvgFile = path.join(workspace.artifactDir.flowDir, "页面流转图.svg");
     const glossaryFile = path.join(workspace.artifactDir.appendixDir, "术语表.md");
     const summaryFile = path.join(workspace.projectDir, "product-design-artifacts.md");
 
@@ -1295,20 +1505,16 @@ async function writeModeArtifacts(mode, workspace, content) {
       writeFileIfMissing(businessFlowFile, buildPlantUmlDiagram("业务流程图", "business", content)),
       writeFileIfMissing(infoArchitectureFile, buildPlantUmlDiagram("信息架构图", "information", content)),
       writeFileIfMissing(pageFlowFile, buildPlantUmlDiagram("页面流转图", "page-flow", content)),
-      writeFileIfMissing(pageFlowSvgFile, buildPageFlowSvg(content)),
       writeFileIfMissing(glossaryFile, buildGlossary(content))
     ]);
-    await convertMarkdownToDocx(prdMarkdownFile, prdDocxFile);
 
     const artifacts = [
       prdMarkdownFile,
-      prdDocxFile,
       versionFile,
       uiSpecFile,
       businessFlowFile,
       infoArchitectureFile,
       pageFlowFile,
-      pageFlowSvgFile,
       glossaryFile
     ];
     await writeFile(summaryFile, buildGeneratedFilesSummary("产品设计产物已生成", artifacts));
@@ -1361,7 +1567,7 @@ async function writeModeArtifacts(mode, workspace, content) {
   }
 
   if (mode === "backend") {
-    const backendDir = path.join(workspace.projectDir, "backend");
+    const backendDir = workspace.backendDir;
     const readmeFile = path.join(backendDir, "README.md");
     const summaryFile = path.join(backendDir, "backend-summary.md");
     await ensureDirectory(backendDir);
@@ -1371,8 +1577,8 @@ async function writeModeArtifacts(mode, workspace, content) {
   }
 
   if (mode === "test-cases") {
-    const testRootDir = path.join(workspace.projectDir, "tests");
-    const testCasesDir = path.join(testRootDir, "test-cases");
+    const testRootDir = workspace.artifactDir.testDir;
+    const testCasesDir = workspace.artifactDir.testCasesDir;
     const e2eDir = path.join(testRootDir, "e2e");
     const summaryFile = path.join(testCasesDir, "test-case-summary.md");
     await Promise.all([ensureDirectory(testCasesDir), ensureDirectory(e2eDir)]);
@@ -1381,10 +1587,10 @@ async function writeModeArtifacts(mode, workspace, content) {
   }
 
   if (mode === "playwright") {
-    const reportFile = path.join(workspace.projectDir, "test-report.md");
-    const playwrightReportDir = path.join(workspace.projectDir, "playwright-report");
-    const testResultsDir = path.join(workspace.projectDir, "test-results");
-    const e2eDir = path.join(workspace.projectDir, "tests", "e2e");
+    const reportFile = path.join(workspace.artifactDir.testReportsDir, "test-report.md");
+    const playwrightReportDir = path.join(workspace.artifactDir.testReportsDir, "playwright-report");
+    const testResultsDir = path.join(workspace.artifactDir.testReportsDir, "test-results");
+    const e2eDir = path.join(workspace.artifactDir.testDir, "e2e");
     await Promise.all([ensureDirectory(playwrightReportDir), ensureDirectory(testResultsDir), ensureDirectory(e2eDir)]);
     await writeFile(reportFile, content);
     return [reportFile, playwrightReportDir, testResultsDir, e2eDir];
@@ -1509,19 +1715,29 @@ export async function startSession({ taskId, requirement = "", workspaceRoot }) 
   };
 }
 
-export async function sendMessage({ taskId, sessionId, prompt }) {
-  const session = sessions.get(taskId);
+export async function sendMessage({ taskId, sessionId, prompt, workspaceRoot }) {
+  const session = sessions.get(taskId) || await loadPersistedSession(taskId, workspaceRoot);
   if (!session || session.sessionId !== sessionId) {
     throw new Error(`Session not found for taskId=${taskId}`);
   }
 
-  const payload = await runClaudeCommand({
+  const command = {
     prompt,
     cwd: session.workspaceDir,
     systemPrompt: discussionSystemPrompt(),
     resumeSessionId: session.claudeSessionId,
     allowedTools: buildAllowedTools("discussion")
-  });
+  };
+  let payload;
+  try {
+    payload = await runClaudeCommand(command);
+  } catch (error) {
+    if (!command.resumeSessionId || !isMissingConversationError(error)) {
+      throw error;
+    }
+    session.claudeSessionId = null;
+    payload = await runClaudeCommand({ ...command, resumeSessionId: null });
+  }
 
   session.claudeSessionId = payload.session_id || session.claudeSessionId;
   session.history.push({ role: "user", content: prompt });
@@ -1545,8 +1761,8 @@ export async function sendMessage({ taskId, sessionId, prompt }) {
   };
 }
 
-export async function runTask({ taskId, mode, prompt, workspaceRoot, sessionId }) {
-  const existingSession = sessions.get(taskId);
+export async function runTask({ taskId, mode, prompt, workspaceRoot, sessionId, agentId }) {
+  const existingSession = sessions.get(taskId) || await loadPersistedSession(taskId, workspaceRoot);
   const requirement = existingSession?.requirement || prompt;
   const workspace = await ensureWorkspace(taskId, requirement, workspaceRoot);
   const resolvedSessionId = sessionId || existingSession?.sessionId || createSessionId(taskId);
@@ -1567,14 +1783,32 @@ export async function runTask({ taskId, mode, prompt, workspaceRoot, sessionId }
 
   sessions.set(taskId, session);
 
-  const projectModes = ["generate", "backend", "test-cases", "playwright", "fix-tests"];
-  const payload = await runClaudeCommand({
+  const modeCwd = {
+    generate: workspace.frontendDir,
+    backend: workspace.backendDir,
+    "test-cases": workspace.projectDir,
+    playwright: workspace.projectDir,
+    "fix-tests": workspace.projectDir
+  };
+  const modeSystemPrompt = runSystemPrompt(mode, workspace);
+  const agentPrompt = await loadAgentPrompt(agentId);
+  const command = {
     prompt: buildModePrompt(mode, prompt, workspace),
-    cwd: projectModes.includes(mode) ? workspace.projectDir : repoRoot(),
-    systemPrompt: runSystemPrompt(mode, workspace),
+    cwd: modeCwd[mode] || repoRoot(),
+    systemPrompt: mergeSystemPrompt(agentPrompt.prompt, modeSystemPrompt),
     resumeSessionId: session.claudeSessionId,
     allowedTools: buildAllowedTools(mode)
-  });
+  };
+  let payload;
+  try {
+    payload = await runClaudeCommand(command);
+  } catch (error) {
+    if (!command.resumeSessionId || !isMissingConversationError(error)) {
+      throw error;
+    }
+    session.claudeSessionId = null;
+    payload = await runClaudeCommand({ ...command, resumeSessionId: null });
+  }
 
   session.claudeSessionId = payload.session_id || session.claudeSessionId;
   session.history.push({ role: "user", content: `[${mode}] ${prompt}` });
@@ -1593,7 +1827,7 @@ export async function runTask({ taskId, mode, prompt, workspaceRoot, sessionId }
       {
         time: new Date().toISOString(),
         level: "info",
-        message: `Executed ${mode || "custom"} task with Claude CLI`
+        message: `Executed ${mode || "custom"} task with Claude CLI${agentPrompt.agentId ? ` using ${agentPrompt.agentId}` : ""}`
       }
     ],
     workspaceDir: workspace.taskRoot,
@@ -1603,8 +1837,110 @@ export async function runTask({ taskId, mode, prompt, workspaceRoot, sessionId }
   };
 }
 
-export async function closeSession({ taskId, sessionId }) {
-  const session = sessions.get(taskId);
+function buildOpenSpecPrompt(action, context) {
+  const artifactPaths = Array.isArray(context.artifactPaths) ? context.artifactPaths : [];
+  const lines = [
+    `/${action === "explore" ? "opsx:explore" : action === "propose" ? "opsx:propose" : action === "apply" ? "opsx:apply" : "opsx:archive"}${context.changeId && action !== "explore" && action !== "propose" ? ` ${context.changeId}` : ""}`,
+    "",
+    "这是 AI 软件工厂阶段产物修订操作，请基于当前阶段上下文执行。",
+    `workflowRunId: ${context.workflowRunId}`,
+    `stageKey: ${context.stageKey}`,
+    `stageTitle: ${context.stageTitle}`,
+    `projectName: ${context.projectName || "未命名项目"}`,
+    `changeId: ${context.changeId || "未创建"}`,
+    `允许修改范围: ${context.allowedPaths || "当前阶段相关产物"}`,
+    "",
+    "当前阶段产物路径:",
+    ...(artifactPaths.length ? artifactPaths.map((item) => `- ${item}`) : ["- 暂无产物路径"]),
+    "",
+    "用户反馈:",
+    context.userFeedback || "用户尚未填写具体反馈。"
+  ];
+
+  if (action === "explore") {
+    lines.push("", "请只探索当前阶段产物如何修改，不要直接实现代码。输出阶段修订建议、风险和下一步计划。 ");
+  }
+  if (action === "propose") {
+    lines.push("", `请为当前阶段修订创建 OpenSpec change。建议 changeId：${context.changeId || `revise-${context.stageKey}`}`);
+  }
+  if (action === "apply") {
+    lines.push("", "请执行该 OpenSpec change，但必须限制在允许修改范围内。完成后总结修改文件。 ");
+  }
+  if (action === "archive") {
+    lines.push("", "请归档该 OpenSpec change。归档后不要推进主工作流阶段。 ");
+  }
+
+  return lines.join("\n");
+}
+
+async function extractChangeId(action, context, content) {
+  const reusable = action === "propose" ? "" : await reusableChangeId(context);
+  if (reusable) {
+    return reusable;
+  }
+  if (context.changeId && action !== "propose") {
+    return context.changeId;
+  }
+  const text = content || "";
+  const matched = text.match(/(?:change(?:Id)?|Change ID|变更|change)[：:\s`]*([a-z0-9][a-z0-9-]{3,})/i);
+  if (matched?.[1]) {
+    return matched[1];
+  }
+  if (action === "propose") {
+    return `revise-${context.stageKey}-${String(context.workflowRunId || Date.now()).slice(0, 8)}`;
+  }
+  return context.changeId || "";
+}
+
+export async function runOpenSpecAction({ taskId, action, context, workspaceRoot }) {
+  const workspace = await ensureWorkspace(taskId, context?.projectName || "", workspaceRoot);
+  const resolvedContext = { ...(context || {}) };
+  const reusable = action === "propose" ? "" : await reusableChangeId(resolvedContext);
+  if (action === "propose") {
+    resolvedContext.changeId = nextAvailableChangeId(resolvedContext);
+  } else if (reusable && action !== "explore") {
+    resolvedContext.changeId = reusable;
+  }
+  const prompt = buildOpenSpecPrompt(action, resolvedContext);
+  let payload;
+  try {
+    payload = await runClaudeCommand({
+      prompt,
+      cwd: repoRoot(),
+      systemPrompt: "你是 OpenSpec 阶段修订执行代理。严格遵循用户指定的 /opsx 操作和允许修改范围，输出简洁中文结果。",
+      resumeSessionId: null,
+      allowedTools: buildAllowedTools("openspec")
+    });
+  } catch (error) {
+    const changeId = existingChangeId(resolvedContext);
+    if (changeId) {
+      return {
+        taskId,
+        action,
+        changeId,
+        status: "success",
+        content: `检测到 OpenSpec change 已创建：\`${changeId}\`\n\n位置：\`openspec/changes/${changeId}/\`\n\nClaude CLI 退出状态异常，但 proposal.md 与 tasks.md 已落盘，可继续执行计划。`,
+        updatedAt: new Date().toISOString(),
+        workspaceDir: workspace.taskRoot
+      };
+    }
+    throw error;
+  }
+  const content = payload.result || "";
+
+  return {
+    taskId,
+    action,
+    changeId: await extractChangeId(action, resolvedContext, content),
+    status: "success",
+    content,
+    updatedAt: new Date().toISOString(),
+    workspaceDir: workspace.taskRoot
+  };
+}
+
+export async function closeSession({ taskId, sessionId, workspaceRoot }) {
+  const session = sessions.get(taskId) || await loadPersistedSession(taskId, workspaceRoot);
   if (!session || session.sessionId !== sessionId) {
     throw new Error(`Session not found for taskId=${taskId}`);
   }

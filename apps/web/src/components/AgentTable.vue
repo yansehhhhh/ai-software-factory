@@ -17,20 +17,17 @@ function statusLabel(value) {
 <template>
   <section class="agent-panel">
     <div class="panel-head">
-      <h2>参与 Agent 列表</h2>
+      <h2>Agent 状态</h2>
     </div>
 
     <div class="agent-table">
-      <div class="agent-row header">
-        <span>Agent 名称</span>
-        <span>角色</span>
-        <span>状态</span>
-      </div>
       <div v-for="agent in agents" :key="agent.name" class="agent-row">
-        <span class="agent-name">{{ agent.name }}</span>
-        <span class="agent-role">{{ agent.role }}</span>
+        <span class="agent-icon" :data-status="agent.status">{{ agent.name?.slice(0, 1) || 'A' }}</span>
+        <span class="agent-copy">
+          <strong>{{ agent.name }}</strong>
+          <small>{{ agent.role }}</small>
+        </span>
         <span class="agent-status" :data-status="agent.status">
-          <i></i>
           {{ statusLabel(agent.status) }}
         </span>
       </div>
@@ -40,15 +37,21 @@ function statusLabel(value) {
 
 <style scoped>
 .agent-panel {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 300px);
+  min-height: 360px;
+  max-height: calc(100vh - 300px);
+  overflow: hidden;
   background: #ffffff;
   border: 1px solid #edf1f7;
-  border-radius: 16px;
-  padding: 18px 18px 10px;
-  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.04);
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
 }
 
 .panel-head {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .panel-head h2 {
@@ -59,71 +62,100 @@ function statusLabel(value) {
 
 .agent-table {
   display: flex;
+  flex: 1;
+  min-height: 0;
   flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 4px;
+  scrollbar-width: none;
+}
+
+.agent-table::-webkit-scrollbar {
+  display: none;
 }
 
 .agent-row {
   display: grid;
-  grid-template-columns: 1.2fr 1fr 90px;
-  gap: 12px;
+  grid-template-columns: 36px minmax(0, 1fr) auto;
+  gap: 10px;
   align-items: center;
-  min-height: 44px;
+  min-height: 58px;
   border-top: 1px solid #f0f3f8;
-  color: #475569;
-  font-size: 13px;
 }
 
-.agent-row.header {
+.agent-row:first-child {
   border-top: none;
-  color: #94a3b8;
-  font-size: 12px;
-  min-height: 34px;
 }
 
-.agent-name {
-  color: #111827;
-  font-weight: 500;
-}
-
-.agent-role {
-  color: #64748b;
-}
-
-.agent-status {
+.agent-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #4f46e5;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  font-weight: 600;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 800;
 }
 
-.agent-status i {
-  width: 6px;
-  height: 6px;
-  border-radius: 999px;
-  background: #cbd5e1;
-}
-
-.agent-status[data-status="running"] {
+.agent-icon[data-status="success"] {
+  background: #dcfce7;
   color: #16a34a;
 }
 
-.agent-status[data-status="running"] i {
-  background: #22c55e;
+.agent-icon[data-status="running"] {
+  background: #fff7ed;
+  color: #f97316;
+}
+
+.agent-copy {
+  min-width: 0;
+}
+
+.agent-copy strong,
+.agent-copy small {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.agent-copy strong {
+  color: #111827;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.agent-copy small {
+  margin-top: 4px;
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.agent-status {
+  border-radius: 999px;
+  background: #f8fafc;
+  color: #64748b;
+  padding: 5px 9px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.agent-status[data-status="running"] {
+  background: #fff7ed;
+  color: #f97316;
 }
 
 .agent-status[data-status="success"] {
-  color: #2563eb;
-}
-
-.agent-status[data-status="success"] i {
-  background: #2563eb;
+  background: #dcfce7;
+  color: #16a34a;
 }
 
 .agent-status[data-status="error"] {
+  background: #fee2e2;
   color: #ef4444;
-}
-
-.agent-status[data-status="error"] i {
-  background: #ef4444;
 }
 </style>

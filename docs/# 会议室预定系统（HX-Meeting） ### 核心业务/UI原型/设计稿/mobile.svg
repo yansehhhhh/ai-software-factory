@@ -1,0 +1,88 @@
+<svg width="430" height="1480" viewBox="0 0 430 1480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="430" height="1480" rx="36" fill="#F8FAFC"/>
+  <rect width="430" height="54" rx="36" fill="#0F172A"/>
+  <text x="24" y="92" fill="#1F2937" font-size="24" font-family="Arial, sans-serif" font-weight="700">HX-Meeting 移动端 H5 总览</text>
+  <text x="24" y="118" fill="#6B7280" font-size="13" font-family="Arial, sans-serif">H5 基准：底部导航、单列卡片、底部抽屉、扫码落地页</text>
+
+  <rect x="18" y="142" width="394" height="120" rx="22" fill="#FFFFFF" stroke="#BFDBFE"/>
+  <rect x="18" y="142" width="394" height="120" rx="22" fill="url(#hero)" fill-opacity="0.72"/>
+  <text x="38" y="178" fill="#1F2937" font-size="22" font-family="Arial, sans-serif" font-weight="700">首页待办优先</text>
+  <text x="38" y="204" fill="#475569" font-size="13" font-family="Arial, sans-serif">待签到 1 场 · 转让待确认 1 条 · 未读通知 4 条</text>
+  <rect x="38" y="222" width="124" height="28" rx="14" fill="#FEF3C7"/>
+  <text x="56" y="241" fill="#92400E" font-size="12" font-family="Arial, sans-serif" font-weight="700">15 分钟后签到</text>
+
+  <text x="24" y="300" fill="#1F2937" font-size="20" font-family="Arial, sans-serif" font-weight="700">快捷入口（2 列卡片）</text>
+  <rect x="18" y="320" width="188" height="96" rx="18" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <rect x="224" y="320" width="188" height="96" rx="18" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <rect x="18" y="432" width="188" height="96" rx="18" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <rect x="224" y="432" width="188" height="96" rx="18" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="36" y="356" fill="#1F2937" font-size="17" font-family="Arial, sans-serif" font-weight="700">会议预约</text>
+  <text x="36" y="380" fill="#6B7280" font-size="12" font-family="Arial, sans-serif">日期 + 卡片 + Chip</text>
+  <text x="242" y="356" fill="#1F2937" font-size="17" font-family="Arial, sans-serif" font-weight="700">扫码签到</text>
+  <text x="242" y="380" fill="#6B7280" font-size="12" font-family="Arial, sans-serif">扫码后直接确认</text>
+  <text x="36" y="468" fill="#1F2937" font-size="17" font-family="Arial, sans-serif" font-weight="700">我的预约</text>
+  <text x="36" y="492" fill="#6B7280" font-size="12" font-family="Arial, sans-serif">签到 / 释放 / 转让</text>
+  <text x="242" y="468" fill="#1F2937" font-size="17" font-family="Arial, sans-serif" font-weight="700">通知中心</text>
+  <text x="242" y="492" fill="#6B7280" font-size="12" font-family="Arial, sans-serif">待办优先处理</text>
+
+  <rect x="18" y="552" width="394" height="74" rx="20" fill="#F8FBFF" stroke="#93C5FD" stroke-dasharray="6 6"/>
+  <text x="38" y="584" fill="#1F2937" font-size="16" font-family="Arial, sans-serif" font-weight="700">管理员入口：会议室管理</text>
+  <text x="38" y="608" fill="#6B7280" font-size="12" font-family="Arial, sans-serif">首页管理卡进入，移动端以会议室卡片替代表格</text>
+
+  <text x="24" y="672" fill="#1F2937" font-size="20" font-family="Arial, sans-serif" font-weight="700">移动预约页</text>
+  <rect x="18" y="692" width="394" height="360" rx="22" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="38" y="728" fill="#1F2937" font-size="16" font-family="Arial, sans-serif" font-weight="700">日期选择</text>
+  <rect x="38" y="744" width="68" height="48" rx="16" fill="#EFF6FF" stroke="#2563EB"/>
+  <rect x="114" y="744" width="68" height="48" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <rect x="190" y="744" width="68" height="48" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="56" y="774" fill="#2563EB" font-size="12" font-family="Arial, sans-serif" font-weight="700">今天</text>
+  <text x="132" y="774" fill="#475569" font-size="12" font-family="Arial, sans-serif">周六</text>
+  <text x="208" y="774" fill="#475569" font-size="12" font-family="Arial, sans-serif">周日</text>
+
+  <rect x="38" y="814" width="354" height="86" rx="18" fill="#F8FAFC" stroke="#E5E7EB"/>
+  <text x="56" y="846" fill="#1F2937" font-size="16" font-family="Arial, sans-serif" font-weight="700">A101 会议室 · 8人</text>
+  <text x="56" y="870" fill="#6B7280" font-size="12" font-family="Arial, sans-serif">09:00-10:00 已占用（张三 / 研发部）</text>
+  <rect x="272" y="856" width="102" height="28" rx="14" fill="#EFF6FF"/>
+  <text x="292" y="875" fill="#2563EB" font-size="12" font-family="Arial, sans-serif" font-weight="700">占用详情</text>
+
+  <rect x="38" y="916" width="354" height="112" rx="18" fill="#FFFFFF" stroke="#BFDBFE"/>
+  <text x="56" y="948" fill="#1F2937" font-size="16" font-family="Arial, sans-serif" font-weight="700">B203 会议室 · 12人</text>
+  <text x="56" y="970" fill="#6B7280" font-size="12" font-family="Arial, sans-serif">30 分钟 Chip，连续选择，最多 2 小时</text>
+  <rect x="56" y="984" width="64" height="30" rx="15" fill="#2563EB"/>
+  <rect x="128" y="984" width="64" height="30" rx="15" fill="#2563EB"/>
+  <rect x="200" y="984" width="64" height="30" rx="15" fill="#2563EB"/>
+  <rect x="272" y="984" width="64" height="30" rx="15" fill="#2563EB"/>
+  <text x="74" y="1004" fill="#FFFFFF" font-size="12" font-family="Arial, sans-serif" font-weight="700">10:00</text>
+  <text x="146" y="1004" fill="#FFFFFF" font-size="12" font-family="Arial, sans-serif" font-weight="700">10:30</text>
+  <text x="218" y="1004" fill="#FFFFFF" font-size="12" font-family="Arial, sans-serif" font-weight="700">11:00</text>
+  <text x="290" y="1004" fill="#FFFFFF" font-size="12" font-family="Arial, sans-serif" font-weight="700">11:30</text>
+
+  <rect x="18" y="1076" width="394" height="126" rx="24" fill="#FFFFFF" stroke="#BFDBFE"/>
+  <rect x="188" y="1088" width="54" height="4" rx="2" fill="#CBD5E1"/>
+  <text x="38" y="1120" fill="#1F2937" font-size="18" font-family="Arial, sans-serif" font-weight="700">底部预约表单 / 抽屉</text>
+  <text x="38" y="1146" fill="#6B7280" font-size="12" font-family="Arial, sans-serif">自动带入会议室、开始时间和结束时间；补充主题和参会人后提交</text>
+  <rect x="38" y="1162" width="354" height="30" rx="15" fill="#2563EB"/>
+  <text x="188" y="1182" fill="#FFFFFF" font-size="12" font-family="Arial, sans-serif" font-weight="700">提交预约</text>
+
+  <text x="24" y="1242" fill="#1F2937" font-size="20" font-family="Arial, sans-serif" font-weight="700">扫码签到 / 转让 / 通知</text>
+  <rect x="18" y="1262" width="122" height="86" rx="18" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <rect x="154" y="1262" width="122" height="86" rx="18" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <rect x="290" y="1262" width="122" height="86" rx="18" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="36" y="1296" fill="#1F2937" font-size="14" font-family="Arial, sans-serif" font-weight="700">扫码签到</text>
+  <text x="36" y="1320" fill="#6B7280" font-size="11" font-family="Arial, sans-serif">落地确认</text>
+  <text x="172" y="1296" fill="#1F2937" font-size="14" font-family="Arial, sans-serif" font-weight="700">转让确认</text>
+  <text x="172" y="1320" fill="#6B7280" font-size="11" font-family="Arial, sans-serif">责任说明</text>
+  <text x="308" y="1296" fill="#1F2937" font-size="14" font-family="Arial, sans-serif" font-weight="700">通知中心</text>
+  <text x="308" y="1320" fill="#6B7280" font-size="11" font-family="Arial, sans-serif">待办优先</text>
+
+  <rect x="0" y="1398" width="430" height="82" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <g font-family="Arial, sans-serif" font-size="12" font-weight="700">
+    <text x="42" y="1444" fill="#2563EB">首页</text>
+    <text x="120" y="1444" fill="#64748B">预约</text>
+    <text x="196" y="1444" fill="#64748B">我的预约</text>
+    <text x="300" y="1444" fill="#64748B">核销</text>
+    <text x="370" y="1444" fill="#64748B">通知</text>
+  </g>
+
+  <defs><linearGradient id="hero" x1="18" y1="142" x2="412" y2="262" gradientUnits="userSpaceOnUse"><stop stop-color="#EFF6FF"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient></defs>
+</svg>

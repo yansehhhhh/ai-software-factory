@@ -6,8 +6,6 @@ import com.aifactory.dto.DiscussionChatResult;
 import com.aifactory.dto.DiscussionMessage;
 import com.aifactory.dto.DiscussionStartResult;
 import com.aifactory.dto.WorkflowStatus;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -20,7 +18,6 @@ import java.util.concurrent.ConcurrentHashMap;
 public class DiscussionService {
 
     private final Map<String, DiscussionSession> sessions = new ConcurrentHashMap<>();
-    private final ObjectMapper objectMapper = new ObjectMapper();
     private final WorkflowService workflowService;
     private final ClaudeCodeService claudeCodeService;
 
@@ -114,48 +111,25 @@ public class DiscussionService {
             return new ParsedDiscussionResponse("", List.of(), cliComplete || markerComplete);
         }
 
-        String cleanedContent = stripMarkdownCodeBlock(content);
-
-        try {
-            JsonNode root = objectMapper.readTree(cleanedContent);
-            boolean complete = cliComplete || markerComplete || root.path("complete").asBoolean(false);
-            String question = root.path("question").asText("").strip();
-            String summary = root.path("summary").asText("").strip();
-            List<String> options = new ArrayList<>();
-            JsonNode optionNodes = root.path("options");
-            if (optionNodes.isArray()) {
-                optionNodes.forEach(option -> {
-                    String value = option.asText("").strip();
-                    if (!value.isEmpty()) {
-                        options.add(value);
-                    }
-                });
-            }
-            String displayContent = complete && !summary.isEmpty() ? summary : question;
-            if (displayContent.isEmpty()) {
-                displayContent = content;
-            }
-            return new ParsedDiscussionResponse(displayContent, complete ? List.of() : options, complete);
-        } catch (Exception ignored) {
-            return new ParsedDiscussionResponse(content, List.of(), cliComplete || markerComplete);
-        }
+        String displayContent = content
+                .replace("[DISCUSSION_COMPLETE]", "")
+                .replace("[讨论完成]", "")
+                .strip();
+        return new ParsedDiscussionResponse(displayContent, markerComplete ? List.of() : extractMarkdownOptions(displayContent), cliComplete || markerComplete);
     }
 
-    private String stripMarkdownCodeBlock(String content) {
-        if (content == null) {
-            return null;
-        }
-        String stripped = content.strip();
-        if (stripped.startsWith("```json") || stripped.startsWith("```")) {
-            int startIndex = stripped.indexOf('\n');
-            if (startIndex >= 0) {
-                int endIndex = stripped.lastIndexOf("```");
-                if (endIndex > startIndex) {
-                    return stripped.substring(startIndex + 1, endIndex).strip();
-                }
+    private List<String> extractMarkdownOptions(String content) {
+        List<String> options = new ArrayList<>();
+        for (String line : content.split("\\R")) {
+            String option = line.strip()
+                    .replaceFirst("^[-*+]\\s+", "")
+                    .replaceFirst("^\\d+[.)、]\\s*", "")
+                    .strip();
+            if (!option.equals(line.strip()) && !option.isEmpty() && option.length() <= 80) {
+                options.add(option);
             }
         }
-        return stripped;
+        return options.size() >= 2 && options.size() <= 4 ? options : List.of();
     }
 
     private String generateEnrichedRequirement(DiscussionSession session) {
